@@ -1,0 +1,113 @@
+
+.faq-grd-block:first-child{
+	padding-top: 40px;
+}
+.faq-grd-block{
+	padding: 90px 0;
+}
+
+.faq-grd-hdr{
+	padding-bottom: 15px;
+}
+.faq-accordion-hdr {
+    position: relative;
+    cursor: pointer;
+    background: #F7F7F7;
+    border: 1px solid #DDDDDD;
+    padding: 20px 55px 18px 16px;
+}
+.faq-accordion-title{
+	margin-bottom: 0!important;
+	cursor: pointer;
+	line-height: 1.2;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.faq-accordion-hdr:hover .faq-accordion-title{
+	color: #E7A345;
+}
+.faq-accordion-icon-box{
+	position: absolute;
+	top: 50%;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 50px;
+	height: 50px;
+	border: 2px solid #E7A345;
+	background: transparent;
+	border-radius: 6px;
+	cursor: pointer;
+	margin-top: 3px;
+}
+.faq-accordion-icon-box:after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	height: 14px;
+	width: 14px;
+	background-image: url('../images/plus-icon.svg');
+	background-repeat: no-repeat;
+}
+
+.active .faq-accordion-icon-box:after{
+	background-image: url('../images/minus-icon.svg');
+	height: 3px;
+}
+
+.faq-accordion-des{
+	display: none;
+	padding-right: 20px;
+}
+.faq-accordion-des p{
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+.faq-accordion-des a{
+	text-decoration: none;
+	text-transform: capitalize;
+	padding-right: 28px;
+	position: relative;
+}
+.faq-accordion-des a i{
+	position: absolute;
+	top: 50%;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.faq-accordion-des a:hover{
+	color: #202D42;
+}
+.faq-accordion-des a:hover i{
+	margin-right: -5px;
+}
+.faq-accordion-des a:hover svg{
+	fill: #202D42;
+}
+
+
+.faq-accordion-menu.active{
+	border-bottom: 2px solid #F8F8F8;
+	padding-bottom: 40px;
+}
+
+.gray-bg{
+	background: #F9F9F9;
+}
+.gray-bg .faq-accordion-hdr{
+	border-bottom-color: #fff;
+}
+.gray-bg .faq-accordion-menu.active{
+	border-bottom-color: #fff;
+}
+.faq-cntlr .breadcrumb-cntlr{
+	padding-top: 5px;
+}

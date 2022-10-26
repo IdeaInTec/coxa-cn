@@ -350,13 +350,43 @@ $(window).resize(function(){
 
 
 /*---- NZ ----*/ 
-
+ $('.faq-accordion-hdr').on('click', function(){ 
+    $(this).parents('.faq-accordion-menu').toggleClass('active');
+    $(this).parents('.faq-grd').siblings().find('.faq-accordion-menu').removeClass('active'); 
+    $(this).parents('.faq-grd').find('.faq-accordion-des').slideToggle(300);
+    $(this).parents('.faq-grd').siblings().find('.faq-accordion-des').slideUp(300);  
+  });
 
 
 
 
 
 /*---- SK ----*/ 
+
+if( $('.reviewSlider').length ){
+    $('.reviewSlider').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        }
+      ]
+    });
+}
+
 
 
 new WOW().init();

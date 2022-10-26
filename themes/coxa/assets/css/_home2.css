@@ -2,6 +2,7 @@
 	padding: 90px 0;
 	border-top: 2px solid #A37D36;
 	border-bottom: 2px solid #A37D36;
+	background: linear-gradient(0deg, #0C2543, #0C2543)
 }
 .why-choose-sec .sec-entry-hdr p,
 .why-choose-sec .sec-entry-hdr-title{
@@ -10,7 +11,7 @@
 .why-choose-sec .sec-entry-hdr-cntlr{
 	padding-bottom: 70px;
 }
-.why-choose-grid {
+.why-choose-grids {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -10px;
@@ -35,7 +36,7 @@
 	width: auto;
 }
 .why-choose-grid-des {
-	padding: 0 14px 15px;
+	padding: 0 10px 15px;
     text-align: center;
 }
 .why-choose-grid-title {
@@ -49,4 +50,186 @@
 }
 .why-choose-grid-des p:last-of-type{
 	margin-bottom: 0;
+}
+.why-choose-grid-btn{
+	text-align: center;
+	padding-top: 50px;
+}
+.why-choose-grid-btn .cdc-btn{
+	box-shadow: 0px 0px 6px rgba(2, 13, 28, 0.8);
+	padding: 14.5px 10px;
+	min-width: 190px;
+}
+.review-sec{
+	padding: 80px 0;
+}
+.review-grids {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.review-grid-col {
+    width: 50%;
+    padding: 0 10px;
+    padding-bottom: 28px;
+}
+.review-grids-cntlr {
+    padding: 0 50px 0;
+}
+.review-grids-item{
+	border: 1px solid #DDDDDD;
+	background: #F7F7F7;
+	text-align: center;
+    padding: 0 20px;
+    padding-bottom: 60px;
+    margin-top: 55px;
+}
+.review-pro-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -55px;
+    text-align: center;
+    margin-bottom: 25px;
+    z-index: 1;
+}
+.review-pro-img i {
+    display: inline-block;
+    height: 110px;
+    width: 110px;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 100%;
+    overflow: hidden;
+}
+.review-pro-img i img {
+    height: 110px;
+    width: 110px;
+    border-radius: 100%;
+}
+.review-pro-rating span i{
+	display: inline-block;
+	line-height: 1;
+	padding: 0 4px;
+}
+.review-pro-rating{
+	display: inline-block;
+	margin-bottom: 30px;
+}
+.review-tstmnl-mgs{
+	font-weight: 600;
+	line-height: 1.25;
+	margin-bottom: 28px;
+}
+.review-pro-des{
+	margin-bottom: 16px;
+}
+.review-pro-des p{
+	font-size: 20px;
+	line-height: 1.5;
+}
+.review-pro-des p:last-of-type{
+	margin-bottom: 0;
+}
+.review-pro-des-btn{
+	text-align: center;
+	line-height: 1;
+	margin-bottom: 28px;
+}
+.review-pro-des-btn a{
+	line-height: 1.25;
+	color: #29467D;
+	text-decoration: none;
+	display: inline-block;
+	vertical-align: baseline;
+	/*border-bottom: 1px dashed #29467D;*/
+	text-decoration:underline;
+	text-decoration-style: dotted;
+	text-underline-offset: 5px;
+}
+.review-pro-des-btn a:hover{
+	color: #A37D36;
+	border-color: #A37D36;
+}
+.review-pro-name strong {
+	color: #A37D36;
+	font-size: 20px;
+	font-weight: 400;
+	display: block;
+	line-height: 1.4;
+	text-transform: capitalize;
+}
+.review-pro-name span{
+	color: #333333;
+	font-weight: 600;
+	font-size: 13px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	line-height: 1.1;
+}
+.review-grid-btns ul{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.review-grid-btns {
+    padding-top: 40px;
+}
+.review-grid-btns ul li{
+	padding: 0 8px;
+}
+.reviewSlider .review-grid-col{
+	display: none;
+}
+.reviewSlider .review-grid-col:first-child{
+	display: block;
+}
+.reviewSlider.slick-initialized .review-grid-col{
+	display: block;
+}
+
+.cta-module-wrp {
+    padding: 35px;
+}
+.cta-module {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 70px 30px 60px 40px;
+    border: 1px solid #EACC95;
+}
+.cta-module-des-ctlr {
+    width: 73%;
+}
+.cta-btn-ctlr {
+    width: 27%;
+    display: flex;
+}
+.cta-btn {
+    margin-left: auto;
+    margin-top: auto;
+}
+.cta-module-des-title{
+	color: #fff;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 6px #03172E;
+	font-weight: 600;
+}
+.cta-module-des-title strong{
+	font-style: italic;
+	font-weight: 700;
+}
+.cta-module-des-ctlr .diamond-module{
+	margin-bottom: 25px;
+}
+.cta-module-des p{
+	font-size: 19px;
+	line-height: 1.5;
+	color: #fff;
+}
+.cta-module-des p:last-of-type{
+	margin-bottom: 0;
+}
+.cta-btn a{
+	min-width: 190px;
 }
