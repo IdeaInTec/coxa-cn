@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.intro-sec{
+	padding: 140px 0;
+}
+.intro-cntlr{
+	max-width: 940px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.intro-title{
+	font-weight: 600;
+	margin-bottom: 27px;
+}
