@@ -8,7 +8,7 @@
 	color: #fff;
 }
 .why-choose-sec .sec-entry-hdr-cntlr{
-	padding-bottom: 60px;
+	padding-bottom: 70px;
 }
 .why-choose-grid {
     display: flex;
@@ -18,12 +18,13 @@
 .why-choose-grid-col {
     width: 25%;
     padding: 0 10px;
+    padding-bottom: 15px;
 }
 .why-choose-grid-img {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 20px 35px;
+    padding: 10px 20px 35px;
 }
 .why-choose-grid-img i {
     display: inline-block;
@@ -34,9 +35,8 @@
 	width: auto;
 }
 .why-choose-grid-des {
-	padding: 0 18px;
+	padding: 0 14px 15px;
     text-align: center;
-    padding-bottom: 20px;
 }
 .why-choose-grid-title {
     color: #fff;

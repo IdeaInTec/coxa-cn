@@ -61,13 +61,16 @@
 	margin-bottom: 20px;
 	position: relative;
 }
-.sec-entry-hdr ul{
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.diamond-module{
+	display: inline-block;
 	margin-bottom: 20px;
 }
-.sec-entry-hdr ul li{
+.diamond-module ul{
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+.diamond-module ul li{
 	line-height: 1;
 }
 .sec-entry-hdr p {
