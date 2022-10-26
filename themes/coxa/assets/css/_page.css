@@ -61,11 +61,14 @@
 	margin-bottom: 20px;
 	position: relative;
 }
+.diamond-module{
+	display: inline-block;
+	margin-bottom: 20px;
+}
 .diamond-module ul{
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	margin-bottom: 20px;
+	justify-content: center;	
 }
 .diamond-module ul li{
 	line-height: 1;
