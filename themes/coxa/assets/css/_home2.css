@@ -156,6 +156,7 @@
 	font-weight: 400;
 	display: block;
 	line-height: 1.4;
+	text-transform: capitalize;
 }
 .review-pro-tag span{
 	color: #333333;
