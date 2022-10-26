@@ -11,6 +11,18 @@
     font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 }
 @font-face {
+    font-family: 'SourceSansPro';
+    src: url('SourceSansPro-Semibold/SourceSansPro-Semibold.woff2') format('woff2'),
+        url('SourceSansPro-Semibold/SourceSansPro-Semibold.woff') format('woff');
+    font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
+}
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('SourceSansPro-Bold/SourceSansPro-Bold.woff2') format('woff2'),
+        url('SourceSansPro-Bold/SourceSansPro-Bold.woff') format('woff');
+    font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+@font-face {
     font-family: 'SourceSerifPro';
     src: url('SourceSerifPro-Bold/SourceSerifPro-Bold.woff2') format('woff2'),
         url('SourceSerifPro-Bold/SourceSerifPro-Bold.woff') format('woff');
