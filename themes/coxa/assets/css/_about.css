@@ -24,3 +24,11 @@
 .about-team-sec .sec-entry-hdr-cntlr{
 	padding-bottom: 30px;
 }
+.abtis-lft-img-row .abtis-row-img{
+	order: 1;
+}
+
+.abtis-lft-img-row .abtis-row-text{
+	padding-right: 0;
+	padding-left: 30px;
+}
