@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Source Serif Pro';
+    src: url('SourceSerifPro-BoldIt.woff2') format('woff2'),
+        url('SourceSerifPro-BoldIt.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
