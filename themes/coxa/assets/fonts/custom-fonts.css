@@ -1,11 +1,30 @@
-
 @font-face {
-    font-family: 'LatoRegular';
-    src: url('LatoRegular/LatoRegular.eot');
-    src: url('LatoRegular/LatoRegular.eot') format('embedded-opentype'),
-         url('LatoRegular/LatoRegular.woff2') format('woff2'),
-         url('LatoRegular/LatoRegular.woff') format('woff'),
-         url('LatoRegular/LatoRegular.ttf') format('truetype'),
-         url('LatoRegular/LatoRegular.svg#LatoRegular') format('svg');
-    font-weight: normal;
+    font-family: 'SourceSansPro';
+    src: url('SourceSansPro-Light/SourceSansPro-Light.woff2') format('woff2'),
+        url('SourceSansPro-Light/SourceSansPro-Light.woff') format('woff');
+    font-display:auto;font-style:normal;font-weight:300;font-stretch:normal;
+}
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('SourceSansPro-Regular/SourceSansPro-Regular.woff2') format('woff2'),
+        url('SourceSansPro-Regular/SourceSansPro-Regular.woff') format('woff');
+    font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+@font-face {
+    font-family: 'SourceSerifPro';
+    src: url('SourceSerifPro-Bold/SourceSerifPro-Bold.woff2') format('woff2'),
+        url('SourceSerifPro-Bold/SourceSerifPro-Bold.woff') format('woff');
+    font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+@font-face {
+    font-family: 'SourceSerifPro';
+    src: url('SourceSerifPro-BoldIt/SourceSerifPro-BoldIt.woff2') format('woff2'),
+        url('SourceSerifPro-BoldIt/SourceSerifPro-BoldIt.woff') format('woff');
+    font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;    
+}
+@font-face {
+    font-family: 'SourceSerifPro';
+    src: url('SourceSerifPro-Semibold/SourceSerifPro-Semibold.woff2') format('woff2'),
+        url('SourceSerifPro-Semibold/SourceSerifPro-Semibold.woff') format('woff');
+    font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
 }
