@@ -79,6 +79,8 @@
 	border: 1px solid #DDDDDD;
 	background: #F7F7F7;
 	text-align: center;
+    padding: 0 20px;
+    padding-bottom: 60px;
 }
 .review-pro-img {
     display: flex;
@@ -88,6 +90,7 @@
     margin-top: -55px;
     text-align: center;
     margin-bottom: 25px;
+    z-index: 1;
 }
 .review-pro-img i {
     display: inline-block;
@@ -102,4 +105,63 @@
     height: 110px;
     width: 110px;
     border-radius: 100%;
+}
+.review-pro-rating span i{
+	display: inline-block;
+	line-height: 1;
+	padding: 0 4px;
+}
+.review-pro-rating{
+	display: inline-block;
+	margin-bottom: 30px;
+}
+.review-tstmnl-mgs{
+	font-weight: 600;
+	line-height: 1.25;
+	margin-bottom: 28px;
+}
+.review-pro-des{
+	margin-bottom: 16px;
+}
+.review-pro-des p{
+	font-size: 20px;
+	line-height: 1.5;
+}
+.review-pro-des p:last-of-type{
+	margin-bottom: 0;
+}
+.review-pro-des-btn{
+	text-align: center;
+	line-height: 1;
+	margin-bottom: 28px;
+}
+.review-pro-des-btn a{
+	line-height: 1.25;
+	color: #29467D;
+	text-decoration: none;
+	display: inline-block;
+	vertical-align: baseline;
+	/*border-bottom: 1px dashed #29467D;*/
+	text-decoration:underline;
+	text-decoration-style: dotted;
+	text-underline-offset: 5px;
+}
+.review-pro-des-btn a:hover{
+	color: #A37D36;
+	border-color: #A37D36;
+}
+.review-pro-tag strong {
+	color: #A37D36;
+	font-size: 20px;
+	font-weight: 400;
+	display: block;
+	line-height: 1.4;
+}
+.review-pro-tag span{
+	color: #333333;
+	font-weight: 600;
+	font-size: 13px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	line-height: 1.1;
 }
