@@ -76,7 +76,7 @@
 .review-grids-cntlr {
     padding: 0 50px 0;
 }
-.review-grids-item{
+.review-grid-item{
 	border: 1px solid #DDDDDD;
 	background: #F7F7F7;
 	text-align: center;
@@ -143,10 +143,10 @@
 	text-decoration: none;
 	display: inline-block;
 	vertical-align: baseline;
-	/*border-bottom: 1px dashed #29467D;*/
-	text-decoration:underline;
+	border-bottom: 1px dashed #29467D;
+	/*text-decoration:underline;
 	text-decoration-style: dotted;
-	text-underline-offset: 5px;
+	text-underline-offset: 5px;*/
 }
 .review-pro-des-btn a:hover{
 	color: #A37D36;
