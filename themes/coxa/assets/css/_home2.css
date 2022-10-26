@@ -120,9 +120,15 @@
 	line-height: 1.25;
 	margin-bottom: 28px;
 }
+.review-pro-des{
+	margin-bottom: 16px;
+}
 .review-pro-des p{
 	font-size: 20px;
 	line-height: 1.5;
+}
+.review-pro-des p:last-of-type{
+	margin-bottom: 0;
 }
 .review-pro-des-btn{
 	text-align: center;
@@ -135,7 +141,10 @@
 	text-decoration: none;
 	display: inline-block;
 	vertical-align: baseline;
-	border-bottom: 1px dashed #29467D;
+	/*border-bottom: 1px dashed #29467D;*/
+	text-decoration:underline;
+	text-decoration-style: dotted;
+	text-underline-offset: 5px;
 }
 .review-pro-des-btn a:hover{
 	color: #A37D36;
