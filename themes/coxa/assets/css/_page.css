@@ -58,9 +58,22 @@
 }
 .sec-entry-hdr-title{
 	line-height: 1.25;
-	padding-bottom: 35px;
 	margin-bottom: 20px;
 	position: relative;
+}
+.sec-entry-hdr ul{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+.sec-entry-hdr ul li{
+	line-height: 1;
+}
+.sec-entry-hdr p {
+	font-weight: 300;
+	line-height: 1.5;
+	font-size: 20px;
 }
 .sec-entry-hdr p:last-of-type{
 	margin-bottom: 0;
