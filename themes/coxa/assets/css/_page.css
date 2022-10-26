@@ -20,13 +20,41 @@
 }
 .slick-slider .slick-dots li button{
 	padding: 0;
-	width: 20px;
-	height: 20px;
+	width: 18px;
+	height: 18px;
 	border-radius: 100% 100%!important;
 	background: transparent!important;
 	border: 1px solid #29467D!important;
 }
-
+.slick-prev, 
+.slick-next{
+	width: 11px;
+	height: 34px;
+}
+.slick-slider .slick-prev:before, 
+.slick-slider .slick-next:before{
+	content: ""!important;
+	position: absolute;
+	opacity: 1!important;
+	background-image: url(../images/left-arrow.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 11px;
+	height: 34px;
+	top: 0;
+	left: 0;
+}
+.slick-slider .slick-next:before{
+	background-image: url(../images/right-arrow.svg);
+	right: 0;
+}
+.slick-slider .slick-prev:hover:before{
+	background-image: url(../images/left-arrow2.svg);
+}
+.slick-slider .slick-next:hover:before{
+	background-image: url(../images/right-arrow2.svg);
+}
 .slick-dots li:only-child{ 
 	display: none; 
 }

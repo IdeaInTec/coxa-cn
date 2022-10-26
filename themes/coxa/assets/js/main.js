@@ -329,6 +329,31 @@ $(".dft-fl-btn" ).each(function( index ) {
 
 /*---- SK ----*/ 
 
+if( $('.reviewSlider').length ){
+    $('.reviewSlider').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        }
+      ]
+    });
+}
+
+
 
 new WOW().init();
 
