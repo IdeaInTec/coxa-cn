@@ -31,7 +31,7 @@ nav.main-nav ul li a{
 	display: inline-block;
 	text-decoration: none;
 	font-weight: 700;
-	font-size: 14.5px;
+	font-size: 15px;
 	line-height: 1;
 	letter-spacing: 0.75px;
 	text-transform: uppercase;
@@ -41,11 +41,11 @@ nav.main-nav > ul{
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	margin: 0 -16px;
+	margin: 0 -20px;
 	padding-top: 32px;
 }
 nav.main-nav > ul > li{
-	padding: 0 16px;
+	padding: 0 20px;
 	position: relative;
 	line-height: 1;
 }
@@ -64,12 +64,12 @@ nav.main-nav > ul > li.menu-item-has-children > a{
 }
 nav.main-nav > ul > li.menu-item-has-children > a:before {
     position: absolute;
-    top: 3px;
+    top: 4px;
     right: 0;
     content: "";
     background-image: url(../images/down-icon.svg);
-    width: 11px;
-    height: 7px;
+    width: 13px;
+    height: 8px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -133,10 +133,10 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li:hover{
 }
 nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a {
     display: block;
-    padding: 10px 10px 10px 16px;
+    padding: 10px 10px 10px 20px;
     position: relative;
     line-height: 1;
-    font-size: 13px;
+    font-size: 14px;
     overflow: hidden;
     text-decoration: none;
 
