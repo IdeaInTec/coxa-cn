@@ -295,10 +295,33 @@ body.login-register.hide-account-title .select2-container--open .select2-dropdow
 	border-radius: 4px;
 	line-height: 1;
 	font-weight: 700;
-	line-height: 1;
 	text-align: center;
-	padding: 16px 16px;
+	padding: 16px 19px;
 	border: 2px solid #29467D;    
 	text-transform: capitalize;
 	text-decoration: none;
+}
+.cdc-btn:hover{
+	color: #FFFFFF;
+	background: #EACC95;
+	border-color: #EACC95;
+}
+.cdc-trnsprnt-btn{
+	display: inline-block;
+	vertical-align: baseline;
+	border-radius: 4px;
+	line-height: 1;
+	font-weight: 700;
+	text-align: center;
+	padding: 16px 19px;
+	border: 2px solid #29467D;  
+	text-transform: capitalize;
+	text-decoration: none;
+	background: transparent;
+	color: #29467D;
+}
+.cdc-trnsprnt-btn:hover{
+	color: #FFFFFF;
+	border: 2px solid #29467D;  
+	background: #29467D;
 }
