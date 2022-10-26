@@ -1,0 +1,18 @@
+.about-intro-sec{
+	padding: 70px 0 50px;
+}
+.abtis-img-text-row-inr{
+	display: flex;
+	align-items: center;
+}
+.abtis-img-txt-col{
+	width: 50%;
+}
+
+.abtis-row-img{
+	order: 2;
+}
+.abtis-row-text{
+	padding-right: 50px;
+	order: 1;
+}
