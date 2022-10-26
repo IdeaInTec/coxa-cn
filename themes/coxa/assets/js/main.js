@@ -316,7 +316,12 @@ $(".dft-fl-btn" ).each(function( index ) {
 
 
 /*---- NZ ----*/ 
-
+ $('.faq-accordion-hdr').on('click', function(){ 
+    $(this).parents('.faq-accordion-menu').toggleClass('active');
+    $(this).parents('.faq-grd').siblings().find('.faq-accordion-menu').removeClass('active'); 
+    $(this).parents('.faq-grd').find('.faq-accordion-des').slideToggle(300);
+    $(this).parents('.faq-grd').siblings().find('.faq-accordion-des').slideUp(300);  
+  });
 
 
 
