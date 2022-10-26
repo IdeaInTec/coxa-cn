@@ -1,6 +1,5 @@
 (function($) {
 var windowWidth = $(window).width();
-var windowWidth_1920 = $('.page-body-cntlr').width();
 
 /*Google Map Style*/
 var CustomMapStyles  = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
@@ -309,20 +308,85 @@ $(".dft-fl-btn" ).each(function( index ) {
 
 
 /*---- MIN ----*/ 
+var windowHeighT = $(window).height();
+var headerHeight = $('.header').height();
+var hmBnrH = windowHeighT - headerHeight;
+if (windowWidth > 767) {
+  if (windowHeighT > 650) {
+    $('.banner-cntlr').css('height', hmBnrH);
+  }
+}
 
+if( $('.bannerSlider').length ){
+    $('.bannerSlider').slick({
+      dots: false,
+      infinite: false,
+      autoplay: true,
+      arrows: true,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+}
 
+if( $('.treatment-sec').length ){
+  var conW = $('.banner .container').width();
+  var conLW2 = windowWidth - conW;
+  var conLW = conLW2 / 2;
+  $('.treatment-cntlr').css('margin-left', conLW);
+}
+$(window).resize(function(){
+  var windowWidth2 = $(window).width();
+  if( $('.treatment-sec').length ){
+  var conW = $('.banner .container').width();
+  var conLW2 = windowWidth2 - conW;
+  var conLW = conLW2 / 2;
+  $('.treatment-cntlr').css('margin-left', conLW);
+}
+});
 
 
 
 
 /*---- NZ ----*/ 
-
+ $('.faq-accordion-hdr').on('click', function(){ 
+    $(this).parents('.faq-accordion-menu').toggleClass('active');
+    $(this).parents('.faq-grd').siblings().find('.faq-accordion-menu').removeClass('active'); 
+    $(this).parents('.faq-grd').find('.faq-accordion-des').slideToggle(300);
+    $(this).parents('.faq-grd').siblings().find('.faq-accordion-des').slideUp(300);  
+  });
 
 
 
 
 
 /*---- SK ----*/ 
+
+if( $('.reviewSlider').length ){
+    $('.reviewSlider').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        }
+      ]
+    });
+}
+
 
 
 new WOW().init();
