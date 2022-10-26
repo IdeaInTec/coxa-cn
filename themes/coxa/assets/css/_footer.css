@@ -5,64 +5,111 @@
 	border-top: 2px solid #A37D36;
 }
 
-.ftr-top-cntlr{
-	display: flex;
-	flex-wrap: wrap;
-	padding-top: 54px;
-	padding-bottom: 34px;
+.ftr-top-cntlr {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 90px;
+    padding-bottom: 130px;
 }
 .ftr-top-col{
-	padding-right: 10px;
+	padding-right: 20px;
+	padding-top: 38px;
 }
 .ftr-top-col-01{
-	width: 25.347%;
+	width: 40%;
+	padding-right: 70px;
+	padding-top: 0;
 }
 .ftr-top-col-02{
-	width:  16.944%;
-	padding-top: 8px;
+	width:  21%;
 }
 .ftr-top-col-03{
-	width:  16.944%;
-	padding-top: 8px;
+	width:  22%;
 }
 .ftr-top-col-04{
-	width: 17.361%;
-	padding-top: 8px;
+	width: 17%;
 }
-
+.ftr-logo {
+    margin-bottom: 22px;
+}
 .ftr-logo a{
 	display: inline-block;
 	max-width: 230px;
 }
 .ftr-top-col-title{
 	line-height: 1;
-	margin-bottom: 30px;
-	text-transform: uppercase;
+	margin-bottom: 25px;
+	text-transform: capitalize;
 	font-weight: 600;
 	color: #fff;
 }
-
 .ftr-top-menu ul li{
 	line-height: 1;
-	margin-bottom: 30px;
+	margin-bottom: 23px;
+}
+.ftr-top-menu ul li:last-child{
+	margin-bottom: 0;
 }
 .ftr-top-menu ul li a{
 	display: inline-block;
 	text-decoration: none;
 	font-size: 15px;
 	line-height: 1;
-	text-transform: uppercase;
+	text-transform: capitalize;
+	padding-left: 20px;
+	position: relative;
 	color: #fff;
 }
-.ftr-top-menu ul li a:hover{
-	color: #FF9B4C;
+.ftr-top-menu ul li a:after {
+    content: "";
+    background: url(../images/footer-list-icon.svg);
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    left: 0;
+    top: 2px;
 }
-.ftr-contacts{
-
+.ftr-top-menu ul li a:hover{
+	color: #EACC95;
+}
+.ftr-desc{
+	margin-bottom: 45px;
+}
+.ftr-desc p{
+	color:#fff;
 }
 .ftr-contacts ul li{
 	line-height: 1;
 	margin-bottom: 30px;
+}
+.massage-review-cntlr .massage-col{
+	margin-bottom: 25px;
+}
+.massage-review-cntlr .massage-col a,
+.massage-review-cntlr .review-col a{
+	color: #EACC95;
+	font-weight: 600;
+	text-decoration: none;
+	line-height: 2;
+    line-height: 2;
+    display: inline-block;
+
+}
+.massage-review-cntlr .massage-col a:hover,
+.massage-review-cntlr .review-col a:hover{
+	opacity: .8;
+}
+.massage-review-cntlr .massage-col a span,
+.massage-review-cntlr .review-col a span{
+	display: inline-block;
+	line-height: 1;
+}
+.massage-review-cntlr .massage-col a i,
+.massage-review-cntlr .review-col a i{
+	margin-right: 15px;
+	display: inline-block;
+	position: relative;
+    top: -2px
 }
 /*.ftr-contact-col a{
 	display: inline-block;
@@ -198,11 +245,11 @@
 .ftr-copyright{
 	padding-right: 10px;
 }
-.ftr-copyright p{
-	margin-bottom: 0;
-	line-height: 1.2;
-	font-size: 13px;
-	color: #fff;
+.ftr-copyright p {
+    margin-bottom: 0;
+    line-height: 1.7;
+    font-size: 13px;
+    color: #EAEAEA;
 }
 .ftr-btm-menu{
 	margin-left: auto;
@@ -217,32 +264,32 @@
 	padding: 0 12px;
 	position: relative;
 }
-.ftr-btm-menu ul li:before{
-	position: absolute;
-	background: #C9C9C9;
-	content: ""!important;
-	height: 1px;
-	width: 3px;
-	top: 50%;
-	right: 0;
+.ftr-btm-menu ul li:before {
+    position: absolute;
+    background: #A37D36;
+    content: ""!important;
+    height: 15px;
+    width: 1px;
+    top: 50%;
+    right: 0;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     margin-top: 2px;
 }
-.ftr-btm-menu ul li:first-child:before{
+.ftr-btm-menu ul li:last-child:before{
 	content: none!important;
 }
 .ftr-btm-menu ul li a{
 	display: inline-block;
 	text-decoration: none;
-	line-height: 1;
+	line-height: 1.7;
 	font-size: 13px;
-	color: #fff;
+	color: #F7F7F7;
 }
 .ftr-btm-menu ul li a:hover{
-	color: #FF9B4C;
+	color: #A37D36;
 }
 
 

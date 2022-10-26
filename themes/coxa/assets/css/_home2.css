@@ -2,6 +2,7 @@
 	padding: 90px 0;
 	border-top: 2px solid #A37D36;
 	border-bottom: 2px solid #A37D36;
+	background: linear-gradient(0deg, #0C2543, #0C2543)
 }
 .why-choose-sec .sec-entry-hdr p,
 .why-choose-sec .sec-entry-hdr-title{
@@ -10,7 +11,7 @@
 .why-choose-sec .sec-entry-hdr-cntlr{
 	padding-bottom: 70px;
 }
-.why-choose-grid {
+.why-choose-grids {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -10px;
@@ -52,4 +53,53 @@
 }
 .why-choose-grid-btn{
 	text-align: center;
+	padding-top: 50px;
+}
+.why-choose-grid-btn .cdc-btn{
+	box-shadow: 0px 0px 6px rgba(2, 13, 28, 0.8);
+	padding: 14.5px 10px;
+	min-width: 190px;
+}
+.review-sec{
+	padding: 80px 0;
+}
+.review-grids {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.review-grid-col {
+    width: 50%;
+    padding: 0 20px;
+}
+.review-grids-cntlr {
+    padding: 0 50px;
+}
+.review-grids-item{
+	border: 1px solid #DDDDDD;
+	background: #F7F7F7;
+	text-align: center;
+}
+.review-pro-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -55px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.review-pro-img i {
+    display: inline-block;
+    height: 110px;
+    width: 110px;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 100%;
+    overflow: hidden;
+}
+.review-pro-img i img {
+    height: 110px;
+    width: 110px;
+    border-radius: 100%;
 }
