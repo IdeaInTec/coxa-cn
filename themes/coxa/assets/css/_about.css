@@ -16,3 +16,11 @@
 	padding-right: 50px;
 	order: 1;
 }
+
+.about-team-sec{
+	padding: 80px 0 75px;
+	background: #f7f7f7;
+}
+.about-team-sec .sec-entry-hdr-cntlr{
+	padding-bottom: 30px;
+}
