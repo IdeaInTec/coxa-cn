@@ -11,7 +11,7 @@
 
 
 /*---- RS ----*/ 
-
+@import url('_about.css');
 
 /*---- MIN ----*/ 
 
@@ -22,3 +22,5 @@
 
 /*---- SK ----*/ 
 @import url('_home2.css');
+
+@import url('_team.css');

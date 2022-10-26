@@ -1,0 +1,36 @@
+.counter-sec-cntlr{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.cdc-tm-counter{
+	text-align: center;
+	padding: 0 40px;
+	padding-top: 50px;
+}
+.cdc-tm-counter .cdc-counter-title{
+	margin-bottom: 10px;
+}
+.cdc-tm-counter{
+	font-size: 20px;
+	font-weight: 400;
+}
+.prfl-grd-title{
+	font-size: 22px;
+}
+.prfl-grd-subtitle{
+	font-size: 20px;
+}
+.prfl-grd-subtitle span{
+	font-size: 16px;
+	padding-left: 8px;
+}
+.profile-grids-inr ul{
+	display: flex;
+}
+.profile-grids-inr ul li{
+	padding: 0 9px 0 0;
+}
+.cdc-prfl-team-grd-item-des-cntlr{
+	padding: 25px 15px 20px;
+}
