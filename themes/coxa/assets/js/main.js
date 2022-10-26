@@ -329,6 +329,21 @@ if( $('.bannerSlider').length ){
       slidesToScroll: 1,
     });
 }
+if( $('.treatmentSlider').length ){
+    $('.treatmentSlider').slick({
+      dots: false,
+      infinite: true,
+      autoplay: true,
+      arrows: true,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      nextArrow: '.arrow-right',
+      prevArrow: '.arrow-left',
+    });
+}
+
 
 if( $('.treatment-sec').length ){
   var conW = $('.banner .container').width();
