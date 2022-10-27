@@ -390,6 +390,8 @@ if( $('.reviewSlider').length ){
       speed: 700,
       slidesToShow: 2,
       slidesToScroll: 1,
+      nextArrow: '.revw-right',
+      prevArrow: '.revw-left',
       responsive: [
         {
           breakpoint: 992,

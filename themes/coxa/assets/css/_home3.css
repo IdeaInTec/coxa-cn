@@ -163,6 +163,7 @@
 .locations-sec-grids {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -8px;
 }
 .locations-sec-grids .locations-sec-grid-item {
 	width: 33.3333%;

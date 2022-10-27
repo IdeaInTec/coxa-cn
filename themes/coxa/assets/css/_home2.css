@@ -139,6 +139,7 @@
 }
 .review-pro-des-btn a{
 	line-height: 1.25;
+	font-weight: 600;
 	color: #29467D;
 	text-decoration: none;
 	display: inline-block;
@@ -189,7 +190,29 @@
 .reviewSlider.slick-initialized .review-grid-col{
 	display: block;
 }
-
+.review-grids-cntlr {
+    position: relative;
+}
+.revw-next,
+.revw-prev{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	cursor: pointer;
+}
+.revw-next:hover span svg,
+.revw-prev:hover span svg{
+	fill: #A37D36;
+}
+.revw-prev{
+	left: 15px;
+}
+.revw-next{
+	right: 15px;
+}
 .cta-module-wrp {
     padding: 35px;
 }
@@ -232,4 +255,16 @@
 }
 .cta-btn a{
 	min-width: 190px;
+}
+
+
+/*page banner*/
+.page-banner-wrap{
+	position: relative;
+}
+.page-banner-bg{
+	height: 500px;
+	width: 100%;
+	position: relative;
+	z-index: 2;
 }
