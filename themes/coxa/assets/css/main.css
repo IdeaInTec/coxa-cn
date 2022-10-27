@@ -12,13 +12,14 @@
 
 /*---- RS ----*/ 
 @import url('_about.css');
-@import url('_our-practice.css');
+
 /*---- MIN ----*/ 
 
 
 /*---- NZ ----*/ 
 @import url('_home3.css');
-
+@import url('_our-practice.css');
+@import url('_why-choose-us.css');
 
 /*---- SK ----*/ 
 @import url('_home2.css');

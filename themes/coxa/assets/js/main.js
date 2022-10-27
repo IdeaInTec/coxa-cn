@@ -374,7 +374,20 @@ $(window).resize(function(){
     $(this).parents('.faq-grd').siblings().find('.faq-accordion-des').slideUp(300);  
   });
 
-
+if( $('.reviewSlider2').length ){
+    $('.reviewSlider2').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: '.revw-right',
+      prevArrow: '.revw-left',
+    });
+}
 
 
 
