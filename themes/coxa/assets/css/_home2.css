@@ -264,7 +264,8 @@
 }
 .cox-profile-modal .modal.show .modal-dialog{
 	max-width: 960px;
-	width: 100%;	
+	width: 100%;
+	margin-top: 100px;	
 }
 .cox-profile-modal .modal-body{
 	padding: 40px;
