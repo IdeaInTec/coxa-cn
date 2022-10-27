@@ -259,31 +259,31 @@
 
 
 /*modal*/
-.modal{
+.cox-profile-modal .modal{
 	background: rgba(4, 20, 38, 0.95);
 }
-.modal.show .modal-dialog{
+.cox-profile-modal .modal.show .modal-dialog{
 	max-width: 960px;
 	width: 100%;	
 }
-.modal-body{
+.cox-profile-modal .modal-body{
 	padding: 40px;
 	padding-top: 0;
 }
-.modal-content {
+.cox-profile-modal .modal-content {
     background: #F7F7F7;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%), 0px 4px 4px rgb(0 0 0 / 25%), 0px 0px 35px 8px rgb(0 0 0 / 40%);
 }
-.modal-header button{
+.cox-profile-modal .modal-header button{
 	margin-left: auto;
 	background: transparent;
 	padding: 0;
 	line-height: 1;
 }
-.modal-header button:hover i svg{
+.cox-profile-modal .modal-header button:hover i svg{
 	fill: #A37D36;
 }
-.modal-header{
+.cox-profile-modal .modal-header{
 	border: none;
 	padding: 32px 30px 24px;
 }
