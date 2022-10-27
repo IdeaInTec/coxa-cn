@@ -189,7 +189,29 @@
 .reviewSlider.slick-initialized .review-grid-col{
 	display: block;
 }
-
+.review-grids-cntlr {
+    position: relative;
+}
+.revw-next,
+.revw-prev{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	cursor: pointer;
+}
+.revw-next:hover span svg,
+.revw-prev:hover span svg{
+	fill: #A37D36;
+}
+.revw-prev{
+	left: 15px;
+}
+.revw-next{
+	right: 15px;
+}
 .cta-module-wrp {
     padding: 35px;
 }
