@@ -112,6 +112,7 @@
 .banner-desc-wrap .container .row .col-md-12{
 	height: 100%;
 }
+.pg-banner-cntlr,
 .banner-cntlr{
 	position: relative;
 	z-index: 7;
@@ -121,6 +122,7 @@
 	padding: 100px 0;
 	height: 100%;
 }
+.pg-banner-desc-cntlr,
 .banner-desc-cntlr{
 	text-align: center;
 	max-width: 800px;
@@ -128,6 +130,7 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+.pg-banner-title,
 .banner-title{
 	color: #fff;
 	text-align: center;
@@ -135,21 +138,29 @@
 	margin-bottom: 20px;
 	font-style: italic;
 }
+.pg-banner-title span,
+.banner-title span{
+	font-style: italic;
+}
+.pg-banner-desc-cntlr .diamond-module,
 .banner-desc-cntlr .diamond-module{
 	margin-bottom: 24px;
 }
-
+.pg-banner-desc p,
 .banner-desc p{
 	font-size: 24px;
 	color: #fff;
 	line-height: 1.8;
 }
+.pg-banner-desc p:last-of-type,
 .banner-desc p:last-of-type{
 	margin-bottom: 0;
 }
+.pg-banner-desc,
 .banner-desc{
 	margin-bottom: 34px;
 }
+.pg-banner-btns,
 .banner-btns{
 	display: flex;
 	align-items: center;
@@ -157,21 +168,36 @@
 	justify-content: center;
 	margin: 0 -12px;
 }
+.pg-banner-btn,
 .banner-btn{
 	padding: 0 12px;
 }
+.pg-banner-btn a,
 .banner-btn a{
 	font-size: 17px!important;
 }
+.pg-banner-btn .cdc-trnsprnt-btn,
 .banner-btn .cdc-trnsprnt-btn{
 	border-width: 1px;
 	color: #fff;
 	border-color: #fff;
 }
+.pg-banner-btn .cdc-trnsprnt-btn:hover,
 .banner-btn .cdc-trnsprnt-btn:hover{
 	border-color: #29467D;
 }
-
+.page-banner{
+	position: relative;
+	overflow: hidden;
+}
+.page-bnr-bg{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+}
 .treatment-sec{
 	background: #f7f7f7;
 	padding-top: 80px;
