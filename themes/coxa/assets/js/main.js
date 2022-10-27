@@ -313,12 +313,12 @@ var headerHeight = $('.header').height();
 var hmBnrH = windowHeighT - headerHeight;
 if (windowWidth > 767) {
   if (windowHeighT > 650) {
-    $('.banner-cntlr').css('height', hmBnrH);
+    $('.banner-bg').css('height', hmBnrH);
   }
 }
 
-if( $('.bannerSlider').length ){
-    $('.bannerSlider').slick({
+if( $('.bannerBgSlider').length ){
+    $('.bannerBgSlider').slick({
       dots: false,
       infinite: false,
       autoplay: true,
@@ -327,6 +327,8 @@ if( $('.bannerSlider').length ){
       speed: 700,
       slidesToShow: 1,
       slidesToScroll: 1,
+      nextArrow: '.bnr-right',
+      prevArrow: '.bnr-left',
     });
 }
 if( $('.treatmentSlider').length ){
