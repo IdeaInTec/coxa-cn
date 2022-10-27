@@ -39,7 +39,8 @@
 .faq-accordion-icon-box:after,
 .faq-accordion-title,
 .faq-accordion-hdr,
-.faq-accordion-icon-box{
+.faq-accordion-icon-box,
+.faq-accordion-icon-box:before{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -53,9 +54,6 @@
 }
 .faq-accordion-hdr:hover .faq-accordion-icon-box {
     border-color: #fff;
-}
-.faq-accordion-hdr:hover .faq-accordion-icon-box:after{
-	background-image: url('../images/faq-list-icon-hover.svg');
 }
 .faq-accordion-icon-box {
     position: absolute;
@@ -71,7 +69,8 @@
     border-radius: 100%;
     cursor: pointer;
 }
-.faq-accordion-icon-box:after{
+.faq-accordion-icon-box:after,
+.faq-accordion-icon-box:before{
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -81,13 +80,28 @@
 	transform: translate(-50%,-50%);
 	height: 8px;
 	width: 14px;
-	background-image: url('../images/faq-list-icon.svg');
-	background-repeat: no-repeat;
-	margin-top: 1px;
+	background-repeat: no-repeat;	
 }
-.active .faq-accordion-icon-box:after {
+.faq-accordion-icon-box:after{
+	margin-top: 1px;
+	background-image: url('../images/faq-list-icon.svg');
+}
+.faq-accordion-icon-box:before,
+.active .faq-accordion-icon-box:after{
+	opacity: 0;
+	z-index: -1;
+}
+.active .faq-accordion-icon-box:before,
+.faq-accordion-icon-box:after{
+    opacity: 1;
+	z-index: 1;
+}
+.faq-accordion-icon-box:before {
     background-image: url('../images/faq-list-icon-active.svg')!important;
     margin-top: -1px;
+}
+.faq-accordion-hdr:hover .faq-accordion-icon-box:after{
+	background-image: url('../images/faq-list-icon-hover.svg');
 }
 .active .faq-accordion-icon-box {
 	border-color: #fff;
