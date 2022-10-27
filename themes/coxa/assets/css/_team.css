@@ -1,36 +1,50 @@
-.counter-sec-cntlr{
+.counter-sec{
+	background: #F7F7F7;
+	padding: 20px 0;
+}
+.counter-cntlr{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 }
-.cdc-tm-counter{
+.counter-col{
 	text-align: center;
-	padding: 0 40px;
-	padding-top: 50px;
+	padding: 30px 10px 0;
+	width: 25%;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
 }
-.cdc-tm-counter .cdc-counter-title{
-	margin-bottom: 10px;
+.counter-number-title{
+	color: #11345E;
+	font-weight: 600;
+	line-height: 1;
+	margin-bottom: 14px;
 }
-.cdc-tm-counter{
-	font-size: 20px;
+.counter-col p{
+	font-size: 24px;
 	font-weight: 400;
+	line-height: 1.2;
+	color: #333333;
 }
-.prfl-grd-title{
-	font-size: 22px;
+.counter-col p:last-of-type{
+	margin-bottom: 0;
 }
-.prfl-grd-subtitle{
-	font-size: 20px;
+
+
+
+.profile-sec{
+	padding-top: 60px;
 }
-.prfl-grd-subtitle span{
-	font-size: 16px;
-	padding-left: 8px;
+.profile-cntlr{
+
 }
-.profile-grids-inr ul{
-	display: flex;
+.profile-module-cntlr{
+
 }
-.profile-grids-inr ul li{
-	padding: 0 9px 0 0;
+.pro-mdul-hdr{
+
 }
-.cdc-prfl-team-grd-item-des-cntlr{
-	padding: 25px 15px 20px;
+.pro-mdul-hdr .diamond-module{
+	margin-bottom: 14px;
 }
