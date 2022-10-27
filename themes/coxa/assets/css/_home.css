@@ -274,6 +274,7 @@
 }
 .trtmnt-grd-desc{
 	padding-bottom: 20px;
+	padding-right: 20px;
 }
 .trtmnt-grd-desc p{
 
@@ -297,4 +298,8 @@
 }
 .intro-btn{
 	padding: 0 8px;
+}
+
+@media(max-width: 1199px){
+	
 }
