@@ -343,6 +343,29 @@ if( $('.treatmentSlider').length ){
       slidesToScroll: 1,
       nextArrow: '.arrow-right',
       prevArrow: '.arrow-left',
+      responsive: [
+        {
+          breakpoint: 1799,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
 }
 

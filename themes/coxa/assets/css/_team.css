@@ -151,6 +151,9 @@
 .pm-grd-btn a{
 	padding: 11.5px 15px;
 }
+.pm-grd-desc{
+	display: none;
+}
 .team-pg-content-cntlr .cta-section{
 	margin-bottom: 44px;
 }
