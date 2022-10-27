@@ -8,7 +8,7 @@
 .ftr-top-cntlr {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 90px;
+    padding-top: 75px;
     padding-bottom: 130px;
 }
 .ftr-top-col{
@@ -45,7 +45,7 @@
 }
 .ftr-top-menu ul li{
 	line-height: 1;
-	margin-bottom: 23px;
+	margin-bottom: 22px;
 }
 .ftr-top-menu ul li:last-child{
 	margin-bottom: 0;
@@ -83,7 +83,7 @@
 	margin-bottom: 30px;
 }
 .massage-review-cntlr .massage-col{
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 .massage-review-cntlr .massage-col a,
 .massage-review-cntlr .review-col a{
@@ -258,11 +258,12 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	margin:  -12px;
+	/*margin:0  -12px;*/
 }
 .ftr-btm-menu ul li{
 	padding: 0 12px;
 	position: relative;
+	line-height: 1;
 }
 .ftr-btm-menu ul li:before {
     position: absolute;
@@ -276,7 +277,6 @@
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-    margin-top: 2px;
 }
 .ftr-btm-menu ul li:last-child:before{
 	content: none!important;
@@ -287,6 +287,7 @@
 	line-height: 1.7;
 	font-size: 13px;
 	color: #F7F7F7;
+	text-transform: capitalize;
 }
 .ftr-btm-menu ul li a:hover{
 	color: #A37D36;
