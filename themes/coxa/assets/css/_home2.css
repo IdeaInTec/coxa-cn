@@ -74,7 +74,7 @@
     padding-bottom: 28px;
 }
 .review-grids-cntlr {
-    padding: 0 50px 0;
+    padding: 0;
 }
 .review-grid-item{
 	border: 1px solid #DDDDDD;
@@ -208,10 +208,10 @@
 	fill: #A37D36;
 }
 .revw-prev{
-	left: 15px;
+	left: -35px;
 }
 .revw-next{
-	right: 15px;
+	right: -35px;
 }
 .cta-module-wrp {
     padding: 35px;
