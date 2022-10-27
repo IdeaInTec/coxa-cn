@@ -136,29 +136,41 @@
 	text-align: center;
 	line-height: 1;
 	margin-bottom: 20px;
-	font-style: italic;
+	font-weight: 600;
+}
+.pg-banner-title{
+	margin-bottom: 16px;
 }
 .pg-banner-title span,
 .banner-title span{
 	font-style: italic;
+	font-weight: 700;
 }
-.pg-banner-desc-cntlr .diamond-module,
+.pg-banner-desc-cntlr .diamond-module{
+	margin-bottom: 16px;
+}
 .banner-desc-cntlr .diamond-module{
 	margin-bottom: 24px;
 }
-.pg-banner-desc p,
 .banner-desc p{
 	font-size: 24px;
 	color: #fff;
 	line-height: 1.8;
 }
+.pg-banner-desc p{
+	font-size: 20px;
+	color: #fff;
+	line-height: 1.5;
+}
 .pg-banner-desc p:last-of-type,
 .banner-desc p:last-of-type{
 	margin-bottom: 0;
 }
-.pg-banner-desc,
 .banner-desc{
 	margin-bottom: 34px;
+}
+.pg-banner-desc{
+	margin-bottom: 30px;
 }
 .pg-banner-btns,
 .banner-btns{
@@ -175,6 +187,7 @@
 .pg-banner-btn a,
 .banner-btn a{
 	font-size: 17px!important;
+	min-width: 160px;
 }
 .pg-banner-btn .cdc-trnsprnt-btn,
 .banner-btn .cdc-trnsprnt-btn{
