@@ -80,7 +80,12 @@
 
 
     <!-- SK -->
-
+    <symbol id="revw-right-arrow" width="11" height="34" viewBox="0 0 11 34" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.9401 33.1176C0.64438 32.969 0.419627 32.7093 0.315119 32.3953C0.210611 32.0813 0.234879 31.7387 0.382601 31.4426L7.6001 17.0001L0.380098 2.56007C0.30505 2.41317 0.259824 2.25286 0.247027 2.08839C0.234229 1.92392 0.254114 1.75854 0.305534 1.60179C0.356955 1.44504 0.438894 1.30002 0.546628 1.17509C0.654362 1.05016 0.785758 0.947793 0.933243 0.873883C1.08073 0.799977 1.24138 0.755994 1.40595 0.744469C1.57051 0.732949 1.73573 0.754113 1.89207 0.806744C2.04842 0.85938 2.1928 0.942437 2.31689 1.05114C2.44099 1.15983 2.54233 1.29202 2.6151 1.44007L10.1151 16.4401C10.2022 16.6139 10.2476 16.8056 10.2476 17.0001C10.2476 17.1945 10.2022 17.3862 10.1151 17.5601L2.6151 32.5601C2.46657 32.8558 2.20683 33.0805 1.89284 33.1851C1.57885 33.2896 1.23623 33.2653 0.9401 33.1176Z"/>
+    </symbol>
+    <symbol id="revw-left-arrow" width="11" height="34" viewBox="0 0 11 34" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0599 0.882428C10.3556 1.03096 10.5804 1.2907 10.6849 1.60469C10.7894 1.91868 10.7651 2.2613 10.6174 2.55743L3.3999 16.9999L10.6199 31.4399C10.6949 31.5868 10.7402 31.7471 10.753 31.9116C10.7658 32.0761 10.7459 32.2415 10.6945 32.3982C10.643 32.555 10.5611 32.7 10.4534 32.8249C10.3456 32.9498 10.2142 33.0522 10.0668 33.1261C9.91927 33.2 9.75861 33.244 9.59405 33.2555C9.42948 33.2671 9.26427 33.2459 9.10792 33.1933C8.95158 33.1406 8.8072 33.0576 8.6831 32.9489C8.55901 32.8402 8.45766 32.708 8.3849 32.5599L0.8849 17.5599C0.797796 17.3861 0.752441 17.1944 0.752441 16.9999C0.752441 16.8055 0.797796 16.6138 0.8849 16.4399L8.3849 1.43993C8.53343 1.14421 8.79317 0.919454 9.10716 0.814947C9.42115 0.710439 9.76377 0.734706 10.0599 0.882428Z"/>
+    </symbol>
 
   </svg>  
 
@@ -761,16 +766,32 @@
                   </div>
                 </div>
               </div>
-              <div class="review-grid-btns">
-                <ul class="reset-list">
-                  <li>
-                    <a href="#" class="cdc-btn">See Patient Reviews</a>
-                  </li>
-                  <li>
-                    <a href="#" class="cdc-trnsprnt-btn">See Dentist Reviews</a>
-                  </li>
-                </ul>
-              </div>
+              <div class="review-prev-next">
+                <div class="revw-prev">
+                  <span class="revw-left">
+                    <svg class="revw-left-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#29467D">
+                      <use xlink:href="#revw-left-arrow"></use> 
+                    </svg>
+                  </span>
+                </div>
+                <div class="revw-next">
+                  <span class="revw-right">
+                    <svg class="revw-right-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#29467D">
+                      <use xlink:href="#revw-right-arrow"></use> 
+                    </svg>
+                  </span>
+                </div>
+              </div>              
+            </div>
+            <div class="review-grid-btns">
+              <ul class="reset-list">
+                <li>
+                  <a href="#" class="cdc-btn">See Patient Reviews</a>
+                </li>
+                <li>
+                  <a href="#" class="cdc-trnsprnt-btn">See Dentist Reviews</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
