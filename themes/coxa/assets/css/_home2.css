@@ -255,3 +255,15 @@
 .cta-btn a{
 	min-width: 190px;
 }
+
+
+/*page banner*/
+.page-banner-wrap{
+	position: relative;
+}
+.page-banner-bg{
+	height: 500px;
+	width: 100%;
+	position: relative;
+	z-index: 2;
+}
