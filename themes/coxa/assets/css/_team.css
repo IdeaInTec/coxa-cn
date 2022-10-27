@@ -34,17 +34,123 @@
 
 
 .profile-sec{
-	padding-top: 60px;
+	padding-bottom: 40px;
 }
 .profile-cntlr{
 
 }
 .profile-module-cntlr{
-
+	padding-top: 60px;
+}
+.specialists-profile-module{
+	padding-top: 32px;
 }
 .pro-mdul-hdr{
-
+	padding-bottom: 10px;
 }
 .pro-mdul-hdr .diamond-module{
 	margin-bottom: 14px;
+}
+.pro-mdul-hdr-title{
+	font-weight: 600;
+	color: #333333;
+}
+
+.profile-module{
+
+}
+.profile-module ul{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0 -10px;
+}
+.profile-module ul li{
+	padding: 0 10px;
+	width: 33.33%;
+	margin-bottom: 28px;
+}
+.pro-mdul-grd{
+
+}
+.pro-mdul-grd:hover .pm-grd-img{
+	transform: scale(1.042);
+	-ms-transform: scale(1.042);
+	-webkit-transform: scale(1.042);
+	-o-transform: scale(1.042);
+}
+.pm-grd-img-cntlr{
+	height: 420px;
+	position: relative;
+	overflow: hidden;
+	border-bottom: 4px solid #a47e37;
+}
+.pm-grd-img{
+	height: 100%;
+	width: 100%;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.pm-grd-desc-cntlr{
+	padding: 22px 14px 12px;
+	border: 1px solid #DDDDDD;
+}
+.pm-grd-title{
+	color: #333333;
+	line-height: 1;
+	margin-bottom: 8px;
+}
+.pm-grd-title a{
+	display: inline-block;
+	text-decoration: none;
+	color: #333333;
+	line-height: 1;
+}
+.pm-grd-title a:hover{
+	color: #11345E;
+}
+.pm-grd-assist{
+	line-height: 1;
+	margin-bottom: 8px;
+}
+.pm-grd-assist-name{
+	font-family: 'SourceSerifPro';
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1;
+	color: #11345E;
+}
+.pm-grd-assist-no{
+	font-family: 'SourceSansPro';
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 1;
+	color: #29467D;
+	margin-left: 8px;
+	border-bottom: 1px dashed #29467D;
+}
+.pm-grd-addr{
+	display: inline-block;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 1.5;
+	color: #A37D36;
+	margin-bottom: 15px;
+}
+.pm-grd-btns-cntlr{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0 -8px;
+}
+.pm-grd-btn{
+	padding: 0 8px;
+	margin-bottom: 8px;
+}
+.pm-grd-btn a{
+	padding: 11.5px 15px;
+}
+.team-pg-content-cntlr .cta-section{
+	margin-bottom: 44px;
 }
