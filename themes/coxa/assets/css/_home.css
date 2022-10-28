@@ -299,6 +299,9 @@
 .custom-prev-next-cntlr > div{
 	cursor: pointer;
 }
+.custom-prev-next-cntlr > div:hover span svg{
+	fill: #EACC95;
+}
 .treatment-grids{
 	margin:  0;
 	padding-bottom: 60px;
