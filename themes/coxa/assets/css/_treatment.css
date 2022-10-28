@@ -29,3 +29,12 @@
 	font-weight: 400;
 	margin-bottom: 25px;
 }
+.treatment-page-con-cntlr .pm-grd-btn a {
+    padding: 0;
+    color: #29467D;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px dotted #29467D;
+}
