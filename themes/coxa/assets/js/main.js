@@ -434,6 +434,21 @@ $('.counter-number').counterUp({
 });
 
 
+/*---- MSI ----*/ 
+if( $('.teamGrdSlider').length ){
+    $('.teamGrdSlider').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 3,
+      slidesToScroll: 1
+    });
+}
+
+
 
 new WOW().init();
 
