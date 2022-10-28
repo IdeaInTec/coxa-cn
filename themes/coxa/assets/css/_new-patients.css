@@ -1,0 +1,20 @@
+.patient-page-con-cntlr .cta-section{
+	padding-bottom: 70px;
+}
+.patient-page-con-cntlr .faq-sec{
+	padding-top: 70px;
+	padding-bottom: 90px;
+}
+.patients-intro-sec {
+	padding: 70px 0 70px;
+}
+.patients-intro-sec .abtis-lft-img-row .abtis-row-text{
+	padding-left: 40px;
+}
+.abtis-intro-des-btn {
+    display: inline-block;
+    padding-right: 16px;
+}
+.patients-intro-sec .abtis-row-text-inr p:not(:last-of-type){
+	margin-bottom: 20px;
+}
