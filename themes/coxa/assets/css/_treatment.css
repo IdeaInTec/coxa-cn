@@ -1,11 +1,11 @@
 .treatment-grds{
-	/*display: flex;
-	flex-wrap: wrap;*/
+	display: flex;
+	flex-wrap: wrap;
 	margin-left: -12px;
 	margin-right: -12px;
 }
 .treatment-grd-item-col{
-	/*width: 33.3333%;*/
+	width: 33.3333%;
 	padding: 0 12px 25px;
 }
 .treatment-grd-img-cntlr{
@@ -37,4 +37,14 @@
     text-decoration: none;
     padding-bottom: 1px;
     border-bottom: 1px dotted #29467D;
+}
+.treatment-page-con-cntlr .profile-module ul{
+	justify-content: center;
+}
+.treatment-page-con-cntlr .team-grd-item-col{
+	padding-bottom: 30px;
+}
+.treatment-page-con-cntlr .team-grds{
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
