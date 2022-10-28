@@ -109,3 +109,30 @@
 .sec-entry-hdr p:last-of-type{
 	margin-bottom: 0;
 }
+
+.sitemap-section{
+    padding: 55px 0 80px;
+}
+.sitemap ol{
+    font-weight: 700;
+}
+.sitemap ol li{
+    padding-top: 0;
+    padding-left: 35px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.sitemap ol li a {
+    display: inline-block;
+    transition: .5s;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #29467D;
+}
+.sitemap ol li a:hover{
+    color: #EACC95;
+}
+.sitemap ol li a:focus{
+    color: #EACC95;
+    text-decoration: underline;
+}
