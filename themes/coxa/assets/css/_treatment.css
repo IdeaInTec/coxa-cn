@@ -12,6 +12,10 @@
 	position: relative;
 	overflow: hidden;
 	border-bottom: 4px solid #A37D36;
+	height: 350px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .treatment-grd-des{
 	padding: 24px 15px 1px;
@@ -47,4 +51,17 @@
 .treatment-page-con-cntlr .team-grds{
 	padding-bottom: 0;
 	margin-bottom: 0;
+}
+
+
+/*our equionment*/
+.our-equionment-page-con-cntlr .treatments-sec{
+	padding-top: 50px;
+	padding-bottom: 70px;
+}
+.our-equionment-page-con-cntlr .treatment-sec{
+	padding-bottom: 30px;
+}
+.our-equionment-page-con-cntlr .cta-section{
+	padding-bottom: 70px;
 }
