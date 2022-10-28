@@ -52,6 +52,22 @@
 	padding-bottom: 0;
 	margin-bottom: 0;
 }
+.treatment-page-con-cntlr .review-grid-item{
+	background: #fff;
+}
+.review-color .sec-entry-hdr-title{
+	color: #FFFFFF;
+}
+.review-color .review-tstmnl-mgs{
+	color: #333333;
+}
+.patientReviewSlider.slick-slider .slick-dots li button{
+	border: 1px solid #EACC95!important;
+}
+.patientReviewSlider.slick-slider .slick-dots li.slick-active button, 
+.patientReviewSlider.slick-slider .slick-dots li button:hover {
+    background: #EACC95!important;
+}
 
 
 /*our equionment*/
