@@ -5,3 +5,9 @@
 	padding-top: 70px;
 	padding-bottom: 90px;
 }
+.patients-intro-sec {
+	padding: 70px 0 70px;
+}
+.patients-intro-sec .abtis-lft-img-row .abtis-row-text{
+	padding-left: 40px;
+}
