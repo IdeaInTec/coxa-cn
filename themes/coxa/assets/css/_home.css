@@ -104,8 +104,48 @@
 	top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
-    
+    left: 0;  
+}
+.bnr-recommended{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	position: absolute;
+	right: -20px;
+	bottom: 32px;
+	z-index: 10;
+}
+.start-module{
+	padding-right: 14px;
+}
+.start-module ul{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0 -4px;
+}
+.start-module ul li{
+	padding: 0 4px;
+}
+.bnr-recommended > span{
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 1;
+	color: #FFFFFF;
+	padding-top: 7px;
+	display: inline-block;
+}
+.bnr-recommended > span a{
+	font-weight: 400;
+	display: inline-block;
+	text-decoration: underline;
+	line-height: 1;
+	color: #FFFFFF;
+	font-style: italic;
+}
+.bnr-recommended > span a:hover{
+	color: #EACC95;
+	text-decoration: none;
 }
 .banner-desc-wrap .container,
 .banner-desc-wrap .container .row,
@@ -223,6 +263,9 @@
 .treatment-lft{
 	width: 22.83%;
 	padding-right: 40px;
+}
+.treatment-lft .diamond-module{
+	margin-bottom: 33px;
 }
 .treatment-title{
 	font-size: 32px;
