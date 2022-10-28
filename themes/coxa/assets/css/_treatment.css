@@ -1,0 +1,31 @@
+.treatment-grds{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -12px;
+	margin-right: -12px;
+}
+.treatment-grd-item-col{
+	width: 33.3333%;
+	padding: 0 12px 25px;
+}
+.treatment-grd-img-cntlr{
+	position: relative;
+	overflow: hidden;
+	border-bottom: 4px solid #A37D36;
+}
+.treatment-grd-des{
+	padding: 24px 15px 1px;
+}
+.treatment-grd-des-title{
+	margin-bottom: 16px;
+	font-weight: 600;
+}
+.treatment-grd-des-title > a{
+	color: #11345E;
+}
+.treatment-grd-des-subtitle{
+	color: #A37D36;
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 25px;
+}
