@@ -371,7 +371,7 @@ if( $('.treatmentSlider').length ){
 
 
 if( $('.treatment-sec').length ){
-  var conW = $('.banner .container').width();
+  var conW = $('.container').width();
   var conLW2 = windowWidth - conW;
   var conLW = conLW2 / 2;
   $('.treatment-cntlr').css('margin-left', conLW);
@@ -379,7 +379,7 @@ if( $('.treatment-sec').length ){
 $(window).resize(function(){
   var windowWidth2 = $(window).width();
   if( $('.treatment-sec').length ){
-  var conW = $('.banner .container').width();
+  var conW = $('.container').width();
   var conLW2 = windowWidth2 - conW;
   var conLW = conLW2 / 2;
   $('.treatment-cntlr').css('margin-left', conLW);
