@@ -11,3 +11,7 @@
 .patients-intro-sec .abtis-lft-img-row .abtis-row-text{
 	padding-left: 40px;
 }
+.abtis-intro-des-btn {
+    display: inline-block;
+    padding-right: 16px;
+}
