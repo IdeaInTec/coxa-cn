@@ -117,13 +117,13 @@
 	align-items: center;
 	justify-content: center;
 }
-.our-equionment-page-con-cntlr .abtis-row-img-inner{
+/*.our-equionment-page-con-cntlr .abtis-row-img-inner{
 	margin-right: -40px;
 }
 .our-equionment-page-con-cntlr .abtis-lft-img-row .abtis-row-img-inner{
 	margin-right: initial;
 	margin-left: -40px;
-}
+}*/
 .our-equionment-page-con-cntlr .about-intro-sec{
 	overflow: hidden;
 }
