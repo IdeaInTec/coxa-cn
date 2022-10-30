@@ -1,0 +1,94 @@
+.galler-sec{
+	background: #fff!important;
+	max-width: 1920px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border: none!important;
+}
+.galler-sec .practice-gallery-grid-img-cntlr{
+	box-shadow: none;
+	margin-bottom: 20px;
+	opacity: 0.7;
+	border-bottom: none;
+	transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.galler-sec .why-choose-grids {
+    margin: 0 0px;
+    padding: 0 20px;
+}
+.galler-sec .why-choose-grids .practice-gallery-grid-col {
+	width: 20%;
+	margin-bottom: 30px;
+}
+.galler-sec .practice-gallery-grid-img-cntlr .practice-gallery-grid-img {
+    height: 370px;
+}
+.galler-sec .practice-gallery-grid-title, .galler-sec .practice-gallery-grid-title a {
+    color: #333333;
+    text-align: left;
+}
+.galler-sec .practice-gallery-grid-des {
+    text-align: left;
+}
+.galler-sec .practice-gallery-grid-img-cntlr:before{
+    content: '';
+    position: absolute;
+    width: calc( 100% - 50px );
+    height: calc(100% - 50px);
+    opacity: 0;
+    transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    border-top: 4px solid #A37D36;
+    border-left: 4px solid #A37D36;
+    border-bottom: 4px solid #A37D36;
+    border-right: 4px solid #A37D36;
+    right: 25px;
+    left: 25px;
+    top: 25px;
+    bottom: 25px;
+    z-index: 1;
+}
+.galler-sec .practice-gallery-grid-img-cntlr:after{
+	content: "";
+	position: absolute;
+	height: 4px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #A37D36;
+	transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+	opacity: 1;
+}
+.galler-sec .practice-gallery-grid-img-cntlr:hover:after{
+	opacity: 0;
+}
+/*.galler-sec .practice-gallery-grid-img-cntlr:hover{
+	opacity: 1;
+	border-bottom: 4px solid transparent;
+	transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}*/
+.galler-sec .practice-gallery-grid-img-cntlr:hover:before{
+    opacity: 1;
+}
+.galler-sec .practice-gallery-grid-img-cntlr:hover{
+	opacity: 1;
+}
+@media(max-width: 1599px){
+	.galler-sec .practice-gallery-grid-img-cntlr .practice-gallery-grid-img {
+	    height: 310px;
+	}
+}
+
+@media(max-width: 1399px){
+	.galler-sec .practice-gallery-grid-img-cntlr .practice-gallery-grid-img {
+	    height: 250px;
+	}
+}
