@@ -1,3 +1,122 @@
 .fees-banner-btns .pg-banner-btn a{
 	padding: 14.5px 12px;
 }
+.fees-sec{
+	padding-top: 60px;
+}
+.fees-sec-cntlr{
+	padding-bottom: 18px;
+}
+.fees-sec-entry-hdr{
+	margin-bottom: 44px;
+	text-align: center;
+	width: 100%;
+	max-width: 920px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.fees-sec-entry-hdr p:last-of-type{
+	margin-bottom: 0;
+}
+.fees-cntlr{
+
+}
+.fees-tab{
+	padding-bottom: 48px;
+	margin-bottom: 49px;
+}
+.fees-tab ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 -12px;
+}
+.fees-tab ul li{
+	padding: 0 12px;
+	position: relative;
+	line-height: 1;
+}
+.fees-tab ul li:after{
+	position: absolute;
+	content: "";
+	height: 24px;
+	width: 2px;
+	background: #DDDDDD;
+	right: 0;
+	top: 50%;
+	transform: translate(50%,-50%);
+	-ms-transform: translate(50%,-50%);
+	-webkit-transform: translate(50%,-50%);
+	-o-transform: translate(50%,-50%);
+}
+.fees-tab ul li:last-child:after{
+	content: none;
+	display: none;
+}
+.fees-tab ul li a{
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 1.2;
+	color: #29467D;
+	display: inline-block;
+	text-decoration: none;
+	padding-bottom: 3px;
+	border-bottom: 1px dashed #29467D;
+}
+.fees-tab ul li a.active{
+	color: #EACC95;
+	border-color: #EACC95;
+}
+.fees-tab ul li a:hover{
+	color: #EACC95;
+	border-color: transparent;
+}
+.fees-module-cntlr{
+	padding-bottom: 60px;
+}
+.fees-module-title{
+	text-align: center;
+	margin-bottom: 34px;
+}
+.fees-module{
+	max-width: 637px;
+	width: 100%;
+	background: #F7F7F7;
+	border-radius: 8px;
+	padding: 34px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+.fees-module ul li{
+	line-height: 1;
+	padding-bottom: 17px;
+	margin-bottom: 17px;
+	border-bottom: 1px solid #DDDDDD;
+}
+.fees-module ul li:last-child{
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.fees-module-item{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	line-height: 1;
+}
+.fees-module-item-name{
+	color: #000000;
+	display: inline-block;
+	line-height: 1;
+	font-size: 20px;
+	padding-right: 10px;
+}
+.fees-module-item-prize{
+	font-weight: 600;
+	display: inline-block;
+	line-height: 1;
+	font-size: 20px;
+	color: #A37D36;
+}
