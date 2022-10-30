@@ -33,7 +33,7 @@
 }
 .fees-tab ul li{
 	padding: 0 12px;
-	position: relative;
+	position: relative; 
 	line-height: 1;
 }
 .fees-tab ul li:after{
@@ -63,7 +63,7 @@
 	padding-bottom: 3px;
 	border-bottom: 1px dashed #29467D;
 }
-.fees-tab ul li a.active{
+.fees-tab ul li.active a{
 	color: #EACC95;
 	border-color: #EACC95;
 }
