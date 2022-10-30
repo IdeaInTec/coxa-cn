@@ -402,16 +402,13 @@ if( $('.tmreviewSlider').length ){
 }
 
 
-
-
-
-
-$('.fees-tab ul li a').click(function(e) {
-  e.preventDefault();
-  var sonp = $(this).data('tag');
-  alert(sonp);
-    $(sonp).scroll(100);
-}); 
+$('#onepagenav').onePageNav({
+  currentClass: 'active',
+  changeHash: false,
+  scrollSpeed: 750,
+  scrollThreshold: 0.5,
+  filter: '',
+});
 
 
 
