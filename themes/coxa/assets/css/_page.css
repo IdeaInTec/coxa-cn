@@ -137,7 +137,7 @@ ul li {
 	position: relative;
 	line-height: 1.5;
 }
-ul li:after{
+ul li:before{
 	position: absolute;
 	content: '';
 	top: 10px;
