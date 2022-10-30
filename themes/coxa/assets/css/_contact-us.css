@@ -14,13 +14,13 @@
 	position: relative;
 }
 .map-loc-desc-cntlr {
-    max-width: 309px;
+    max-width: 300px;
 }
 .map-item-img-cntlr{
 	border
 }
 .map-item-loc-phn{
-	padding: 12px 28px 8px 8px;
+	padding: 12px 8px;
 }
 .map-loc-title{
 	background: linear-gradient(90deg, #0D2E56 0%, #11345E 50%, #0D2E56 100%);
