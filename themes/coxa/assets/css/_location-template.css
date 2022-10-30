@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tl-team-sec{
+	padding-top: 80px;
+	padding-bottom: 14px;
+}
+.tl-team-sec .profile-module ul{
+	justify-content: center;
+	margin-top: 14px;
+}
+.tl-review-sec{
+	padding-top: 80px;
+	padding-bottom: 40px;
+}
+.practice-gallery.tl-practice-gallery{
+	background: linear-gradient(90deg, #F7F7F7 0%, #FFFFFF 50%, #F7F7F7 100%);
+	padding-top: 70px!important;
+	padding-top: 60px!important;
+}
+.tl-faq-sec{
+	padding-top: 66px;
+	padding-bottom: 66px;
+}
