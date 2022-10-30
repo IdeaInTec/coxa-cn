@@ -60,3 +60,9 @@
 	font-weight: 400;
 	color: #333;
 }
+.faq-page-con-cntlr .faq-grd{
+	padding-bottom: 8px;
+}
+.faq-grid-item-col{
+	padding-bottom: 65px;
+}
