@@ -81,7 +81,7 @@
 	padding-bottom: 8px;
 }
 .faq-grid-item-col{
-	padding-bottom: 65px;
+	padding-bottom: 60px;
 }
 .faq-grd-cntlr{
 	max-width: 900px;
@@ -91,4 +91,8 @@
 }
 .faq-grids{
 	padding: 0 50px;
+}
+.faq-page-con-cntlr .treatment-sec{
+	padding-top: 60px;
+	padding-bottom: 25px;
 }
