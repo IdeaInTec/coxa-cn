@@ -406,6 +406,14 @@ if( $('.tmreviewSlider').length ){
 
 
 
+$('.fees-tab ul li a').click(function(e) {
+  e.preventDefault();
+  var sonp = $(this).data('tag');
+  alert(sonp);
+    $(sonp).scroll(100);
+}); 
+
+
 
 
 /*---- NZ ----*/ 
