@@ -57,6 +57,7 @@
 }
 .review-color .sec-entry-hdr-title{
 	color: #FFFFFF;
+	font-weight: 600;
 }
 .review-color .review-tstmnl-mgs{
 	color: #333333;
@@ -79,9 +80,9 @@
 	padding-top: 90px;
 	padding-bottom: 40px;
 }
-.treatment-page-con-cntlr .abtis-row-img-inner{
+/*.treatment-page-con-cntlr .abtis-row-img-inner{
 	margin-right: -30px;
-}
+}*/
 .treatment-page-con-cntlr .why-choose-sec{
 	margin-top: 20px;
 }
@@ -97,6 +98,9 @@
 .treatment-page-con-cntlr .faq-accordion-title{
 	color: #333;
 	font-weight: 400;
+}
+.treatment-page-con-cntlr .faq-sec .sec-entry-hdr-title{
+	font-weight: 600;
 }
 
 
