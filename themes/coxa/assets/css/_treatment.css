@@ -79,7 +79,7 @@
 	padding-top: 90px;
 	padding-bottom: 40px;
 }
-.treatment-page-con-cntlr .abtis-row-img{
+.treatment-page-con-cntlr .abtis-row-img-inner{
 	margin-right: -30px;
 }
 .treatment-page-con-cntlr .why-choose-sec{
@@ -116,4 +116,28 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+.our-equionment-page-con-cntlr .abtis-row-img-inner{
+	margin-right: -40px;
+}
+.our-equionment-page-con-cntlr .abtis-lft-img-row .abtis-row-img-inner{
+	margin-right: initial;
+	margin-left: -40px;
+}
+.our-equionment-page-con-cntlr .about-intro-sec{
+	overflow: hidden;
+}
+.our-equionment-page-con-cntlr .abtis-row-text p{
+	margin-bottom: 30px;
+}
+.our-equionment-page-con-cntlr .abtis-row-text p:last-of-type{
+	margin-bottom: 15px;
+}
+.our-equionment-page-con-cntlr .cta-section{
+	overflow: hidden;
+	margin-top: 50px;
+}
+.our-equionment-page-con-cntlr .cta-module-wrp{
+	margin-left: -20px;
+	margin-right: -20px;
 }
