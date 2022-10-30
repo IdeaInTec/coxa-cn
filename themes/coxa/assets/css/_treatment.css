@@ -1,0 +1,83 @@
+.treatment-grds{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -12px;
+	margin-right: -12px;
+}
+.treatment-grd-item-col{
+	width: 33.3333%;
+	padding: 0 12px 25px;
+}
+.treatment-grd-img-cntlr{
+	position: relative;
+	overflow: hidden;
+	border-bottom: 4px solid #A37D36;
+	height: 350px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.treatment-grd-des{
+	padding: 24px 15px 1px;
+}
+.treatment-grd-des-title{
+	margin-bottom: 16px;
+	font-weight: 600;
+}
+.treatment-grd-des-title > a{
+	color: #11345E;
+}
+.treatment-grd-des-subtitle{
+	color: #A37D36;
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 25px;
+}
+.treatment-page-con-cntlr .pm-grd-btn a {
+    padding: 0;
+    color: #29467D;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px dotted #29467D;
+}
+.treatment-page-con-cntlr .profile-module ul{
+	justify-content: center;
+}
+.treatment-page-con-cntlr .team-grd-item-col{
+	padding-bottom: 30px;
+}
+.treatment-page-con-cntlr .team-grds{
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.treatment-page-con-cntlr .review-grid-item{
+	background: #fff;
+}
+.review-color .sec-entry-hdr-title{
+	color: #FFFFFF;
+}
+.review-color .review-tstmnl-mgs{
+	color: #333333;
+}
+.patientReviewSlider.slick-slider .slick-dots li button{
+	border: 1px solid #EACC95!important;
+}
+.patientReviewSlider.slick-slider .slick-dots li.slick-active button, 
+.patientReviewSlider.slick-slider .slick-dots li button:hover {
+    background: #EACC95!important;
+}
+
+
+/*our equionment*/
+.our-equionment-page-con-cntlr .treatments-sec{
+	padding-top: 50px;
+	padding-bottom: 70px;
+}
+.our-equionment-page-con-cntlr .treatment-sec{
+	padding-bottom: 30px;
+}
+.our-equionment-page-con-cntlr .cta-section{
+	padding-bottom: 70px;
+}

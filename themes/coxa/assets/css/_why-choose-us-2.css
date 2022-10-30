@@ -1,0 +1,18 @@
+.why-choose-page-con-cntlr .intro-sec{
+	padding-top: 75px;
+	padding-bottom: 35px;
+}
+.why-choose-page-con-cntlr .intro-cntlr .sec-entry-hdr p{
+	font-size: 15px;
+	line-height: 2;
+}
+.why-choose-page-con-cntlr .intro-sec .sec-entry-hdr-title{
+	font-weight: 600;
+}
+.why-choose-page-con-cntlr .intro-cntlr .sec-entry-hdr-cntlr {
+    max-width: 890px;
+}
+.why-choose-page-con-cntlr .counter-sec{
+	background: transparent;
+	margin-bottom: 80px;
+}

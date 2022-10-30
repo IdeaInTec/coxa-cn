@@ -14,6 +14,8 @@
 @import url('_about.css');
 
 /*---- MIN ----*/ 
+@import url('_fees.css');
+@import url('_testimonials.css');
 
 
 /*---- NZ ----*/ 
@@ -23,5 +25,11 @@
 
 /*---- SK ----*/ 
 @import url('_home2.css');
-
+@import url('_why-choose-us-2.css');
 @import url('_team.css');
+@import url('_new-patients.css');
+
+
+
+/*---- MSI ----*/ 
+@import url('_treatment.css');

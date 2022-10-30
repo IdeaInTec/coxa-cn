@@ -343,12 +343,35 @@ if( $('.treatmentSlider').length ){
       slidesToScroll: 1,
       nextArrow: '.arrow-right',
       prevArrow: '.arrow-left',
+      responsive: [
+        {
+          breakpoint: 1799,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
 }
 
 
 if( $('.treatment-sec').length ){
-  var conW = $('.banner .container').width();
+  var conW = $('.container').width();
   var conLW2 = windowWidth - conW;
   var conLW = conLW2 / 2;
   $('.treatment-cntlr').css('margin-left', conLW);
@@ -356,12 +379,27 @@ if( $('.treatment-sec').length ){
 $(window).resize(function(){
   var windowWidth2 = $(window).width();
   if( $('.treatment-sec').length ){
-  var conW = $('.banner .container').width();
+  var conW = $('.container').width();
   var conLW2 = windowWidth2 - conW;
   var conLW = conLW2 / 2;
   $('.treatment-cntlr').css('margin-left', conLW);
 }
 });
+
+if( $('.tmreviewSlider').length ){
+    $('.tmreviewSlider').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: '.revw-right',
+      prevArrow: '.revw-left',
+    });
+}
 
 
 
@@ -416,6 +454,39 @@ if( $('.reviewSlider').length ){
           }
         }
       ]
+    });
+}
+$('.counter-number').counterUp({
+  delay: 15,
+  time: 1500
+});
+
+
+/*---- MSI ----*/ 
+if( $('.teamGrdSlider').length ){
+    $('.teamGrdSlider').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 3,
+      slidesToScroll: 1
+    });
+}
+if( $('.patientReviewSlider').length ){
+    $('.patientReviewSlider').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: '.revw-right',
+      prevArrow: '.revw-left',
     });
 }
 
