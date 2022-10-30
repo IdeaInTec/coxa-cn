@@ -514,6 +514,32 @@ if( $('.patientReviewSlider').length ){
     });
 }
 
+if( $('.reviewSliderGrd3').length ){
+    $('.reviewSliderGrd3').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      nextArrow: '.revw-right',
+      prevArrow: '.revw-left',
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        }
+      ]
+    });
+}
+
 
 
 new WOW().init();
