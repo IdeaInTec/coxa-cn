@@ -48,3 +48,15 @@
 .sec-entry-hdr ul li a:hover{
 	color: #EACC95;
 }
+
+
+.faq-grd-title{
+	margin-bottom: 40px;
+	color: #000;
+	font-weight: 400;
+	text-transform: capitalize;
+}
+.faq-page-con-cntlr .faq-accordion-title{
+	font-weight: 400;
+	color: #333;
+}

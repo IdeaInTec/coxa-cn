@@ -352,9 +352,9 @@ if( $('.treatmentSlider').length ){
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 1199,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1
           }
         },
@@ -400,6 +400,18 @@ if( $('.tmreviewSlider').length ){
       prevArrow: '.revw-left',
     });
 }
+
+
+
+
+
+
+$('.fees-tab ul li a').click(function(e) {
+  e.preventDefault();
+  var sonp = $(this).data('tag');
+  alert(sonp);
+    $(sonp).scroll(100);
+}); 
 
 
 
