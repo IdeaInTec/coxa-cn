@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Location Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#11345E">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <!--   <?php $favicon = get_theme_mod('favicon'); if(!empty($favicon)) { ?> 
+  <link rel="shortcut icon" href="<?php echo $favicon; ?>" />
+  <?php } ?> -->
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome/font-awesome.css">
+  
+  <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="assets/fancybox3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/slick.slider/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="assets/slick.slider/slick.css">
+  <link rel="stylesheet" type="text/css" href="assets/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/select2/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/flatpickr/flatpickr.min.css">  
+  <link rel="stylesheet" type="text/css" href="assets/fonts/custom-fonts.css">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->	
+  <svg style="display: none;">
+  <!-- <svg class="id-name" width="16" height="16" viewBox="0 0 16 16" fill="#FF5C26">
+    <use xlink:href="#id-name"></use> </svg> -->
+
+    <!-- RS -->
+
+
+
+    <!-- MIN -->
+    <symbol id="prev-line" width="66" height="20" viewBox="0 0 66 20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1.11612 9.11612C0.62796 9.60428 0.62796 10.3957 1.11612 10.8839L9.07107 18.8388C9.55922 19.327 10.3507 19.327 10.8388 18.8388C11.327 18.3507 11.327 17.5592 10.8388 17.0711L3.76777 10L10.8388 2.92894C11.327 2.44078 11.327 1.64933 10.8388 1.16117C10.3507 0.673015 9.55922 0.673015 9.07107 1.16117L1.11612 9.11612ZM66 8.75L2 8.75001L2 11.25L66 11.25L66 8.75Z"/>
+    </symbol>
+
+    <symbol id="next-line" width="66" height="20" viewBox="0 0 66 20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M64.8839 10.8839C65.372 10.3957 65.372 9.60427 64.8839 9.11612L56.9289 1.16117C56.4408 0.67301 55.6493 0.67301 55.1612 1.16117C54.673 1.64932 54.673 2.44078 55.1612 2.92893L62.2322 10L55.1612 17.0711C54.673 17.5592 54.673 18.3507 55.1612 18.8388C55.6493 19.327 56.4408 19.327 56.9289 18.8388L64.8839 10.8839ZM-3.14164e-09 11.25L64 11.25L64 8.75L3.14164e-09 8.75L-3.14164e-09 11.25Z"/>
+    </symbol>
+
+    <symbol id="bnr-left-arrow" width="16" height="50" viewBox="0 0 16 50" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5901 0.823764C15.0337 1.04656 15.3708 1.43617 15.5276 1.90716C15.6843 2.37814 15.6479 2.89207 15.4263 3.33626L4.60009 25L15.4301 46.66C15.5427 46.8804 15.6105 47.1208 15.6297 47.3675C15.6489 47.6142 15.6191 47.8623 15.5419 48.0974C15.4648 48.3326 15.3419 48.5501 15.1803 48.7375C15.0187 48.9249 14.8216 49.0784 14.6004 49.1893C14.3791 49.3002 14.1382 49.3661 13.8913 49.3834C13.6445 49.4007 13.3966 49.3689 13.1621 49.29C12.9276 49.2111 12.711 49.0865 12.5249 48.9234C12.3388 48.7604 12.1867 48.5621 12.0776 48.34L0.827594 25.84C0.696938 25.5793 0.628906 25.2917 0.628906 25C0.628906 24.7084 0.696938 24.4207 0.827594 24.16L12.0776 1.66001C12.3004 1.21643 12.69 0.879303 13.161 0.722542C13.632 0.565781 14.1459 0.602182 14.5901 0.823764Z" fill-opacity="1"/>
+    </symbol>
+
+    <symbol id="bnr-right-arrow" width="16" height="50" viewBox="0 0 16 50" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.40991 49.1762C0.966326 48.9534 0.629196 48.5638 0.472435 48.0928C0.315673 47.6219 0.352075 47.1079 0.573658 46.6637L11.3999 25L0.569902 3.33999C0.45733 3.11963 0.389492 2.87916 0.370296 2.63246C0.3511 2.38575 0.380927 2.13769 0.458057 1.90257C0.535188 1.66744 0.658098 1.44991 0.819698 1.26252C0.981298 1.07512 1.17839 0.921567 1.39962 0.810708C1.62085 0.699846 1.86183 0.63387 2.10868 0.616586C2.35552 0.599302 2.60335 0.631051 2.83787 0.71C3.07239 0.788949 3.28896 0.913537 3.4751 1.07658C3.66123 1.23963 3.81326 1.43791 3.9224 1.65999L15.1724 24.16C15.3031 24.4207 15.3711 24.7083 15.3711 25C15.3711 25.2916 15.3031 25.5793 15.1724 25.84L3.92241 48.34C3.69961 48.7836 3.31 49.1207 2.83901 49.2775C2.36802 49.4342 1.8541 49.3978 1.40991 49.1762Z" fill-opacity="1"/>
+    </symbol>
+
+
+    <!-- NZ -->
+    <symbol id="ftr-massage-icon"width="24" height="22" viewBox="0 0 24 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.0001 0.790039C5.37193 0.790039 0.00131835 5.1541 0.00131835 10.54C0.00131835 12.7727 0.9346 14.8174 2.48147 16.4557C1.78397 18.3072 0.331318 19.8719 0.307881 19.8893C-0.00266603 20.2174 -0.0846973 20.6979 0.091084 21.108C0.272772 21.5182 0.674115 21.79 1.12505 21.79C4.00787 21.79 6.23912 20.583 7.64537 19.6221C8.95787 20.0463 10.4672 20.29 12.0001 20.29C18.6282 20.29 23.9579 15.9246 23.9579 10.54C23.9579 5.15551 18.6282 0.790039 12.0001 0.790039ZM12.0047 18.04C10.7508 18.04 9.51474 17.8467 8.33068 17.4719L7.26427 17.1379L6.35021 17.7825C5.68224 18.2568 4.76208 18.7846 3.6549 19.1418C4.0006 18.5737 4.32849 17.9348 4.58677 17.2551L5.08458 15.9426L4.11802 14.9175C3.27287 14.0135 2.25333 12.5182 2.25333 10.54C2.25333 6.40332 6.62443 3.04004 12.0033 3.04004C17.3822 3.04004 21.7533 6.40332 21.7533 10.54C21.7533 14.6768 17.3813 18.04 12.0047 18.04Z" fill="#EACC95"/>
+    </symbol>
+    <symbol id="ftr-review-icon"width="23" height="25" viewBox="0 0 23 25" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21.8564 13.7286C22.2675 13.0325 22.5 12.29 22.5 11.3924C22.5 9.32918 20.7554 7.38082 18.4772 7.38082H16.7672C16.9978 6.78035 17.182 6.06223 17.182 5.19926C17.182 1.78704 15.4153 0.290039 12.7162 0.290039C9.82842 0.290039 9.99314 4.74002 9.3525 5.38066C8.28623 6.44693 7.0268 8.49537 6.12937 9.29004H1.5C0.671578 9.29004 0 9.96162 0 10.79V22.04C0 22.8685 0.671578 23.54 1.5 23.54H4.5C5.19811 23.54 5.78475 23.0631 5.95209 22.4174C8.03845 22.4643 9.47053 24.2896 14.2866 24.2896C14.625 24.2896 15 24.29 15.3281 24.29C18.943 24.29 20.5775 22.4421 20.6222 19.8214C21.2465 18.9578 21.5737 17.8001 21.435 16.6813C21.8969 15.8164 22.0755 14.7902 21.8564 13.7286ZM18.9619 16.2519C19.5506 17.2424 19.0209 18.568 18.3084 18.9505C18.6694 21.2371 17.4831 22.0396 15.8184 22.0396H14.0456C10.6875 22.0396 8.51302 20.2668 6 20.2668V11.54H6.51188C7.84125 11.54 9.69844 8.21707 10.9434 6.9716C12.2728 5.64223 11.8298 3.42645 12.7162 2.54004C14.932 2.54004 14.932 4.08598 14.932 5.19926C14.932 7.03535 13.6027 7.85801 13.6027 9.63082H18.4772C19.4667 9.63082 20.2458 10.5172 20.25 11.4036C20.2542 12.2896 19.6491 13.176 19.2061 13.176C19.8384 13.8582 19.9735 15.2964 18.9619 16.2519ZM4.125 20.54C4.125 21.1614 3.62133 21.665 3 21.665C2.37867 21.665 1.875 21.1614 1.875 20.54C1.875 19.9187 2.37867 19.415 3 19.415C3.62133 19.415 4.125 19.9187 4.125 20.54Z" fill="#EACC95"/>
+    </symbol>
+    <symbol id="facebook-icon" width="10" height="18" viewBox="0 0 10 18" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.39703 17.9972V9.80117H9.16203L9.57303 6.59217H6.39703V4.54817C6.39703 3.62217 6.65503 2.98817 7.98403 2.98817H9.66803V0.127169C8.84867 0.0393602 8.02508 -0.00303802 7.20103 0.000169166C4.75703 0.000169166 3.07903 1.49217 3.07903 4.23117V6.58617H0.332031V9.79517H3.08503V17.9972H6.39703Z" />
+    </symbol>
+
+    <symbol id="twitter-icon"width="24" height="20" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23.643 2.93708C22.808 3.30708 21.911 3.55708 20.968 3.67008C21.941 3.08787 22.669 2.17154 23.016 1.09208C22.1019 1.63507 21.1014 2.01727 20.058 2.22208C19.3564 1.47294 18.4271 0.976403 17.4143 0.809551C16.4016 0.642699 15.3621 0.814868 14.4572 1.29933C13.5524 1.78379 12.8328 2.55344 12.4102 3.48878C11.9875 4.42412 11.8855 5.47283 12.12 6.47208C10.2677 6.37907 8.45564 5.89763 6.80144 5.05898C5.14723 4.22034 3.68785 3.04324 2.51801 1.60408C2.11801 2.29408 1.88801 3.09408 1.88801 3.94608C1.88757 4.71307 2.07644 5.46832 2.43789 6.14481C2.79934 6.8213 3.32217 7.39812 3.96001 7.82408C3.22029 7.80054 2.49688 7.60066 1.85001 7.24108V7.30108C1.84994 8.37682 2.22204 9.41945 2.90319 10.2521C3.58434 11.0847 4.53258 11.656 5.58701 11.8691C4.9008 12.0548 4.18135 12.0821 3.48301 11.9491C3.78051 12.8747 4.36001 13.6841 5.14038 14.264C5.92075 14.8439 6.86293 15.1653 7.83501 15.1831C6.18484 16.4785 4.1469 17.1812 2.04901 17.1781C1.67739 17.1782 1.30609 17.1565 0.937012 17.1131C3.06649 18.4823 5.54535 19.2089 8.07701 19.2061C16.647 19.2061 21.332 12.1081 21.332 5.95208C21.332 5.75208 21.327 5.55008 21.318 5.35008C22.2293 4.69105 23.0159 3.87497 23.641 2.94008L23.643 2.93708Z"/>
+    </symbol>
+    <symbol id="instagram-icon"width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.465 0.066C7.638 0.012 8.012 0 11 0C13.988 0 14.362 0.013 15.534 0.066C16.706 0.119 17.506 0.306 18.206 0.577C18.939 0.854 19.604 1.287 20.154 1.847C20.714 2.396 21.146 3.06 21.422 3.794C21.694 4.494 21.88 5.294 21.934 6.464C21.988 7.639 22 8.013 22 11C22 13.988 21.987 14.362 21.934 15.535C21.881 16.705 21.694 17.505 21.422 18.205C21.146 18.9391 20.7133 19.6042 20.154 20.154C19.604 20.714 18.939 21.146 18.206 21.422C17.506 21.694 16.706 21.88 15.536 21.934C14.362 21.988 13.988 22 11 22C8.012 22 7.638 21.987 6.465 21.934C5.295 21.881 4.495 21.694 3.795 21.422C3.06092 21.146 2.39582 20.7133 1.846 20.154C1.28638 19.6047 0.853315 18.9399 0.577 18.206C0.306 17.506 0.12 16.706 0.066 15.536C0.012 14.361 0 13.987 0 11C0 8.012 0.013 7.638 0.066 6.466C0.119 5.294 0.306 4.494 0.577 3.794C0.853723 3.06008 1.28712 2.39531 1.847 1.846C2.39604 1.2865 3.06047 0.853443 3.794 0.577C4.494 0.306 5.294 0.12 6.464 0.066H6.465ZM15.445 2.046C14.285 1.993 13.937 1.982 11 1.982C8.063 1.982 7.715 1.993 6.555 2.046C5.482 2.095 4.9 2.274 4.512 2.425C3.999 2.625 3.632 2.862 3.247 3.247C2.88205 3.60205 2.60118 4.03428 2.425 4.512C2.274 4.9 2.095 5.482 2.046 6.555C1.993 7.715 1.982 8.063 1.982 11C1.982 13.937 1.993 14.285 2.046 15.445C2.095 16.518 2.274 17.1 2.425 17.488C2.601 17.965 2.882 18.398 3.247 18.753C3.602 19.118 4.035 19.399 4.512 19.575C4.9 19.726 5.482 19.905 6.555 19.954C7.715 20.007 8.062 20.018 11 20.018C13.938 20.018 14.285 20.007 15.445 19.954C16.518 19.905 17.1 19.726 17.488 19.575C18.001 19.375 18.368 19.138 18.753 18.753C19.118 18.398 19.399 17.965 19.575 17.488C19.726 17.1 19.905 16.518 19.954 15.445C20.007 14.285 20.018 13.937 20.018 11C20.018 8.063 20.007 7.715 19.954 6.555C19.905 5.482 19.726 4.9 19.575 4.512C19.375 3.999 19.138 3.632 18.753 3.247C18.3979 2.88207 17.9657 2.60121 17.488 2.425C17.1 2.274 16.518 2.095 15.445 2.046ZM9.595 14.391C10.3797 14.7176 11.2534 14.7617 12.0669 14.5157C12.8805 14.2697 13.5834 13.7489 14.0556 13.0422C14.5278 12.3356 14.7401 11.4869 14.656 10.6411C14.572 9.79534 14.197 9.00497 13.595 8.405C13.2112 8.02148 12.7472 7.72781 12.2363 7.54515C11.7255 7.36248 11.1804 7.29536 10.6405 7.34862C10.1006 7.40187 9.57915 7.57418 9.1138 7.85313C8.64845 8.13208 8.25074 8.51074 7.9493 8.96185C7.64786 9.41296 7.45019 9.92529 7.37052 10.462C7.29084 10.9986 7.33115 11.5463 7.48854 12.0655C7.64593 12.5847 7.91648 13.0626 8.28072 13.4647C8.64496 13.8668 9.09382 14.1832 9.595 14.391ZM7.002 7.002C7.52702 6.47697 8.15032 6.0605 8.8363 5.77636C9.52228 5.49222 10.2575 5.34597 11 5.34597C11.7425 5.34597 12.4777 5.49222 13.1637 5.77636C13.8497 6.0605 14.473 6.47697 14.998 7.002C15.523 7.52702 15.9395 8.15032 16.2236 8.8363C16.5078 9.52228 16.654 10.2575 16.654 11C16.654 11.7425 16.5078 12.4777 16.2236 13.1637C15.9395 13.8497 15.523 14.473 14.998 14.998C13.9377 16.0583 12.4995 16.654 11 16.654C9.50046 16.654 8.06234 16.0583 7.002 14.998C5.94166 13.9377 5.34597 12.4995 5.34597 11C5.34597 9.50046 5.94166 8.06234 7.002 7.002ZM17.908 6.188C18.0381 6.06527 18.1423 5.91768 18.2143 5.75397C18.2863 5.59027 18.3248 5.41377 18.3274 5.23493C18.33 5.05609 18.2967 4.87855 18.2295 4.71281C18.1622 4.54707 18.0624 4.39651 17.936 4.27004C17.8095 4.14357 17.6589 4.04376 17.4932 3.97652C17.3275 3.90928 17.1499 3.87598 16.9711 3.87858C16.7922 3.88119 16.6157 3.91965 16.452 3.9917C16.2883 4.06374 16.1407 4.1679 16.018 4.298C15.7793 4.55103 15.6486 4.88712 15.6537 5.23493C15.6588 5.58274 15.7992 5.91488 16.0452 6.16084C16.2911 6.40681 16.6233 6.54723 16.9711 6.5523C17.3189 6.55737 17.655 6.42669 17.908 6.188Z" />
+    </symbol>
+    <symbol id="likedin-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path  d="M7.429 6.969H11.143V8.819C11.678 7.755 13.05 6.799 15.111 6.799C19.062 6.799 20 8.917 20 12.803V20H16V13.688C16 11.475 15.465 10.227 14.103 10.227C12.214 10.227 11.429 11.572 11.429 13.687V20H7.429V6.969ZM0.57 19.83H4.57V6.799H0.57V19.83ZM5.143 2.55C5.14315 2.88528 5.07666 3.21724 4.94739 3.52659C4.81812 3.83594 4.62865 4.11651 4.39 4.352C3.9064 4.83262 3.25181 5.10165 2.57 5.1C1.88939 5.09954 1.23631 4.8312 0.752 4.353C0.514211 4.11671 0.325386 3.83582 0.196344 3.52643C0.0673015 3.21704 0.000579132 2.88522 0 2.55C0 1.873 0.27 1.225 0.753 0.747C1.23689 0.268158 1.89024 -0.000299211 2.571 2.50265e-07C3.253 2.50265e-07 3.907 0.269 4.39 0.747C4.872 1.225 5.143 1.873 5.143 2.55Z"/>
+    </symbol>
+
+
+    <!-- SK -->
+    <symbol id="revw-right-arrow" width="11" height="34" viewBox="0 0 11 34" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.9401 33.1176C0.64438 32.969 0.419627 32.7093 0.315119 32.3953C0.210611 32.0813 0.234879 31.7387 0.382601 31.4426L7.6001 17.0001L0.380098 2.56007C0.30505 2.41317 0.259824 2.25286 0.247027 2.08839C0.234229 1.92392 0.254114 1.75854 0.305534 1.60179C0.356955 1.44504 0.438894 1.30002 0.546628 1.17509C0.654362 1.05016 0.785758 0.947793 0.933243 0.873883C1.08073 0.799977 1.24138 0.755994 1.40595 0.744469C1.57051 0.732949 1.73573 0.754113 1.89207 0.806744C2.04842 0.85938 2.1928 0.942437 2.31689 1.05114C2.44099 1.15983 2.54233 1.29202 2.6151 1.44007L10.1151 16.4401C10.2022 16.6139 10.2476 16.8056 10.2476 17.0001C10.2476 17.1945 10.2022 17.3862 10.1151 17.5601L2.6151 32.5601C2.46657 32.8558 2.20683 33.0805 1.89284 33.1851C1.57885 33.2896 1.23623 33.2653 0.9401 33.1176Z"/>
+    </symbol>
+    <symbol id="revw-left-arrow" width="11" height="34" viewBox="0 0 11 34" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0599 0.882428C10.3556 1.03096 10.5804 1.2907 10.6849 1.60469C10.7894 1.91868 10.7651 2.2613 10.6174 2.55743L3.3999 16.9999L10.6199 31.4399C10.6949 31.5868 10.7402 31.7471 10.753 31.9116C10.7658 32.0761 10.7459 32.2415 10.6945 32.3982C10.643 32.555 10.5611 32.7 10.4534 32.8249C10.3456 32.9498 10.2142 33.0522 10.0668 33.1261C9.91927 33.2 9.75861 33.244 9.59405 33.2555C9.42948 33.2671 9.26427 33.2459 9.10792 33.1933C8.95158 33.1406 8.8072 33.0576 8.6831 32.9489C8.55901 32.8402 8.45766 32.708 8.3849 32.5599L0.8849 17.5599C0.797796 17.3861 0.752441 17.1944 0.752441 16.9999C0.752441 16.8055 0.797796 16.6138 0.8849 16.4399L8.3849 1.43993C8.53343 1.14421 8.79317 0.919454 9.10716 0.814947C9.42115 0.710439 9.76377 0.734706 10.0599 0.882428Z"/>
+    </symbol>
+    <symbol id="modal-close-icon" width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.6589 1.15925C17.8656 0.940764 18.1139 0.765924 18.3893 0.645065C18.6647 0.524207 18.9615 0.459783 19.2622 0.455601C19.5629 0.451419 19.8614 0.507564 20.1401 0.620718C20.4187 0.733872 20.6719 0.901738 20.8845 1.11439C21.0972 1.32705 21.265 1.58018 21.3782 1.85882C21.4913 2.13746 21.5475 2.43596 21.5433 2.73667C21.5391 3.03738 21.4747 3.3342 21.3538 3.60959C21.233 3.88498 21.0581 4.13334 20.8397 4.34L14.2472 10.9325C14.2384 10.9412 14.2315 10.9516 14.2268 10.9629C14.222 10.9743 14.2196 10.9865 14.2196 10.9989C14.2196 11.0112 14.222 11.0234 14.2268 11.0348C14.2315 11.0462 14.2384 11.0565 14.2472 11.0653L20.8397 17.6578C21.0514 17.866 21.2198 18.1142 21.3352 18.3879C21.4506 18.6616 21.5106 18.9554 21.5118 19.2524C21.5131 19.5494 21.4555 19.8437 21.3424 20.1184C21.2294 20.393 21.063 20.6426 20.853 20.8526C20.643 21.0627 20.3935 21.2291 20.1189 21.3422C19.8443 21.4553 19.55 21.513 19.253 21.5118C18.956 21.5106 18.6621 21.4507 18.3884 21.3354C18.1147 21.2201 17.8665 21.0517 17.6582 20.84L11.0657 14.2475C11.0569 14.2388 11.0466 14.2318 11.0352 14.2271C11.0238 14.2224 11.0116 14.22 10.9993 14.22C10.9869 14.22 10.9747 14.2224 10.9633 14.2271C10.952 14.2318 10.9416 14.2388 10.9329 14.2475L4.34041 20.84C4.13213 21.0518 3.88398 21.2202 3.61029 21.3355C3.33659 21.4509 3.04277 21.5109 2.74575 21.5122C2.44874 21.5134 2.15442 21.4559 1.87977 21.3428C1.60512 21.2297 1.35557 21.0634 1.14553 20.8534C0.935479 20.6434 0.769088 20.3939 0.655952 20.1193C0.542815 19.8446 0.485171 19.5503 0.486346 19.2533C0.48752 18.9563 0.547489 18.6625 0.662793 18.3887C0.778098 18.115 0.946456 17.8668 1.15816 17.6585L7.75066 11.066C7.75939 11.0573 7.76631 11.0469 7.77104 11.0356C7.77577 11.0242 7.7782 11.012 7.7782 10.9996C7.7782 10.9873 7.77577 10.9751 7.77104 10.9637C7.76631 10.9523 7.75939 10.942 7.75066 10.9333L1.15816 4.34075C0.741826 3.91768 0.509534 3.34724 0.511881 2.75368C0.514228 2.16013 0.751022 1.59154 1.17069 1.17178C1.59035 0.752014 2.15888 0.515085 2.75244 0.512599C3.346 0.510112 3.91649 0.742269 4.33966 1.1585L10.9322 7.751C10.9409 7.75973 10.9512 7.76666 10.9626 7.77138C10.974 7.77611 10.9862 7.77854 10.9985 7.77854C11.0109 7.77854 11.0231 7.77611 11.0345 7.77138C11.0459 7.76666 11.0562 7.75973 11.0649 7.751L17.6574 1.1585L17.6589 1.15925Z"/>
+    </symbol>
+
+  </svg>  
+
+</head>
+<body>
+  <div class="page-body-cntlr">
+    <div class="bdoverlay"></div>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header-inr clearfix">
+              <div class="hdr-lft">
+                <div class="logo">
+                  <a href="#"><img src="assets/images/logo.png"></a>
+                </div>
+              </div>
+              <div class="hdr-rgt">
+                <div class="hdr-menu">
+                  <nav class="main-nav">
+                    <ul class="clearfix reset-list">
+                      <li class="current-menu-item"><a href="#">Home</a></li>
+                      <li class="menu-item-has-children">
+                        <a href="#">About Us</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Submenu 1</a></li>
+                          <li><a href="#">Submenu 2</a></li>
+                          <li><a href="#">Submenu 3</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Why Choose Us</a></li>
+                      <li class="menu-item-has-children">
+                        <a href="#">Treatments</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Submenu 1</a></li>
+                          <li><a href="#">Submenu 2</a></li>
+                          <li><a href="#">Submenu 3</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Testimonials</a></li>
+                      <li><a href="#">Gallery</a></li>
+                      <li class="menu-item-has-children">
+                        <a href="#">Fees</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Submenu 1</a></li>
+                          <li><a href="#">Submenu 2</a></li>
+                          <li><a href="#">Submenu 3</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-item-has-children">
+                        <a href="#">Contact us</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Submenu 1</a></li>
+                          <li><a href="#">Submenu 2</a></li>
+                          <li><a href="#">Submenu 3</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="hdr-btn">
+                  <a class="cdc-btn" href="#">Book Online</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="xs-mobile-menu d-none">
+      <div class="xs-pop-up-menu-inr">
+        <div class="xs-pop-up-menu-top">
+          <div class="logo">
+            <a href="#">
+              <img src="assets/images/logo.svg">
+            </a>
+          </div>
+          <div class="hamburgar-cntlr">
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="xs-pop-menu-con">
+          <div class="xs-menu">
+
+          </div>
+        </div>
+        <div class="xs-pop-up-menu-btm">
+        </div>
+      </div>
+    </div>
+
+    <section class="page-banner">
+      <div class="banner-black-bg"></div>
+      <div class="page-bnr-bg inline-bg" style="background-image: url(assets/images/pg-banner-bg.jpg);"></div>
+      <div class="bnr-vdo d-none">
+        <video id="bt-vdo" autoplay="true" muted="" loop>
+          <source src="assets/images/videos/placeholder-video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="pg-banner-cntlr">
+              <div class="pg-banner-desc-cntlr">
+                <h2 class="pg-banner-title fl-h3">2 Llanthewy Road</h2>
+                <div class="diamond-module">
+                  <ul class="reset-list">
+                    <li>
+                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                    <li>
+                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                    <li>
+                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                  </ul>
+                </div> 
+                <div class="pg-banner-desc">
+                  <p>If you’ve moved to Newport and need a dentist, or simply fancy changing, get in touch. We are more than happy to talk to you about how we can help.</p>
+                </div>
+                <div class="pg-banner-btns fees-banner-btns">
+                  <div class="pg-banner-btn pg-banner-btn-01">
+                    <a class="cdc-btn" href="#">Join Practice</a>
+                  </div>
+                  <div class="pg-banner-btn pg-banner-btn-02">
+                    <a class="cdc-trnsprnt-btn" href="#">Request A Callback</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="lt-page-con-cntlr">
+      
+      <section class="about-intro-sec">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="abtis-img-text-row">
+                <div class="abtis-img-text-row-inr">
+                  <div class="abtis-img-txt-col abtis-row-img">
+                    <div class="abtis-row-img-inner">
+                      <img src="assets/images/about-us-intro-img-01.png" alt="">
+                    </div>
+                  </div>
+                  <div class="abtis-img-txt-col abtis-row-text">
+                    <div class="abtis-row-text-inr">
+                      <div class="diamond-module">
+                        <ul class="reset-list">
+                          <li>
+                            <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                          </li>
+                          <li>
+                            <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                          </li>
+                          <li>
+                            <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                          </li>
+                        </ul>
+                      </div>
+                      <h2 class="fl-h4">Who we are</h2>
+                      <p>Fermentum et tristique dictumst ipsum dolor turpis arcu nibh integer. Mauris volutpat dictum cras sagittis leo platea tincidunt. Scelerisque turpis tortor, purus nec eget mauris tempor lacus. Varius amet egestas cursus quam proin magna varius sit. Dui ut in massa nibh ut. Commodo et sapien semper imperdiet dolor nunc id sit consectetur. Fames amet, turpis in at in senectus, in felis amet euismod vitae potenti praesents.</p>
+                      <p>Aenean in sed mi malesuada quis purus facilisis vel senectus. Purus aliquet consequat dignissim aliquam bibendum pulvinar faucibus et enim. Sapien faucibus mattis quis nunc vulputate habitant scelerisque. Non tincidunt enim adipiscing lectus euismod turpis vel non massa, ultricies condimentum dui.</p>
+                      <div class="abtis-intro-des-btn">
+                        <a class="cdc-btn" href="#">See our practice</a>
+                      </div>
+                    </div>                          
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tl-team-sec">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="sec-entry-hdr-cntlr">
+                <div class="sec-entry-hdr">
+                  <h2 class="sec-entry-hdr-title fl-h4">Meet Our Practice Team</h2>
+                  <div class="diamond-module">
+                    <ul class="reset-list">
+                      <li>
+                        <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                      <li>
+                        <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                      <li>
+                        <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                    </ul>
+                  </div>                
+                  <p>Amet a aliquam tellus, ut. Fringilla sagittis ut a pellentesque accumsan. Ipsum malesuada vitae fusce semper nec scelerisque a.</p>
+                </div>
+              </div>
+              <div class="profile-module">
+                <div class="team-grds teamGrdSlider">
+                  <div class="team-grd-item-col">
+                    <div class="pro-mdul-grd">
+                      <div class="pm-grd-img-cntlr">
+                        <div class="pm-grd-img inline-bg" style="background-image: url(assets/images/pm-grd-img-01.jpg);"></div>
+                      </div>
+                      <div class="pm-grd-desc-cntlr mHc">
+                        <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">David Cox</a></h5>
+                        <div class="pm-grd-assist mHc2">
+                          <span class="pm-grd-assist-name">Practice Principal<span class="pm-grd-assist-no">GDC No: 65106</span></span>
+                        </div>
+                        <span class="pm-grd-addr mHc3">BDS (Wales, 1990), MSc (Dental Implantology, 2014)</span>
+                        <div class="pm-grd-desc">
+                          <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
+                        </div>
+                        <div class="pm-grd-btns-cntlr">
+                          <div class="pm-grd-btn pm-grd-btn-01">
+                            <a class="cdc-btn" href="#">Book Consultation</a>
+                          </div>
+                          <div class="pm-grd-btn pm-grd-btn-02">
+                            <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-grd-item-col">
+                    <div class="pro-mdul-grd">
+                      <div class="pm-grd-img-cntlr">
+                        <div class="pm-grd-img inline-bg" style="background-image: url(assets/images/pm-grd-img-02.jpg);"></div>
+                      </div>
+                      <div class="pm-grd-desc-cntlr mHc">
+                        <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Robert Hitchcock</a></h5>
+                        <div class="pm-grd-assist mHc2">
+                          <span class="pm-grd-assist-name">Practice Principal<span class="pm-grd-assist-no">GDC No: 69354</span></span>
+                        </div>
+                        <span class="pm-grd-addr mHc3">BDS (Newcastle, 1993)</span>
+                        <div class="pm-grd-desc">
+                          <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
+                        </div>
+                        <div class="pm-grd-btns-cntlr">
+                          <div class="pm-grd-btn pm-grd-btn-01">
+                            <a class="cdc-btn" href="#">Book Consultation</a>
+                          </div>
+                          <div class="pm-grd-btn pm-grd-btn-02">
+                            <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-grd-item-col">
+                    <div class="pro-mdul-grd">
+                      <div class="pm-grd-img-cntlr">
+                        <div class="pm-grd-img inline-bg" style="background-image: url(assets/images/pm-grd-img-07.jpg);"></div>
+                      </div>
+                      <div class="pm-grd-desc-cntlr mHc">
+                        <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Katy Robinson</a></h5>
+                        <div class="pm-grd-assist mHc2">
+                          <span class="pm-grd-assist-name">Associate Dentist<span class="pm-grd-assist-no">GDC No: 114378</span></span>
+                        </div>
+                        <span class="pm-grd-addr mHc3">BDS (Cardiff Dental School, 2007), MJDF RCS (Eng)</span>
+                        <div class="pm-grd-desc">
+                          <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
+                        </div>
+                        <div class="pm-grd-btns-cntlr">
+                          <div class="pm-grd-btn pm-grd-btn-01">
+                            <a class="cdc-btn" href="#">Book Consultation</a>
+                          </div>
+                          <div class="pm-grd-btn pm-grd-btn-02">
+                            <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-grd-item-col">
+                    <div class="pro-mdul-grd">
+                      <div class="pm-grd-img-cntlr">
+                        <div class="pm-grd-img inline-bg" style="background-image: url(assets/images/pm-grd-img-01.jpg);"></div>
+                      </div>
+                      <div class="pm-grd-desc-cntlr mHc">
+                        <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">David Cox</a></h5>
+                        <div class="pm-grd-assist mHc2">
+                          <span class="pm-grd-assist-name">Practice Principal<span class="pm-grd-assist-no">GDC No: 65106</span></span>
+                        </div>
+                        <span class="pm-grd-addr mHc3">BDS (Wales, 1990), MSc (Dental Implantology, 2014)</span>
+                        <div class="pm-grd-desc">
+                          <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
+                        </div>
+                        <div class="pm-grd-btns-cntlr">
+                          <div class="pm-grd-btn pm-grd-btn-01">
+                            <a class="cdc-btn" href="#">Book Consultation</a>
+                          </div>
+                          <div class="pm-grd-btn pm-grd-btn-02">
+                            <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-grd-item-col">
+                    <div class="pro-mdul-grd">
+                      <div class="pm-grd-img-cntlr">
+                        <div class="pm-grd-img inline-bg" style="background-image: url(assets/images/pm-grd-img-02.jpg);"></div>
+                      </div>
+                      <div class="pm-grd-desc-cntlr mHc">
+                        <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Robert Hitchcock</a></h5>
+                        <div class="pm-grd-assist mHc2">
+                          <span class="pm-grd-assist-name">Practice Principal<span class="pm-grd-assist-no">GDC No: 69354</span></span>
+                        </div>
+                        <span class="pm-grd-addr mHc3">BDS (Newcastle, 1993)</span>
+                        <div class="pm-grd-desc">
+                          <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
+                        </div>
+                        <div class="pm-grd-btns-cntlr">
+                          <div class="pm-grd-btn pm-grd-btn-01">
+                            <a class="cdc-btn" href="#">Book Consultation</a>
+                          </div>
+                          <div class="pm-grd-btn pm-grd-btn-02">
+                            <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-grd-item-col">
+                    <div class="pro-mdul-grd">
+                      <div class="pm-grd-img-cntlr">
+                        <div class="pm-grd-img inline-bg" style="background-image: url(assets/images/pm-grd-img-07.jpg);"></div>
+                      </div>
+                      <div class="pm-grd-desc-cntlr mHc">
+                        <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Katy Robinson</a></h5>
+                        <div class="pm-grd-assist mHc2">
+                          <span class="pm-grd-assist-name">Associate Dentist<span class="pm-grd-assist-no">GDC No: 114378</span></span>
+                        </div>
+                        <span class="pm-grd-addr mHc3">BDS (Cardiff Dental School, 2007), MJDF RCS (Eng)</span>
+                        <div class="pm-grd-desc">
+                          <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
+                        </div>
+                        <div class="pm-grd-btns-cntlr">
+                          <div class="pm-grd-btn pm-grd-btn-01">
+                            <a class="cdc-btn" href="#">Book Consultation</a>
+                          </div>
+                          <div class="pm-grd-btn pm-grd-btn-02">
+                            <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tl-review-sec review-color inline-bg" style="background: url('assets/images/patient-review-bg.jpg');">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="sec-entry-hdr-cntlr">
+                <div class="sec-entry-hdr">
+                  <h2 class="sec-entry-hdr-title fl-h4">Dental Implant Patient Reviews</h2>
+                  <div class="diamond-module">
+                    <ul class="reset-list">
+                      <li>
+                        <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                      <li>
+                        <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                      <li>
+                        <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                    </ul>
+                  </div>                
+                </div>
+              </div>
+              <div class="review-grids-cntlr">
+                <div class="review-grids tlPatientReviewSlider"> 
+                  <div class="review-grid-col">
+                    <div class="review-grid-item">
+                      <div class="review-pro-img">
+                        <i>
+                          <img src="assets/images/review-pro-img-1.jpg" alt="">
+                        </i>
+                      </div>
+                      <div class="review-pro-rating">
+                        <span>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                        </span>
+                      </div>
+                      <h3 class="review-tstmnl-mgs fl-h5 mHc">“Very kind and friendly staff as well a highly qualified skilled dentists!”</h3>
+                      <div class="review-pro-des mHc1">
+                        <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis....</p>
+                      </div>
+                      <div class="review-pro-des-btn">
+                        <a href="#">Read More</a>
+                      </div>
+                      <div class="review-pro-name">
+                        <strong class="review-pro-title">Chloe Jones</strong>
+                        <span>Cardiff</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review-grid-col">
+                    <div class="review-grid-item">
+                      <div class="review-pro-img">
+                        <i>
+                          <img src="assets/images/review-pro-img-2.jpg" alt="">
+                        </i>
+                      </div>
+                      <div class="review-pro-rating">
+                        <span>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                        </span>
+                      </div>
+                      <h3 class="review-tstmnl-mgs fl-h5 mHc">“Best experience I have ever had with a dentist in Newport”</h3>
+                      <div class="review-pro-des mHc1">
+                        <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis....</p>
+                      </div>
+                      <div class="review-pro-des-btn">
+                        <a href="#">Read More</a>
+                      </div>
+                      <div class="review-pro-name">
+                        <strong class="review-pro-title">Bob Ross</strong>
+                        <span>Newport</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review-grid-col">
+                    <div class="review-grid-item">
+                      <div class="review-pro-img">
+                        <i>
+                          <img src="assets/images/review-pro-img-1.jpg" alt="">
+                        </i>
+                      </div>
+                      <div class="review-pro-rating">
+                        <span>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                        </span>
+                      </div>
+                      <h3 class="review-tstmnl-mgs fl-h5 mHc">“Very kind and friendly staff as well a highly qualified skilled dentists!”</h3>
+                      <div class="review-pro-des mHc1">
+                        <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis....</p>
+                      </div>
+                      <div class="review-pro-des-btn">
+                        <a href="#">Read More</a>
+                      </div>
+                      <div class="review-pro-name">
+                        <strong class="review-pro-title">Chloe Jones</strong>
+                        <span>Cardiff</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review-grid-col">
+                    <div class="review-grid-item">
+                      <div class="review-pro-img">
+                        <i>
+                          <img src="assets/images/review-pro-img-2.jpg" alt="">
+                        </i>
+                      </div>
+                      <div class="review-pro-rating">
+                        <span>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                        </span>
+                      </div>
+                      <h3 class="review-tstmnl-mgs fl-h5 mHc">“Best experience I have ever had with a dentist in Newport”</h3>
+                      <div class="review-pro-des mHc1">
+                        <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis....</p>
+                      </div>
+                      <div class="review-pro-des-btn">
+                        <a href="#">Read More</a>
+                      </div>
+                      <div class="review-pro-name">
+                        <strong class="review-pro-title">Bob Ross</strong>
+                        <span>Newport</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review-grid-col">
+                    <div class="review-grid-item">
+                      <div class="review-pro-img">
+                        <i>
+                          <img src="assets/images/review-pro-img-1.jpg" alt="">
+                        </i>
+                      </div>
+                      <div class="review-pro-rating">
+                        <span>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                        </span>
+                      </div>
+                      <h3 class="review-tstmnl-mgs fl-h5 mHc">“Very kind and friendly staff as well a highly qualified skilled dentists!”</h3>
+                      <div class="review-pro-des mHc1">
+                        <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis....</p>
+                      </div>
+                      <div class="review-pro-des-btn">
+                        <a href="#">Read More</a>
+                      </div>
+                      <div class="review-pro-name">
+                        <strong class="review-pro-title">Chloe Jones</strong>
+                        <span>Cardiff</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review-grid-col">
+                    <div class="review-grid-item">
+                      <div class="review-pro-img">
+                        <i>
+                          <img src="assets/images/review-pro-img-2.jpg" alt="">
+                        </i>
+                      </div>
+                      <div class="review-pro-rating">
+                        <span>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                          <i><img src="assets/images/rating-star-icon.svg" alt=""></i>
+                        </span>
+                      </div>
+                      <h3 class="review-tstmnl-mgs fl-h5 mHc">“Best experience I have ever had with a dentist in Newport”</h3>
+                      <div class="review-pro-des mHc1">
+                        <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis....</p>
+                      </div>
+                      <div class="review-pro-des-btn">
+                        <a href="#">Read More</a>
+                      </div>
+                      <div class="review-pro-name">
+                        <strong class="review-pro-title">Bob Ross</strong>
+                        <span>Newport</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-prev-next">
+                  <div class="revw-prev">
+                    <span class="revw-left">
+                      <svg class="revw-left-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#EACC95">
+                        <use xlink:href="#revw-left-arrow"></use> 
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="revw-next">
+                    <span class="revw-right">
+                      <svg class="revw-right-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#EACC95">
+                        <use xlink:href="#revw-right-arrow"></use> 
+                      </svg>
+                    </span>
+                  </div>
+                </div>              
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="practice-gallery tl-practice-gallery">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="sec-entry-hdr-cntlr">
+                <div class="sec-entry-hdr">
+                  <h2 class="sec-entry-hdr-title fl-h4">Practice Gallery</h2>
+                  <div class="diamond-module">
+                    <ul class="reset-list">
+                      <li>
+                        <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                      <li>
+                        <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                      <li>
+                        <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                    </ul>
+                  </div>                
+                  <p>Amet a aliquam tellus, ut. Fringilla sagittis ut a pellentesque accumsan. Ipsum malesuada vitae fusce semper nec scelerisque a.</p>
+                </div>
+              </div>
+              <div class="why-choose-grids-cntlr">
+                <div class="why-choose-grids">
+                  <div class="practice-gallery-grid-col">
+                    <div class="practice-gallery-grid-item">
+                      <div class="practice-gallery-grid-img-cntlr">
+                        <a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+                        <div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-01.jpg);"></div>
+                      </div>
+                      <div class="practice-gallery-grid-des">
+                        <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Teatment Room</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="practice-gallery-grid-col">
+                    <div class="practice-gallery-grid-item">
+                      <div class="practice-gallery-grid-img-cntlr">
+                        <a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+                        <div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-02.jpg);"></div>
+                      </div>
+                      <div class="practice-gallery-grid-des">
+                        <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Dental Implant Room</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="practice-gallery-grid-col">
+                    <div class="practice-gallery-grid-item">
+                      <div class="practice-gallery-grid-img-cntlr">
+                        <a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+                        <div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-03.jpg);"></div>
+                      </div>
+                      <div class="practice-gallery-grid-des">
+                        <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Cosmetic Dentistry Room</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="practice-gallery-grid-col">
+                    <div class="practice-gallery-grid-item">
+                      <div class="practice-gallery-grid-img-cntlr">
+                        <a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+                        <div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-04.jpg);"></div>
+                      </div>
+                      <div class="practice-gallery-grid-des">
+                        <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Specialist Chair</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="practice-gallery-grid-col">
+                    <div class="practice-gallery-grid-item">
+                      <div class="practice-gallery-grid-img-cntlr">
+                        <a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+                        <div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-11.jpg);"></div>
+                      </div>
+                      <div class="practice-gallery-grid-des">
+                        <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Teatment Room</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="practice-gallery-grid-col">
+                    <div class="practice-gallery-grid-item">
+                      <div class="practice-gallery-grid-img-cntlr">
+                        <a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+                        <div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-05.jpg);"></div>
+                      </div>
+                      <div class="practice-gallery-grid-des">
+                        <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Dental Implant Room</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="practice-gallery-grid-col">
+                    <div class="practice-gallery-grid-item">
+                      <div class="practice-gallery-grid-img-cntlr">
+                        <a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+                        <div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-12.jpg);"></div>
+                      </div>
+                      <div class="practice-gallery-grid-des">
+                        <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Cosmetic Dentistry Room</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="practice-gallery-grid-col">
+                    <div class="practice-gallery-grid-item">
+                      <div class="practice-gallery-grid-img-cntlr">
+                        <a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+                        <div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-06.jpg);"></div>
+                      </div>
+                      <div class="practice-gallery-grid-des">
+                        <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Specialist Chair</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="practice-gallery-grid-col">
+                    <div class="practice-gallery-grid-item">
+                      <div class="practice-gallery-grid-img-cntlr">
+                        <a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+                        <div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-07.jpg);"></div>
+                      </div>
+                      <div class="practice-gallery-grid-des">
+                        <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Teatment Room</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="practice-gallery-grid-col">
+                    <div class="practice-gallery-grid-item">
+                      <div class="practice-gallery-grid-img-cntlr">
+                        <a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+                        <div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-08.jpg);"></div>
+                      </div>
+                      <div class="practice-gallery-grid-des">
+                        <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Dental Implant Room</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="practice-gallery-grid-col">
+                    <div class="practice-gallery-grid-item">
+                      <div class="practice-gallery-grid-img-cntlr">
+                        <a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+                        <div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-09.jpg);"></div>
+                      </div>
+                      <div class="practice-gallery-grid-des">
+                        <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Cosmetic Dentistry Room</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="practice-gallery-grid-col">
+                    <div class="practice-gallery-grid-item">
+                      <div class="practice-gallery-grid-img-cntlr">
+                        <a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+                        <div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-10.jpg);"></div>
+                      </div>
+                      <div class="practice-gallery-grid-des">
+                        <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Specialist Chair</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="why-choose-grid-btn">
+                  <a href="#" class="cdc-btn">Meet Our Team</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer-wrp">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="ftr-top-cntlr">
+                <div class="ftr-top-col ftr-top-col-01">
+                  <div class="ftr-logo">
+                    <a href="#">
+                      <img src="assets/images/footer-logo.png" alt="">
+                    </a>
+                  </div>
+                  <div class="ftr-desc">
+                    <p>Nascetur arcu eu sed nunc in elementum. Amet, auctor massa urna orci. Gravida nisi volutpat, quis molestie justo. Euismod ac integer in id neque platea sed maecenas aliquet. Non eu fringilla est est integer donec diam in.</p>
+                  </div>
+                  <div class="massage-review-cntlr">
+                    <div class="massage-col">
+                      <a href="#">
+                        <i>
+                          <svg class="ftr-massage-icon" width="24" height="22" viewBox="0 0 24 22" fill="#FF5C26">
+                            <use xlink:href="#ftr-massage-icon"></use>
+                          </svg>
+                        </i> 
+                        <span>Send a message</span>
+                      </a>
+                    </div>
+                    <div class="review-col">
+                      <a href="#">
+                        <i>
+                          <svg class="ftr-review-icon" width="23" height="25" viewBox="0 0 23 25" fill="#FF5C26">
+                            <use xlink:href="#ftr-review-icon"></use> 
+                          </svg>
+                        </i>
+                        <span>Leave a Review</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="ftr-top-col ftr-top-col-02">
+                  <h6 class="fl-h6 ftr-top-col-title">About us</h6>
+                  <div class="ftr-top-menu xs-toggle-menu">
+                    <ul class="reset-list">
+                      <li><a href="#">About us</a></li>
+                      <li><a href="#">Meet our team</a></li>
+                      <li><a href="#">Why choose Us</a></li>
+                      <li><a href="#">Our practices</a></li>
+                      <li><a href="#">Our equipment</a></li>
+                      <li><a href="#">Fees</a></li>
+                      <li><a href="#">FAQs</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="ftr-top-col ftr-top-col-03">
+                  <h6 class="fl-h6 ftr-top-col-title">Our treatments</h6>
+                  <div class="ftr-top-menu xs-toggle-menu">
+                    <ul class="reset-list">
+                      <li><a href="#">Dental implants</a></li>
+                      <li><a href="#">Cosmetic dentristy</a></li>
+                      <li><a href="#">Private dentristy</a></li>
+                      <li><a href="#">Teeth straightening</a></li>
+                      <li><a href="#">White fillings</a></li>
+                      <li><a href="#">Laser dentistry</a></li>
+                      <li><a href="#">Emergencies</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="ftr-top-col ftr-top-col-04">
+                  <h6 class="fl-h6 ftr-top-col-title">Contact us</h6>
+                  <div class="ftr-top-menu xs-toggle-menu">
+                    <ul class="reset-list">
+                      <li><a href="#">Our locations</a></li>
+                      <li><a href="#">Book online</a></li>
+                      <li><a href="#">Request a callback</a></li>
+                      <li><a href="#">Dental referrals</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="ftr-btm-cntlr">
+                <div class="ftr-copyright">
+                  <p>&copy;2022 Cox & Hitchcock Dental Group. All Rights Reserved.</p>
+                </div>
+                <div class="ftr-btm-menu">
+                  <ul class="reset-list">
+                    <li><a href="#">Complaints procedure</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Terms & conditions</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </footer>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/fancybox3/dist/jquery.fancybox.min.js"></script>
+<script src="assets/slick.slider/slick.js"></script>
+<script src="assets/swiper/swiper-bundle.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIoxxXHcTiQKJ2R383lZHXv4nucLGxMyg"></script>
+<script src="assets/js/jquery.matchHeight-min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/jquery.nav.js"></script>
+<script src="assets/select2/select2.min.js"></script>
+<script src="assets/flatpickr/flatpickr.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
