@@ -98,6 +98,13 @@
 	font-weight: 600;
 	font-size: 16px;
 }
+.map-des-btn .cdc-btn{
+	padding: 8px 2px;
+	font-size: 12px;
+}
+.map-des-btn {
+    padding: 0 0 19px 8px;
+}
 .map-des-btm-arrow-img {
     position: absolute;
     bottom: -20px;
