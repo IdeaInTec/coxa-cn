@@ -410,6 +410,21 @@ $('#onepagenav').onePageNav({
   filter: '',
 });
 
+if( $('.tlPatientReviewSlider').length ){
+    $('.tlPatientReviewSlider').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      nextArrow: '.revw-right',
+      prevArrow: '.revw-left',
+    });
+}
+
 
 
 

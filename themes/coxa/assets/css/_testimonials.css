@@ -1,8 +1,15 @@
 .review-grids-sec{
 	padding: 80px 0 80px;
+
 }
+
+.tl-practice-gallery .practice-gallery-grid-title,
+.tl-practice-gallery .practice-gallery-grid-title a,
 .practice-gallery-bgwhite .practice-gallery-grid-title,
 .practice-gallery-bgwhite .practice-gallery-grid-title a{
 	color: #333333;
+}
+.practice-gallery-bgwhite{
+	background: linear-gradient(90deg, #F7F7F7 0%, #FFFFFF 50%, #F7F7F7 100%);
 }
 

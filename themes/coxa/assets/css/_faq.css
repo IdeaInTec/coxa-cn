@@ -55,6 +55,23 @@
 	color: #000;
 	font-weight: 400;
 	text-transform: capitalize;
+	padding-left: 28px;
+	position: relative;
+}
+.faq-grd-title:before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	background-image: url('../images/sec-title-diamond.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 18px;
+	height: 17px;
+	margin-top: 2px;
 }
 .faq-page-con-cntlr .faq-accordion-title{
 	font-weight: 400;
@@ -64,5 +81,18 @@
 	padding-bottom: 8px;
 }
 .faq-grid-item-col{
-	padding-bottom: 65px;
+	padding-bottom: 60px;
+}
+.faq-grd-cntlr{
+	max-width: 900px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.faq-grids{
+	padding: 0 50px;
+}
+.faq-page-con-cntlr .treatment-sec{
+	padding-top: 60px;
+	padding-bottom: 25px;
 }
