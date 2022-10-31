@@ -450,7 +450,7 @@ if( $('.reviewSlider2').length ){
       prevArrow: '.revw-left',
     });
 }
-$('.wpforms-container select').select2();
+$('.wpforms-container select').select2()
 
 /*---- SK ----*/ 
 
