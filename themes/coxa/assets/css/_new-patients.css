@@ -18,3 +18,6 @@
 .patients-intro-sec .abtis-row-text-inr p:not(:last-of-type){
 	margin-bottom: 20px;
 }
+.patient-page-con-cntlr .abtis-lft-img-row .abtis-row-img-inner{
+	margin-left: -180px;
+}
