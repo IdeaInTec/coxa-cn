@@ -289,7 +289,7 @@ textarea {
     padding: 0!important;
     list-style: none!important;
     position: relative;
-    padding: 0px 10px 0px 40px!important;
+    padding: 0px 24px 0px 40px!important;
     line-height: 20px!important;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-html ul,
@@ -430,6 +430,9 @@ textarea {
 }
 .req-callbacki-sec{
     padding-top: 75px;
+    padding-bottom: 140px;
+}
+.consultation-sec{
     padding-bottom: 140px;
 }
 /*responsive*/
