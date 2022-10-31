@@ -424,7 +424,14 @@ textarea {
     background: #F7F7F7;
     margin-right: 9px!important;
 }
-
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.req-callbacki-sec{
+    padding-top: 75px;
+    padding-bottom: 140px;
+}
 /*responsive*/
 
 @media(max-width: 1199px){
