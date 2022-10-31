@@ -77,6 +77,9 @@
 	font-weight: 400;
 	color: #333333;
 }
+.about-page-con-cntlr .pm-grd-desc-cntlr{
+	background: #fff;
+}
 
 
 @media(min-width: 1600px){
