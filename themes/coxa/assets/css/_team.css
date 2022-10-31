@@ -53,7 +53,6 @@
 }
 .pro-mdul-hdr-title{
 	font-weight: 600;
-	color: #333333;
 }
 
 .profile-module{
@@ -64,6 +63,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 	margin: 0 -10px;
+	justify-content: center;
 }
 .profile-module ul li{
 	padding: 0 10px;

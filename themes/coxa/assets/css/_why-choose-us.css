@@ -11,3 +11,19 @@
     padding-top: 75px;
     padding-bottom: 100px;
 }
+.why-choose-us-page-body-cntlr .pg-banner-btns .cdc-trnsprnt-btn{
+    padding: 15.5px 8px;
+}
+.wco-team-sec{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.wco-team-sec .team-grds{
+    padding-bottom: 0;
+}
+.wco-team-sec .team-grds.slick-slider ul.slick-dots{
+    margin-top: 10px;
+}
+.wco-team-btn{
+    text-align: center;
+}
