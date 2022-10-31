@@ -67,7 +67,6 @@
 .bnr-prev-next-cntlr .container .row,
 .bnr-prev-next-cntlr .container .row .col-md-12{
 	height: 100%;
-	width: 100%;
 }
 .bnr-prev-next{
 	display: flex;
@@ -276,6 +275,8 @@
 }
 .treatment-desc p{
 	font-weight: 300;
+	line-height: 1.5;
+	font-size: 19px;
 }
 .treatment-desc p:last-of-type{
 	margin-bottom: 0;
