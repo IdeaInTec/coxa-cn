@@ -480,10 +480,13 @@ if( $('.reviewSlider').length ){
       ]
     });
 }
-$('.counter-number').counterUp({
-  delay: 15,
-  time: 1500
-});
+if( $('.counter-number').length ){
+  $('.counter-number').counterUp({
+    delay: 15,
+    time: 1500
+  });
+}
+
 
 
 /*---- MSI ----*/ 
