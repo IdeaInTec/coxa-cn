@@ -429,6 +429,8 @@ textarea {
     border:1px solid #ddd;
     background: #F7F7F7;
     margin-right: 9px!important;
+    color: #333333!important;
+    cursor: pointer;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul {
     display: flex;
