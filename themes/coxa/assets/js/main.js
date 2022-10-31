@@ -450,7 +450,9 @@ if( $('.reviewSlider2').length ){
       prevArrow: '.revw-left',
     });
 }
-
+$('#contact-select2').select2({
+  // dropdownParent: $('#contact-select2-wrap'),
+});
 
 
 /*---- SK ----*/ 
