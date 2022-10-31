@@ -6,6 +6,12 @@
 .practice-gallery{
     padding: 90px 0 70px!important;
 }
+.pratice-pg-con-cntlr .locations-sec  .sec-entry-hdr-cntlr{
+    max-width: 890px;
+}
+.pratice-pg-con-cntlr .locations-sec .sec-entry-hdr p{
+    font-size: 15px;
+}
 .why-choose-grids .practice-gallery-grid-col{
     width: 25%;
     padding: 0 10px;
@@ -61,4 +67,17 @@
     width: 17px;
     height: 17px;
     top: 5px;
+}
+.practice-faq-sec{
+    background: linear-gradient(0deg, #0C2543, #0C2543);
+    background-blend-mode: multiply, normal;
+    padding-top: 80px;
+    padding-bottom: 130px;
+}
+.practice-faq-sec .sec-entry-hdr-title,
+.practice-faq-sec .sec-entry-hdr{
+    color: #fff;
+}
+.practice-faq-sec .faq-accordion-des{
+    background: #F7F7F7;
 }
