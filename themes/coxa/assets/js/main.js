@@ -557,6 +557,9 @@ if( $('.reviewSliderGrd3').length ){
     });
 }
 
+$('#contact-select2').select2();
+$('#contact-select3').select2();
+
 
 
 new WOW().init();
