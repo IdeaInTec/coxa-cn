@@ -452,6 +452,21 @@ if( $('.reviewSlider2').length ){
 }
 $('.wpforms-container select').select2()
 
+if( $('.tlPatientReviewSlider2').length ){
+    $('.tlPatientReviewSlider2').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: '.revw-right',
+      prevArrow: '.revw-left',
+    });
+}
+
 /*---- SK ----*/ 
 
 if( $('.reviewSlider').length ){
@@ -541,6 +556,9 @@ if( $('.reviewSliderGrd3').length ){
       ]
     });
 }
+
+$('#contact-select2').select2();
+$('#contact-select3').select2();
 
 
 

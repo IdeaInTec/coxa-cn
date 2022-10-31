@@ -14,9 +14,17 @@
 .slick-slider .slick-dots li button:hover{
 	background: #29467D!important;
 }
+
 .slick-slider .slick-dots li:before,
 .slick-slider .slick-dots li button:before{
 	content: none!important;
+}
+.review-color .slick-slider .slick-dots li button {
+    border: 1px solid #EACC95!important;
+}
+.review-color .slick-slider .slick-dots li.slick-active button, 
+.review-color .slick-slider .slick-dots li button:hover {
+    background: #EACC95!important;
 }
 .slick-slider .slick-dots li button{
 	padding: 0;
