@@ -19,5 +19,20 @@
 	margin-bottom: 20px;
 }
 .patient-page-con-cntlr .abtis-lft-img-row .abtis-row-img-inner{
-	margin-left: -180px;
+	margin-left: -60px;
+}
+.has-inline-bg .abtis-lft-img-row .abtis-row-img-inner{
+	padding-left: 0;
+	padding-right: 90px;
+}
+.abtis-lft-img-row .abtis-row-sub-img-cntlr{
+	left: initial;
+	right: 8px;
+}
+
+
+@media(min-width: 1600px){
+	.patient-page-con-cntlr .abtis-lft-img-row .abtis-row-img-inner{
+		margin-left: -160px;
+	}
 }
