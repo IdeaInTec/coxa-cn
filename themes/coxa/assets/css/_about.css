@@ -52,9 +52,12 @@
 	margin-right: -60px;
 	position: relative;
 }
-.abtis-lft-img-row .abtis-row-img-inner{
+.double-image-module .abtis-row-img-inner{
+	margin-right: -60px;
+}
+.single-image-module .abtis-lft-img-row .abtis-row-img-inner{
 	margin-right: initial;
-	margin-left: -40px;
+	margin-left: -20px;
 }
 .abtis-row-text-inr p{
 	margin-bottom: 30px;
@@ -142,10 +145,10 @@
 }
 
 @media(min-width: 1600px){
-	.abtis-row-img-inner{
+	.double-image-module .abtis-row-img-inner{
 		margin-right: -160px;
 	}
-	.abtis-lft-img-row .abtis-row-img-inner{
+	.double-image-module .abtis-lft-img-row .abtis-row-img-inner{
 		margin-left: -60px;
 	}
 	.has-inline-bg .abtis-row-img-inner{
