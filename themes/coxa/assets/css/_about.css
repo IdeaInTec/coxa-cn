@@ -82,6 +82,15 @@
 }
 
 
+
+
+
+.abtis-row-main-img {
+    height: 600px;
+    width: 547px;
+    margin-left: auto;
+}
+
 @media(min-width: 1600px){
 	.abtis-row-img-inner{
 		margin-right: -160px;
