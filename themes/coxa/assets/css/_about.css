@@ -113,8 +113,8 @@
 .abtis-row-main-img-cntrl:before {
     content: '';
     position: absolute;
-    width: calc( 100% - 64px );
-    height: calc(100% - 64px);
+    width: calc( 100% - 52px );
+    height: calc(100% - 52px);
     transition: all 0.5s;
     -ms-transition: all 0.5s;
     -webkit-transition: all 0.5s;
@@ -122,10 +122,10 @@
     border-left: 2px solid #A37D36;
     border-bottom: 2px solid #A37D36;
     border-right: 2px solid #A37D36;
-    right: 32px;
-    left: 32px;
-    top: 32px;
-    bottom: 32px;
+    right: 26px;
+    left: 26px;
+    top: 26px;
+    bottom: 26px;
     z-index: 1;
 }
 
@@ -137,7 +137,7 @@
 		margin-left: -60px;
 		padding-left: 105px;
 	}
-	.abtis-row-sub-img {
+	.abtis-row-sub-img-cntlr {
 	    width: 374px;
 	    height: 420px;
 	}
