@@ -50,6 +50,8 @@
 }
 .abtis-row-img-inner{
 	margin-right: -60px;
+	position: relative;
+	padding-left: 90px;
 }
 .abtis-lft-img-row .abtis-row-img-inner{
 	margin-right: initial;
@@ -86,9 +88,45 @@
 
 
 .abtis-row-main-img {
-    height: 600px;
-    width: 547px;
+    height: 515px;
+    /*width: 547px;*/
+    width: 100%;
     margin-left: auto;
+}
+.abtis-row-sub-img-cntlr{
+	z-index: 2;
+	width: 322px;
+    height: 356px;
+    position: absolute;
+    bottom: 30px;
+    left: 8px;
+    border: 4px solid #fff;
+    box-shadow: 8px 8px 16px rgb(3 0 0 / 32%);
+}
+.abtis-row-sub-img {
+  width: 100%;
+  height: 100%;
+}
+.abtis-row-main-img-cntrl{
+	position: relative;
+}
+.abtis-row-main-img-cntrl:before {
+    content: '';
+    position: absolute;
+    width: calc( 100% - 64px );
+    height: calc(100% - 64px);
+    transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    border-top: 2px solid #A37D36;
+    border-left: 2px solid #A37D36;
+    border-bottom: 2px solid #A37D36;
+    border-right: 2px solid #A37D36;
+    right: 32px;
+    left: 32px;
+    top: 32px;
+    bottom: 32px;
+    z-index: 1;
 }
 
 @media(min-width: 1600px){
@@ -97,5 +135,13 @@
 	}
 	.abtis-lft-img-row .abtis-row-img-inner{
 		margin-left: -60px;
+		padding-left: 105px;
+	}
+	.abtis-row-sub-img {
+	    width: 374px;
+	    height: 420px;
+	}
+	.abtis-row-main-img {
+	    height: 590px;
 	}
 }
