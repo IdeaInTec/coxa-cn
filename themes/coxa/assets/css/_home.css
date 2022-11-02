@@ -291,12 +291,12 @@
 .custom-prev-next-cntlr{
 	position: absolute;
 	bottom: 0;
-	left: 0;
+	left: 50px;
 	z-index: 10;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	max-width: 700px;
+	max-width: 665px;
 	width: 100%;
 	justify-content: space-between;
 }
