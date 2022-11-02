@@ -48,9 +48,12 @@
 .team-grds .pm-grd-desc{
 	display: block;
 }
-.abtis-row-img-inner{
+.double-image-module .abtis-row-img-inner{
 	margin-right: -60px;
 	position: relative;
+}
+.abtis-row-img-inner{
+	margin-right: -40px;
 }
 .double-image-module .abtis-row-img-inner{
 	margin-right: -60px;
