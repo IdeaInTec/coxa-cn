@@ -502,7 +502,6 @@ if( $('.counter-number').length ){
 }
 
 
-
 /*---- MSI ----*/ 
 if( $('.teamGrdSlider').length ){
     $('.teamGrdSlider').slick({
