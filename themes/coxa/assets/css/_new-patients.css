@@ -18,8 +18,9 @@
 .patients-intro-sec .abtis-row-text-inr p:not(:last-of-type){
 	margin-bottom: 20px;
 }
-.patient-page-con-cntlr .abtis-lft-img-row .abtis-row-img-inner{
+.abtis-lft-img-row .abtis-row-img-inner{
 	margin-left: -60px;
+	margin-right: 0;
 }
 .has-inline-bg.double-image-module .abtis-lft-img-row .abtis-row-img-inner{
 	padding-left: 0;
@@ -32,7 +33,11 @@
 
 
 @media(min-width: 1600px){
-	.patient-page-con-cntlr .abtis-lft-img-row .abtis-row-img-inner{
+	.abtis-lft-img-row .abtis-row-img-inner{
 		margin-left: -160px;
+	}
+	.has-inline-bg.double-image-module .abtis-lft-img-row .abtis-row-img-inner{
+		padding-left: 0;
+		padding-right: 105px;
 	}
 }
