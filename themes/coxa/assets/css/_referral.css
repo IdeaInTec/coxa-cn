@@ -299,6 +299,9 @@ textarea {
     line-height: 20px!important;
     margin-bottom: 5px!important;
 }
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-checkbox {
+    margin-bottom: 20px;
+}
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-html ul,
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-html ol,
 .contact-form-wrp div.wpforms-container-full .wpforms-form .wpforms-field-html ul, 
