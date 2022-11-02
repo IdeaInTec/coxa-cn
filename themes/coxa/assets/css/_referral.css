@@ -5,6 +5,42 @@
 .referral-sec .sec-entry-hdr-cntlr{
     padding-bottom: 8px;
 }
+
+.referral-about-intro .faq-accordion-hdr{
+    background: transparent!important;
+    border: none!important;
+    display: inline-block;
+    padding: 18px 35px 20px 0px;
+}
+.referral-about-intro .active .faq-accordion-hdr,
+.referral-about-intro .box-shadow{
+    box-shadow: none!important;
+}
+.referral-about-intro .faq-accordion-icon-box{
+    width: initial;
+    height: initial;
+    border: 0;
+}
+.referral-about-intro .faq-accordion-des{
+    border: none!important;
+    background: #F7F7F7;
+}
+.referral-about-intro .active .faq-accordion-title,
+.referral-about-intro .faq-accordion-hdr:hover .faq-accordion-title{
+    color: #0a2648;
+}
+.referral-about-intro .active .faq-accordion-hdr:after{
+    display: none;
+}
+.referral-about-intro .faq-accordion-hdr:hover .faq-accordion-icon-box:after{
+    background-image: url(../images/faq-list-icon.svg);
+    background-size: contain!important;
+}
+.referral-about-intro .active .faq-accordion-icon-box:before{
+    background-image: url(../images/faq-list-icon-blue-active.svg)!important;
+    background-size: contain!important;
+    margin-top: 0px!important;
+}
 .contact-form-wrp{
     max-width: 840px;
     margin-right: auto;
