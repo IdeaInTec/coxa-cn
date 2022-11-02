@@ -21,7 +21,7 @@
 .patient-page-con-cntlr .abtis-lft-img-row .abtis-row-img-inner{
 	margin-left: -60px;
 }
-.has-inline-bg .abtis-lft-img-row .abtis-row-img-inner{
+.has-inline-bg.double-image-module .abtis-lft-img-row .abtis-row-img-inner{
 	padding-left: 0;
 	padding-right: 90px;
 }
