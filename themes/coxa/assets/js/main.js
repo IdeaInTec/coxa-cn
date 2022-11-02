@@ -402,13 +402,13 @@ if( $('.tmreviewSlider').length ){
 }
 
 
-$('#onepagenav').onePageNav({
-  currentClass: 'active',
-  changeHash: false,
-  scrollSpeed: 750,
-  scrollThreshold: 0.5,
-  filter: '',
-});
+// $('#onepagenav').onePageNav({
+//   currentClass: 'active',
+//   changeHash: false,
+//   scrollSpeed: 750,
+//   scrollThreshold: 0.5,
+//   filter: '',
+// });
 
 if( $('.tlPatientReviewSlider').length ){
     $('.tlPatientReviewSlider').slick({
