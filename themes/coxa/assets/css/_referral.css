@@ -295,8 +295,9 @@ textarea {
     padding: 0!important;
     list-style: none!important;
     position: relative;
-    padding: 0px 24px 0px 40px!important;
+    padding: 5px 24px 8px 40px!important;
     line-height: 20px!important;
+    margin-bottom: 5px!important;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-html ul,
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-html ol,

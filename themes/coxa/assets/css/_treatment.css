@@ -145,3 +145,10 @@
 	margin-left: -20px;
 	margin-right: -20px;
 }
+.treatment-bg-color .sec-entry-hdr-title,
+.treatment-bg-color .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
+    color: #fff;
+}
+.treatment-bg-color .sec-entry-hdr p{
+	color:#EACC95;	
+}
