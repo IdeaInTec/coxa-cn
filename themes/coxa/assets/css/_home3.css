@@ -250,7 +250,31 @@
     flex-wrap: wrap;
     margin: 0 -4px;
 }
-
  .office-social ul li {
     padding: 0 4px;
+}
+/*.parallaxie-rel{
+    position: relative;
+}
+.parallaxie-rel .container{
+    position: relative;
+    z-index: 1;
+}
+.parallaxie{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+}
+.parallaxie-bg-Size_auto{
+    background-size: auto!important;
+}
+.parallaxie-Zindex{
+    z-index: 2;
+    position: relative;
+}*/
+.parallaxie-bg-Size_auto{
+    background-size: auto!important;
 }
