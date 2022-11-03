@@ -179,21 +179,21 @@
 	margin-bottom: 35px;
 	border-bottom: 2px solid #A37D36;
 }
-.locations-sec-grid-item .locations-title-cntrl{
+.locations-title-cntrl{
 	margin-bottom: 27px;
 }
-.locations-sec-grid-item .office-time-zoon,
-.locations-sec-grid-item .office-contact,
-.locations-sec-grid-item .office-social{
+.office-time-zoon,
+.office-contact,
+.office-social{
     line-height: 1;
     margin-bottom: 34px;
 }
-.locations-sec-grid-item .office-time-zoon {
+.office-time-zoon {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.locations-sec-grid-item .office-des-title {
+.office-des-title {
     color: #A37D36;
     font-size: 15px;
     letter-spacing: 2px;
@@ -202,32 +202,32 @@
     line-height: 1.25;
     font-weight: 600;
 }
-.locations-sec-grid-item .locations-des {
+.locations-des {
     /*padding-right: 11px;*/
 }
-.locations-sec-grid-item .office-social .office-des-title{
+.office-social .office-des-title{
 	margin-bottom: 15px;
 }
-.locations-sec-grid-item .office-time-zoon span {
+.office-time-zoon span {
     display: block;
     line-height: 1;
     margin-bottom: 11px;
     font-size: 20px;
 }
-.locations-sec-grid-item .locations-title-cntrl a{
+.locations-title-cntrl a{
 	padding: 11px 14px;
 	margin-right: 5px;
 }
 .locations-title-cntrl > a:last-child{
     margin-right: 0px;
 }
-.locations-sec-grid-item .office-contact a {
+.office-contact a {
     text-decoration: none;
     font-weight: 600;
     color: #29467D;
     font-size: 20px;
 }
-.locations-sec-grid-item .office-social ul li a i {
+ .office-social ul li a i {
     width: 40px;
     height: 40px;
     border: 1px solid #707070;
@@ -236,21 +236,21 @@
     justify-content: center;
     align-items: center;
 }
-.locations-sec-grid-item .office-contact a:hover {
+ .office-contact a:hover {
     color: #A37D36;
 }
-.locations-sec-grid-item .office-social ul li a:hover i{
+ .office-social ul li a:hover i{
     border: 1px solid #11345E;
 }
-.locations-sec-grid-item .office-social ul li a:hover i svg{
+ .office-social ul li a:hover i svg{
 	fill: #11345E;
 }
-.locations-sec-grid-item .office-social ul {
+ .office-social ul {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -4px;
 }
 
-.locations-sec-grid-item .office-social ul li {
+ .office-social ul li {
     padding: 0 4px;
 }

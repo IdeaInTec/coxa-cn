@@ -58,7 +58,7 @@
 .profile-module{
 
 }
-.profile-module ul{
+.profile-module > ul{
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;

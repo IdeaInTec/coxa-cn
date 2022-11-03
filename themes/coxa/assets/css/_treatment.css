@@ -14,6 +14,10 @@
 	border-bottom: 4px solid #A37D36;
 	
 }
+.treatment-sec .sec-entry-hdr-cntlr {
+    padding-bottom: 40px;
+}
+
 .treatment-grd-des{
 	padding: 24px 15px 1px;
 }
@@ -148,6 +152,9 @@
 .treatment-bg-color .sec-entry-hdr-title,
 .treatment-bg-color .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
     color: #fff;
+}
+.treatment-bg-color .contact-form-wrp .wpforms-field-checkbox ul li label{
+	color: #EAEAEA!important;
 }
 .treatment-bg-color .sec-entry-hdr p{
 	color:#EACC95;	
