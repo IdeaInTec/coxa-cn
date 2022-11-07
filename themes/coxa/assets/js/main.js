@@ -320,7 +320,7 @@ if (windowWidth > 767) {
 if( $('.bannerBgSlider').length ){
     $('.bannerBgSlider').slick({
       dots: false,
-      infinite: false,
+      infinite: true,
       autoplay: true,
       arrows: true,
       autoplaySpeed: 4000,
@@ -329,6 +329,21 @@ if( $('.bannerBgSlider').length ){
       slidesToScroll: 1,
       nextArrow: '.bnr-right',
       prevArrow: '.bnr-left',
+    });
+}
+if( $('.bannerBgSlider2').length ){
+    $('.bannerBgSlider2').slick({
+      dots: false,
+      infinite: true,
+      autoplay: true,
+      fade:true,
+      arrows: true,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: '.bnr-right2',
+      prevArrow: '.bnr-left2',
     });
 }
 if( $('.treatmentSlider').length ){
@@ -483,17 +498,13 @@ $('.parallaxie').parallaxie({
 
   });
 // $('.parallax-window').parallax({imageSrc: '/path/to/image.jpg'});
-
+var $reviewDesHeight = $('.review-pro-des').height();
+$('.review-pro-des').css({
+  'min-height':$reviewDesHeight,
+});
 $(".review-pro-des-btn button").click(function(){
   $(this).parent().prev().toggleClass('viewAllText');
-  $(this).parent().prev().find('#more_text').slideToggle();
 });
-
-// $('.reviewSlider ').on('afterChange', function(event, slick, currentSlide, nextSlide){
-//       $(this).parent().prev().css({
-//         "height": "initial"
-//       })
-// });
 
 $('.review-pro-des-btn button').on('click',function(){
   $(this).parent().prev().css({

@@ -151,6 +151,21 @@
 .pm-grd-btn a{
 	padding: 11.5px 15px;
 }
+.teamGrdSlider .pm-grd-btn a {
+    line-height: 1.25;
+    font-weight: 600;
+    color: #29467D;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: baseline;
+    border-bottom: 1px dashed #29467D;
+    background: none;
+    padding: 0;
+}
+.teamGrdSlider .pm-grd-btn a:hover{
+	color: #A37D36;
+	border-color: #A37D36;
+}
 .pm-grd-desc{
 	display: none;
 }

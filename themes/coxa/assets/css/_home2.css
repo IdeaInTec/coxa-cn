@@ -129,7 +129,7 @@
 .review-pro-des p #more_text{
 	display: none;
 }
-/*.viewAllText p #more_text {
+.viewAllText p #more_text {
     display: inline;
     transition: all 0.5s;
 }
@@ -143,7 +143,7 @@
 }
 .viewAllText + .review-pro-des-btn #rdless_bnt{
 	display: inline-block;
-}*/
+}
 .review-pro-des p{
 	font-size: 20px;
 	line-height: 1.5;
@@ -156,20 +156,21 @@
 	line-height: 1;
 	margin-bottom: 28px;
 }
-.review-pro-des-btn button{
-	line-height: 1.25;
-	font-weight: 600;
-	color: #29467D;
-	text-decoration: none;
-	display: inline-block;
-	vertical-align: baseline;
-	border-bottom: 1px dashed #29467D;
-	background: none;
-	/*text-decoration:underline;
-	text-decoration-style: dotted;
-	text-underline-offset: 5px;*/
+.review-pro-des-btn button, 
+.review-pro-des-btn a {
+    line-height: 1.25;
+    font-weight: 600;
+    color: #29467D;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: baseline;
+    border-bottom: 1px dashed #29467D;
+    background: none;
+    text-transform: capitalize;
+    padding: 0;
 }
-.review-pro-des-btn a:hover{
+.review-pro-des-btn a:hover,
+.review-pro-des-btn button:hover{
 	color: #A37D36;
 	border-color: #A37D36;
 }
