@@ -369,6 +369,11 @@ if( $('.treatmentSlider').length ){
     });
 }
 
+$(".slick-current").prev().addClass('prevdiv');
+$('.treatmentSlider').on('afterChange', function(){
+    $(".slick-current").prev().removeClass('nextdiv').addClass('prevdiv');
+});
+
 
 if( $('.treatment-sec').length ){
   var conW = $('.container').width();
