@@ -320,6 +320,9 @@
 
 .treatmentSlider.slick-initialized .trtmnt-grd-cntlr{
 	display: block;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .treatmentSlider .slick-list.draggable{
 	padding-left: 40px!important;

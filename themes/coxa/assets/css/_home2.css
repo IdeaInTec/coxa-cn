@@ -129,6 +129,21 @@
 .review-pro-des p #more_text{
 	display: none;
 }
+/*.viewAllText p #more_text {
+    display: inline;
+    transition: all 0.5s;
+}
+
+.viewAllText p #dots {
+    display: none;
+}
+.viewAllText + .review-pro-des-btn #rdmore_bnt,
+.review-pro-des-btn #rdless_bnt{
+	display: none;
+}
+.viewAllText + .review-pro-des-btn #rdless_bnt{
+	display: inline-block;
+}*/
 .review-pro-des p{
 	font-size: 20px;
 	line-height: 1.5;
