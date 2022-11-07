@@ -14,6 +14,10 @@
 	border-bottom: 4px solid #A37D36;
 	
 }
+.treatment-sec .sec-entry-hdr-cntlr {
+    padding-bottom: 40px;
+}
+
 .treatment-grd-des{
 	padding: 24px 15px 1px;
 }
@@ -144,4 +148,24 @@
 .our-equionment-page-con-cntlr .cta-module-wrp{
 	margin-left: -20px;
 	margin-right: -20px;
+}
+.treatment-bg-color .sec-entry-hdr-title,
+.treatment-bg-color .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
+    color: #fff;
+}
+.treatment-bg-color .contact-form-wrp .wpforms-field-checkbox ul li label{
+	color: #EAEAEA!important;
+}
+.treatment-bg-color .sec-entry-hdr p{
+	color:#EACC95;	
+}
+.treatment-sec{
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.treatment-sec .wpforms-field-description a{
+	color: #EACC95!important;
+}
+.treatment-sec .contact-form-wrp {
+    max-width: 1135px;
 }

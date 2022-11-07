@@ -320,7 +320,7 @@ if (windowWidth > 767) {
 if( $('.bannerBgSlider').length ){
     $('.bannerBgSlider').slick({
       dots: false,
-      infinite: false,
+      infinite: true,
       autoplay: true,
       arrows: true,
       autoplaySpeed: 4000,
@@ -331,11 +331,26 @@ if( $('.bannerBgSlider').length ){
       prevArrow: '.bnr-left',
     });
 }
+if( $('.bannerBgSlider2').length ){
+    $('.bannerBgSlider2').slick({
+      dots: false,
+      infinite: true,
+      autoplay: true,
+      fade:true,
+      arrows: true,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: '.bnr-right2',
+      prevArrow: '.bnr-left2',
+    });
+}
 if( $('.treatmentSlider').length ){
     $('.treatmentSlider').slick({
       dots: false,
       infinite: true,
-      autoplay: true,
+      autoplay: false,
       arrows: true,
       autoplaySpeed: 4000,
       speed: 700,
@@ -368,6 +383,11 @@ if( $('.treatmentSlider').length ){
       ]
     });
 }
+
+$(".slick-current").prev().addClass('prevdiv');
+$('.treatmentSlider').on('afterChange', function(){
+    $(".slick-current").prev().removeClass('nextdiv').addClass('prevdiv');
+});
 
 
 if( $('.treatment-sec').length ){
@@ -402,13 +422,13 @@ if( $('.tmreviewSlider').length ){
 }
 
 
-$('#onepagenav').onePageNav({
-  currentClass: 'active',
-  changeHash: false,
-  scrollSpeed: 750,
-  scrollThreshold: 0.5,
-  filter: '',
-});
+// $('#onepagenav').onePageNav({
+//   currentClass: 'active',
+//   changeHash: false,
+//   scrollSpeed: 750,
+//   scrollThreshold: 0.5,
+//   filter: '',
+// });
 
 if( $('.tlPatientReviewSlider').length ){
     $('.tlPatientReviewSlider').slick({
@@ -450,8 +470,47 @@ if( $('.reviewSlider2').length ){
       prevArrow: '.revw-left',
     });
 }
+$('.wpforms-container select').select2()
 
+if( $('.tlPatientReviewSlider2').length ){
+    $('.tlPatientReviewSlider2').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: '.revw-right',
+      prevArrow: '.revw-left',
+    });
+}
+$('.bnrparallaxie').parallaxie({
+    speed:0.4,
+    pos_x:'center',
+    size: 'auto',
+    offset: -140,
+  });
+$('.parallaxie').parallaxie({
+    speed:0.4,
+    pos_x:'center',
 
+  });
+// $('.parallax-window').parallax({imageSrc: '/path/to/image.jpg'});
+var $reviewDesHeight = $('.review-pro-des').height();
+$('.review-pro-des').css({
+  'min-height':$reviewDesHeight,
+});
+$(".review-pro-des-btn button").click(function(){
+  $(this).parent().prev().toggleClass('viewAllText');
+});
+
+$('.review-pro-des-btn button').on('click',function(){
+  $(this).parent().prev().css({
+    "height": "auto"
+  })
+});
 
 /*---- SK ----*/ 
 
@@ -480,10 +539,13 @@ if( $('.reviewSlider').length ){
       ]
     });
 }
-$('.counter-number').counterUp({
-  delay: 15,
-  time: 1500
-});
+if( $('.counter-number').length ){
+  $('.counter-number').counterUp({
+    delay: 15,
+    time: 1500
+  });
+}
+
 
 
 /*---- MSI ----*/ 
@@ -539,6 +601,9 @@ if( $('.reviewSliderGrd3').length ){
       ]
     });
 }
+
+$('#contact-select2').select2();
+$('#contact-select3').select2();
 
 
 

@@ -1,163 +1,57 @@
 .referral-sec{
 	padding-top: 60px;
+    padding-bottom: 120px;
+}
+.referral-sec .sec-entry-hdr-cntlr{
+    padding-bottom: 8px;
+}
+
+.referral-about-intro .faq-accordion-hdr{
+    background: transparent!important;
+    border: none!important;
+    display: inline-block;
+    padding: 18px 35px 20px 0px;
+}
+.referral-about-intro .active .faq-accordion-hdr,
+.referral-about-intro .box-shadow{
+    box-shadow: none!important;
+}
+.referral-about-intro .faq-accordion-icon-box{
+    width: initial;
+    height: initial;
+    border: 0;
+}
+.referral-about-intro .faq-accordion-des{
+    border: none!important;
+    background: #F7F7F7;
+}
+.referral-about-intro .active .faq-accordion-title,
+.referral-about-intro .faq-accordion-hdr:hover .faq-accordion-title{
+    color: #0a2648;
+}
+.referral-about-intro .active .faq-accordion-hdr:after{
+    display: none;
+}
+.referral-about-intro .faq-accordion-hdr:hover .faq-accordion-icon-box:after{
+    background-image: url(../images/faq-list-icon.svg);
+    background-size: contain!important;
+}
+.referral-about-intro .active .faq-accordion-icon-box:before{
+    background-image: url(../images/faq-list-icon-blue-active.svg)!important;
+    background-size: contain!important;
+    margin-top: 0px!important;
+}
+.contact-form-wrp{
+    max-width: 840px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
 }
 .contact-form-sec-wrp{
     padding-top: 60px;
     padding-bottom: 110px;
-}
-.contact-form-block{
-    display: flex;
-    flex-wrap: wrap;
-}
-.contact-form-lft{
-    width:  66.31%;
-    order: 2;
-    padding-top: 38px;
-}
-.contact-form-rgt{
-    width: 33.68%;   
-    padding-right: 85px;
-    padding-top: 0;
-    order: 1;
-}
-.contact-form-rgt-inr{
-   /* position: -webkit-sticky;
-    position: sticky;
-    top: 20px;*/
-}
-.contact-details{
-
-}
-.contact-details-top{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #903EFA;
-    padding: 64px 20px;
-    flex-direction: column;
     position: relative;
-    z-index: 2;
-    border-bottom: 12px solid rgba(255, 255, 255, 0.13);
 }
-.cntct-phone{
-    text-align: center;
-    margin-bottom: 40px;
-}
-.cntct-phone a{
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 27px;
-    line-height: 1;
-    align-items: center;
-    color: #FFFFFF;
-    color: #fff;
-}
-.cntct-mail a:hover,
-.cntct-phone a:hover{
-    opacity: 0.7;
-}
-.cntct-phone-icon{
-    margin-bottom: 9px;
-    width: 100%;
-    text-align: center;
-}
-.cntct-phone-icon i svg{
-    max-width: 28px;
-}
-.cntct-mail a{
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 27px;
-    line-height: 1;
-    align-items: center;
-    color: #FFFFFF;
-    color: #fff;
-}
-.cntct-mail-icon{
-    margin-bottom: 9px;
-    width: 100%;
-    text-align: center;
-}
-.cntct-mail-icon i svg{
-    max-width: 43px;
-}
-.contact-details-btm{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #FF9B4C;
-    padding: 40px 20px 40px 50px;
-    flex-direction: column;
-    position: relative;
-    z-index: 1;
-}
-.cntct-dtls-btm-addr{
-    width: 100%;
-    margin-bottom: 32px;
-}
-.cntct-dtls-btm-btw > span,
-.cntct-dtls-btm-addr span{
-    display: block;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    margin-bottom: 7px;
-    width: 100%;
-}
-.cntct-dtls-btm-btw span.cntct-dtls-btm-btw-text,
-.cntct-dtls-btm-addr a{
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    margin-bottom: 0;
-}
-.cntct-dtls-btm-btw{
-    width: 100%;
-    margin-bottom: 32px;
-}
-.cntct-dtls-socials{
-    width: 100%;
-}
-.cntct-dtls-socials ul{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin:  0 -11px;
-}
-.cntct-dtls-socials ul li{
-    padding: 0 11px;
-    display: inline-block;
-}
-.cntct-dtls-socials ul li a i,
-.cntct-dtls-socials ul li a{
-    display: inline-block;
-}
-.cntct-dtls-btm-addr a:hover,
-.cntct-dtls-socials ul li a:hover i svg{
-    opacity: 0.7;
-}
-.cnt-sec-entry-hdr-title{
-    margin-bottom: 17px;
-    text-transform: uppercase;
-    font-weight: 900;
-}
-.contact-entry-header{
-    margin-bottom: 50px;
-}
-.contact-entry-header p:last-of-type{
-    margin-bottom: 0;
-}
-
-
-
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container {
     margin: 0 -12px;
     display: flex;
@@ -169,7 +63,15 @@
     padding: 0 12px;
     margin-bottom: 24px;
     position: relative;
+    line-height: 1;
 } 
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field .referrign-form-title {
+    font-weight: 400;
+    color: #333333;
+    line-height: 1.28;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-textarea, 
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.FullWidthField {
     width: 100%;
@@ -183,7 +85,7 @@
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-textarea textarea,
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.FullWidthField textarea{
-    height: 240px!important;
+    height: 140px!important;
     display: block;
     resize: none;
 }
@@ -191,19 +93,21 @@
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-textarea{
     width: 100%;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-textarea textarea,
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input {
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-textarea textarea, 
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input[type="text"],
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input[type="email"]
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input[type="number"]
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input[type="password"]{
     width: 100%;
     max-width: 100%;
     height: 54px;
-    background: transparent;
-    border: 1px solid #E0E0E0!important;
+    background: #F7F7F7;
+    border: 1px solid #ddd!important;
     box-sizing: border-box;
-    padding: 16px 26px 16px 20px;
-    color: #A9A9A9;
-    font-size: 15px;
+    padding: 16px 8px 16px 8px;
+    color: #333333;
+    font-weight: 600;
     line-height: 1.5;
-    letter-spacing: 0.02em;
     border-radius: 0!important;
     position: relative;
     transition: all 0.5s;
@@ -217,41 +121,41 @@
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input:focus {
     border: 1px solid #151B2F!important;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label {
     font-size: 17px;
-    line-height: 1.3;
-    margin-bottom: 7px;
-    color: #1F1F1F;
+    line-height: 1.27;
+    margin-bottom: 15px;
+    color: #11345E;
     font-weight: 600;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label .wpforms-required-label{
-    color: #231F20;
-    font-weight: 400;
-    display: none;
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-checkbox label{
+    margin-bottom: 22px;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label .wpforms-required-label {
+    color: #A37D36;
+    font-weight: 600;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button {
     display: inline-block;
     vertical-align: baseline;
-    min-width: 210px;
-    color: #fff;
-    background: #39B76B;
+    color: #FFFFFF;
+    background: #29467D;
+    border-radius: 4px;
     line-height: 1;
-    padding: 19.5px 15px 15.5px;
+    font-weight: 700;
     text-align: center;
-    font-weight: 600;
-    border: 2px solid #39B76B;
-    position: relative;
-    text-transform: uppercase;
-    z-index: 2;
-    cursor: pointer!important;   
+    padding: 16px 24px;
+    border: 2px solid #29467D;
+    text-transform: capitalize;
+    text-decoration: none;  
 }
 .contact-form-wrp .select2-container--default .select2-selection--single .select2-selection__rendered{
     color: #1F1F1F!important;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button:hover{
-    background: transparent!important;
-    border: 2px solid #39B76B!important;
-    color: #39B76B!important;
+    color: #FFFFFF;
+    background: #EACC95;
+    border-color: #EACC95;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container:after, 
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container:before {
@@ -310,27 +214,32 @@ textarea {
 
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input::placeholder,
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field textarea::placeholder{
-    color: #A9A9A9!important;
+    color: #707070!important;
+    font-weight: 400;
     opacity:1;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input::-webkit-input-placeholder,
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field textarea::-webkit-input-placeholder{ 
-    color: #A9A9A9!important;
+    color: #707070!important;
+    font-weight: 400;
     opacity:1;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input::-moz-placeholder,
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field textarea::-moz-placeholder{ 
-    color: #A9A9A9!important;
+    color: #707070!important;
+    font-weight: 400;
     opacity:1;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input:-ms-input-placeholder,
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field textarea:-ms-input-placeholder{ 
-    color: #A9A9A9!important;
+    color: #707070!important;
+    font-weight: 400;
     opacity:1;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input:-moz-placeholder,
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field textarea:-moz-placeholder{ 
-    color: #A9A9A9!important;
+    color: #707070!important;
+    font-weight: 400;
     opacity:1;
 }
 
@@ -386,23 +295,26 @@ textarea {
     margin-bottom: 26px;
 }
 .wpforms-field-description {
-    padding-top: 30px;
-    padding-bottom: 7px;
     margin-top: 0!important;
-    line-height: 1.8!important;
-    color: #A9A9A9!important;
+    color: #707070!important;
     font-size: 15px!important;
     font-weight: 400!important;
     text-transform: initial!important;
+    line-height: 1;
 }
-.wpforms-field-description a{
+.wpforms-field-description a {
     display: inline-block;
-    color: #A9A9A9!important;
-    text-decoration: underline!important;
+    color: #29467D!important;
+    text-decoration: none;
+    font-weight: 600;
+}
+.wpforms-field-description p{
+    line-height: 1.25;
+    margin-bottom: 13px;
 }
 .wpforms-field-description a:hover{
-    color: #39B76B!important;
-    text-decoration: none!important;
+    color: #EACC95!important;
+    text-decoration: underline;!important;
 }
 .wpforms-container .wpforms-submit-container{
     padding: 0!important;
@@ -419,8 +331,12 @@ textarea {
     padding: 0!important;
     list-style: none!important;
     position: relative;
-    padding: 0px 10px 0px 25px!important;
+    padding: 5px 24px 8px 40px!important;
     line-height: 20px!important;
+    margin-bottom: 5px!important;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-checkbox {
+    margin-bottom: 20px;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-html ul,
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-html ol,
@@ -430,14 +346,17 @@ textarea {
 }
 .contact-form-wrp .wpforms-field-checkbox ul li:before {
     position: absolute;
-    top: 2.5px;
+    top: 50%;
     left: 0;
-    height: 18px;
-    width: 18px;
-    background: transparent;
-    border: 1px solid #E0E0E0;
-    margin-top: 0;
+    height: 32px;
+    width: 32px;
+    background: #F7F7F7;
+    border: 1px solid #dddddd;
+    margin-top: -1px;
     border-radius: 0!important;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 .contact-form-wrp .wpforms-field-checkbox ul li{
     margin-bottom: 0!important;
@@ -471,6 +390,7 @@ textarea {
 }
 .contact-form-wrp .wpforms-field-checkbox ul{
     padding-left: 0!important;
+    padding-bottom: 14px;
 }
 .contact-form-wrp .wpforms-field-checkbox ul li:after {
     left: 6px;
@@ -521,17 +441,6 @@ textarea {
     margin-top: 0;
     top: 0;
 }
-/*map-start*/
-
-.contact-google-map-wrp{
-    position: relative;
-}
-.contact-google-map iframe{
-    height: 600px;
-    width: 100%;
-    vertical-align: bottom;
-}
-
 .wpforms-form input:-webkit-autofill,
 .wpforms-form input:-webkit-autofill:hover, 
 .wpforms-form input:-webkit-autofill:focus,
@@ -544,66 +453,40 @@ textarea {
   -webkit-box-shadow: 0 0 0px 1000px #FFF inset!important;
   transition: background-color 5000s ease-in-out 0s;
 }
-.contact-page-con-cntlr .instagram-feed-section .sec-btm-bdr{
-    width: 100%;
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-file-upload input[type="file"]:focus{
+    border: none!important;
+ }
+.widthField3d {
+    width: 33.33%!important;
 }
-.contact-page-con-cntlr .instagram-feed-section .sec-btm-bdr ul{
-    margin-right: 0!important;
+.wpforms-field-file-upload input[type="file"]{
+    color: #707070;
+    cursor: pointer;
 }
-.contact-form-sec-wrp{
-    position: relative;
+.wpforms-field-file-upload input[type="file"]::-webkit-file-upload-button {
+    padding: 8px 15px;
+    border-radius:4px;
+    border:1px solid #ddd;
+    background: #F7F7F7;
+    margin-right: 9px!important;
+    color: #333333!important;
+    cursor: pointer;
 }
-.contact-form-sec-wrp .sec-btm-bdr{
-    width: 100%;
-    bottom: -5px;
-    top: initial;
-    z-index: 10;
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul {
+    display: flex;
+    flex-wrap: wrap;
 }
-.contact-form-sec-wrp .sec-btm-bdr ul:after{
-    display: none;
-    content: none;
+.req-callbacki-sec{
+    padding-top: 75px;
+    padding-bottom: 140px;
 }
-.contact-form-sec-wrp .sec-btm-bdr ul{
-    margin-right: 0!important;
+.consultation-sec{
+    padding-bottom: 140px;
 }
 /*responsive*/
-@media(max-width: 1699px){
-    .cntct-phone-icon i svg{
-        max-width: 26px;
-    }
-    .cntct-mail a,
-    .cntct-phone a{
-        font-size: 25px;
-    }
-    .cntct-mail-icon i svg{
-        max-width: 40px;
-    }
-    .contact-form-lft {
-        width: 65%;
-    }
-    .contact-form-rgt{
-        width: 35%;
-    }
-}
+
 @media(max-width: 1199px){
-   .contact-form-rgt {
-        padding-right: 60px;
-    }
-    .cntct-phone-icon i svg {
-        max-width: 24px;
-    }
-    .cntct-mail a, .cntct-phone a {
-        font-size: 23px;
-    }
-    .cntct-mail-icon i svg {
-        max-width: 37px;
-    }
-    .contact-form-sec-wrp {
-        padding-bottom: 80px;
-    }
-    .contact-details-btm{
-        padding: 40px 20px 40px 30px;
-    }
+
     .contact-form-wrp .wpforms-container .select2-container--default .select2-selection--single .select2-selection__rendered,
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-textarea textarea, 
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input{
@@ -614,62 +497,15 @@ textarea {
     }
 }
 @media(max-width: 991px){
-    .contact-form-rgt {
-        padding-right: 30px;
-    }
-    .cntct-dtls-btm-btw > span, 
-    .cntct-dtls-btm-addr span{
-        font-size: 14px;
-    }
-    .cntct-dtls-btm-btw span.cntct-dtls-btm-btw-text, 
-    .cntct-dtls-btm-addr a{
-        font-size: 16px;
-    }
-    .contact-details-btm{
-        padding: 40px 16px 40px 16px;
-    }
-    .contact-details-top{
-        padding: 50px 20px;
-    }
+    
 }
 @media(max-width: 767px){
-    .contact-form-lft {
-        width: 100%;
-        order: 1;
-        padding-top: 0;
-        margin-bottom: 60px;
-    }
-    .contact-entry-header {
-        margin-bottom: 35px;
-    }
-    .contact-form-rgt {
-        width: 100%;
-        padding-right: 0;
-        padding-top: 0;
-        order: 2;
-    }
-    .contact-form-rgt-inr {
-        max-width: 400px;
-        width: 100%;
-        margin: 0 auto;
-    }
+    
     .contact-form-sec-wrp {
         padding-top: 40px;
-    }
-    .contact-form-sec-wrp {
         padding-bottom: 60px;
     }
-    .contact-details-btm{
-        padding: 40px 20px 43px 43px;
-    }
-    .cntct-dtls-btm-btw > span, 
-    .cntct-dtls-btm-addr span{
-       font-size: 16px;
-    }
-    .cntct-dtls-btm-btw span.cntct-dtls-btm-btw-text, 
-    .cntct-dtls-btm-addr a{
-        font-size: 20px;
-    }
+    
     .contact-form-wrp .wpforms-field-checkbox ul li label{
         font-size: 16px!important;
         line-height: 30px!important;
@@ -683,26 +519,8 @@ textarea {
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-textarea textarea{
         height: 250px!important;
     }
-    .cntct-dtls-btm-btw > span, 
-    .cntct-dtls-btm-addr span{
-        margin-bottom: 11px;
-    }
-    .cntct-mail-icon i svg, 
-    .cntct-phone-icon i svg {
-        max-width: initial;
-    }
-    .cntct-mail a, 
-    .cntct-phone a {
-        font-size: 30px;
-    }
-    .cntct-dtls-btm-btw > span, 
-    .cntct-dtls-btm-addr span {
-        font-size: 16px;
-    }
-    .cntct-dtls-btm-btw span.cntct-dtls-btm-btw-text, 
-    .cntct-dtls-btm-addr a {
-        font-size: 20px;
-    }
+
+
     .wpforms-container .wpforms-submit-container{
         padding-top: 8px!important;
     }
@@ -734,10 +552,6 @@ textarea {
 @media(max-width: 575px){
    .contact-form-sec-wrp {
         padding-top: 27px;
-    }
-    .cnt-sec-entry-hdr-title{
-        margin-bottom: 10px;
-        line-height: 1.1;
     }
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field{
         width: 100%;
@@ -777,43 +591,10 @@ textarea {
         padding: 22.5px 15px 18.5px;
         font-size: 16px;
     }
-    .contact-form-lft{
-        margin-bottom: 52px;
-    }
-    .cntct-mail-icon i svg,
-    .cntct-phone-icon i svg {
-        max-width: initial;
-    }
-    .cntct-mail a, 
-    .cntct-phone a{
-        font-size: 30px;
-    }
-    .contact-details-btm{
-        padding-left: 43px;
-        padding-bottom: 45px;
-        padding-top: 43px;
-    }
-    .cntct-dtls-btm-btw > span, 
-    .cntct-dtls-btm-addr span{
-        font-size: 16px;
-    }
-    .cntct-dtls-btm-btw span.cntct-dtls-btm-btw-text, 
-    .cntct-dtls-btm-addr a{
-        font-size: 20px;
-    }
-    .cntct-dtls-btm-btw,
-    .cntct-dtls-btm-addr{
-        margin-bottom: 37px;
-    }
     .contact-form-sec-wrp {
         padding-bottom: 46px;
     }
-    .contact-google-map iframe{
-        height: 720px;
-    }
-    .cntct-phone{
-        margin-bottom: 48px;
-    }
+    
     .contact-form-wrp .wpforms-field-checkbox ul li input[type="checkbox"],
     .contact-form-wrp .wpforms-field-checkbox ul li:before{
         top: 4px;

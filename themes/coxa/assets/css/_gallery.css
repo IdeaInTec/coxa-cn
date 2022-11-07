@@ -30,6 +30,9 @@
     color: #333333;
     text-align: left;
 }
+.galler-sec .practice-gallery-grid-title a:hover{
+    color: #EACC95;
+}
 .galler-sec .practice-gallery-grid-des {
     text-align: left;
 }
