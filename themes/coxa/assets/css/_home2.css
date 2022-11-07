@@ -126,6 +126,9 @@
 .review-pro-des{
 	margin-bottom: 16px;
 }
+.review-pro-des p #more_text{
+	display: none;
+}
 .review-pro-des p{
 	font-size: 20px;
 	line-height: 1.5;
@@ -138,7 +141,7 @@
 	line-height: 1;
 	margin-bottom: 28px;
 }
-.review-pro-des-btn a{
+.review-pro-des-btn button{
 	line-height: 1.25;
 	font-weight: 600;
 	color: #29467D;
@@ -146,6 +149,7 @@
 	display: inline-block;
 	vertical-align: baseline;
 	border-bottom: 1px dashed #29467D;
+	background: none;
 	/*text-decoration:underline;
 	text-decoration-style: dotted;
 	text-underline-offset: 5px;*/

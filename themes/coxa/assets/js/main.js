@@ -478,6 +478,31 @@ $('.parallaxie').parallaxie({
 
   });
 // $('.parallax-window').parallax({imageSrc: '/path/to/image.jpg'});
+
+$(".review-pro-des-btn button").click(function(){
+  var moreAndLess = $("#rdmore_bnt").is(':visible') ? 'View More' : 'View Less';
+  $(this).text(moreAndLess);
+  $(this).parent().prev().find('#dots').slideToggle();
+  $(this).parent().prev().find('#more_text').slideToggle();
+  $(this).html('View Less');
+});
+
+// $(".review-pro-des-btn button").click(function(event) {
+//     event.preventDefault();
+//     $('<div/>')
+//     .append('default ' + event.type + ' prevented')
+//     .appendTo('#log');
+// });
+
+
+
+
+$('.review-pro-des-btn button').on('click',function(){
+  $(this).parent().prev().css({
+    "height": "auto"
+  })
+});
+
 /*---- SK ----*/ 
 
 if( $('.reviewSlider').length ){
