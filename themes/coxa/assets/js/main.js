@@ -335,7 +335,7 @@ if( $('.treatmentSlider').length ){
     $('.treatmentSlider').slick({
       dots: false,
       infinite: true,
-      autoplay: true,
+      autoplay: false,
       arrows: true,
       autoplaySpeed: 4000,
       speed: 700,
