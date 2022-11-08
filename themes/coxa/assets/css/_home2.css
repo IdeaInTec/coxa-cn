@@ -123,16 +123,22 @@
 	margin-bottom: 28px;
 	color: #333333;
 }
-.review-pro-des{
-	margin-bottom: 16px;
+.review-pro-des {
+    margin-bottom: 16px;
+    overflow: hidden;
+    height: 148px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 }
-.review-pro-des p #more_text{
+/*.review-pro-des p #more_text{
 	display: none;
-}
-.viewAllText p #more_text {
+}*/
+/*.viewAllText p #more_text {
     display: inline;
     transition: all 0.5s;
-}
+}*/
 
 .viewAllText p #dots {
     display: none;
