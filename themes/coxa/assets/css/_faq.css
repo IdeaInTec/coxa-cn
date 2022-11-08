@@ -3,6 +3,7 @@
 }
 .faq-page-con-cntlr .sec-entry-hdr-cntlr{
 	max-width: 1000px;
+	padding-bottom: 35px;
 }
 .faq-page-con-cntlr .sec-entry-hdr p:last-of-type{
 	margin-bottom: 45px;
@@ -80,8 +81,9 @@
 .faq-page-con-cntlr .faq-grd{
 	padding-bottom: 8px;
 }
-.faq-grid-item-col{
-	padding-bottom: 60px;
+.faq-grid-item-col {
+    padding-bottom: 40px;
+    padding-top: 20px;
 }
 .faq-grd-cntlr{
 	max-width: 900px;

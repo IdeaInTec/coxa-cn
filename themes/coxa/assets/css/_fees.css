@@ -23,7 +23,7 @@
 }
 .fees-tab{
 	padding-bottom: 48px;
-	margin-bottom: 49px;
+	margin-bottom: 29px;
 }
 .fees-tab ul{
 	display: flex;
@@ -71,8 +71,9 @@
 	color: #EACC95;
 	border-color: transparent;
 }
-.fees-module-cntlr{
-	padding-bottom: 60px;
+.fees-module-cntlr {
+    padding-bottom: 40px;
+    padding-top: 20px;
 }
 .fees-module-title{
 	text-align: center;
