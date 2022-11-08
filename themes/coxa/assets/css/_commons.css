@@ -278,6 +278,7 @@ body.login-register.hide-account-title .select2-container--open .select2-dropdow
 .bannerBgSlider2 .bannerBgSlider-item,
 .bannerBgSlider .bannerBgSlider-item{
 	display: none;
+	position: relative;
 }
 
 .hmProdctGrdsSlider .hmProdctGrdsSlideItme:first-child,
@@ -289,7 +290,7 @@ body.login-register.hide-account-title .select2-container--open .select2-dropdow
 .hmProdctGrdsSlider.slick-initialized .hmProdctGrdsSlideItme,
 .bannerBgSlider2.slick-initialized .bannerBgSlider-item,
 .bannerBgSlider.slick-initialized .bannerBgSlider-item{
-	
+	display: block;
 }
 
 

@@ -339,10 +339,10 @@
 .has_bg_content_slide .banner-desc-wrap{
 	position: relative;
 }
-.has_bg_content_slide .pg-banner-cntlr, 
+/*.has_bg_content_slide .pg-banner-cntlr, 
 .has_bg_content_slide .banner-cntlr{
-	z-index: 2;
-}
+	z-index: 4;
+}*/
 .has_bg_content_slide .pg-banner-cntlr, 
 .has_bg_content_slide .banner-cntlr {
     padding: 91px 0;
