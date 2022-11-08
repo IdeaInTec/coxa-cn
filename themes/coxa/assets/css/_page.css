@@ -79,7 +79,7 @@
 }
 .sec-entry-hdr-title{
 	line-height: 1.25;
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 	position: relative;
 }
 .diamond-module{
@@ -93,6 +93,7 @@
 }
 .diamond-module ul li{
 	line-height: 1;
+    margin: 0px -1px;
 }
 .sec-entry-hdr p {
 	font-weight: 300;

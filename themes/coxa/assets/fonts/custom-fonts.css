@@ -40,3 +40,9 @@
         url('SourceSerifPro-Semibold/SourceSerifPro-Semibold.woff') format('woff');
     font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
 }
+@font-face {
+    font-family: 'SourceSerifPro';
+    src: url('SourceSerifPro-Regular/SourceSerifPro-Regular.woff2') format('woff2'),
+        url('SourceSerifPro-Regular/SourceSerifPro-Regular.woff') format('woff');
+    font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}

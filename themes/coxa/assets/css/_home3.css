@@ -7,7 +7,7 @@
     padding-bottom: 56px;
 }
 .faq-sec .faq-sec-inner {
-    max-width: 1080px;
+    max-width: 970px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -28,13 +28,14 @@
     cursor: pointer;
     background: #F7F7F7;
     border: 1px solid #DDDDDD;
-    padding: 18px 55px 20px 16px;
+    padding: 17px 55px 17px 16px;
 }
 .faq-accordion-title{
 	margin-bottom: 0!important;
 	cursor: pointer;
 	line-height: 1.2;
-	font-weight: 600;
+	font-weight: 400;
+    color: #333333;
 }
 .faq-accordion-icon-box:after,
 .faq-accordion-title,
@@ -62,8 +63,8 @@
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     border: 2px solid #29467D;
     background: transparent;
     border-radius: 100%;
@@ -134,7 +135,7 @@
 	display: none;
 }
 .faq-accordion-des a{
-	padding: 13px 18px;
+	padding: 12px 17px;
 	position: relative;
 }
 .faq-accordion-des a i{
@@ -158,7 +159,7 @@
 
 .locations-sec {
     padding-bottom: 55px;
-    padding-top: 60px;
+    padding-top: 55px;
 }
 .locations-sec-grids {
     display: flex;
@@ -172,7 +173,7 @@
 .locations-des-title{
 	font-weight: 600;
 	line-height: 1.25;
-	margin-bottom: 17px;
+	margin-bottom: 1px;
 	color: #333333;
 }
 .locations-sec-grid-item .locations-area{
