@@ -268,7 +268,7 @@
 	padding-right: 40px;
 }
 .treatment-lft .diamond-module{
-	margin-bottom: 33px;
+	margin-bottom: 28px;
 }
 .treatment-title{
 	font-size: 32px;
@@ -298,7 +298,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 	max-width: 665px;
-	max-width: 76%;
+	max-width: 53%;
 	width: 100%;
 	justify-content: space-between;
 }
@@ -442,6 +442,20 @@
 	padding: 0 8px;
 }
 
-@media(max-width: 1199px){
-	
+@media(max-width: 1799px){
+	.custom-prev-next-cntlr {
+	    max-width: 76%;
+	}
+}
+@media(max-width: 1599px){
+	.treatment-lft {
+    	padding-right: 20px;
+	}
+	.cdc-btn {
+	    padding: 13.5px 16px;
+	}
+}
+@media(max-width: 1299px){
+	.custom-prev-next-cntlr {
+	    max-width: 76%;
 }
