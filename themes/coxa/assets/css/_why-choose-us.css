@@ -28,3 +28,11 @@
 .wco-team-btn{
     text-align: center;
 }
+.why-choose-us-page-body-cntlr .pm-grd-btn a{
+    padding: 0 0;
+    text-decoration: none;
+    color: #29467D;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-bottom: 1px dotted #29467D;
+}
