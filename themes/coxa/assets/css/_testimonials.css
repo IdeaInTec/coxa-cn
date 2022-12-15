@@ -16,3 +16,16 @@
 .practice-gallery-bgwhite .practice-gallery-grid-img-cntlr{
 	box-shadow: none;
 }
+.testimonials-pg-content-cntlr .review-pro-des{
+	height: initial;
+}
+.reviewSlider2 .review-grid-col{
+    display: none;
+    position: relative;
+}
+.reviewSlider2 .review-grid-col:first-child{
+    display: block;
+}
+.reviewSlider2.slick-initialized .review-grid-col{
+    display: block;
+}
