@@ -5,6 +5,8 @@
 	margin-left: auto;
 	margin-right: auto;
 	border: none!important;
+	padding-top: 60px!important;
+	padding-bottom: 120px!important;
 }
 .galler-sec .practice-gallery-grid-img-cntlr{
 	box-shadow: none;
@@ -17,7 +19,7 @@
 }
 .galler-sec .why-choose-grids {
     margin: 0 0px;
-    padding: 0 20px;
+    padding: 0 30px;
 }
 .galler-sec .why-choose-grids .practice-gallery-grid-col {
 	width: 20%;
@@ -84,9 +86,11 @@
 .galler-sec .practice-gallery-grid-img-cntlr:hover{
 	opacity: 1;
 }
-.after-before-grids{
+.after-before-grids-cntlr{
 	padding-left: 25px;
 	padding-right: 25px;
+}
+.after-before-grids{
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -121,6 +125,9 @@
 }
 .afterBeforeEffect img{
 	transition: none;
+}
+.afterBeforeEffect-bx{
+	border-bottom: 4px solid #A37D36;
 }
 .twentytwenty-horizontal .twentytwenty-after-label:before {
     right: 34px;
@@ -186,8 +193,38 @@
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
-
-
+.filter-button-cntlr{
+	padding-bottom: 42px;
+}
+.filte-button ul{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-left: -8px;
+	margin-right: -8px;
+}
+.filte-button ul li{
+	padding: 0 8px 16px;
+}
+.filte-button ul li a{
+	text-decoration: none;
+	padding: 16px 26px;
+	background: transparent;
+	border: 1px solid #29467D;
+	border-radius: 52px;
+	font-size: 18px;
+	line-height: 1;
+	font-weight: 600;
+	color: #29467D;
+	text-transform: capitalize;
+	display: inline-block;
+	vertical-align: baseline;
+}
+.filte-button ul li.active a,
+.filte-button ul li a:hover{
+	background: #29467D;
+	color: #fff;
+}
 
 
 
