@@ -113,6 +113,7 @@
 	line-height: 1;
 	font-size: 20px;
 	padding-right: 10px;
+	text-transform: capitalize;
 }
 .fees-module-item-prize{
 	font-weight: 600;
