@@ -135,9 +135,6 @@
 .faq-accordion-des{
 	display: none;
 }
-.faq-accordion-menu.active .faq-accordion-des{
-    display: block;
-}
 .faq-accordion-des a{
 	padding: 12px 17px;
 	position: relative;
