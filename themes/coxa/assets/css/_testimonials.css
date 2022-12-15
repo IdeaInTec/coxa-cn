@@ -29,3 +29,6 @@
 .reviewSlider2.slick-initialized .review-grid-col{
     display: block;
 }
+.testimonials-pg-content-cntlr .review-grid-col {
+    width: 100%;
+}
