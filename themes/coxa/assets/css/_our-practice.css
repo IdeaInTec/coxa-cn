@@ -69,15 +69,15 @@
     top: 5px;
 }
 .practice-faq-sec{
-    background: linear-gradient(0deg, #0C2543, #0C2543);
-    background-blend-mode: multiply, normal;
-    padding-top: 80px;
-    padding-bottom: 130px;
-}
-.practice-faq-sec .sec-entry-hdr-title,
-.practice-faq-sec .sec-entry-hdr{
-    color: #fff;
-}
-.practice-faq-sec .faq-accordion-des{
     background: #F7F7F7;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+.practice-faq-sec .active .faq-accordion-hdr,
+.practice-faq-sec .faq-accordion-hdr:hover{
+    background: #11345E;
+}
+.practice-faq-sec .faq-accordion-des,
+.practice-faq-sec .faq-accordion-hdr{
+    background: #fff;
 }
