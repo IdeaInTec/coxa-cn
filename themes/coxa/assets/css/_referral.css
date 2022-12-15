@@ -65,9 +65,9 @@
 .referral-page-con-cntlr .tl-review-sec .review-grid-item{
     padding: 0 40px;
 }
-.tlPatientReviewSlider2 .review-pro-des{
+/*.tlPatientReviewSlider2 .review-pro-des{
     height: initial;
-}
+}*/
 .tlPatientReviewSlider2 .review-grid-col{
     display: none;
     position: relative;
