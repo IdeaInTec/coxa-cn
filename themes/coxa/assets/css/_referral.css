@@ -104,6 +104,9 @@
     padding-bottom: 110px;
     position: relative;
 }
+.treatment-sec-cntlr{
+    background: #061E39;
+}
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container {
     margin: 0 -12px;
     display: flex;
