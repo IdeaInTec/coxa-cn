@@ -173,7 +173,7 @@
 .locations-des-title{
 	font-weight: 600;
 	line-height: 1.25;
-	margin-bottom: 1px;
+	margin-bottom: 16px;
 	color: #333333;
 }
 .locations-sec-grid-item .locations-area{
@@ -182,6 +182,17 @@
 }
 .locations-title-cntrl{
 	margin-bottom: 27px;
+}
+.locations-sec-inner{
+    position: relative;
+}
+.location-prev-next .revw-next,
+.location-prev-next .revw-prev{
+    top: 205px;
+    transform: initial;
+}
+.locations-sec-grids .locations-sec-grid-item{
+    margin-bottom: 55px;
 }
 .office-time-zoon,
 .office-contact,
