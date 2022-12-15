@@ -112,6 +112,9 @@
 	border: 1px solid #11345E;
 	box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.16);
 }
+.active .faq-accordion-title{
+    color: #fff!important;
+}
 .active .faq-accordion-hdr:after {
     content: "";
     position: absolute;
@@ -134,6 +137,9 @@
 
 .faq-accordion-des{
 	display: none;
+}
+.faq-accordion-des.active{
+    display: block;
 }
 .faq-accordion-des a{
 	padding: 12px 17px;
