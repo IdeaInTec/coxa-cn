@@ -28,6 +28,7 @@
 }
 .ftr-top-col-04{
 	width: 17%;
+	padding-right: 0;
 }
 .ftr-logo {
     margin-bottom: 32px;
@@ -305,10 +306,11 @@
 }
 .ftr-designby p a{
 	color: #EACC95;
+	font-weight: 600;
 }
 .ftr-designby p{
 	padding-left: 12px;
-	font-weight: 600;
+	
 }
 /*@media(max-width: 1699px){
 	.ftr-logo a {
