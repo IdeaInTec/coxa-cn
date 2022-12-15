@@ -63,10 +63,11 @@
 }
 .testimonials-pg-content-cntlr .review-grid-item,
 .referral-page-con-cntlr .tl-review-sec .review-grid-item{
-    padding: 0 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .tlPatientReviewSlider2 .review-pro-des{
-    height: initial;
+    height: 90px;
 }
 .tlPatientReviewSlider2 .review-grid-col{
     display: none;
