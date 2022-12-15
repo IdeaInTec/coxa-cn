@@ -66,6 +66,7 @@
     padding-left: 40px;
     padding-right: 40px;
 }
+.testimonials-pg-content-cntlr .review-pro-des,
 .tlPatientReviewSlider2 .review-pro-des{
     height: 90px;
 }
@@ -78,6 +79,13 @@
 }
 .tlPatientReviewSlider2.slick-initialized .review-grid-col{
     display: block;
+}
+.referral-page-con-cntlr .review-color .slick-slider .slick-dots li.slick-active button, 
+.referral-page-con-cntlr .review-color .slick-slider .slick-dots li button:hover{
+    background: #C5CBE5!important;
+}
+.referral-page-con-cntlr .review-color .slick-slider .slick-dots li button {
+    border: 1px solid #C5CBE5!important;
 }
 .contact-form-wrp{
     max-width: 840px;
