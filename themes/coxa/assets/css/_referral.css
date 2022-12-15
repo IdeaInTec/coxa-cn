@@ -19,10 +19,16 @@
 .faq-accordion-menu.topactiove .faq-accordion-des{
     display: block;
 }
-.referral-about-intro  .faq-accordion-title{
-    color: #11345E;
+.referral-about-intro .faq-accordion-title{
+    color: #11345E!important;
     font-weight: 600;
+    transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
+/*.referral-about-intro .faq-accordion-hdr .faq-accordion-title:hover {
+    color: #EACC95!important;
+}*/
 .referral-about-intro .faq-accordion-icon-box{
     width: initial;
     height: initial;
