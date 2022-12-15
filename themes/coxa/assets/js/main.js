@@ -633,6 +633,21 @@ if( $('.reviewSliderGrd3').length ){
       ]
     });
 }
+
+if( $('.afterBeforeEffect').length ){
+  $('.afterBeforeEffect').each(function(index) {
+    var afterBeforeEffectInduvidual = $(this);
+    afterBeforeEffectInduvidual.twentytwenty({ 
+        before_label: 'Before Treatment',
+        after_label: 'After Treatment',
+        click_to_move: true,
+    });
+  });
+}
+
+
+
+
 /*---- MIN ----*/ 
 var windowHeighT = $(window).height();
 var headerHeight = $('.header').outerHeight();
