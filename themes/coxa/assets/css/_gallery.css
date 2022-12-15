@@ -84,6 +84,113 @@
 .galler-sec .practice-gallery-grid-img-cntlr:hover{
 	opacity: 1;
 }
+.after-before-grids{
+	padding-left: 25px;
+	padding-right: 25px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.after-before-grd-item-col{
+	width: 33.3333%;
+	padding: 0 15px 30px;
+}
+.after-before-grd-item-col.width-50{
+	width: 50%;
+}
+.after-before-des{
+	padding-top: 24px;
+}
+.after-before-des-title{
+	padding-left: 26px;
+	position: relative;
+	font-size: 21px;
+	margin-bottom: 10px;
+}
+.after-before-des-title:before{
+	content: "";
+    position: absolute;
+    left: 0;
+    background: url(../images/gallery-title-icon.svg);
+    width: 18px;
+    height: 17px;
+    top: 3px;
+}
+.after-before-des-title a{
+	text-decoration: none;
+	color: #333333;
+}
+.afterBeforeEffect img{
+	transition: none;
+}
+.twentytwenty-horizontal .twentytwenty-after-label:before {
+    right: 34px;
+}
+.twentytwenty-horizontal .twentytwenty-before-label:before {
+    left: 26px;
+}
+.twentytwenty-horizontal .twentytwenty-before-label:before, 
+.twentytwenty-horizontal .twentytwenty-after-label:before {
+    top: initial;
+    bottom: 15px;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
+    font-size: 20px;
+    font-family: 'SourceSansPro';
+    font-weight: 600;
+    line-height: 1;
+    text-transform: capitalize;
+    letter-spacing: initial;
+}
+.twentytwenty-handle{
+	height: 69px;
+	width: 69px;
+	background: #A37D36;
+	border: 2px solid #A37D36;
+	border-radius: 100%;
+	box-shadow: none;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	margin-left: 0;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.45);
+}
+.twentytwenty-horizontal .twentytwenty-handle:before, 
+.twentytwenty-horizontal .twentytwenty-handle:after, 
+.twentytwenty-vertical .twentytwenty-handle:before, 
+.twentytwenty-vertical .twentytwenty-handle:after{
+	background: #A37D36;
+	width: 6px;
+	box-shadow: none;
+}
+.twentytwenty-left-arrow{
+	border: none;
+	margin-left: -10px;
+	margin-top: 0;
+	background: url('../images/after-before-handle-right-arrow.svg');
+	width: 14px;
+	height: 24px;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.twentytwenty-right-arrow{
+	border: none;
+	margin-right: -28px;
+	margin-top: 0;
+	background: url('../images/after-before-handle-left-arrow.svg');
+	width: 14px;
+	height: 24px;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+
+
+
+
 @media(max-width: 1599px){
 	.galler-sec .practice-gallery-grid-img-cntlr .practice-gallery-grid-img {
 	    height: 310px;
