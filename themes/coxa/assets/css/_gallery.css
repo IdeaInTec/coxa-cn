@@ -159,7 +159,6 @@
 	background: #A37D36;
 	border: 2px solid #A37D36;
 	border-radius: 100%;
-	box-shadow: none;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
@@ -172,7 +171,7 @@
 .twentytwenty-vertical .twentytwenty-handle:after{
 	background: #A37D36;
 	width: 4px;
-	box-shadow: none;
+	box-shadow: 0 0px 0 white, 0px -3px 5px rgb(255 255 255);
 }
 .twentytwenty-left-arrow{
 	border: none;
