@@ -382,3 +382,6 @@
 .pro-modal-des p:not(:last-of-type){
 	margin-bottom: 30px;
 }
+.pro-modal-btn{
+	padding-top: 9px;
+}
