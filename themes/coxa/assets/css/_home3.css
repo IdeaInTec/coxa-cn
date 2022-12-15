@@ -150,13 +150,6 @@
 	padding-top: 5px;
 }
 
-
-
-
-
-
-
-
 .locations-sec {
     padding-bottom: 75px;
     padding-top: 30px;
@@ -214,6 +207,7 @@
     margin-bottom: 10px;
     line-height: 1.25;
     font-weight: 600;
+    font-family: 'SourceSansPro';
 }
 .locations-des {
     /*padding-right: 11px;*/
@@ -307,4 +301,19 @@
 }
 .locationSlider.slick-initialized .locations-sec-grid-item{
     display: block;
+}
+
+    .abtis-row-text-inr .locations-des {
+        padding-top: 8px;
+    }
+    .abtis-row-text-inr .locations-des{
+        line-height: 1.8;
+    }
+@media(max-width: 1399px){
+    .about-intro-sec .office-time-zoon, 
+    .about-intro-sec .office-contact, 
+    .about-intro-sec .office-social {
+        margin-bottom: 23px;
+    }
+
 }
