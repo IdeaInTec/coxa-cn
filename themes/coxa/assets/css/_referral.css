@@ -49,6 +49,31 @@
     background-size: contain!important;
     margin-top: 0px!important;
 }
+.referral-page-con-cntlr .tl-review-sec .sec-entry-hdr-cntlr{
+    padding-bottom: 4px;
+}
+.referral-page-con-cntlr .tl-review-sec {
+    padding-bottom: 120px;
+}
+.tlPatientReviewSlider2{
+    margin-bottom: 0!important;
+}
+.tlPatientReviewSlider2 .review-grid-col{
+    width: 100%;
+}
+.tlPatientReviewSlider2 .review-pro-des{
+    height: initial;
+}
+.tlPatientReviewSlider2 .review-grid-col{
+    display: none;
+    position: relative;
+}
+.tlPatientReviewSlider2 .review-grid-col:first-child{
+    display: block;
+}
+.tlPatientReviewSlider2.slick-initialized .review-grid-col{
+    display: block;
+}
 .contact-form-wrp{
     max-width: 840px;
     margin-right: auto;
