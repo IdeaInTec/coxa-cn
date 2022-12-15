@@ -201,6 +201,12 @@
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
+.twentytwenty-overlay{
+	background: rgba(6,30,57,0);
+}
+.twentytwenty-overlay:hover {
+    background: rgba(6, 30, 57, 0.6);
+}
 .filter-button-cntlr{
 	padding-bottom: 30px;
 }
