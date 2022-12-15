@@ -4,6 +4,9 @@
 }
 .abtis-img-text-row-inr{
 	display: flex;
+	align-items: center;
+}
+.lt-page-con-cntlr .abtis-img-text-row-inr{
 	align-items: flex-end;
 }
 .abtis-img-txt-col{

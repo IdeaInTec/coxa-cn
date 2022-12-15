@@ -62,6 +62,7 @@
 .review-color .sec-entry-hdr-title{
 	color: #FFFFFF;
 	font-weight: 600;
+	text-transform: capitalize;
 }
 .review-color .review-tstmnl-mgs{
 	color: #333333;
@@ -161,7 +162,7 @@
 }
 .treatment-sec{
 	padding-top: 70px;
-	padding-bottom: 30px;
+	padding-bottom: 70px;
 }
 .treatment-sec .wpforms-field-description a{
 	color: #EACC95!important;

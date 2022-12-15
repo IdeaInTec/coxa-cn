@@ -21,9 +21,18 @@
 .wco-team-sec .team-grds{
     padding-bottom: 0;
 }
+.why-choose-us-page-body-cntlr 
 .wco-team-sec .team-grds.slick-slider ul.slick-dots{
     margin-top: 10px;
 }
 .wco-team-btn{
     text-align: center;
+}
+.why-choose-us-page-body-cntlr .pm-grd-btn a{
+    padding: 0 0;
+    text-decoration: none;
+    color: #29467D;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-bottom: 1px dotted #29467D;
 }

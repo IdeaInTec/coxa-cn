@@ -16,3 +16,34 @@
 .practice-gallery-bgwhite .practice-gallery-grid-img-cntlr{
 	box-shadow: none;
 }
+.testimonials-pg-content-cntlr .review-pro-des{
+	height: initial;
+}
+.reviewSlider2 .review-grid-col{
+    display: none;
+    position: relative;
+}
+.reviewSlider2 .review-grid-col:first-child{
+    display: block;
+}
+.reviewSlider2.slick-initialized .review-grid-col{
+    display: block;
+}
+.testimonials-pg-content-cntlr .review-grid-col {
+    width: 100%;
+}
+.testimonials-pg-content-cntlr .practice-gallery .sec-entry-hdr-cntlr {
+    padding-bottom: 55px;
+}
+.testimonials-pg-content-cntlr .practice-gallery {
+    padding: 80px 0 70px!important;
+}
+.testimonials-pg-content-cntlr .why-choose-sec{
+	padding: 70px 0 80px;
+}
+.testimonials-pg-content-cntlr .why-choose-grid-btn {
+    padding-top: 40px;
+}
+.testimonials-pg-content-cntlr .why-choose-sec .sec-entry-hdr-cntlr {
+    padding-bottom: 60px;
+}
