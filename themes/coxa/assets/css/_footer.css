@@ -308,6 +308,7 @@
 }
 .ftr-designby p{
 	padding-left: 12px;
+	font-weight: 600;
 }
 /*@media(max-width: 1699px){
 	.ftr-logo a {
