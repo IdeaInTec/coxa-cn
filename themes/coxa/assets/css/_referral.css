@@ -16,6 +16,13 @@
 .referral-about-intro .box-shadow{
     box-shadow: none!important;
 }
+.faq-accordion-menu.topactiove .faq-accordion-des{
+    display: block;
+}
+.referral-about-intro  .faq-accordion-title{
+    color: #11345E;
+    font-weight: 600;
+}
 .referral-about-intro .faq-accordion-icon-box{
     width: initial;
     height: initial;

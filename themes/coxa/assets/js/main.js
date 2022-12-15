@@ -445,7 +445,8 @@ if( $('.tlPatientReviewSlider').length ){
     $(this).parents('.faq-accordion-menu').toggleClass('active');
     $(this).parents('.faq-grd').siblings().find('.faq-accordion-menu').removeClass('active'); 
     $(this).parents('.faq-grd').find('.faq-accordion-des').slideToggle(300);
-    $(this).parents('.faq-grd').siblings().find('.faq-accordion-des').slideUp(300);  
+    $(this).parents('.faq-grd').siblings().find('.faq-accordion-des').slideUp(300);
+    $('.faq-accordion-menu').removeClass('topactiove');
   });
 
 if( $('.reviewSlider2').length ){
