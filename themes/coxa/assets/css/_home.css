@@ -210,7 +210,7 @@
 	margin-bottom: 0;
 }
 .banner-desc{
-	margin-bottom: 34px;
+	margin-bottom: 40px;
 }
 .pg-banner-desc{
 	margin-bottom: 30px;
@@ -430,6 +430,9 @@
 }
 .intro-cntlr .sec-entry-hdr-cntlr{
 	max-width: 929px;
+}
+.intro-sec .sec-entry-hdr p:not(:last-of-type){
+	margin-bottom: 26px;
 }
 .intro-btns{
 	display: flex;
