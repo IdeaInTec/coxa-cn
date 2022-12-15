@@ -159,6 +159,7 @@
 }
 .contact-form-wrp .select2-container--default .select2-selection--single .select2-selection__rendered{
     color: #1F1F1F!important;
+    padding: 16px 8px 16px 8px;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button:hover{
     color: #FFFFFF;
