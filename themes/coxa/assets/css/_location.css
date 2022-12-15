@@ -1,16 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
 .tl-team-sec{
 	padding-top: 80px;
 	padding-bottom: 14px;
@@ -34,4 +22,16 @@
 }
 .abtis-row-text-inr .locations-des{
 	padding-top: 15px;
+}
+.tlPatientReviewSlider .review-grid-col{
+	display: none;
+}
+.tlPatientReviewSlider .review-grid-col:first-child{
+	display: block;
+}
+.tlPatientReviewSlider.slick-initialized .review-grid-col{
+	display: block;
+}
+.practice-gallery .sec-entry-hdr-cntlr {
+    padding-bottom: 12px;
 }
