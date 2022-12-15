@@ -13,10 +13,16 @@ if( $('.hamburgar-cntlr').length ){
     $('body').toggleClass('allWork');
   });
 }
-if(windowWidth <=767){
+if(windowWidth <=991){
     if( $('ul > li.menu-item-has-children').length ){
       $('ul > li.menu-item-has-children').click(function(){
        $(this).find('.sub-menu').slideToggle(300);
+       $(this).toggleClass('sub-menu-arrow');
+     });
+    }
+    if( $('ul > li.menu-item-has-megamenu').length ){
+      $('ul > li.menu-item-has-megamenu').click(function(){
+       $(this).find('.megamenu').slideToggle(300);
        $(this).toggleClass('sub-menu-arrow');
      });
     }
