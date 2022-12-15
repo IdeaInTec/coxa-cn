@@ -2,7 +2,8 @@
 	padding: 90px 0;
 	border-top: 2px solid #A37D36;
 	border-bottom: 2px solid #A37D36;
-	background: linear-gradient(0deg, #0C2543, #0C2543)
+	background: linear-gradient(0deg, #0C2543, #0C2543);
+/*	background-position: top left!important;*/
 }
 .why-choose-sec .sec-entry-hdr p,
 .why-choose-sec .sec-entry-hdr-title{
