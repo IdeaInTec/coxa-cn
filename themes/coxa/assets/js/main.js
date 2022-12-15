@@ -445,7 +445,8 @@ if( $('.tlPatientReviewSlider').length ){
     $(this).parents('.faq-accordion-menu').toggleClass('active');
     $(this).parents('.faq-grd').siblings().find('.faq-accordion-menu').removeClass('active'); 
     $(this).parents('.faq-grd').find('.faq-accordion-des').slideToggle(300);
-    $(this).parents('.faq-grd').siblings().find('.faq-accordion-des').slideUp(300);  
+    $(this).parents('.faq-grd').siblings().find('.faq-accordion-des').slideUp(300);
+    $('.faq-accordion-menu').removeClass('topactiove');
   });
 
 if( $('.reviewSlider2').length ){
@@ -545,6 +546,31 @@ if( $('.reviewSlider').length ){
       ]
     });
 }
+if( $('.locationSlider').length ){
+    $('.locationSlider').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 3,
+      slidesToScroll: 1, 
+      nextArrow: '.revw-right',
+      prevArrow: '.revw-left',     
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        }
+      ]
+    });
+}
 if( $('.counter-number').length ){
   $('.counter-number').counterUp({
     delay: 15,
@@ -607,6 +633,21 @@ if( $('.reviewSliderGrd3').length ){
       ]
     });
 }
+
+if( $('.afterBeforeEffect').length ){
+  $('.afterBeforeEffect').each(function(index) {
+    var afterBeforeEffectInduvidual = $(this);
+    afterBeforeEffectInduvidual.twentytwenty({ 
+        before_label: 'Before Treatment',
+        after_label: 'After Treatment',
+        click_to_move: true,
+    });
+  });
+}
+
+
+
+
 /*---- MIN ----*/ 
 var windowHeighT = $(window).height();
 var headerHeight = $('.header').outerHeight();
