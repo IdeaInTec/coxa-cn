@@ -308,6 +308,9 @@
 	color: #EACC95;
 	font-weight: 600;
 }
+.ftr-designby p a:hover{
+	color: #fff;
+}
 .ftr-designby p{
 	padding-left: 12px;
 	
