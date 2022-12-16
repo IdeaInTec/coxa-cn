@@ -111,11 +111,12 @@
 	background: #11345E;
 	border: 2px solid #11345E;
 	box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.16);
+    border-bottom: 2px solid #A37D36;
 }
 .active .faq-accordion-title{
     color: #fff!important;
 }
-.active .faq-accordion-hdr:after {
+/*.active .faq-accordion-hdr:after {
     content: "";
     position: absolute;
     bottom: -1px;
@@ -123,7 +124,7 @@
     right: 0;
     height: 2px;
     background: #A37D36;
-}
+}*/
 .active .faq-accordion-title{
 	color: #fff;
 }
