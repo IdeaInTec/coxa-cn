@@ -150,8 +150,11 @@
     bottom: 32px;
     left: 8px;
     border: 4px solid #fff;
-    box-shadow: -8px -8px 16px rgb(3 0 0 / 32%);
+/*    box-shadow: 8px 8px 16px rgb(0 0 0 / 32%);*/
     display: none;
+}
+.about-page-con-cntlr .pm-grd-title{
+	margin-bottom: 10px;
 }
 .abtis-row-sub-img {
   width: 100%;
