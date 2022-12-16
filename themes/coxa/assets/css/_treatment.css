@@ -154,11 +154,14 @@
 .treatment-bg-color .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
     color: #fff;
 }
+.referral-sec .sec-entry-hdr-title{
+	color: #11345E;
+}
 .treatment-bg-color .contact-form-wrp .wpforms-field-checkbox ul li label{
 	color: #EAEAEA!important;
 }
 .treatment-bg-color .sec-entry-hdr p{
-	color:#EACC95;	
+	color:#333333;	
 }
 .treatment-sec{
 	padding-top: 70px;
@@ -168,5 +171,9 @@
 	color: #EACC95!important;
 }
 .treatment-sec .contact-form-wrp {
-    max-width: 1135px;
+    max-width: 1080px;
+}
+.treatment-sec-cntlr form.wpforms-form.needs-validation{
+	padding: 40px 40px;
+	border: 2px solid #A37D36;
 }
