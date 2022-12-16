@@ -156,6 +156,9 @@
 /*    box-shadow: 8px 8px 16px rgb(0 0 0 / 32%);*/
     display: none;
 }
+/*.three-col-review .review-pro-des{
+	height: 210px;
+}*/
 .about-page-con-cntlr .pm-grd-title{
 	margin-bottom: 10px;
 }
