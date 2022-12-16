@@ -707,6 +707,7 @@ body.allWork .hamburger-icon span:nth-child(2) {
         -webkit-box-shadow: initial;
         background: transparent;
         border: 0;
+        visibility: visible;
     }
     nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li {
         padding: 0 0;
