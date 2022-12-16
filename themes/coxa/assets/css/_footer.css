@@ -281,7 +281,7 @@
     -o-transform: translate(-50%, -50%);
 }
 .ftr-btm-menu ul li:last-child:before{
-/*	content: none!important;*/
+	content: none!important;
 }
 .ftr-btm-menu ul li a{
 	display: inline-block;
