@@ -280,9 +280,9 @@
     -webkit-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
 }
-.ftr-btm-menu ul li:last-child:before{
-/*	content: none!important;*/
-}
+/*.ftr-btm-menu ul li:last-child:before{
+	content: none!important;
+}*/
 .ftr-btm-menu ul li a{
 	display: inline-block;
 	text-decoration: none;
@@ -307,6 +307,9 @@
 .ftr-designby p a{
 	color: #EACC95;
 	font-weight: 600;
+}
+.ftr-designby p a:hover{
+	color: #fff;
 }
 .ftr-designby p{
 	padding-left: 12px;

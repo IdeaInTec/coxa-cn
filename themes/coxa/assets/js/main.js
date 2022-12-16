@@ -532,6 +532,7 @@ $(function(){
       $(this).parent().prev().attr('data-status', 'closed');    }
   });
 })
+
  //Function to animate height: auto 
 function autoHeightAnimate(element, time){
     var curHeight = element.height(), // Get Default Height

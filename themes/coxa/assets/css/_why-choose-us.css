@@ -36,3 +36,24 @@
     text-transform: capitalize;
     border-bottom: 1px dotted #29467D;
 }
+.why-choose-us-page-body-cntlr .pm-grd-btn a:hover{
+    color: #A37D36;
+    letter-spacing: 1px;
+    border-bottom-color: #A37D36;
+}
+
+.teamGrdSlider .team-grd-item-col{
+    display: none;
+}
+.teamGrdSlider .team-grd-item-col:first-child{
+    display: block;
+}
+.teamGrdSlider.slick-initialized .team-grd-item-col{
+    display: block;
+}
+.why-choose-us-page-body-cntlr .review-grid-item{
+    padding-bottom: 35px;
+}
+.why-choose-us-page-body-cntlr .review-pro-des{
+    height: 90px;
+}

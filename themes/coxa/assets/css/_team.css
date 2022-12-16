@@ -138,6 +138,9 @@
 	color: #A37D36;
 	margin-bottom: 15px;
 }
+.team-pg-content-cntlr .pm-grd-addr{
+	margin-bottom: 22px;
+}
 .pm-grd-btns-cntlr{
 	display: flex;
 	align-items: center;
