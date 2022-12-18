@@ -90,6 +90,13 @@
       <path d="M17.6589 1.15925C17.8656 0.940764 18.1139 0.765924 18.3893 0.645065C18.6647 0.524207 18.9615 0.459783 19.2622 0.455601C19.5629 0.451419 19.8614 0.507564 20.1401 0.620718C20.4187 0.733872 20.6719 0.901738 20.8845 1.11439C21.0972 1.32705 21.265 1.58018 21.3782 1.85882C21.4913 2.13746 21.5475 2.43596 21.5433 2.73667C21.5391 3.03738 21.4747 3.3342 21.3538 3.60959C21.233 3.88498 21.0581 4.13334 20.8397 4.34L14.2472 10.9325C14.2384 10.9412 14.2315 10.9516 14.2268 10.9629C14.222 10.9743 14.2196 10.9865 14.2196 10.9989C14.2196 11.0112 14.222 11.0234 14.2268 11.0348C14.2315 11.0462 14.2384 11.0565 14.2472 11.0653L20.8397 17.6578C21.0514 17.866 21.2198 18.1142 21.3352 18.3879C21.4506 18.6616 21.5106 18.9554 21.5118 19.2524C21.5131 19.5494 21.4555 19.8437 21.3424 20.1184C21.2294 20.393 21.063 20.6426 20.853 20.8526C20.643 21.0627 20.3935 21.2291 20.1189 21.3422C19.8443 21.4553 19.55 21.513 19.253 21.5118C18.956 21.5106 18.6621 21.4507 18.3884 21.3354C18.1147 21.2201 17.8665 21.0517 17.6582 20.84L11.0657 14.2475C11.0569 14.2388 11.0466 14.2318 11.0352 14.2271C11.0238 14.2224 11.0116 14.22 10.9993 14.22C10.9869 14.22 10.9747 14.2224 10.9633 14.2271C10.952 14.2318 10.9416 14.2388 10.9329 14.2475L4.34041 20.84C4.13213 21.0518 3.88398 21.2202 3.61029 21.3355C3.33659 21.4509 3.04277 21.5109 2.74575 21.5122C2.44874 21.5134 2.15442 21.4559 1.87977 21.3428C1.60512 21.2297 1.35557 21.0634 1.14553 20.8534C0.935479 20.6434 0.769088 20.3939 0.655952 20.1193C0.542815 19.8446 0.485171 19.5503 0.486346 19.2533C0.48752 18.9563 0.547489 18.6625 0.662793 18.3887C0.778098 18.115 0.946456 17.8668 1.15816 17.6585L7.75066 11.066C7.75939 11.0573 7.76631 11.0469 7.77104 11.0356C7.77577 11.0242 7.7782 11.012 7.7782 10.9996C7.7782 10.9873 7.77577 10.9751 7.77104 10.9637C7.76631 10.9523 7.75939 10.942 7.75066 10.9333L1.15816 4.34075C0.741826 3.91768 0.509534 3.34724 0.511881 2.75368C0.514228 2.16013 0.751022 1.59154 1.17069 1.17178C1.59035 0.752014 2.15888 0.515085 2.75244 0.512599C3.346 0.510112 3.91649 0.742269 4.33966 1.1585L10.9322 7.751C10.9409 7.75973 10.9512 7.76666 10.9626 7.77138C10.974 7.77611 10.9862 7.77854 10.9985 7.77854C11.0109 7.77854 11.0231 7.77611 11.0345 7.77138C11.0459 7.76666 11.0562 7.75973 11.0649 7.751L17.6574 1.1585L17.6589 1.15925Z"/>
     </symbol>
 
+    <symbol id="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.3335 1.00016L7.00016 6.3335L1.66683 1.00016" stroke="#29467D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1.6665 6.99984L6.99984 1.6665L12.3332 6.99984" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
   </svg>  
 
 </head>
@@ -448,7 +455,18 @@
                       <div class="faq-accordion-menu active">
                         <div class="faq-accordion-hdr">
                           <h3 class="faq-accordion-title fl-h6">Where are the Cox & Hitchock is the practices?</h3>
-                          <div class="faq-accordion-icon-box"></div>
+                          <div class="faq-accordion-icon-box">
+                            <i class="faq-icon">
+                              <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <use xlink:href="#faq-list-icon-svg"></use> 
+                              </svg>
+                            </i>
+                            <i class="faq-active-icon">
+                              <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <use xlink:href="#faq-list-icon-active-svg"></use> 
+                              </svg>
+                            </i>
+                          </div>
                         </div>
                         <div class="faq-accordion-des active">
                           <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
@@ -462,7 +480,18 @@
                       <div class="faq-accordion-menu">
                         <div class="faq-accordion-hdr">
                           <h3 class="faq-accordion-title fl-h6">What is the difference between NHS and Private dentistry? </h3>
-                          <div class="faq-accordion-icon-box"></div>
+                          <div class="faq-accordion-icon-box">
+                            <i class="faq-icon">
+                              <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <use xlink:href="#faq-list-icon-svg"></use> 
+                              </svg>
+                            </i>
+                            <i class="faq-active-icon">
+                              <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <use xlink:href="#faq-list-icon-active-svg"></use> 
+                              </svg>
+                            </i>
+                          </div>
                         </div>
                         <div class="faq-accordion-des">
                           <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
@@ -476,7 +505,18 @@
                       <div class="faq-accordion-menu">
                         <div class="faq-accordion-hdr">
                           <h3 class="faq-accordion-title fl-h6">How do I make an appointment?</h3>
-                          <div class="faq-accordion-icon-box"></div>
+                          <div class="faq-accordion-icon-box">
+                            <i class="faq-icon">
+                              <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <use xlink:href="#faq-list-icon-svg"></use> 
+                              </svg>
+                            </i>
+                            <i class="faq-active-icon">
+                              <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <use xlink:href="#faq-list-icon-active-svg"></use> 
+                              </svg>
+                            </i>
+                          </div>
                         </div>
                         <div class="faq-accordion-des">
                           <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
@@ -490,7 +530,18 @@
                       <div class="faq-accordion-menu">
                         <div class="faq-accordion-hdr">
                           <h3 class="faq-accordion-title fl-h6">Do you offer dentistry for children?</h3>
-                          <div class="faq-accordion-icon-box"></div>
+                          <div class="faq-accordion-icon-box">
+                            <i class="faq-icon">
+                              <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <use xlink:href="#faq-list-icon-svg"></use> 
+                              </svg>
+                            </i>
+                            <i class="faq-active-icon">
+                              <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <use xlink:href="#faq-list-icon-active-svg"></use> 
+                              </svg>
+                            </i>
+                          </div>
                         </div>
                         <div class="faq-accordion-des">
                           <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
@@ -504,7 +555,18 @@
                       <div class="faq-accordion-menu">
                         <div class="faq-accordion-hdr">
                           <h3 class="faq-accordion-title fl-h6">Are you accepting new patients?</h3>
-                          <div class="faq-accordion-icon-box"></div>
+                          <div class="faq-accordion-icon-box">
+                            <i class="faq-icon">
+                              <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <use xlink:href="#faq-list-icon-svg"></use> 
+                              </svg>
+                            </i>
+                            <i class="faq-active-icon">
+                              <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <use xlink:href="#faq-list-icon-active-svg"></use> 
+                              </svg>
+                            </i>
+                          </div>
                         </div>
                         <div class="faq-accordion-des">
                           <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
@@ -518,7 +580,18 @@
                       <div class="faq-accordion-menu">
                         <div class="faq-accordion-hdr">
                           <h3 class="faq-accordion-title fl-h6">What are the fees for your treatments?</h3>
-                          <div class="faq-accordion-icon-box"></div>
+                          <div class="faq-accordion-icon-box">
+                            <i class="faq-icon">
+                              <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <use xlink:href="#faq-list-icon-svg"></use> 
+                              </svg>
+                            </i>
+                            <i class="faq-active-icon">
+                              <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <use xlink:href="#faq-list-icon-active-svg"></use> 
+                              </svg>
+                            </i>
+                          </div>
                         </div>
                         <div class="faq-accordion-des">
                           <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
@@ -532,7 +605,18 @@
                       <div class="faq-accordion-menu">
                         <div class="faq-accordion-hdr">
                           <h3 class="faq-accordion-title fl-h6">What are the locations of your dentist practices?</h3>
-                          <div class="faq-accordion-icon-box"></div>
+                          <div class="faq-accordion-icon-box">
+                            <i class="faq-icon">
+                              <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <use xlink:href="#faq-list-icon-svg"></use> 
+                              </svg>
+                            </i>
+                            <i class="faq-active-icon">
+                              <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <use xlink:href="#faq-list-icon-active-svg"></use> 
+                              </svg>
+                            </i>
+                          </div>
                         </div>
                         <div class="faq-accordion-des">
                           <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
