@@ -493,7 +493,7 @@ $('.parallaxie').parallaxie({
 
 $(function(){
   var animateTime = 500,
-      button = $('.review-pro-des-btn button');
+      button = $('.review-pro-des-btn-col button');
   button.click(function(){
     $(this).parent().prev().css({'display':'block'});
     if($(this).parent().prev().height() === 148){
@@ -514,7 +514,7 @@ $(function(){
 
 $(function(){
   var animateTime = 500,
-      button = $('.full-width-review .review-pro-des-btn button');
+      button = $('.review-pro-des-btn-fullwidth button');
   button.click(function(){
     $(this).parent().prev().css({'display':'block'});
     if($(this).parent().prev().height() === 90){
@@ -557,11 +557,9 @@ if( $('.reviewSlider').length ){
       prevArrow: '.review-grids-cntlr .revw-left',
       responsive: [
         {
-          breakpoint: 992,
+          breakpoint: 1300,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            infinite: true,
+            arrows: false,
             dots: true
           }
         }

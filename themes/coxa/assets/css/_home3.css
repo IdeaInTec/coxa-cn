@@ -46,15 +46,8 @@
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.faq-accordion-hdr:hover{
-	background: #11345E;
-    border: 1px solid #11345E;
-}
-.faq-accordion-hdr:hover .faq-accordion-title {
-    color: #fff;
-}
-.faq-accordion-hdr:hover .faq-accordion-icon-box {
-    border-color: #fff;
+.faq-accordion-hdr:hover .faq-accordion-title{
+    color: #29467D;
 }
 .faq-accordion-icon-box {
     position: absolute;
@@ -94,40 +87,7 @@
     visibility: visible;
     
 }
-/*.faq-accordion-icon-box:after,
-.faq-accordion-icon-box:before{
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%,-50%);
-	-ms-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
-	height: 8px;
-	width: 14px;
-	background-repeat: no-repeat;	
-}*/
-/*.faq-accordion-icon-box:after{
-	margin-top: 1px;
-	background-image: url('../images/faq-list-icon.svg');
-}*/
-/*.faq-accordion-icon-box:before,
-.active .faq-accordion-icon-box:after{
-	opacity: 0;
-	z-index: -1;
-}
-.active .faq-accordion-icon-box:before,
-.faq-accordion-icon-box:after{
-    opacity: 1;
-	z-index: 1;
-}*/
-/*.faq-accordion-icon-box:before {
-    background-image: url('../images/faq-list-icon-active.svg')!important;
-    margin-top: -1px;
-}
-.faq-accordion-hdr:hover .faq-accordion-icon-box:after{
-	background-image: url('../images/faq-list-icon-hover.svg');
-}*/
+
 .active .faq-accordion-icon-box {
 	border-color: #fff;
 }
@@ -141,15 +101,6 @@
     color: #fff!important;
 }
 
-/*.active .faq-accordion-hdr:after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: #A37D36;
-}*/
 .active .faq-accordion-title{
 	color: #fff;
 }
@@ -245,9 +196,7 @@
 .locations-des {
     /*padding-right: 11px;*/
 }
-/*.office-social .office-des-title{
-	margin-bottom: 15px;
-}*/
+
 .office-time-zoon span {
     display: block;
     line-height: 1;
@@ -300,28 +249,7 @@
  .office-social ul li {
     padding: 0 4px;
 }
-/*.parallaxie-rel{
-    position: relative;
-}
-.parallaxie-rel .container{
-    position: relative;
-    z-index: 1;
-}
-.parallaxie{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-}
-.parallaxie-bg-Size_auto{
-    background-size: auto!important;
-}
-.parallaxie-Zindex{
-    z-index: 2;
-    position: relative;
-}*/
+
 .parallaxie-bg-Size_auto{
     background-size: auto!important;
 }
@@ -351,5 +279,4 @@ padding-bottom: 4px;
     .about-intro-sec .office-social {
         margin-bottom: 23px;
     }
-
 }

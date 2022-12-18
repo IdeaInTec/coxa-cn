@@ -385,3 +385,109 @@
 .pro-modal-btn{
 	padding-top: 9px;
 }
+@media(max-width: 1399px){
+	.why-choose-sec {
+		padding: 80px 0;
+	}
+}
+@media(max-width: 1299px){
+	.review-prev-next{
+		display: none;
+	}
+}
+@media(max-width: 1199px){
+    .why-choose-sec {
+        padding: 70px 0;
+    }
+    .why-choose-sec .sec-entry-hdr-cntlr {
+    	padding-bottom: 50px;
+    }
+    .why-choose-grid-title{
+    	font-size: 22px;
+    }
+    .why-choose-grid-btn{
+    	padding-top: 40px;
+    }
+    .why-choose-grid-des p{
+    	font-size: 14px;
+    }   
+    .why-choose-grid-des{
+    	padding: 0 0px 15px;
+    } 
+    .review-tstmnl-mgs br{
+    	display: none;
+    }
+    .review-grid-item{
+    	padding-bottom: 55px;
+    }
+    .review-pro-rating{
+    	margin-bottom: 24px;
+    }
+    .review-tstmnl-mgs{
+    	margin-bottom: 20px;
+    }
+}
+@media(max-width: 991px){
+    .why-choose-sec {
+        padding: 65px 0;
+    }
+    .why-choose-grid-col{
+    	width: 50%;
+    }
+    .why-choose-grid-des p{
+    	font-size: 15px;
+    } 
+    .why-choose-grids-cntlr {
+    	max-width: 700px;
+    	width: 100%;
+    	margin: 0 auto;
+    }
+    .why-choose-grid-des {
+    	padding: 0 25px 15px;    	
+    }
+    .why-choose-grid-title {
+    	font-size: 25px;
+    }
+}
+@media(max-width: 767px){
+	.why-choose-grids-cntlr{
+		max-width: 100%;
+	}
+	.why-choose-grid-des {
+		padding: 0 10px 15px;
+	}
+	.why-choose-grid-des p{
+    	font-size: 16px;
+    	line-height: 2;
+    }   
+    .why-choose-sec {
+        padding-top: 65px;
+        padding-bottom: 40px;
+        border-bottom: none;
+    }  
+}
+@media(max-width: 575px){
+	.why-choose-grid-col{
+    	width: 100%;
+    	padding-left: 0;
+    	padding-right: 0;
+    }
+    .why-choose-grids{
+    	margin: 0;
+    }
+    .why-choose-grids-cntlr {
+    	max-width: 400px;
+    }
+    .why-choose-grid-title{
+    	font-size: 28px;
+    }
+    .why-choose-grid-img{
+    	padding: 10px 20px 30px;
+    }
+}
+@media(max-width: 479px){
+	/*.why-choose-grid-des{
+		padding-left: 0;
+		padding-right: 0;
+	}*/
+}
