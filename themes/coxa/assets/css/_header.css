@@ -809,7 +809,9 @@ body.allWork .hamburger-icon span:nth-child(2) {
     .xs-mobile-menu{
         max-width: 100%;
     }
-    
+    .xs-pop-up-menu-top .logo a {
+        max-width: 227px;
+    }
 }
 @media(max-width: 359px){
     .mobile-btn-col a{
