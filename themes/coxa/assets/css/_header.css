@@ -715,7 +715,7 @@ body.allWork .hamburger-icon span:nth-child(2) {
         display: block;
         position: relative;
         border: none;
-        margin-bottom: 10px;
+        padding:7px;
     }
     nav.main-nav > ul > li.menu-item-has-megamenu ul.megamenu li a,
     nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
