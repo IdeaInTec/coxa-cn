@@ -301,8 +301,10 @@
 		max-width: 330px;
 		margin: 0 auto;
 	}
-	/*.filte-button ul li{
-		width: 100%;
-		text-align: center;
-	}*/
+	.galler-sec .why-choose-grids{
+		padding: 0 20px;
+	}
+	.galler-sec .why-choose-grids .practice-gallery-grid-col{
+		padding: 0;
+	}
 }
