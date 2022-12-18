@@ -278,5 +278,40 @@ padding-bottom: 4px;
     .about-intro-sec .office-contact, 
     .about-intro-sec .office-social {
         margin-bottom: 23px;
+    }    
+}
+@media(max-width: 1299px){
+    .location-prev-next{
+        display: none;
     }
+}
+@media(max-width: 1199px){
+    .faq-sec {
+        padding-top: 80px;
+        padding-bottom: 55px;
+    }    
+}
+@media(max-width: 991px){
+
+}
+@media(max-width: 767px){
+    .faq-sec {
+        padding-top: 100px;
+        padding-bottom: 75px;
+    }
+    .faq-accordion-hdr{
+        padding: 15px 48px 15px 16px;
+    }
+    .faq-accordion-title{
+        font-size: 18px;        
+    }
+    .faq-accordion-des{
+        padding: 24px 16px 24px 16px;
+    }
+}
+@media(max-width: 575px){
+
+}
+@media(max-width: 479px){
+
 }

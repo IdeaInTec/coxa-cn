@@ -592,11 +592,18 @@ if( $('.locationSlider').length ){
       prevArrow: '.locations-sec-inner .revw-left',     
       responsive: [
         {
-          breakpoint: 992,
+          breakpoint: 1300,
           settings: {
-            slidesToShow: 2,
+            arrows: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
             slidesToScroll: 1,
-            infinite: true,
+            arrows: false,
             dots: true
           }
         }
