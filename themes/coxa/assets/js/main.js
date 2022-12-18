@@ -553,8 +553,8 @@ if( $('.reviewSlider').length ){
       speed: 700,
       slidesToShow: 2,
       slidesToScroll: 1,
-      nextArrow: '.revw-right',
-      prevArrow: '.revw-left',
+      nextArrow: '.review-grids-cntlr .revw-right',
+      prevArrow: '.review-grids-cntlr .revw-left',
       responsive: [
         {
           breakpoint: 992,
@@ -578,8 +578,8 @@ if( $('.locationSlider').length ){
       speed: 700,
       slidesToShow: 3,
       slidesToScroll: 1, 
-      nextArrow: '.revw-right',
-      prevArrow: '.revw-left',     
+      nextArrow: '.locations-sec-inner .revw-right',
+      prevArrow: '.locations-sec-inner .revw-left',     
       responsive: [
         {
           breakpoint: 992,
