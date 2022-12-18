@@ -309,4 +309,14 @@
 	.galler-sec .why-choose-grids .practice-gallery-grid-col{
 		padding: 0;
 	}
+	.filte-button ul li{
+		padding: 0 5px 10px;
+	}
+	.filte-button ul li a{
+		font-size: 14px;
+		padding: 10px 10px;
+	}
+	.galler-sec{
+		padding: 20px!important;
+	}
 }
