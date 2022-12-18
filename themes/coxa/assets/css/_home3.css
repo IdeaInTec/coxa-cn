@@ -83,6 +83,7 @@
 .faq-accordion-icon-box i.faq-active-icon{
     opacity: 0;
     visibility: hidden;
+    margin-top: -2.5px;
 }
 .active .faq-accordion-icon-box i.faq-icon{
     opacity: 0;
@@ -91,7 +92,7 @@
 .active .faq-accordion-icon-box i.faq-active-icon{
     opacity: 1;
     visibility: visible;
-    margin-top: -2.5px;
+    
 }
 /*.faq-accordion-icon-box:after,
 .faq-accordion-icon-box:before{
