@@ -290,6 +290,9 @@ padding-bottom: 4px;
         padding-top: 80px;
         padding-bottom: 55px;
     }    
+    .locations-des-title{
+        font-size: 24px;
+    }
 }
 @media(max-width: 991px){
 
