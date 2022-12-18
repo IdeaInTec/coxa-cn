@@ -562,6 +562,15 @@ if( $('.reviewSlider').length ){
             arrows: false,
             dots: true
           }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
         }
       ]
     });
