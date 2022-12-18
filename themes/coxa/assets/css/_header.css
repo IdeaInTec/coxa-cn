@@ -514,6 +514,9 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li:hover:after{
     align-items: center;
     border-bottom: 1px solid #DDDDDD;
 }
+.xs-pop-up-menu-top .logo a {
+    max-width: 250px;
+}
 .xs-pop-up-menu-top-inr{
     display: flex;
     align-items: center;
@@ -802,7 +805,10 @@ body.allWork .hamburger-icon span:nth-child(2) {
 @media(max-width: 575px){
     
 }
-@media(max-width: 479px){
+@media(max-width: 400px){
+    .xs-mobile-menu{
+        max-width: 100%;
+    }
     
 }
 @media(max-width: 359px){
