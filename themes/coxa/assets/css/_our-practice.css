@@ -104,6 +104,21 @@
     position: relative;
     overflow: hidden;
     height: 350px;
+    border-bottom: 4px solid #A37D36;
+}
+.ex-trmnt-grd-item-img-cntlr:after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    border: 4px solid #A37D36;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
 }
 .ex-trmnt-grd-item-img{
     width: 100%;
@@ -118,4 +133,11 @@
 .ex-trmnt-grd-des-title a{
     color: #333333;
     text-decoration: none;
+}
+.ex-trmnt-grd-des-title a:hover{
+    color: #A37D36;
+}
+.ex-trmnt-grd-item:hover .ex-trmnt-grd-item-img-cntlr:after{
+    opacity: 1;
+    visibility: visible;
 }
