@@ -493,7 +493,7 @@ $('.parallaxie').parallaxie({
 
 $(function(){
   var animateTime = 500,
-      button = $('.review-pro-des-btn button');
+      button = $('.review-pro-des-btn-col button');
   button.click(function(){
     $(this).parent().prev().css({'display':'block'});
     if($(this).parent().prev().height() === 148){
@@ -514,7 +514,7 @@ $(function(){
 
 $(function(){
   var animateTime = 500,
-      button = $('.full-width-review .review-pro-des-btn button');
+      button = $('.review-pro-des-btn-fullwidth button');
   button.click(function(){
     $(this).parent().prev().css({'display':'block'});
     if($(this).parent().prev().height() === 90){
