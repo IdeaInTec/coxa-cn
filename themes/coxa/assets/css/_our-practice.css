@@ -4,14 +4,21 @@
     margin: 0 -10px;
 }
 .practice-gallery{
-    padding: 90px 0 70px!important;
+    padding: 70px 0 60px!important;
+    margin-top: 40px;
+}
+.pratice-pg-con-cntlr .why-choose-sec .sec-entry-hdr-cntlr {
+    padding-bottom: 50px;
+}
+.pratice-pg-con-cntlr .why-choose-grid-btn{
+    padding-top: 30px;
 }
 .pratice-pg-con-cntlr .locations-sec  .sec-entry-hdr-cntlr{
     max-width: 890px;
 }
-.pratice-pg-con-cntlr .locations-sec .sec-entry-hdr p{
+/*.pratice-pg-con-cntlr .locations-sec .sec-entry-hdr p{
     font-size: 15px;
-}
+}*/
 .why-choose-grids .practice-gallery-grid-col{
     width: 25%;
     padding: 0 10px;
@@ -140,4 +147,30 @@
 .ex-trmnt-grd-item:hover .ex-trmnt-grd-item-img-cntlr:after{
     opacity: 1;
     visibility: visible;
+}
+
+
+
+.pratice-pg-con-cntlr .locations-sec{
+    padding-top: 120px;
+}
+.pratice-pg-con-cntlr .locations-sec .sec-entry-hdr-cntlr,
+.pratice-pg-con-cntlr .faq-sec .sec-entry-hdr-cntlr{
+    padding-bottom: 40px;
+}
+.pratice-pg-con-cntlr .wco-team-sec{
+    padding-top: 100px;
+}
+.pratice-pg-con-cntlr .pm-grd-addr{
+    margin-bottom: 24px;
+}
+.pratice-pg-con-cntlr .pm-grd-btn a{
+    padding: 0;
+    text-decoration: none;
+    border-bottom: 1px dotted #29467D;
+    font-weight: 600;
+}
+.pratice-pg-con-cntlr .pm-grd-btn a:hover{
+    border-bottom-color: #EACC95;
+    letter-spacing: 1px;
 }
