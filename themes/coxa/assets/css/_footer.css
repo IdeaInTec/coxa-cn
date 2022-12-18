@@ -225,12 +225,30 @@
 }
 @media(max-width: 991px){
 	.ftr-top-cntlr{
-		padding-bottom: 0;
+		padding-bottom: 63px;
 		padding-top: 63px;
+	}
+	.ftr-logo {
+		margin-bottom: 25px;
+		text-align: left;
 	}
 	.ftr-top-col-01 {
 		padding-right: 0;
 		width: 100%;
+		margin-bottom: 40px;
+	}
+	.ftr-desc {
+		margin-bottom: 2px;
+		max-width: 400px;
+		width: 100%;
+		text-align: left;
+	}
+	.massage-review-cntlr .massage-col {
+		margin-bottom: 10px;
+	}
+	.review-col,
+	.massage-col{
+		text-align: left;
 	}
 	.ftr-top-col-04,
 	.ftr-top-col-03,
@@ -242,9 +260,35 @@
 	.ftr-top-col-04{
 		margin-bottom: 0;
 	}
+	.ftr-btm-cntlr{
+
+	}
+	.ftr-copyright {
+		padding-right: 0;
+		text-align: center;
+		width: 100%;
+	}
+	.ftr-btm-menu {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.ftr-designby{
+		padding-right: 0;
+		text-align: center;
+		width: 100%;
+	}
 }
 @media(max-width: 767px){
-	
+	.ftr-top-col-04,
+	.ftr-top-col-03,
+	.ftr-top-col-02 {
+		width: 100%;
+		padding: 0;
+		margin-bottom: 50px;
+	}
+	.ftr-top-col-04{
+		margin-bottom: 0;
+	}
 }
 @media(max-width: 639px){
 	
