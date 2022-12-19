@@ -32,7 +32,13 @@ var stickyOffset = $('.header').offset().top;
     else{
       $('body').removeClass('fixed-header');
     }
-    if(scroll >= 400){
+    if(scroll >= 240){
+      $('body').addClass('fixed-header-in');
+    }
+    else{
+      $('body').removeClass('fixed-header-in');
+    }
+    if(scroll >= 300){
       $('body').addClass('fixed');
     }
     else{

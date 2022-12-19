@@ -5,16 +5,22 @@
     background: #fff;
 }
 .fixed-header .header{
-    margin-top: -20px;
+    margin-top: -90px;
+
     transition: all 0.5s;
     position: fixed;
     left: 0;
     right: 0;
+    top: -100%;
+}
+.fixed-header-in.fixed-header .header{
     top: 0;
-    transform: translateY(-85px);
-    -ms-transform: translateY(-85px);
-    -webkit-transform: translateY(-85px);
-    -o-transform: translateY(-85px);
+     transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    margin-top: -20px;
+    transition: all 0.5s;
 }
 .fixed-header .main-header-gap{
     height: 195px;
