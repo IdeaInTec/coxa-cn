@@ -542,7 +542,28 @@ $(function(){
       $(this).text( $(this).attr('data-text-closed') );
       $(this).parent().prev().attr('data-status', 'closed');    }
   });
-})
+});
+
+$(function(){
+  var animateTime = 500,
+      button = $('.review-pro-des-btn-col-3 button');
+  button.click(function(){
+    $(this).parent().prev().css({'display':'block'});
+    if($(this).parent().prev().height() === 218){
+      autoHeightAnimate($(this).parent().prev(), animateTime);
+    } else {
+      $(this).parent().prev().css({'display':'-webkit-box'});
+      $(this).parent().prev().stop().animate({ height: '218' }, animateTime);
+      
+    }
+    if ( $(this).parent().prev().attr('data-status') == 'closed' ){
+      $(this).text( $(this).attr('data-text-open') );
+      $(this).parent().prev().attr('data-status', 'open');
+    }else{
+      $(this).text( $(this).attr('data-text-closed') );
+      $(this).parent().prev().attr('data-status', 'closed');    }
+  });
+});
 
 $(function(){
   var animateTime = 500,
@@ -563,7 +584,7 @@ $(function(){
       $(this).text( $(this).attr('data-text-closed') );
       $(this).parent().prev().attr('data-status', 'closed');    }
   });
-})
+});
 
  //Function to animate height: auto 
 function autoHeightAnimate(element, time){

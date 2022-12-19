@@ -94,7 +94,16 @@
 .about-page-con-cntlr .pm-grd-desc-cntlr{
 	background: #fff;
 }
-
+.reviewSliderGrd3 .review-grid-col{
+	display: none;
+	position: relative;
+}
+.reviewSliderGrd3 .review-grid-col:first-child{
+	display: block;
+}
+.reviewSliderGrd3.slick-initialized .review-grid-col{
+	display: block;
+}
 
 
 
@@ -188,7 +197,13 @@
     bottom: 26px;
     z-index: 1;
 }
-
+.review-pro-des-btn-col-3-cntlr .review-pro-des{
+	height: 218px;
+	-webkit-line-clamp: 7;
+}
+.review-pro-des-btn-col-3-cntlr .review-grid-col{
+	width: 33.333%;
+}
 @media(min-width: 1600px){
 	.double-image-module .abtis-row-img-inner{
 		margin-right: -160px;
