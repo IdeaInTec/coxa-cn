@@ -187,7 +187,8 @@
 	.counter-col{
 		width: 50%;
 	}
-	.specialists-profile-module{
+	.specialists-profile-module, 
+	.profile-module{
 		max-width: 700px;
 		margin: 0 auto;
 	}
@@ -197,7 +198,8 @@
 	.profile-module-cntlr{
 		padding-top: 40px;
 	}
-	.specialists-profile-module{
+	.specialists-profile-module, 
+	.profile-module{
 		max-width: 100%;
 	}
 }
@@ -206,7 +208,8 @@
 		width: 100%;
 		padding-top: 18px;
 	}
-	.profile-module-cntlr{
+	.profile-module-cntlr, 
+	.profile-module{
 		max-width: 360px;
 		margin: 0 auto;
 	}
