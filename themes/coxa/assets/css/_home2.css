@@ -441,6 +441,19 @@
     .cta-module-des-ctlr{
     	padding-right: 20px;
     }
+    .cox-profile-modal .modal.show .modal-dialog{
+        max-width: 800px;
+    }
+    .cox-profile-modal .modal-header{
+        padding: 24px 30px 24px;
+    }
+    .pro-modal-img-cntlr {        
+        margin-left: -85px;
+    }
+    .cox-profile-modal .modal-body {
+        padding: 30px;
+        padding-top: 0;
+    }
 }
 @media(max-width: 991px){
     .why-choose-sec {
@@ -480,6 +493,27 @@
     }
     .cta-module{
     	padding: 50px 20px 45px 30px;
+    }
+    .cox-profile-modal .modal.show .modal-dialog {
+        max-width: 700px;        
+        margin-top: 80px;
+    }
+    .cox-profile-modal .modal-header {        
+        padding: 20px 20px 16px;
+    }
+    .pro-modal-con-lft {
+        width: 39%;
+    }
+    .pro-modal-con-rgt {
+        width: 61%;        
+    }
+    .pro-modal-img-cntlr {
+        border: 5px solid #FFFFFF;
+        margin-left: -40px;
+    }
+    .cox-profile-modal .modal-body {
+        padding: 30px 20px;
+        padding-top: 0;
     }
 }
 @media(max-width: 767px){
@@ -565,6 +599,17 @@
     .cta-module-des-title{
     	margin-bottom: 32px;
     	font-size: 43px!important;
+    }
+    .cox-profile-modal .modal-header button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cox-profile-modal .modal-header {        
+        padding: 17px 20px 25px;
+    }
+    .cox-profile-modal .modal-body {
+        padding: 32px 8px;
+        padding-top: 0;
     }
 }
 @media(max-width: 575px){
