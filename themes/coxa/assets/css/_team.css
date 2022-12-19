@@ -175,3 +175,39 @@
 .team-pg-content-cntlr .cta-section{
 	margin-bottom: 44px;
 }
+@media(max-width: 1199px){
+	.pm-grd-img-cntlr{
+		height: 380px;
+	}
+}
+@media(max-width: 991px){
+	.profile-module ul li{
+		width: 50%;
+	}
+	.counter-col{
+		width: 50%;
+	}
+}
+@media(max-width: 767px){
+	
+	.profile-module-cntlr{
+		padding-top: 40px;
+	}
+}
+@media(max-width: 575px){
+	.counter-col{
+		width: 100%;
+		padding-top: 18px;
+	}
+	.profile-module-cntlr{
+		max-width: 360px;
+		margin: 0 auto;
+	}
+	.profile-module > ul{
+		margin: 0 0;
+	}
+	.profile-module ul li{
+		width: 100%;
+		padding: 0;
+	}
+}
