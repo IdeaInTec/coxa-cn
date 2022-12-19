@@ -441,6 +441,19 @@
     .cta-module-des-ctlr{
     	padding-right: 20px;
     }
+    .cox-profile-modal .modal.show .modal-dialog{
+        max-width: 800px;
+    }
+    .cox-profile-modal .modal-header{
+        padding: 24px 30px 24px;
+    }
+    .pro-modal-img-cntlr {        
+        margin-left: -85px;
+    }
+    .cox-profile-modal .modal-body {
+        padding: 30px;
+        padding-top: 0;
+    }
 }
 @media(max-width: 991px){
     .why-choose-sec {
@@ -480,6 +493,27 @@
     }
     .cta-module{
     	padding: 50px 20px 45px 30px;
+    }
+    .cox-profile-modal .modal.show .modal-dialog {
+        max-width: 700px;        
+        margin-top: 80px;
+    }
+    .cox-profile-modal .modal-header {        
+        padding: 20px 20px 16px;
+    }
+    .pro-modal-con-lft {
+        width: 39%;
+    }
+    .pro-modal-con-rgt {
+        width: 61%;        
+    }
+    .pro-modal-img-cntlr {
+        border: 5px solid #FFFFFF;
+        margin-left: -40px;
+    }
+    .cox-profile-modal .modal-body {
+        padding: 30px 20px;
+        padding-top: 0;
     }
 }
 @media(max-width: 767px){
@@ -566,6 +600,48 @@
     	margin-bottom: 32px;
     	font-size: 43px!important;
     }
+    .cox-profile-modal .modal-header button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cox-profile-modal .modal-header {        
+        padding: 17px 20px 25px;
+    }
+    .cox-profile-modal .modal-body {
+        padding: 32px 8px;
+        padding-top: 0;
+    }
+    .cox-profile-modal .modal.show .modal-dialog {
+        max-width: 400px;        
+        margin-top: 80px;
+    }
+    .pro-modal-con-rgt{
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }   
+    .pro-modal-con-lft{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+     .pro-modal-img-cntlr {
+        border: none;
+        margin-left: 0;
+    }
+    .pro-modal-title{
+        font-size: 28px!important;
+        margin-bottom: 8px;
+    }
+    .pro-modal-assist-name span{
+        font-size: 16px!important;
+    }
+    .pro-modal-addr span{
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    .pro-modal-addr {
+        margin-bottom: 16px;
+    }
 }
 @media(max-width: 575px){
 	.why-choose-grid-col{
@@ -598,10 +674,20 @@
     .cta-module{
     	padding: 65px 16px 70px 16px;
     }
+    .cox-profile-modal .modal.show .modal-dialog {        
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 @media(max-width: 479px){
 	/*.why-choose-grid-des{
 		padding-left: 0;
 		padding-right: 0;
 	}*/
+    .cox-profile-modal .modal.show .modal-dialog {
+        max-width: 300px;
+        margin-top: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

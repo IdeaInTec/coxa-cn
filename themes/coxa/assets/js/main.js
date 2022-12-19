@@ -724,7 +724,16 @@ if( $('.reviewSliderGrd3').length ){
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            infinite: true,
+            arrows: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
             dots: true
           }
         }

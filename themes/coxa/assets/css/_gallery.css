@@ -175,6 +175,12 @@
 	width: 4px;
 	box-shadow: 0 0px 0 white, 0px -3px 5px rgb(255 255 255);
 }
+.twentytwenty-horizontal .twentytwenty-handle:before{
+	margin-bottom: 26px;
+}
+.twentytwenty-horizontal .twentytwenty-handle:after{
+	margin-top: 27px;
+}
 .twentytwenty-left-arrow{
 	border: none;
 	margin-left: -10px;
@@ -260,12 +266,60 @@
 		width: 25%;
 	}
 }
+@media(max-width: 1199px){
+	.twentytwenty-handle{
+		height: 42px;
+		width: 42px;
+	}
+	.twentytwenty-left-arrow{
+		width: 8px;
+		height: 15px;
+		margin-left: -7px;
+	}
+	.twentytwenty-right-arrow{
+		width: 8px;
+		height: 15px;
+		margin-right: -16px;
+	}
+	.twentytwenty-horizontal .twentytwenty-handle:before {
+	    margin-bottom: 23px;
+	}
+	.twentytwenty-horizontal .twentytwenty-handle:after {
+	    margin-top: 23px;
+	}
+	.after-before-grd-item-col.width-50 .twentytwenty-handle {
+	    height: 46px;
+	    width: 46px;
+	}
+	.after-before-grd-item-col.width-50 .twentytwenty-horizontal .twentytwenty-handle:before {
+	    margin-bottom: 25px;
+	}
+	.after-before-grd-item-col.width-50 .twentytwenty-horizontal .twentytwenty-handle:after {
+	    margin-top: 25px;
+	}
+}
 @media(max-width: 991px){
 	.galler-sec .why-choose-grids .practice-gallery-grid-col{
 		width: 33.3333%;
 	}
 	.galler-sec{
 		padding-bottom: 75px!important;
+	}
+	.after-before-grd-item-col{
+		width: 50%;
+	}
+	.after-before-grd-item-col.width-50 .twentytwenty-handle {
+	    height: 42px;
+	    width: 42px;
+	}
+	.after-before-grd-item-col.width-50 .twentytwenty-horizontal .twentytwenty-handle:before {
+	    margin-bottom: 23px;
+	}
+	.after-before-grd-item-col.width-50 .twentytwenty-horizontal .twentytwenty-handle:after {
+	    margin-top: 23px;
+	}
+	.galler-sec .why-choose-grids{
+		padding: 0 0;
 	}
 }
 @media(max-width: 767px){
@@ -295,6 +349,8 @@
 	}
 	.after-before-grd-item-col{
 		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	.after-before-grd-item-col.width-50{
 		width: 100%;
@@ -304,7 +360,7 @@
 		margin: 0 auto;
 	}
 	.galler-sec .why-choose-grids{
-		padding: 0 20px;
+		padding: 0 0;
 	}
 	.galler-sec .why-choose-grids .practice-gallery-grid-col{
 		padding: 0;
@@ -318,5 +374,9 @@
 	}
 	.galler-sec{
 		padding: 20px!important;
+	}
+	.after-before-grids-cntlr {
+	    padding-left: 0;
+	    padding-right: 0;
 	}
 }
