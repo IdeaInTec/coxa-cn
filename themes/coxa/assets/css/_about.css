@@ -227,6 +227,12 @@
 	.double-image-module .abtis-row-img-inner {
 		margin-right: 0;
 	}
+	.abtis-row-img-inner {
+		margin-right: 0;
+	}
+	.about-intro-sec .abtis-lft-img-row .abtis-row-img-inner {
+		margin-left: 0!important;		
+	}
 }
 @media(max-width: 1199px){
 	.about-intro-sec {
@@ -245,6 +251,9 @@
 	}
 	.about-intro-sec {
 		padding: 45px 0 40px;
+	}
+	.abtis-lft-img-row .abtis-row-text {		
+		padding-left: 20px;
 	}
 }
 @media(max-width: 767px){
@@ -281,6 +290,16 @@
 	}	
 	.abtis-row-text-inr p {
 		margin-bottom: 30px;
+	}
+	.abtis-lft-img-row .abtis-row-text {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.abtis-row-text-inr h2{
+		margin-bottom: 16px;
+	}
+	.abtis-lft-img-row .abtis-row-text-inr p:last-of-type {
+		margin-bottom: 0;
 	}
 }
 @media(max-width: 575px){
