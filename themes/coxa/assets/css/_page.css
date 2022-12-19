@@ -348,4 +348,7 @@ span.select2.select2-container.select2-container--default {
     .diamond-module {        
         margin-bottom: 16px;
     }
+    .sec-entry-hdr p br{
+        display: none;
+    }
 }

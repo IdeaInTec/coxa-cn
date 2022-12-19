@@ -301,6 +301,9 @@
 	.abtis-lft-img-row .abtis-row-text-inr p:last-of-type {
 		margin-bottom: 0;
 	}
+	.about-page-con-cntlr .why-choose-sec {
+		margin-top: 0;
+	}
 }
 @media(max-width: 575px){
 	.abtis-row-main-img-cntrl:before{
