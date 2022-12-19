@@ -94,7 +94,16 @@
 .about-page-con-cntlr .pm-grd-desc-cntlr{
 	background: #fff;
 }
-
+.reviewSliderGrd3 .review-grid-col{
+	display: none;
+	position: relative;
+}
+.reviewSliderGrd3 .review-grid-col:first-child{
+	display: block;
+}
+.reviewSliderGrd3.slick-initialized .review-grid-col{
+	display: block;
+}
 
 
 
@@ -190,6 +199,9 @@
 }
 .about-page-con-cntlr .review-pro-des{
 	height: 218px;
+}
+.about-page-con-cntlr .review-grid-col{
+	width: 33.333%;
 }
 @media(min-width: 1600px){
 	.double-image-module .abtis-row-img-inner{
