@@ -570,7 +570,11 @@ textarea {
     .contact-form-wrp .wpforms-container .select2-container--default .select2-selection--single .select2-selection__rendered,    
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input{
         height: 52px;
-    }    
+    }   
+    .referral-sec {
+        padding-top: 50px;
+        padding-bottom: 80px;
+    } 
 }
 @media(max-width: 991px){
     .contact-form-wrp .wpforms-field-checkbox ul li:before,
@@ -581,7 +585,10 @@ textarea {
     .contact-form-wrp .wpforms-field-checkbox ul li:after{
         width: 8px;
         height: 14px;
-    }    
+    }  
+    .referral-sec {
+        padding-bottom: 60px;
+    }  
 }
 @media(max-width: 767px){    
     .contact-form-sec-wrp {
