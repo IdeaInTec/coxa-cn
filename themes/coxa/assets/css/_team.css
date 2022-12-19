@@ -243,3 +243,9 @@
 	}
 
 }
+@media(max-width: 359px){
+	.pm-grd-assist-no {
+		display: table;
+		margin-left: 0;
+	}
+}
