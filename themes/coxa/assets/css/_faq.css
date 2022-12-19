@@ -106,3 +106,18 @@
 .faq-page-con-cntlr .faq-content-sec .sec-entry-hdr-title{
 	font-weight: 600;
 }
+
+
+@media(max-width: 991px){
+	.faq-page-con-cntlr .sec-entry-hdr p br{
+		display: none;
+	}
+	.faq-grids {
+	    padding: 0 30px;
+	}
+}
+@media(max-width: 767px){
+	.faq-grids {
+	    padding: 0 0;
+	}
+}
