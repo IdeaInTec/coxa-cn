@@ -553,6 +553,12 @@
 	    padding-top: 50px!important;
 	    padding-bottom: 50px!important;
 	}
+	.pg-banner-cntlr{
+		padding: 70px 0;
+	}
+	.pg-banner-cntlr {
+		min-height: 404px;
+	}
 }
 @media(max-width: 767px){
 	.intro-sec {
@@ -631,6 +637,7 @@
 	.pg-banner-desc p br{
 		display: none!important;
 	}
+
 }
 @media(max-width: 575px){
 	.treatmentSlider .slick-list.draggable {
