@@ -342,3 +342,10 @@ span.select2.select2-container.select2-container--default {
     background: #9B9B9B;
     border-radius: 6px;
 }
+
+
+@media(max-width:767px){
+    .diamond-module {        
+        margin-bottom: 16px;
+    }
+}
