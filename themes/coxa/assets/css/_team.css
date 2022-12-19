@@ -233,5 +233,13 @@
 		font-size: 16px;
 		line-height: 1.25;
 	}
+	.counter-number-title{
+		font-size: 67px;
+		line-height: 1.25;
+	}
+	.counter-col p{
+		font-size: 26px;
+		line-height: 1.8;
+	}
 
 }
