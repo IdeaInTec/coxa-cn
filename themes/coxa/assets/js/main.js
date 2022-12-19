@@ -550,11 +550,10 @@ $(function(){
 
 $(function(){
   var animateTime = 500,
-  var col3DesHeight = $('review-pro-des-btn-col-3-cntlr .review-pro-des').outerHeight(); 
       button = $('.review-pro-des-btn-col-3 button');
   button.click(function(){
     $(this).parent().prev().css({'display':'block'});
-    if($(this).parent().prev().height() === col3DesHeight){
+    if($(this).parent().prev().height() === 218){
       autoHeightAnimate($(this).parent().prev(), animateTime);
     } else {
       $(this).parent().prev().css({'display':'-webkit-box'});
@@ -729,17 +728,8 @@ if( $('.reviewSliderGrd3').length ){
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            dots: true,
-            arrows: false,
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-            arrows: false,
+            infinite: true,
+            dots: true
           }
         }
       ]
