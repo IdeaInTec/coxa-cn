@@ -637,7 +637,9 @@
 	.pg-banner-desc p br{
 		display: none!important;
 	}
-
+	.treatment-lft{
+		padding-left: 10px;
+	}
 }
 @media(max-width: 575px){
 	.treatmentSlider .slick-list.draggable {

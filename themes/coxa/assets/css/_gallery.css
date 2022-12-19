@@ -177,9 +177,11 @@
 }
 .twentytwenty-horizontal .twentytwenty-handle:before{
 	margin-bottom: 26px;
+	box-shadow: 0px -2px 0px 2px rgb(255 255 255);
 }
 .twentytwenty-horizontal .twentytwenty-handle:after{
 	margin-top: 27px;
+	box-shadow: 0px 2px 0px 2px rgb(255 255 255);
 }
 .twentytwenty-left-arrow{
 	border: none;
@@ -331,6 +333,13 @@
 	}
 	.after-before-grd-item-col{
 		width: 50%;
+	}
+	.galler-sec .why-choose-grids {
+	    padding: 0 8px;
+	}
+	.after-before-grids-cntlr {
+	    padding-left: 8px;
+	    padding-right: 8px;
 	}
 }
 @media(max-width: 575px){

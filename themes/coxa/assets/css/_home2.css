@@ -641,7 +641,7 @@
     }
     .pro-modal-addr {
         margin-bottom: 16px;
-    }
+    }    
 }
 @media(max-width: 575px){
 	.why-choose-grid-col{
@@ -677,6 +677,9 @@
     .cox-profile-modal .modal.show .modal-dialog {        
         margin-left: auto;
         margin-right: auto;
+    }
+    .review-pro-des p br{
+        display: none;
     }
 }
 @media(max-width: 479px){
