@@ -129,10 +129,15 @@
 .fees-tab-inr{
 	position: relative;
 }
+
 @media(max-width: 767px){
 	.fees-tab ul{
 		display: block;
 		margin: 0;
+		border: 1px solid #DDDDDD;
+		border-top: 0;
+		padding: 8px 0;
+		display: none;
 	}
 	.fees-tab ul li{
 		padding: 0;
@@ -146,7 +151,10 @@
 		line-height: 1;
 		border: 0;
 		font-size: 16px;
+		padding: 12px 8px;
+		width: 100%;
 	}
+	
 	.fees-tab{
 		padding-bottom: 20px;
 		margin-bottom: 20px;
@@ -175,6 +183,13 @@
 		background-size: contain;
 		background-position: center center;
 		background-repeat: no-repeat;
+	}
+	.fees-tab-arrow.fees-tab-button:after{
+		background: url(../images/active-gray-arrow-bottom.svg);
+		transform: rotate(-180deg);
+		-ms-transform: rotate(-180deg);
+		-webkit-transform: rotate(-180deg);
+		-o-transform: rotate(-180deg);
 	}
 	.fees-tab-button span{
 		font-weight: 400;
