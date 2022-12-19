@@ -16,7 +16,6 @@ if( $('.hamburgar-cntlr').length ){
 if(windowWidth <=991){
     if( $('.main-nav ul > li').length ){
       $('.main-nav ul > li').click(function(){
-       
        $('.main-nav ul > li.sub-menu-arrow').removeClass('sub-menu-arrow'); 
        $(this).toggleClass('sub-menu-arrow');
        $(this).find('.co-sub-menu').slideToggle(300);
@@ -24,6 +23,28 @@ if(windowWidth <=991){
      });
     }
 }
+var stickyOffset = $('.header').offset().top;
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+    if(scroll >= 200){
+      $('body').addClass('fixed-header');
+    }
+    else{
+      $('body').removeClass('fixed-header');
+    }
+    if(scroll >= 210){
+      $('body').addClass('fixed-header-in');
+    }
+    else{
+      $('body').removeClass('fixed-header-in');
+    }
+    if(scroll >= 300){
+      $('body').addClass('fixed');
+    }
+    else{
+      $('body').removeClass('fixed');
+    }
+  });
 	
 //matchHeightCol
 if($('.mHc').length){
@@ -328,7 +349,7 @@ if( $('.bannerBgSlider').length ){
         {
           breakpoint: 768,
           settings: {
-            arrows: false,
+            arrows: false
           }
         }
       ]
@@ -490,17 +511,21 @@ if( $('.tlPatientReviewSlider2').length ){
       prevArrow: '.revw-left',
     });
 }
+if( $('.bnrparallaxie').length ){
 $('.bnrparallaxie').parallaxie({
     speed:0.4,
     pos_x:'center',
     size: 'auto',
     offset: -140,
   });
+}
+if( $('.bnrparallaxie').length ){
 $('.parallaxie').parallaxie({
     speed:0.4,
     pos_x:'center',
 
   });
+}
 
 $(function(){
   var animateTime = 500,

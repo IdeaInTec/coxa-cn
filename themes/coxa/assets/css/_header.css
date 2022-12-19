@@ -2,9 +2,38 @@
 .header{    
     border-bottom: 2px solid #A37D36;
     box-shadow: 0px 2px 20px rgba(3, 23, 46, 0.7);
+    background: #fff;
 }
-.header.fixed-header .header-wrap{
+.fixed-header .header{
+    margin-top: -90px;
+    transition: all 0.7s;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -100%;
+}
+.fixed-header-in.fixed-header .header{
+    top: 0;
+}
+.fixed-header .main-header-gap{
+    height: 195px;
+    width: 100%;
+}
+.fixed-header .header .header-wrap{
     padding: 0;
+    
+}
+.fixed.fixed-header .header{
+    top: 0;
+    margin-top: 0;
+    transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -o-transform: translateY(0);
+    z-index: 9999;
+}
+.fixed-header .header .topbar{
+    display: none;
 }
 .topbar{
     background: linear-gradient(90deg, #0D2E56 0%, #11345E 50%, #0D2E56 100%);
