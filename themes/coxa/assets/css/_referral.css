@@ -577,6 +577,7 @@ textarea {
     } 
     .treatment-page-con-cntlr .tl-review-sec, 
     .referral-page-con-cntlr .tl-review-sec {
+        padding-top: 70px;
         padding-bottom: 100px;
     }
 }
@@ -595,6 +596,7 @@ textarea {
     }  
     .treatment-page-con-cntlr .tl-review-sec, 
     .referral-page-con-cntlr .tl-review-sec {
+        padding-top: 60px;
         padding-bottom: 80px;
     }
 }
@@ -681,8 +683,14 @@ textarea {
     }   
     .treatment-page-con-cntlr .tl-review-sec, 
     .referral-page-con-cntlr .tl-review-sec {
+        padding-top: 50px;
         padding-bottom: 70px;
     }  
+    .testimonials-pg-content-cntlr .review-grid-item, 
+    .referral-page-con-cntlr .tl-review-sec .review-grid-item {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 @media (max-width: 600px){
@@ -728,6 +736,16 @@ textarea {
     }
     .contact-form-wrp .wpforms-field-checkbox ul li:after{
         top: 3.5px;
+    }
+    .testimonials-pg-content-cntlr .review-grid-item, 
+    .referral-page-con-cntlr .tl-review-sec .review-grid-item {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .testimonials-pg-content-cntlr .review-pro-des, 
+    .tlPatientReviewSlider2 .review-pro-des {
+        height: 220px;
+        -webkit-line-clamp: 7;
     }
 }
 
