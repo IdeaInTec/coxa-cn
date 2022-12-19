@@ -16,7 +16,6 @@ if( $('.hamburgar-cntlr').length ){
 if(windowWidth <=991){
     if( $('.main-nav ul > li').length ){
       $('.main-nav ul > li').click(function(){
-       
        $('.main-nav ul > li.sub-menu-arrow').removeClass('sub-menu-arrow'); 
        $(this).toggleClass('sub-menu-arrow');
        $(this).find('.co-sub-menu').slideToggle(300);
@@ -24,6 +23,22 @@ if(windowWidth <=991){
      });
     }
 }
+var stickyOffset = $('.header').offset().top;
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+    if(scroll >= 200){
+      $('body').addClass('fixed-header');
+    }
+    else{
+      $('body').removeClass('fixed-header');
+    }
+    if(scroll >= 400){
+      $('body').addClass('fixed');
+    }
+    else{
+      $('body').removeClass('fixed');
+    }
+  });
 	
 //matchHeightCol
 if($('.mHc').length){
