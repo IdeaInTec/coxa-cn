@@ -436,11 +436,11 @@ if( $('.treatment-sec').length ){
 $(window).resize(function(){
   var windowWidth2 = $(window).width();
   if( $('.treatment-sec').length ){
-  var conW = $('.container').width();
-  var conLW2 = windowWidth2 - conW;
-  var conLW = conLW2 / 2;
-  $('.treatment-cntlr').css('margin-left', conLW);
-}
+    var conW = $('.container').width();
+    var conLW2 = windowWidth2 - conW;
+    var conLW = conLW2 / 2;
+    $('.treatment-cntlr').css('margin-left', conLW);
+  }
 });
 
 if( $('.tmreviewSlider').length ){
