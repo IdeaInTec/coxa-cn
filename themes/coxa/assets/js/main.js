@@ -553,11 +553,11 @@ $(function(){
       button = $('.review-pro-des-btn-col-3 button');
   button.click(function(){
     $(this).parent().prev().css({'display':'block'});
-    if($(this).parent().prev().height() === 148){
+    if($(this).parent().prev().height() === 218){
       autoHeightAnimate($(this).parent().prev(), animateTime);
     } else {
       $(this).parent().prev().css({'display':'-webkit-box'});
-      $(this).parent().prev().stop().animate({ height: '148' }, animateTime);
+      $(this).parent().prev().stop().animate({ height: '218' }, animateTime);
       
     }
     if ( $(this).parent().prev().attr('data-status') == 'closed' ){

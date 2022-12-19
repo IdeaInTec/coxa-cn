@@ -188,7 +188,9 @@
     bottom: 26px;
     z-index: 1;
 }
-
+.about-page-con-cntlr .review-pro-des{
+	height: 218px;
+}
 @media(min-width: 1600px){
 	.double-image-module .abtis-row-img-inner{
 		margin-right: -160px;
