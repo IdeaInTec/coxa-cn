@@ -353,4 +353,12 @@
 		width: 145px;
 		height: 184px;
 	}
+	.about-page-con-cntlr .cta-module-des-title{
+		font-size: 32px!important;
+	}
+}
+@media(max-width: 359px){
+	.about-page-con-cntlr .cta-module-des-title{
+		font-size: 27px!important;
+	}    
 }
