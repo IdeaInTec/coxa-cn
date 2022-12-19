@@ -361,6 +361,14 @@ padding-bottom: 4px;
         font-size: 21px;
         line-height: 1.5;
     }
+    .locations-title-cntrl{
+        margin-bottom: 24px;
+    }
+    .office-time-zoon, 
+    .office-contact, 
+    .office-social{
+        margin-bottom: 24px;
+    }
 }
 @media(max-width: 479px){
 
