@@ -32,7 +32,7 @@ var stickyOffset = $('.header').offset().top;
     else{
       $('body').removeClass('fixed-header');
     }
-    if(scroll >= 240){
+    if(scroll >= 210){
       $('body').addClass('fixed-header-in');
     }
     else{
