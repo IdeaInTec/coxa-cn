@@ -607,6 +607,15 @@ if( $('.locationSlider').length ){
           }
         },
         {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        },
+        {
           breakpoint: 768,
           settings: {
             slidesToShow: 1,
