@@ -642,6 +642,9 @@
     .pro-modal-addr {
         margin-bottom: 16px;
     }
+    .review-pro-des p br{
+        display: none;
+    }
 }
 @media(max-width: 575px){
 	.why-choose-grid-col{
