@@ -20,8 +20,7 @@
     width: 100%;
 }
 .fixed-header .header .header-wrap{
-    padding: 0;
-    
+    padding: 0;  
 }
 .fixed.fixed-header .header{
     top: 0;
@@ -30,7 +29,7 @@
     -ms-transform: translateY(0);
     -webkit-transform: translateY(0);
     -o-transform: translateY(0);
-    z-index: 9999;
+    z-index: 999;
 }
 .fixed-header .header .topbar{
     display: none;
@@ -824,6 +823,12 @@ body.allWork .hamburger-icon span:nth-child(2) {
     }
     nav.main-nav > ul > li.menu-item-has-megamenu > ul.megamenu > .menu-item-has-children > .sub-menu{
         padding-top: 17px
+    }
+    .fixed-header .header .header-wrap{
+        padding: 20px 0;  
+    }
+    .fixed-header .main-header-gap{
+        height: 126px;
     }
 }
 @media(max-width: 767px){

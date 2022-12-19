@@ -511,21 +511,17 @@ if( $('.tlPatientReviewSlider2').length ){
       prevArrow: '.revw-left',
     });
 }
-if( $('.bnrparallaxie').length ){
 $('.bnrparallaxie').parallaxie({
     speed:0.4,
     pos_x:'center',
     size: 'auto',
     offset: -140,
   });
-}
-if( $('.bnrparallaxie').length ){
 $('.parallaxie').parallaxie({
     speed:0.4,
     pos_x:'center',
 
   });
-}
 
 $(function(){
   var animateTime = 500,
@@ -728,17 +724,8 @@ if( $('.reviewSliderGrd3').length ){
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            dots: true,
-            arrows: false,
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-            arrows: false,
+            infinite: true,
+            dots: true
           }
         }
       ]
