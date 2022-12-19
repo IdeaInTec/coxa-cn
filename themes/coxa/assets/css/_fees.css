@@ -123,5 +123,17 @@
 	color: #A37D36;
 }
 @media(max-width: 575px){
-	
+	.fees-module-item-name{
+		width: 100%;
+		padding-bottom: 10px;
+	}
+	.fees-module{
+		padding: 28px 15px 28px 10px;
+	}
+	.fees-module-title{
+		margin-bottom: 25px;
+	}
+	.fees-module-cntlr{
+		padding-bottom: 30px;
+	}
 }

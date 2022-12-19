@@ -187,11 +187,18 @@
 	.counter-col{
 		width: 50%;
 	}
+	.specialists-profile-module{
+		max-width: 700px;
+		margin: 0 auto;
+	}
 }
 @media(max-width: 767px){
 	
 	.profile-module-cntlr{
 		padding-top: 40px;
+	}
+	.specialists-profile-module{
+		max-width: 100%;
 	}
 }
 @media(max-width: 575px){
@@ -210,4 +217,21 @@
 		width: 100%;
 		padding: 0;
 	}
+	.pm-grd-title a{
+		font-size: 28px;
+		line-height: 1.25;
+	}
+	.pm-grd-assist-name{
+		font-size: 21px;
+		line-height: 1.23;
+	}
+	.pm-grd-addr{
+		font-size: 14px;
+		line-height: 1.7;
+	}
+	.pm-grd-btn a{
+		font-size: 16px;
+		line-height: 1.25;
+	}
+
 }
