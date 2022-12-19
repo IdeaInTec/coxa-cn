@@ -122,6 +122,69 @@
 	font-size: 20px;
 	color: #A37D36;
 }
+.fees-tab-title{
+	text-align: center;
+	margin-bottom: 8px;
+}
+.fees-tab-inr{
+	position: relative;
+}
+@media(max-width: 767px){
+	.fees-tab ul{
+		display: block;
+		margin: 0;
+	}
+	.fees-tab ul li{
+		padding: 0;
+		line-height: 1;
+	}
+	.fees-tab ul li:after{
+		content: none;
+	}
+	.fees-tab ul li a{
+		padding: 0;
+		line-height: 1;
+		border: 0;
+		font-size: 16px;
+	}
+	.fees-tab{
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		max-width: 400px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.fees-tab-button{
+		line-height: 1;
+		padding: 17px 28px 17px 8px;
+		background: #F7F7F7;
+		border: 1px solid #DDDDDD;
+	}
+	.fees-tab-button:after{
+		position: absolute;
+		content: "";
+		right: 14px;
+		top: 24px;
+		transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+		width: 11px;
+		height: 7px;
+		background: url(../images/gray-arrow-bottom.svg);
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	.fees-tab-button span{
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.2;
+		text-align: left;
+		color: #707070;
+		display: inline-block;
+	}
+}
 @media(max-width: 575px){
 	.fees-module-item-name{
 		width: 100%;
