@@ -324,6 +324,14 @@ if( $('.bannerBgSlider').length ){
       slidesToScroll: 1,
       nextArrow: '.bnr-right',
       prevArrow: '.bnr-left',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+          }
+        }
+      ]
     });
 }
 if( $('.bannerBgSlider2').length ){

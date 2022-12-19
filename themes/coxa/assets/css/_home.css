@@ -474,15 +474,30 @@
 	.intro-sec {
 		padding: 100px 0;
 	}
+	.bnr-prev {
+	    left: 0;
+	}
+	.bnr-next {
+	    right: 0;
+	}
+	.bnr-recommended{
+		right: 0;
+	}
 }
 @media(max-width: 1199px){
 	.intro-sec {
 		padding: 80px 0;
 	}
+	.banner-desc p{
+		font-size: 22px;
+	}
 }
 @media(max-width: 991px){
 	.intro-sec {
 		padding: 60px 0;
+	}
+	.banner-desc p{
+		font-size: 20px;
 	}
 }
 @media(max-width: 767px){
