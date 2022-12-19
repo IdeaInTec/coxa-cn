@@ -45,7 +45,20 @@ var stickyOffset = $('.header').offset().top;
       $('body').removeClass('fixed');
     }
   });
-	
+
+  
+	if(windowWidth <=767){
+    if( $('.fees-tab-inr').length ){
+      $('.fees-tab-button').click(function(){
+       $(this).toggleClass('fees-tab-arrow');
+       $(this).next().slideToggle(300);
+     });
+      $('.fees-tab-inr ul li a').click(function(){
+       var textval = $(this).text();
+       $('.fees-tab-button span').empty().append(textval);
+     });
+    }
+}
 //matchHeightCol
 if($('.mHc').length){
   $('.mHc').matchHeight();
@@ -423,11 +436,11 @@ if( $('.treatment-sec').length ){
 $(window).resize(function(){
   var windowWidth2 = $(window).width();
   if( $('.treatment-sec').length ){
-  var conW = $('.container').width();
-  var conLW2 = windowWidth2 - conW;
-  var conLW = conLW2 / 2;
-  $('.treatment-cntlr').css('margin-left', conLW);
-}
+    var conW = $('.container').width();
+    var conLW2 = windowWidth2 - conW;
+    var conLW = conLW2 / 2;
+    $('.treatment-cntlr').css('margin-left', conLW);
+  }
 });
 
 if( $('.tmreviewSlider').length ){
