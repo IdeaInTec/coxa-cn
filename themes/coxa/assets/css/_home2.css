@@ -461,7 +461,7 @@
     	padding: 0 25px 15px;    	
     }
     .why-choose-grid-title {
-    	font-size: 25px;
+    	font-size: 25px!important;
     }
     .review-sec {
     	padding: 50px 0 70px;
@@ -564,7 +564,7 @@
     }
     .cta-module-des-title{
     	margin-bottom: 32px;
-    	font-size: 43px;
+    	font-size: 43px!important;
     }
 }
 @media(max-width: 575px){
@@ -580,7 +580,7 @@
     	max-width: 400px;
     }
     .why-choose-grid-title{
-    	font-size: 28px;
+    	font-size: 28px!important;
     }
     .why-choose-grid-img{
     	padding: 10px 20px 30px;

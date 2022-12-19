@@ -208,7 +208,7 @@
 }
 .locations-title-cntrl a {
     padding: 12px 15px;
-    margin-right: 5px;
+    margin-right: 12px;
     border: 1px solid #29467D;
 }
 .locations-title-cntrl > a:last-child{
@@ -293,9 +293,29 @@ padding-bottom: 4px;
     .locations-des-title{
         font-size: 24px;
     }
+    .locations-sec {
+        padding-bottom: 65px;
+        padding-top: 20px;
+    }
+    .locations-sec-grid-item .locations-area{
+        margin-bottom: 28px;
+    }
+    .locations-sec .sec-entry-hdr-cntlr {
+        padding-bottom: 50px;
+    }
+    .locations-sec-grids .locations-sec-grid-item {
+        margin-bottom: 48px;
+    }
 }
 @media(max-width: 991px){
-
+    .locations-sec-grids .locations-sec-grid-item{
+        width: 50%;
+    }
+    .locations-sec-inner {        
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 @media(max-width: 767px){
     .faq-sec {
@@ -310,6 +330,22 @@ padding-bottom: 4px;
     }
     .faq-accordion-des{
         padding: 24px 16px 24px 16px;
+    }
+    .locations-sec {
+        padding-bottom: 75px;
+        padding-top: 30px;
+    }
+    .locations-sec .sec-entry-hdr-cntlr {
+        padding-bottom: 40px;
+    }
+    .locations-sec-grids .locations-sec-grid-item {
+        margin-bottom: 40px;
+    }
+    .locations-sec-grids .locations-sec-grid-item{
+        width: 100%;
+    }
+    .locations-sec-inner {        
+        max-width: 400px;
     }
 }
 @media(max-width: 575px){

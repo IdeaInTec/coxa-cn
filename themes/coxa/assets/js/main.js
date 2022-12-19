@@ -343,7 +343,7 @@ if( $('.bannerBgSlider').length ){
         {
           breakpoint: 768,
           settings: {
-            arrows: false,
+            arrows: false
           }
         }
       ]
@@ -617,6 +617,15 @@ if( $('.locationSlider').length ){
         {
           breakpoint: 1300,
           settings: {
+            arrows: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
             arrows: false,
             dots: true
           }

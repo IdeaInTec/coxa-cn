@@ -217,3 +217,33 @@
 		padding-right: 105px;
 	}
 }
+@media(max-width: 1499px){
+	.double-image-module .abtis-row-img-inner {
+		margin-right: -50px;
+	}
+}
+@media(max-width: 1299px){
+	.double-image-module .abtis-row-img-inner {
+		margin-right: 0;
+	}
+}
+@media(max-width: 1199px){
+	.about-intro-sec {
+		padding: 55px 0 40px;		
+	}
+	.has-inline-bg.double-image-module .abtis-row-img-inner {
+		padding-left: 70px;
+	}
+}
+@media(max-width: 991px){
+	
+}
+@media(max-width: 767px){
+	
+}
+@media(max-width: 575px){
+	
+}
+@media(max-width: 479px){
+	
+}
