@@ -557,6 +557,12 @@ textarea {
 .consultation-sec{
     padding-bottom: 140px;
 }
+.referral-page-con-cntlr .about-intro-sec .faq-accordion-icon-box i.faq-active-icon{
+    transform: translate(-50%,-50%) rotate(180deg);
+    -ms-transform: translate(-50%,-50%) rotate(180deg);
+    -webkit-transform: translate(-50%,-50%) rotate(180deg);
+    margin-top: 1.5px;
+}
 /*responsive*/
 
 @media(max-width: 1199px){
@@ -687,12 +693,7 @@ textarea {
     }
     .contact-form-rgt-inr{
         max-width: 100%;
-    }
-    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button{
-        min-width: 100%;
-        padding: 22.5px 15px 18.5px;
-        font-size: 16px;
-    }
+    }    
     .contact-form-sec-wrp {
         padding-bottom: 46px;
     }    
@@ -709,7 +710,5 @@ textarea {
 }
 
 @media(max-width: 479px){
-    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button{
-        padding: 21.5px 15px 17.5px;
-    }
+    
 }    
