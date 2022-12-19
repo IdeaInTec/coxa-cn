@@ -45,3 +45,27 @@
 		padding-right: 105px;
 	}
 }
+@media(max-width: 1199px){
+	.has-inline-bg.double-image-module .abtis-lft-img-row .abtis-row-img-inner {
+		padding-right: 70px;
+	}
+}
+@media(max-width: 991px){
+	.has-inline-bg.double-image-module .abtis-lft-img-row .abtis-row-img-inner {
+		padding-right: 60px;
+	}
+}
+@media(max-width: 767px){
+	.has-inline-bg.double-image-module .abtis-lft-img-row .abtis-row-img-inner {
+		padding-right: 42px;
+	}
+	.abtis-lft-img-row .abtis-row-sub-img-cntlr{
+		right: 0;
+	}
+}
+@media(max-width: 575px){
+	
+}
+@media(max-width: 479px){
+	
+}

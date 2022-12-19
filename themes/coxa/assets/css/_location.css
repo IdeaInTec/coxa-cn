@@ -1,4 +1,3 @@
-
 .tl-team-sec{
 	padding-top: 80px;
 	padding-bottom: 14px;
@@ -34,4 +33,9 @@
 }
 .practice-gallery .sec-entry-hdr-cntlr {
     padding-bottom: 12px;
+}
+@media(max-width: 991px){
+	.lt-page-con-cntlr .abtis-img-text-row-inr {
+		align-items: center;
+	}
 }
