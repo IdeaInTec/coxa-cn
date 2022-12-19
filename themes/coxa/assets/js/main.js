@@ -328,7 +328,7 @@ if( $('.bannerBgSlider').length ){
         {
           breakpoint: 768,
           settings: {
-            arrows: false,
+            arrows: false
           }
         }
       ]

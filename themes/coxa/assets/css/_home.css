@@ -516,6 +516,52 @@
 	.intro-sec {
 		padding: 44px 0;
 	}
+	.banner-bg{
+		height: 487px;
+	}
+	.banner{
+		margin-bottom: 65px;
+	}
+	.bnr-recommended{
+		bottom: -45px;
+		left: 0;
+		justify-content: center;
+	}
+	.bnr-recommended > span,
+	.bnr-recommended > span a{
+		color: #333333;
+		font-size: 13px;
+	}
+	.bnr-recommended > span a{
+		font-weight: 600;
+	}
+	.banner-title{
+		line-height: 1.25;
+		margin-bottom: 32px;
+	}
+	.banner-desc-cntlr .diamond-module {
+	    margin-bottom: 32px;
+	}
+	.banner-desc p {
+	    font-size: 18px;
+	}
+	.banner-desc p br{
+		display: none;
+	}
+	.banner-desc {
+	    margin-bottom: 48px;
+	}
+	.banner-cntlr{
+		padding: 50px 0;
+	}
+	.start-module ul li img{
+		max-width: 20px;
+		width: 100%;
+	}
+	.banner-btn a{
+		font-size: 16px!important;
+    	min-width: 140px;
+	}
 }
 @media(max-width: 575px){
 
