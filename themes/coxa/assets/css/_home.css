@@ -553,6 +553,12 @@
 	    padding-top: 50px!important;
 	    padding-bottom: 50px!important;
 	}
+	.pg-banner-cntlr{
+		padding: 70px 0;
+	}
+	.pg-banner-cntlr {
+		min-height: 404px;
+	}
 }
 @media(max-width: 767px){
 	.intro-sec {
@@ -622,6 +628,16 @@
 	.treatment-cntlr{
 		margin-left: 10px!important;
 	}
+	.pg-banner-cntlr {
+		min-height: initial;
+	}
+	.pg-banner-desc p{
+		font-size: 18px;
+	}
+	.pg-banner-desc p br{
+		display: none!important;
+	}
+
 }
 @media(max-width: 575px){
 	.treatmentSlider .slick-list.draggable {
@@ -629,6 +645,26 @@
 	}
 	.trtmnt-grd-desc{
 		padding-right: 0;
+	}
+	.pg-banner-cntlr{
+		padding: 50px 0;
+	}
+	.pg-banner-title{
+		font-size: 29px!important;
+		margin-bottom: ;
+	}
+	.pg-banner-desc-cntlr .diamond-module{
+	    margin-bottom: 20px;
+	}
+	.pg-banner-desc {
+		margin-bottom: 26px;
+	}
+	.pg-banner-btn, .banner-btn {
+		padding: 0 8px;
+	}
+	.pg-banner-btn a{
+		font-size: 16px!important;
+		min-width: 129px;
 	}
 }
 @media(max-width: 374px){
