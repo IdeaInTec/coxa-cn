@@ -197,10 +197,11 @@
     bottom: 26px;
     z-index: 1;
 }
-.about-page-con-cntlr .review-pro-des{
+.review-pro-des-btn-col-3-cntlr .review-pro-des{
 	height: 218px;
+	-webkit-line-clamp: 7;
 }
-.about-page-con-cntlr .review-grid-col{
+.review-pro-des-btn-col-3-cntlr .review-grid-col{
 	width: 33.333%;
 }
 @media(min-width: 1600px){
@@ -352,4 +353,12 @@
 		width: 145px;
 		height: 184px;
 	}
+	.about-page-con-cntlr .cta-module-des-title{
+		font-size: 32px!important;
+	}
+}
+@media(max-width: 359px){
+	.about-page-con-cntlr .cta-module-des-title{
+		font-size: 27px!important;
+	}    
 }
