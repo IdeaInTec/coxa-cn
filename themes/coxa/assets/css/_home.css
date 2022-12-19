@@ -666,7 +666,7 @@
 	}
 	.pg-banner-btn a{
 		font-size: 16px!important;
-		min-width: 129px;
+		min-width: 115px;
 	}
 }
 @media(max-width: 374px){
