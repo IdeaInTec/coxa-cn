@@ -611,6 +611,37 @@
         padding: 32px 8px;
         padding-top: 0;
     }
+    .cox-profile-modal .modal.show .modal-dialog {
+        max-width: 400px;        
+        margin-top: 80px;
+    }
+    .pro-modal-con-rgt{
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }   
+    .pro-modal-con-lft{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+     .pro-modal-img-cntlr {
+        border: none;
+        margin-left: 0;
+    }
+    .pro-modal-title{
+        font-size: 28px!important;
+        margin-bottom: 8px;
+    }
+    .pro-modal-assist-name span{
+        font-size: 16px!important;
+    }
+    .pro-modal-addr span{
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    .pro-modal-addr {
+        margin-bottom: 16px;
+    }
 }
 @media(max-width: 575px){
 	.why-choose-grid-col{
@@ -643,10 +674,20 @@
     .cta-module{
     	padding: 65px 16px 70px 16px;
     }
+    .cox-profile-modal .modal.show .modal-dialog {        
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 @media(max-width: 479px){
 	/*.why-choose-grid-des{
 		padding-left: 0;
 		padding-right: 0;
 	}*/
+    .cox-profile-modal .modal.show .modal-dialog {
+        max-width: 300px;
+        margin-top: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

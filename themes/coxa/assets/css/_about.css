@@ -279,6 +279,9 @@
 	.about-team-sec-btn {
 		padding-top: 20px;
 	}
+	.review-pro-des-btn-col-3-cntlr .review-grid-col {
+		width: 50%;
+	}
 }
 @media(max-width: 767px){
 	.abtis-img-txt-col {
@@ -330,6 +333,9 @@
 	}
 	.about-team-sec {
 		padding: 50px 0;		
+	}
+	.review-pro-des-btn-col-3-cntlr .review-grid-col {
+		width: 100%;
 	}
 }
 @media(max-width: 575px){
