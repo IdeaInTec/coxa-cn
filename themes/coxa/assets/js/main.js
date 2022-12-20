@@ -717,65 +717,87 @@ if( $('.counter-number').length ){
 
 /*---- MSI ----*/ 
 if( $('.teamGrdSlider').length ){
-    $('.teamGrdSlider').slick({
-      dots: true,
-      arrows: true,
-      infinite: false,
-      autoplay: false,
-      autoplaySpeed: 4000,
-      speed: 700,
-      slidesToShow: 3,
-      slidesToScroll: 1
-    });
+  $('.teamGrdSlider').slick({
+    dots: true,
+    arrows: true,
+    infinite: false,
+    autoplay: false,
+    autoplaySpeed: 4000,
+    speed: 700,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: '.profile-module .revw-right',
+    prevArrow: '.profile-module .revw-left',
+    responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
+      }
+    }
+    ]
+  });
 }
 if( $('.patientReviewSlider').length ){
-    $('.patientReviewSlider').slick({
-      dots: true,
-      arrows: true,
-      infinite: false,
-      autoplay: false,
-      autoplaySpeed: 4000,
-      speed: 700,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      nextArrow: '.revw-right',
-      prevArrow: '.revw-left',
-    });
+  $('.patientReviewSlider').slick({
+    dots: true,
+    arrows: true,
+    infinite: false,
+    autoplay: false,
+    autoplaySpeed: 4000,
+    speed: 700,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: '.revw-right',
+    prevArrow: '.revw-left',
+  });
 }
 
 if( $('.reviewSliderGrd3').length ){
-    $('.reviewSliderGrd3').slick({
-      dots: true,
-      arrows: true,
-      infinite: false,
-      autoplay: false,
-      autoplaySpeed: 4000,
-      speed: 700,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      nextArrow: '.revw-right',
-      prevArrow: '.revw-left',
-      responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true
-          }
-        }
-      ]
-    });
+  $('.reviewSliderGrd3').slick({
+    dots: true,
+    arrows: true,
+    infinite: false,
+    autoplay: false,
+    autoplaySpeed: 4000,
+    speed: 700,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: '.revw-right',
+    prevArrow: '.revw-left',
+    responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
+      }
+    }
+    ]
+  });
 }
 
 if( $('.afterBeforeEffect').length ){

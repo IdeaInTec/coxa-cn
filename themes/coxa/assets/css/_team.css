@@ -56,7 +56,7 @@
 }
 
 .profile-module{
-
+	position: relative;
 }
 .profile-module > ul{
 	display: flex;

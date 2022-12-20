@@ -34,6 +34,21 @@
 .practice-gallery .sec-entry-hdr-cntlr {
     padding-bottom: 12px;
 }
+.lt-page-con-cntlr .tl-team-sec .pm-grd-desc {
+    display: block;
+}
+.lt-page-con-cntlr .tl-team-sec .pm-grd-desc p:last-of-type,
+.lt-page-con-cntlr .tl-team-sec .pm-grd-addr{
+	margin-bottom: 20px;
+}
+@media (max-width: 1299px){
+	.team-prev-next {
+		display: none;
+	}
+}
+@media (max-width: 1199px){
+
+}
 @media(max-width: 991px){
 	.lt-page-con-cntlr .abtis-img-text-row-inr {
 		align-items: center;
