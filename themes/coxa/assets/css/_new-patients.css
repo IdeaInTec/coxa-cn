@@ -53,6 +53,9 @@
 		padding-top: 60px;
 		padding-bottom: 70px;
 	}
+	.patient-page-con-cntlr .cta-section {
+		padding-bottom: 60px;
+	}
 }
 @media(max-width: 991px){
 	.has-inline-bg.double-image-module .abtis-lft-img-row .abtis-row-img-inner {
@@ -62,6 +65,7 @@
 		padding-top: 50px;
 		padding-bottom: 60px;
 	}
+
 }
 @media(max-width: 767px){
 	.has-inline-bg.double-image-module .abtis-lft-img-row .abtis-row-img-inner {
@@ -74,6 +78,9 @@
 		padding-top: 16px;
 	}
 	.patient-page-con-cntlr .faq-sec {		
+		padding-bottom: 50px;
+	}
+	.patient-page-con-cntlr .cta-section {
 		padding-bottom: 50px;
 	}
 }
