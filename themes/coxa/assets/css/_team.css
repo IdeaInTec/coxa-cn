@@ -195,6 +195,7 @@
 	.counter-col{
 		width: 50%;
 	}
+	.profile-module-cntlr,
 	.specialists-profile-module, 
 	.profile-module{
 		max-width: 700px;
@@ -212,6 +213,7 @@
 	.profile-module-cntlr{
 		padding-top: 40px;
 	}
+	.profile-module-cntlr,
 	.specialists-profile-module, 
 	.profile-module{
 		max-width: 100%;
