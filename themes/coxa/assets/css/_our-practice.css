@@ -191,6 +191,25 @@
 .pratice-pg-con-cntlr .wco-team-sec .team-grds{
     margin-bottom: 50px;
 }
+.pratice-pg-con-cntlr .faq-sec {
+    background: #F7F7F7;
+}
+.pratice-pg-con-cntlr .faq-accordion-title{
+    font-weight: 400;
+    color: #11345E;
+}
+.pratice-pg-con-cntlr .faq-accordion-hdr{
+    background: #fff;
+    border: 1px solid #DDDDDD;
+}
+.pratice-pg-con-cntlr .active .faq-accordion-hdr{
+    background: #11345E;
+    border: 1px solid #11345E;
+}
+.pratice-pg-con-cntlr .faq-sec {
+    padding-top: 80px;
+    padding-bottom: 90px;
+}
 
 @media(max-width: 1199px){
     .practice-gallery-grid-img-cntlr .practice-gallery-grid-img{
@@ -232,6 +251,10 @@
         padding-top: 60px;
         padding-bottom: 70px;
     }
+    .pratice-pg-con-cntlr .faq-sec {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
 }
 @media(max-width: 991px){
     .practice-gallery-grids .practice-gallery-grid-col{
@@ -258,6 +281,10 @@
     .practice-faq-sec{
         padding-top: 60px;
         padding-bottom: 70px;
+    }
+    .pratice-pg-con-cntlr .faq-sec {
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 }
 @media(max-width: 767px){
@@ -309,6 +336,10 @@
         margin-bottom: 30px;
     }
     .practice-faq-sec {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .pratice-pg-con-cntlr .faq-sec {
         padding-top: 50px;
         padding-bottom: 50px;
     }
