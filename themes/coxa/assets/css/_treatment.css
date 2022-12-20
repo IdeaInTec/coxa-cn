@@ -188,3 +188,24 @@
 .treatment-page-con-cntlr .pm-grd-desc{
 	display: block;
 }
+@media(max-width: 1199px){
+	.treatment-grds{
+		margin-left: 10px;
+		margin-right: 10px
+	}
+	.treatment-grd-item-col{
+		padding: 0 10px 25px
+	}
+}
+@media(max-width: 991px){
+	
+}
+@media(max-width: 767px){
+	
+}
+@media(max-width: 575px){
+	
+}
+@media(max-width: 479px){
+	
+}
