@@ -1,4 +1,4 @@
-.why-choose-grids{
+.practice-gallery-grids{
     display: flex;
     flex-wrap: wrap;
     margin: 0 -10px;
@@ -10,10 +10,10 @@
 .lt-page-con-cntlr .practice-gallery{
     margin-top: 0;
 }
-.pratice-pg-con-cntlr .why-choose-sec .sec-entry-hdr-cntlr {
+.pratice-pg-con-cntlr .practice-gallery .sec-entry-hdr-cntlr {
     padding-bottom: 50px;
 }
-.pratice-pg-con-cntlr .why-choose-grid-btn{
+.pratice-pg-con-cntlr .practice-gallery-grid-btn{
     padding-top: 30px;
 }
 .pratice-pg-con-cntlr .locations-sec  .sec-entry-hdr-cntlr{
@@ -22,7 +22,7 @@
 /*.pratice-pg-con-cntlr .locations-sec .sec-entry-hdr p{
     font-size: 15px;
 }*/
-.why-choose-grids .practice-gallery-grid-col{
+.practice-gallery-grids .practice-gallery-grid-col{
     width: 25%;
     padding: 0 10px;
     margin-bottom: 20px;
@@ -176,4 +176,68 @@
 .pratice-pg-con-cntlr .pm-grd-btn a:hover{
     border-bottom-color: #EACC95;
     letter-spacing: 1px;
+}
+.practice-gallery-grid-btn .cdc-btn {    
+    font-size: 17px;
+}
+
+@media(max-width: 1199px){
+    .practice-gallery-grid-img-cntlr .practice-gallery-grid-img{
+        height: 230px;
+    }
+    .practice-gallery-grid-title{
+        font-size: 17px!important;
+    }
+    .practice-gallery-grid-title:after{
+        width: 14px;
+        height: 14px;
+        top: 3px;
+        background-size: cover;
+    }
+    .practice-gallery-grid-title {
+        padding-left: 20px;
+    }
+}
+@media(max-width: 991px){
+    .practice-gallery-grids .practice-gallery-grid-col{
+        width: 33.333%;
+    }
+    .practice-gallery-grid-title {
+        font-size: 18px!important;
+    }
+    .practice-gallery-grid-title:after{
+        top: 6px; 
+    }
+}
+@media(max-width: 767px){
+    .practice-gallery-grids .practice-gallery-grid-col{
+        width: 50%;
+        margin-bottom: 16px;
+    }
+    .practice-gallery-grid-img-cntlr .practice-gallery-grid-img {
+        height: 275px;
+    }
+    .practice-gallery-grid-title {
+        font-size: 21px!important;
+    }
+    .practice-gallery-grid-title:after {
+        width: 12px;
+        height: 12px;
+        top: 7px;        
+    }
+}
+@media(max-width: 575px){
+    .practice-gallery-grids{
+        margin: 0;
+    }
+    .practice-gallery-grids .practice-gallery-grid-col{
+        padding: 0;
+        width: 100%;        
+    }
+    .practice-gallery-grid-img-cntlr .practice-gallery-grid-img {
+        height: 328px;
+    }
+}
+@media(max-width: 479px){
+    
 }

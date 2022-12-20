@@ -48,6 +48,11 @@
 .xs-team-prev-next{
 	display: none;
 }
+/*.practice-gallery-grids{
+	display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}*/
 @media (max-width: 1299px){
 	.team-prev-next {
 		display: none;
@@ -57,7 +62,7 @@
 	.tl-team-sec{
 		padding-top: 65px;
 		padding-bottom: 60px;
-	}
+	}	
 }
 @media(max-width: 991px){
 	.lt-page-con-cntlr .abtis-img-text-row-inr {
@@ -90,5 +95,11 @@
 	}
 	.lt-page-con-cntlr .tl-team-sec .profile-module {
 		max-width: 360px;
+	}
+	.practice-gallery.tl-practice-gallery{
+		padding: 60px 0 60px!important;
+	}
+	.lt-page-con-cntlr .practice-gallery-grids .practice-gallery-grid-col{
+		margin-bottom: 24px;
 	}
 }
