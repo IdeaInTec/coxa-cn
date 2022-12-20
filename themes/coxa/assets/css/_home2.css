@@ -691,6 +691,10 @@
     .review-pro-des p br{
         display: none;
     }
+    .why-choose-sec{
+        background-image: none!important;
+        background-color: #061E39;
+    }
 }
 @media(max-width: 479px){
 	/*.why-choose-grid-des{
