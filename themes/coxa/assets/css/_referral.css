@@ -79,10 +79,10 @@
     padding-left: 40px;
     padding-right: 40px;
 }
-.testimonials-pg-content-cntlr .review-pro-des,
+/*.testimonials-pg-content-cntlr .review-pro-des,
 .tlPatientReviewSlider2 .review-pro-des{
     height: 90px;
-}
+}*/
 .tlPatientReviewSlider2 .review-grid-col{
     display: none;
     position: relative;

@@ -16,9 +16,6 @@
 .practice-gallery-bgwhite .practice-gallery-grid-img-cntlr{
 	box-shadow: none;
 }
-.testimonials-pg-content-cntlr .review-pro-des{
-	height: initial;
-}
 .reviewSlider2 .review-grid-col{
     display: none;
     position: relative;
@@ -46,4 +43,9 @@
 }
 .testimonials-pg-content-cntlr .why-choose-sec .sec-entry-hdr-cntlr {
     padding-bottom: 60px;
+}
+@media(max-width: 767px){
+    .testimonials-pg-content-cntlr .practice-gallery-grids .practice-gallery-grid-col{
+        margin-bottom: 24px;
+    }
 }
