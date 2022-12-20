@@ -191,6 +191,21 @@
 .pratice-pg-con-cntlr .wco-team-sec .team-grds{
     margin-bottom: 50px;
 }
+.pratice-pg-con-cntlr .faq-sec {
+    background: #F7F7F7;
+}
+.pratice-pg-con-cntlr .faq-accordion-title{
+    font-weight: 400;
+    color: #11345E;
+}
+.pratice-pg-con-cntlr .faq-accordion-hdr{
+    background: #fff;
+    border: 1px solid #DDDDDD;
+}
+.active .faq-accordion-hdr{
+    background: #11345E;
+    border: 1px solid #11345E;
+}
 
 @media(max-width: 1199px){
     .practice-gallery-grid-img-cntlr .practice-gallery-grid-img{
