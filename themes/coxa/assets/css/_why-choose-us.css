@@ -86,11 +86,19 @@
     .why-choose-us-page-cntlr .sec-entry-hdr-cntlr{
         padding-bottom: 20px;
     }
+    .review-pro-des-btn-fullwidth-cntlr .review-pro-des{
+        height: 220px;
+        -webkit-line-clamp:7;
+    }
+    .review-pro-des-btn-fullwidth-cntlr .review-grid-item{
+        padding: 0 20px;
+        padding-bottom: 30px;
+    }
 }
 @media(max-width: 575px){
     .why-choose-us-page-cntlr .counter-sec {        
         padding-bottom: 30px;
-    }
+    }    
 }
 @media(max-width: 479px){
     
