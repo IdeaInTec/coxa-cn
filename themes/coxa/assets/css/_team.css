@@ -192,6 +192,9 @@
 		max-width: 700px;
 		margin: 0 auto;
 	}
+	.pm-grd-img-cntlr {
+		height: 360px;
+	}
 }
 @media(max-width: 767px){
 	
@@ -201,6 +204,9 @@
 	.specialists-profile-module, 
 	.profile-module{
 		max-width: 100%;
+	}
+	.pm-grd-img-cntlr {
+		height: 344px;
 	}
 }
 @media(max-width: 575px){

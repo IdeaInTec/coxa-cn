@@ -1,6 +1,6 @@
 .tl-team-sec{
 	padding-top: 80px;
-	padding-bottom: 14px;
+	padding-bottom: 75px;
 }
 .tl-team-sec .profile-module ul{
 	justify-content: center;
@@ -41,16 +41,54 @@
 .lt-page-con-cntlr .tl-team-sec .pm-grd-addr{
 	margin-bottom: 20px;
 }
+.lt-page-con-cntlr .tl-team-sec .team-grds{
+	margin-bottom: 0!important;
+	padding-bottom: 0;
+}
+.xs-team-prev-next{
+	display: none;
+}
 @media (max-width: 1299px){
 	.team-prev-next {
 		display: none;
 	}
 }
 @media (max-width: 1199px){
-
+	.tl-team-sec{
+		padding-top: 65px;
+		padding-bottom: 60px;
+	}
 }
 @media(max-width: 991px){
 	.lt-page-con-cntlr .abtis-img-text-row-inr {
 		align-items: center;
+	}
+	.tl-team-sec{
+		padding-top: 45px;
+	}
+}
+@media(max-width: 767px){
+	.tl-team-sec {
+		padding-top: 32px;
+		padding-bottom: 80px;
+	}
+	.tl-team-sec .revw-next, 
+	.tl-team-sec .revw-prev{
+		position: static;
+	}
+	.xs-team-prev-next{
+		display: flex!important;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: -50px;
+	}
+	.tl-team-sec .profile-module ul{
+		margin-top: 0;
+	}
+	.about-intro-sec .about-intro-sec .office-social {
+		margin-bottom: 0;
+	}
+	.lt-page-con-cntlr .tl-team-sec .profile-module {
+		max-width: 360px;
 	}
 }

@@ -285,6 +285,9 @@
 	.has-inline-bg.double-image-module .abtis-row-img-inner {
 		padding-left: 60px;
 	}
+	.team-grd-item-col{
+		width: 50%;
+	}
 }
 @media(max-width: 767px){
 	.abtis-img-txt-col {
@@ -343,6 +346,16 @@
 	.has-inline-bg.double-image-module .abtis-row-img-inner {
 		padding-left: 42px;
 	}
+	.team-grd-item-col{
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 60px;
+	}
+	.team-grds{
+		margin-left: 0;
+		margin-right: 0;		
+	}	
 }
 @media(max-width: 575px){
 	.abtis-row-main-img-cntrl:before{
