@@ -142,6 +142,9 @@
     font-size: 13px;
     color: #EAEAEA;
 }
+.ftr-copyright p br{
+	display: none;
+}
 .ftr-btm-menu{
 	margin-left: auto;
 }
@@ -361,8 +364,13 @@
 		font-size: 21px!important;
 	}
 }
-@media(max-width: 639px){
-	
+@media(max-width: 479px){
+	.ftr-copyright p br{
+		display: block;
+	}
+	.ftr-btm-menu ul li a span{
+		display: none;
+	}
 }
 @media(max-width: 575px){
 	
