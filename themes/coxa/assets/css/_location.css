@@ -11,8 +11,7 @@
 	padding-bottom: 40px;
 }
 .practice-gallery.tl-practice-gallery{
-	background: linear-gradient(90deg, #F7F7F7 0%, #FFFFFF 50%, #F7F7F7 100%);
-	padding-top: 70px!important;
+	background: linear-gradient(90deg, #F7F7F7 0%, #FFFFFF 50%, #F7F7F7 100%);	
 	padding-top: 60px!important;
 }
 .tl-faq-sec{
@@ -48,11 +47,8 @@
 .xs-team-prev-next{
 	display: none;
 }
-/*.practice-gallery-grids{
-	display: flex;
-    flex-wrap: wrap;
-    margin: 0 -10px;
-}*/
+
+
 @media (max-width: 1299px){
 	.team-prev-next {
 		display: none;
@@ -63,6 +59,9 @@
 		padding-top: 65px;
 		padding-bottom: 60px;
 	}	
+	.lt-page-con-cntlr .practice-gallery-grid-btn{
+		padding-top: 40px;
+	}
 }
 @media(max-width: 991px){
 	.lt-page-con-cntlr .abtis-img-text-row-inr {
@@ -70,6 +69,9 @@
 	}
 	.tl-team-sec{
 		padding-top: 45px;
+	}
+	.lt-page-con-cntlr .practice-gallery-grid-btn{
+		padding-top: 30px;
 	}
 }
 @media(max-width: 767px){
@@ -101,5 +103,10 @@
 	}
 	.lt-page-con-cntlr .practice-gallery-grids .practice-gallery-grid-col{
 		margin-bottom: 24px;
+	}
+}
+@media(max-width: 575px){
+	.practice-gallery.tl-practice-gallery {
+		padding: 50px 0 50px!important;
 	}
 }
