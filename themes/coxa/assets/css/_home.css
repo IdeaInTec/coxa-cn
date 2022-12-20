@@ -614,7 +614,7 @@
 		display: none;
 	}
 	.treatment-sec{
-		padding-top: 25px!important;
+		padding-top: 30px!important;
 		padding-bottom: 40px!important;
 	}
 	.treatment-grids{
@@ -643,6 +643,15 @@
 	}
 	.treatment-lft{
 		padding-left: 10px;
+	}
+	.intro-sec .sec-entry-hdr-title{
+		font-size: 38px;
+	}
+	.why-choose-sec .sec-entry-hdr-title,
+	.review-sec .sec-entry-hdr-title,
+	.faq-sec .sec-entry-hdr-title,
+	.locations-sec .sec-entry-hdr-title{
+		font-size: 32px;
 	}
 }
 @media(max-width: 575px){
@@ -674,6 +683,9 @@
 	}
 	.trtmnt-grd-img-cntlr{
 		height: 300px;
+	}
+	.custom-prev-next-cntlr {
+	    max-width: 87%;
 	}
 }
 @media(max-width: 479px){

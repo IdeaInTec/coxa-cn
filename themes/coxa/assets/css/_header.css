@@ -564,7 +564,6 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li:hover:after{
     width: 100%;
     padding: 30px 0;
     z-index: 10;
-    padding-bottom: 0;
 }
 .xs-pop-up-menu-btm {
     position: absolute;
@@ -831,6 +830,18 @@ body.allWork .hamburger-icon span:nth-child(2) {
     }
     .fixed-header .main-header-gap{
         height: 126px;
+    }
+    .topbar-menu ul{
+        display: block;
+        margin: 0;
+    }
+    .topbar-menu ul li{
+        padding: 15px 40px 15px 20px;
+    }
+    .topbar-menu ul li a{
+        font-size: 18px;
+        color: #29467D;
+        font-weight: 600;
     }
 }
 @media(max-width: 767px){
