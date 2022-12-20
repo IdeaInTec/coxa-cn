@@ -606,13 +606,7 @@ textarea {
         padding-top: 40px;
         padding-bottom: 60px;
     }    
-    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container{
-        margin: 0;
-    } 
-    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field{
-        padding-left: 0;
-        padding-right: 0;
-    }
+    
     .contact-form-wrp .wpforms-field-checkbox ul li label{
         font-size: 16px!important;
         line-height: 1.25!important;
@@ -747,6 +741,13 @@ textarea {
     .tlPatientReviewSlider2 .review-pro-des {
         height: 220px;
         -webkit-line-clamp: 7;
+    }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container{
+        margin: 0;
+    } 
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field{
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 

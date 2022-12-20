@@ -352,3 +352,8 @@ span.select2.select2-container.select2-container--default {
         display: none;
     }
 }
+@media(max-width: 374px){
+    .cdc-trnsprnt-btn{
+        padding: 14.5px 11px;
+    }
+}
