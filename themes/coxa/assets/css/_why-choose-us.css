@@ -98,7 +98,11 @@
 @media(max-width: 575px){
     .why-choose-us-page-cntlr .counter-sec {        
         padding-bottom: 30px;
-    }    
+    }   
+    .review-pro-des-btn-fullwidth-cntlr .review-grid-item{
+        padding: 0 10px;
+        padding-bottom: 22px;
+    } 
 }
 @media(max-width: 479px){
     
