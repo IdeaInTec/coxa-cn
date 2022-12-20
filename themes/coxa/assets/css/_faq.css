@@ -115,9 +115,30 @@
 	.faq-grids {
 	    padding: 0 30px;
 	}
+	.faq-content-sec {
+		padding-top: 60px;
+	}
 }
 @media(max-width: 767px){
 	.faq-grids {
 	    padding: 0 0;
 	}
+	.faq-content-sec {
+		padding-top: 50px;
+	}
+	.faq-grid-itesm-col{
+		padding-top: 10px;
+	}
+	.faq-grd-title{
+		margin-bottom: 30px;
+	}
+}
+@media(max-width: 479px){
+	.faq-grd-title:before{
+		top: 0px;
+		-webkit-transform: initial;
+		-ms-transform: initial;
+		transform: initial;		
+		margin-top: 0;
+	}    
 }
