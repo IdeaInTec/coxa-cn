@@ -139,6 +139,7 @@
 }
 .ex-trmnt-grd-des-title{
     margin-bottom: 10px;
+    line-height: 1.2;
 }
 .ex-trmnt-grd-des-title a{
     color: #333333;
@@ -205,10 +206,13 @@
         margin-right: -10px;
     }
     .ex-trmnt-grd-item-col{
-        padding: 0 10px 10px;
+        padding: 0 10px 12px;
     }
     .ex-trmnt-grd-item-img-cntlr{
         height: 320px;
+    }
+    .pratice-pg-con-cntlr .locations-sec {
+        padding-top: 100px;
     }
 }
 @media(max-width: 991px){
@@ -223,6 +227,12 @@
     }
     .ex-trmnt-grd-item-col {
         width: 50%;        
+    }
+    .ex-trmnt-grd-item-img-cntlr {
+        height: 350px;
+    }
+    .pratice-pg-con-cntlr .locations-sec {
+        padding-top: 80px;
     }
 }
 @media(max-width: 767px){
@@ -241,6 +251,32 @@
         height: 12px;
         top: 7px;        
     }
+    .ex-trmnt-grd-item-img-cntlr {
+        height: 300px;
+    }
+    .abtis-intro-des-btn{
+        padding-top: 16px;
+    }
+    .practice-gallery{
+        padding: 60px 0 60px!important;
+        margin-top: 30px;
+    }
+    .practice-gallery-grid-img-cntlr a.overlay-link:after{
+        position: absolute;
+        content: '';
+        right: 14px;
+        bottom: 14px;
+        height: 30px;
+        width: 30px;
+        background-image: url(../images/gallery-zoom-icon.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    .pratice-pg-con-cntlr .locations-sec {
+        padding-top: 60px;
+        padding-bottom: 55px;
+    }
 }
 @media(max-width: 575px){
     .practice-gallery-grids{
@@ -250,8 +286,25 @@
         padding: 0;
         width: 100%;        
     }
+    .ex-trmnt-grd-item-img-cntlr,
     .practice-gallery-grid-img-cntlr .practice-gallery-grid-img {
         height: 328px;
+    }
+    .expert-treatment-grds {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .ex-trmnt-grd-item-col {
+        width: 100%;        
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .practice-gallery{
+        padding: 50px 0 50px!important;
+        margin-top: 20px;
+    }
+    .pratice-pg-con-cntlr .practice-gallery-grid-btn {
+        padding-top: 20px;
     }
 }
 @media(max-width: 479px){

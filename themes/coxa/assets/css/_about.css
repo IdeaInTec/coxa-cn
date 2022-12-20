@@ -331,6 +331,7 @@
 	.abtis-row-text-inr h2{
 		margin-bottom: 16px;
 	}
+	.abtis-row-text-inr p:last-of-type,
 	.abtis-lft-img-row .abtis-row-text-inr p:last-of-type {
 		margin-bottom: 0;
 	}
