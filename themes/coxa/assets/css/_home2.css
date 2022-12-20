@@ -486,7 +486,7 @@
     	padding-top: 25px;
     }
     .review-pro-des p{
-    	font-size: 18px;
+    	font-size: 19px;
     }
     .cta-module-wrp {
     	padding: 25px;
@@ -515,6 +515,10 @@
         padding: 30px 20px;
         padding-top: 0;
     }
+    /*.review-pro-des{
+        height: 160px;
+        -webkit-line-clamp: 6;
+    }*/
 }
 @media(max-width: 767px){
 	.why-choose-grids-cntlr{
@@ -573,7 +577,8 @@
     	margin-top: 41px;
     }
     .review-pro-des{
-    	height: 152px;
+    	height: 220px;
+        -webkit-line-clamp: 7;
     }
     .review-sec {
     	padding: 54px 0 80px;
