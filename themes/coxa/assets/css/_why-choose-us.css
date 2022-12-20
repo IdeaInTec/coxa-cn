@@ -51,10 +51,11 @@
 .teamGrdSlider.slick-initialized .team-grd-item-col{
     display: block;
 }
-.why-choose-us-page-cntlr .review-grid-item{
+.review-pro-des-btn-fullwidth-cntlr .review-grid-item{
+    padding: 0 45px;
     padding-bottom: 35px;
 }
-.why-choose-us-page-cntlr .review-pro-des{
+.review-pro-des-btn-fullwidth-cntlr .review-pro-des{
     height: 90px;
     -webkit-line-clamp:3;
 }
