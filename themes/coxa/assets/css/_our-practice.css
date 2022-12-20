@@ -157,13 +157,14 @@
 
 .pratice-pg-con-cntlr .locations-sec{
     padding-top: 120px;
+    padding-bottom: 80px;
 }
 .pratice-pg-con-cntlr .locations-sec .sec-entry-hdr-cntlr,
 .pratice-pg-con-cntlr .faq-sec .sec-entry-hdr-cntlr{
     padding-bottom: 40px;
 }
 .pratice-pg-con-cntlr .wco-team-sec{
-    padding-top: 100px;
+    padding-top: 90px;
 }
 .pratice-pg-con-cntlr .pm-grd-addr{
     margin-bottom: 24px;
@@ -180,6 +181,15 @@
 }
 .practice-gallery-grid-btn .cdc-btn {    
     font-size: 17px;
+}
+.pratice-pg-con-cntlr .review-sec{
+    padding-top: 0;
+}
+.pratice-pg-con-cntlr .team-grd-item-col{
+    padding-bottom: 30px;
+}
+.pratice-pg-con-cntlr .wco-team-sec .team-grds{
+    margin-bottom: 50px;
 }
 
 @media(max-width: 1199px){
@@ -213,6 +223,10 @@
     }
     .pratice-pg-con-cntlr .locations-sec {
         padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    .pratice-pg-con-cntlr .wco-team-sec{
+        padding-top: 80px;
     }
 }
 @media(max-width: 991px){
@@ -233,6 +247,9 @@
     }
     .pratice-pg-con-cntlr .locations-sec {
         padding-top: 80px;
+    }
+    .pratice-pg-con-cntlr .wco-team-sec{
+        padding-top: 60px;
     }
 }
 @media(max-width: 767px){
@@ -276,6 +293,12 @@
     .pratice-pg-con-cntlr .locations-sec {
         padding-top: 60px;
         padding-bottom: 55px;
+    }
+    .pratice-pg-con-cntlr .team-grd-item-col{
+        padding-bottom: 20px;
+    }
+    .pratice-pg-con-cntlr .wco-team-sec .team-grds{
+        margin-bottom: 30px;
     }
 }
 @media(max-width: 575px){
