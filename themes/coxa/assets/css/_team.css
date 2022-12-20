@@ -222,6 +222,7 @@
 	.counter-col p{
 		font-size: 23px;
 	}
+	
 }
 @media(max-width: 575px){
 	.counter-col{
