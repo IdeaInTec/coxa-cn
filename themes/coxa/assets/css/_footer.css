@@ -199,7 +199,7 @@
 	font-weight: 600;
 }
 .ftr-designby p a:hover{
-	color: #fff;
+	text-decoration: underline;
 }
 .ftr-designby p{
 	padding-left: 12px;

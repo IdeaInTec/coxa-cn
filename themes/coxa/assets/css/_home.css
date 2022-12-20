@@ -270,14 +270,14 @@
 	flex-wrap: wrap;
 }
 .treatment-lft{
-	width: 22.83%;
+	width: 25%;
 	padding-right: 40px;
 }
 .treatment-lft .diamond-module{
 	margin-bottom: 28px;
 }
 .treatment-title{
-	font-size: 30px;
+	font-size: 29px;
 	margin-bottom: 22px;
 }
 .treatment-desc{
@@ -292,7 +292,7 @@
 	margin-bottom: 0;
 }
 .treatment-rgt{
-	width: 77.17%;
+	width: 75%;
 	position: relative;
 }
 .custom-prev-next-cntlr{
