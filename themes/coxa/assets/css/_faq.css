@@ -127,6 +127,9 @@
 	.faq-content-sec {
 		padding-top: 60px;
 	}
+	.faq-page-con-cntlr .sec-entry-hdr p:last-of-type {
+		margin-bottom: 30px;
+	}
 }
 @media(max-width: 767px){
 	.faq-grids {
@@ -140,6 +143,15 @@
 	}
 	.faq-grd-title{
 		margin-bottom: 30px;
+	}
+	.faq-page-con-cntlr .sec-entry-hdr-cntlr {
+		padding-bottom: 0;
+	}
+	.faq-page-con-cntlr .sec-entry-hdr p:last-of-type {
+		margin-bottom: 20px;
+	}
+	.faq-grid-item-col {		
+		padding-top: 10px;
 	}
 }
 @media(max-width: 479px){
