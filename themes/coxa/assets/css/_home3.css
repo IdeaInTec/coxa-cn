@@ -252,6 +252,8 @@
 
 .parallaxie-bg-Size_auto{
     background-size: auto!important;
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
 }
 .locationSlider .locations-sec-grid-item{
     display: none;

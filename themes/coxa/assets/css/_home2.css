@@ -3,6 +3,9 @@
 	border-top: 2px solid #A37D36;
 	border-bottom: 2px solid #A37D36;
 	background: linear-gradient(0deg, #0C2543, #0C2543);
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    background-position: center center!important;
 /*	background-position: top left!important;*/
 }
 .why-choose-sec .sec-entry-hdr p,
@@ -256,6 +259,9 @@
 }
 .cta-module-wrp {
     padding: 35px;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    background-position: center center!important;
 }
 .cta-module {
     display: flex;
@@ -474,9 +480,7 @@
     .why-choose-grid-des {
     	padding: 0 25px 15px;    	
     }
-    .why-choose-grid-title {
-    	font-size: 25px!important;
-    }
+    
     .review-sec {
     	padding: 50px 0 70px;
     }
