@@ -265,11 +265,13 @@
 		font-size: 26px;
 		line-height: 1.8;
 	}
+	.patient-page-con-cntlr .cta-module-des-title,
 	.team-pg-content-cntlr .cta-module-des-title{
 		font-size: 45px!important;
 	}
 }
 @media(max-width: 479px){
+	.patient-page-con-cntlr .cta-module-des-title,
 	.team-pg-content-cntlr .cta-module-des-title{
 		font-size: 32px!important;
 	}
@@ -279,6 +281,7 @@
 		display: table;
 		margin-left: 0;
 	}
+	.patient-page-con-cntlr .cta-module-des-title,
 	.team-pg-content-cntlr .cta-module-des-title{
 		font-size: 27px!important;
 	}
