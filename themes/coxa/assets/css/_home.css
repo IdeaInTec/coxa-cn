@@ -259,6 +259,9 @@
 	bottom: 0;
 	left: 0;
 	z-index: 3;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center
 }
 .treatment-sec{
 	background: #f7f7f7;
