@@ -525,7 +525,7 @@ if( $('.tlPatientReviewSlider2').length ){
       prevArrow: '.revw-left',
     });
 }
-$('.bnrparallaxie').parallaxie({
+/*$('.bnrparallaxie').parallaxie({
     speed:0.4,
     pos_x:'center',
     size: 'auto',
@@ -535,7 +535,7 @@ $('.parallaxie').parallaxie({
     speed:0.4,
     pos_x:'center',
 
-  });
+  });*/
 if(windowWidth > 767){
   $(function(){
     var animateTime = 500,
