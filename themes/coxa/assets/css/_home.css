@@ -677,6 +677,9 @@
 	.pg-banner-desc {
 		margin-bottom: 26px;
 	}
+	.pg-banner-btns, .banner-btns{
+		margin: 0 -8px;
+	}
 	.pg-banner-btn, .banner-btn {
 		padding: 0 8px;
 	}
