@@ -221,6 +221,9 @@
     .practice-gallery-grid-title:after{
         top: 6px; 
     }
+    .ex-trmnt-grd-item-col {
+        width: 50%;        
+    }
 }
 @media(max-width: 767px){
     .practice-gallery-grids .practice-gallery-grid-col{
