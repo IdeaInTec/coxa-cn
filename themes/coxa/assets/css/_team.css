@@ -179,8 +179,16 @@
 	.pm-grd-img-cntlr{
 		height: 380px;
 	}
+	.counter-col p{
+		font-size: 20px;
+	}
 }
 @media(max-width: 991px){
+	.counter-cntlr {
+		max-width: 700px;
+		width: 100%;
+		margin: 0 auto;
+	}
 	.profile-module ul li{
 		width: 50%;
 	}
@@ -195,6 +203,9 @@
 	.pm-grd-img-cntlr {
 		height: 360px;
 	}
+	.counter-col p {
+		font-size: 24px;
+	}
 }
 @media(max-width: 767px){
 	
@@ -208,11 +219,14 @@
 	.pm-grd-img-cntlr {
 		height: 344px;
 	}
+	.counter-col p{
+		font-size: 23px;
+	}
 }
 @media(max-width: 575px){
 	.counter-col{
 		width: 100%;
-		padding-top: 18px;
+		padding: 20px 0;
 	}
 	.profile-module-cntlr, 
 	.profile-module{
@@ -228,7 +242,7 @@
 	}
 	.pm-grd-title a{
 		font-size: 28px;
-		line-height: 1.25;
+		line-height: 1.2;
 	}
 	.pm-grd-assist-name{
 		font-size: 21px;
@@ -243,18 +257,28 @@
 		line-height: 1.25;
 	}
 	.counter-number-title{
-		font-size: 67px;
+		font-size: 67px!important;
 		line-height: 1.25;
 	}
 	.counter-col p{
 		font-size: 26px;
 		line-height: 1.8;
 	}
-
+	.team-pg-content-cntlr .cta-module-des-title{
+		font-size: 45px!important;
+	}
+}
+@media(max-width: 479px){
+	.team-pg-content-cntlr .cta-module-des-title{
+		font-size: 32px!important;
+	}
 }
 @media(max-width: 359px){
 	.pm-grd-assist-no {
 		display: table;
 		margin-left: 0;
+	}
+	.team-pg-content-cntlr .cta-module-des-title{
+		font-size: 27px!important;
 	}
 }

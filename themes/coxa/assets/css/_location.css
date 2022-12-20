@@ -49,6 +49,7 @@
 }
 
 
+
 @media (max-width: 1299px){
 	.team-prev-next {
 		display: none;
@@ -72,6 +73,10 @@
 	}
 	.lt-page-con-cntlr .practice-gallery-grid-btn{
 		padding-top: 30px;
+	}
+	.tl-faq-sec {
+		padding-top: 60px;
+		padding-bottom: 60px;
 	}
 }
 @media(max-width: 767px){
@@ -103,7 +108,7 @@
 	}
 	.lt-page-con-cntlr .practice-gallery-grids .practice-gallery-grid-col{
 		margin-bottom: 24px;
-	}
+	}	
 }
 @media(max-width: 575px){
 	.practice-gallery.tl-practice-gallery {

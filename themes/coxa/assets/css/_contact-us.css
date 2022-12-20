@@ -13,20 +13,32 @@
 .maps-sec-inr{
 	position: relative;
 }
+.maps-sec-inr iframe{
+	height: 800px;
+	width: 100%;
+    vertical-align: bottom;
+}
+.contact-google-parachute{
+    position: absolute;
+    left: -55px;
+    bottom: 100px;
+}
+.contact-parachute-icon {
+    position: absolute;
+    right: -130px;
+    top: -300px;
+}
 .map-loc-desc-cntlr {
     max-width: 300px;
-}
-.map-item-img-cntlr{
-	border
 }
 .map-item-loc-phn{
 	padding: 12px 8px;
 }
 .map-loc-title{
 	background: linear-gradient(90deg, #0D2E56 0%, #11345E 50%, #0D2E56 100%);
-	padding: 12px 8px;
+	padding: 12px 11px;
 	color: #FFFFFF;
-	font-size: 18px;
+	font-size: 18px!important;
 	font-weight: 400;
 	margin-bottom: 0;
 }
@@ -43,20 +55,28 @@
 	border-radius: 6px;
 }
 .map-item-img-cntlr img {
-    border-radius: 6px 6px 0 0;
+    border-radius: 8px 8px 0 0;
     border-bottom: 2px solid #a37d36;
+    overflow: hidden;
+}
+.map-item-img-cntlr{
+	border-radius: 8px 8px 0 0;
+	overflow: hidden;
 }
 .map-loc-desc-cntlr{
 	filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.35));
-	border-radius: 6px;
+	border-radius: 8px;
 	position: absolute;
-	top: 50px;
-	left: 100px;
-	background: #FFF;;
+	top: 50px;	
+	left: 100px;	
 }
 .map-item-loc-phn ul li{
 	position: relative;
 	padding-left: 24px;
+	padding-bottom: 12px;
+}
+.map-item-loc-phn ul li:last-child{
+	padding-bottom: 4px;
 }
 .map-item-loc-phn ul li .map-location:after{
 	position: absolute;
@@ -99,7 +119,7 @@
 	font-size: 16px;
 }
 .map-des-btn .cdc-btn{
-	padding: 8px 2px;
+	padding: 10px 12px;
 	font-size: 12px;
 }
 .map-des-btn {
@@ -112,4 +132,45 @@
     transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
+}
+.map-item-info-des {
+	background: #F7F7F7;
+	border-radius: 0 8px 8px 0;
+}
+@media(max-width: 1199px){
+	.maps-sec-inr iframe{
+		height: 700px;
+	}
+}
+@media(max-width: 992px){
+	.maps-sec-inr iframe{
+		height: 600px;
+	}
+}
+@media(max-width: 767px){
+	.maps-sec-inr iframe{
+		height: 624px;
+	}
+	.map-item-img-cntlr {
+		padding-bottom: 7px;
+		background: #F7F7F7;
+	}
+	.map-loc-desc-cntlr{
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+@media(max-width: 575px){
+	.map-loc-desc-cntlr {
+		max-width: 247px;
+		width: 100%;
+	}
+	.map-loc-title{
+		font-size: 16px!important;
+		padding: 14px;
+	}
+	.map-item-loc-phn ul li{
+		padding-bottom: 10px;
+	}
 }
