@@ -414,7 +414,8 @@ if( $('.treatmentSlider').length ){
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            adaptiveHeight: true
           }
         }
       ]

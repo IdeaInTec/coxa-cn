@@ -529,7 +529,7 @@
 	}
 	.treatment-lft {
 	    width: 100%;
-	    padding-right: 0;
+	    padding-right: 20px;
 	    padding-bottom: 6px;
 	    padding-left: 12px;
 	}
@@ -571,7 +571,7 @@
 		margin-bottom: 65px;
 	}
 	.bnr-recommended{
-		bottom: -45px;
+		bottom: -43px;
 		left: 0;
 		justify-content: center;
 	}
@@ -615,6 +615,10 @@
 	}
 	.treatment-sec{
 		padding-top: 25px!important;
+		padding-bottom: 40px!important;
+	}
+	.treatment-grids{
+		padding-bottom: 35px;
 	}
 	.treatmentSlider .slick-list.draggable {
 	    padding-right: 80px!important;
@@ -667,6 +671,14 @@
 	.pg-banner-btn a{
 		font-size: 16px!important;
 		min-width: 115px;
+	}
+	.trtmnt-grd-img-cntlr{
+		height: 300px;
+	}
+}
+@media(max-width: 479px){
+	.trtmnt-grd-img-cntlr{
+		height: 264px;
 	}
 }
 @media(max-width: 374px){
