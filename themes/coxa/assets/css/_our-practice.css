@@ -202,9 +202,13 @@
     background: #fff;
     border: 1px solid #DDDDDD;
 }
-.active .faq-accordion-hdr{
+.pratice-pg-con-cntlr .active .faq-accordion-hdr{
     background: #11345E;
     border: 1px solid #11345E;
+}
+.pratice-pg-con-cntlr .faq-sec {
+    padding-top: 80px;
+    padding-bottom: 90px;
 }
 
 @media(max-width: 1199px){
@@ -247,6 +251,10 @@
         padding-top: 60px;
         padding-bottom: 70px;
     }
+    .pratice-pg-con-cntlr .faq-sec {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
 }
 @media(max-width: 991px){
     .practice-gallery-grids .practice-gallery-grid-col{
@@ -273,6 +281,10 @@
     .practice-faq-sec{
         padding-top: 60px;
         padding-bottom: 70px;
+    }
+    .pratice-pg-con-cntlr .faq-sec {
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 }
 @media(max-width: 767px){
@@ -324,6 +336,10 @@
         margin-bottom: 30px;
     }
     .practice-faq-sec {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .pratice-pg-con-cntlr .faq-sec {
         padding-top: 50px;
         padding-bottom: 50px;
     }
