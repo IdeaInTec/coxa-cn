@@ -848,7 +848,21 @@ body.allWork .hamburger-icon span:nth-child(2) {
     }
     .topbar-left{
         padding-top: 20px;
-        border-top: 2px solid #EACC95;
+        position: relative;
+    }
+    .topbar-left:after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 50px;
+        background: #EACC95;
+    }
+    .topbar-menu ul li a:after{
+        height: 13px;
+        width: 13px;
     }
 }
 @media(max-width: 767px){

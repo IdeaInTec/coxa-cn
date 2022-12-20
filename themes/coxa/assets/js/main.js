@@ -225,35 +225,6 @@ if( windowWidth > 0 && responsiveSlider < 2 ){
 
 
 
-var swiper = new Swiper('.catagorySlider', {
-    slidesPerView: 1,
-    loop: true,
-    navigation: {
-      nextEl: '.catagorySlider-arrows .swiper-button-next',
-      prevEl: '.catagorySlider-arrows .swiper-button-prev',
-    },
-    breakpoints: {
-       639: {
-        slidesPerView: 2,
-        spaceBetween: 0,
-      },
-      991: {
-        slidesPerView: 3,
-        spaceBetween: 0,
-      },
-      1199: {
-        loop: false,
-        slidesPerView: 4,
-        spaceBetween: 0,
-      },
-      1920: {
-        loop: false,
-        slidesPerView: 4,
-        spaceBetween: 0,
-      },
-    }
-  });
-
 if( $('#mapID').length ){
 var latitude = $('#mapID').data('latitude');
 var longitude = $('#mapID').data('longitude');
@@ -840,6 +811,6 @@ $('#contact-select3').select2();
 
 
 
-new WOW().init();
+
 
 })(jQuery);
