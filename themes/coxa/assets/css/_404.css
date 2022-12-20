@@ -1,0 +1,83 @@
+.page-404-sec{
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 160px;
+}
+.page-404-sec .po-arrangement-account-inr-col{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.page-404-sec .pg-404-title{
+    font-size: 62px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.po-arngmnt-acont-cntlr p{
+    color: #000;
+}
+.cdc-btn-cntlr, 
+.pg-404-title{
+    text-align: center;
+}
+.page-404-sec .po-btn{
+    text-transform: capitalize;
+}
+@media(max-width: 991px){
+    .page-404-sec{
+        padding-top: 95px;
+        padding-bottom: 120px;
+    }
+    .page-404-sec .po-arngmnt-acont-cntlr {
+        max-width: 535px;
+    }
+    .page-404-sec .po-arngmnt-acont-cntlr{
+        padding: 35px 40px;
+    }
+    
+}
+@media(max-width: 767px){
+    .page-404-sec .pg-404-sub-title{
+        font-size: 24px;
+    }
+    .page-404-sec .po-arngmnt-acont-cntlr{
+        padding: 35px 25px;
+        text-align: center;
+    }
+    .page-404-sec .pg-404-title{
+        margin-bottom: 0;
+        line-height: 1;
+    }
+    .page-404-sec .po-arngmnt-acont-cntlr {
+        max-width: 343px;
+    }
+    .page-404-sec{
+        padding-top: 300px;
+    }
+    .page-404-sec .po-arngmnt-acont-cntlr {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .xs-pg-404-bg {
+        background-position: top center!important;
+    }
+}
+@media(max-width: 479px){
+    .page-404-sec{
+        padding-top: 372px;
+        padding-bottom: 23px;
+    }
+    .page-404-sec .po-btn{
+        min-width: 100%;
+    }
+    .page-404-sec .pg-404-sub-title{
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+}
+@media(max-width: 359px){
+    .page-404-sec{
+        padding-top: 300px;
+    }
+}
