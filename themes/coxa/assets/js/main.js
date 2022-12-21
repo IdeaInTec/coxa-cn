@@ -317,7 +317,7 @@ if( $('.bannerBgSlider2').length ){
       dots: false,
       infinite: true,
       autoplay: true,
-      fade:true,
+      fade:false,
       arrows: true,
       autoplaySpeed: 4000,
       speed: 700,
