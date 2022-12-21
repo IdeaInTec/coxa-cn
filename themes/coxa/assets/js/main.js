@@ -399,7 +399,7 @@ $('.treatmentSlider').on('afterChange', function(){
 });
 
 function TreatmentSecMrgnLft(){
-  var windowWidth2 = $(window).width();
+  var windowWidth = $(window).width();
   var conW = $('.container').width();
   var conLW2 = windowWidth - conW;
   var conLW = conLW2 / 2;
