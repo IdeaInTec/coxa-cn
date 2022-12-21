@@ -94,10 +94,13 @@
     display: block;
 }
 .referral-page-con-cntlr .review-color .slick-slider .slick-dots li.slick-active button, 
-.referral-page-con-cntlr .review-color .slick-slider .slick-dots li button:hover{
+.referral-page-con-cntlr .review-color .slick-slider .slick-dots li button:hover,
+.lt-page-con-cntlr .review-color .slick-slider .slick-dots li.slick-active button, 
+.lt-page-con-cntlr .review-color .slick-slider .slick-dots li button:hover{
     background: #C5CBE5!important;
 }
-.referral-page-con-cntlr .review-color .slick-slider .slick-dots li button {
+.referral-page-con-cntlr .review-color .slick-slider .slick-dots li button,
+.lt-page-con-cntlr .review-color .slick-slider .slick-dots li button {
     border: 1px solid #C5CBE5!important;
 }
 .contact-form-wrp{
