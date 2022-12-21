@@ -271,6 +271,15 @@
 	.treatment-sec .sec-entry-hdr-cntlr {
 		padding-bottom: 30px;
 	}
+	.treatment-sec .contact-form-wrp{
+		padding: 0 20px;
+	}
+	.treatment-sec-cntlr form.wpforms-form.needs-validation{
+		padding: 20px;
+	}
+	.treatment-sec-cntlr {		
+		padding: 20px 0;
+	}
 }
 @media(max-width: 575px){
 	.treatment-grds {
