@@ -278,8 +278,10 @@
 		padding: 20px;
 	}
 	.treatment-sec-cntlr {		
-		padding: 20px 0;
-	}
+		padding: 48px 0 42px;
+		margin-left: -20px;
+		margin-right: -20px;
+	}	
 }
 @media(max-width: 575px){
 	.treatment-grds {
@@ -311,6 +313,10 @@
 	}
 	.treatment-sec{		
 		padding-bottom: 50px;
+	}
+	.treatment-sec-cntlr form.wpforms-form.needs-validation {
+		padding: 0;
+		border: none;
 	}
 }
 @media(max-width: 479px){

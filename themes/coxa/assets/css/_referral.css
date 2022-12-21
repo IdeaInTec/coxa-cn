@@ -782,6 +782,13 @@ textarea {
         padding-left: 0;
         padding-right: 0;
     }
+    .contact-form-wrp .wpforms-field-description ul li:before, 
+    .contact-form-wrp .wpforms-field-checkbox ul li:before{
+        top: 1px;
+    }
+    .contact-form-wrp .wpforms-field-description ul li:after{
+        top: 8px;
+    }
 }
 
 @media(max-width: 479px){
