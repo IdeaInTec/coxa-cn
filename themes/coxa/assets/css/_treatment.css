@@ -176,9 +176,9 @@
 .treatment-bg-color .sec-entry-hdr p{
 	color:#333333;	
 }
-.treatment-sec{
-	padding-top: 0;
-	padding-bottom: 90px;
+.treatment-page-con-cntlr .treatment-sec{
+	padding-top: 0!important;
+	padding-bottom: 90px!important;
 }
 .treatment-sec .wpforms-field-description a{
 	color: #EACC95!important;
@@ -215,8 +215,8 @@
 	.treatment-page-con-cntlr .faq-sec{
 		padding: 60px 0 70px;
 	}
-	.treatment-sec{		
-		padding-bottom: 70px;
+	.treatment-page-con-cntlr .treatment-sec{		
+		padding-bottom: 70px!important;
 	}
 }
 @media(max-width: 991px){
@@ -241,8 +241,8 @@
 	.treatment-page-con-cntlr .faq-sec{
 		padding: 60px 0 60px;
 	}
-	.treatment-sec{		
-		padding-bottom: 60px;
+	.treatment-page-con-cntlr .treatment-sec{		
+		padding-bottom: 60px!important;
 	}
 	.treatment-sec .contact-form-wrp{
 		padding: 0 30px;
@@ -268,10 +268,10 @@
 	.treatment-page-con-cntlr .team-grd-item-col {
 	    padding-bottom: 60px;
 	}	
-	.treatment-sec .sec-entry-hdr-cntlr {
+	.treatment-page-con-cntlr .treatment-sec .sec-entry-hdr-cntlr {
 		padding-bottom: 30px;
 	}
-	.treatment-sec .contact-form-wrp{
+	.treatment-page-con-cntlr .treatment-sec .contact-form-wrp{
 		padding: 0 20px;
 	}
 	.treatment-sec-cntlr form.wpforms-form.needs-validation{
@@ -311,8 +311,8 @@
 	.treatment-page-con-cntlr .faq-sec{
 		padding: 50px 0 50px;
 	}
-	.treatment-sec{		
-		padding-bottom: 50px;
+	.treatment-page-con-cntlr .treatment-sec{		
+		padding-bottom: 50px!important;
 	}
 	.treatment-sec-cntlr form.wpforms-form.needs-validation {
 		padding: 0;
