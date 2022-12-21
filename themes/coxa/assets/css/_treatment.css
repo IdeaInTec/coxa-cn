@@ -184,7 +184,12 @@
 	color: #EACC95!important;
 }
 .treatment-sec .contact-form-wrp {
-    max-width: 1080px;
+    max-width: 100%;
+    padding: 0 40px;
+}
+.treatment-sec-cntlr{
+    background: #061E39;
+    padding: 38px 0;
 }
 .treatment-sec-cntlr form.wpforms-form.needs-validation{
 	padding: 40px 40px;
