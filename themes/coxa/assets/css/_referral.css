@@ -413,10 +413,10 @@ textarea {
     position: relative;
     padding: 5px 24px 8px 40px!important;
     line-height: 20px!important;
-    margin-bottom: 5px!important;
+    margin-bottom: 24px!important;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-checkbox {
-    margin-bottom: 20px;
+    margin-bottom: 8px!important;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-html ul,
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-html ol,
@@ -436,9 +436,6 @@ textarea {
     color: #A9A9A9!important;
     margin-bottom: 0!important;
     cursor: pointer;
-}
-.contact-form-wrp .wpforms-field-checkbox{
-    margin-top: 6px!important;
 }
 .contact-form-wrp .wpforms-field-description ul li input[type="checkbox"],
 .contact-form-wrp .wpforms-field-checkbox ul li input[type="checkbox"] {
@@ -470,7 +467,7 @@ textarea {
 .contact-form-wrp .wpforms-field-description ul,
 .contact-form-wrp .wpforms-field-checkbox ul{
     padding-left: 0!important;
-    padding-bottom: 4px;
+    padding-bottom: 0;
 }
 .contact-form-wrp .wpforms-field-description ul li:after,
 .contact-form-wrp .wpforms-field-checkbox ul li:after {
@@ -547,7 +544,7 @@ textarea {
  }
 .widthField3d {
     width: 33.33%!important;
-    margin-bottom: 30px!important;
+    margin-bottom: 32px!important;
 }
 .wpforms-field-file-upload input[type="file"]{
     color: #707070;
@@ -699,7 +696,7 @@ textarea {
         top: 7px;
         left: 7px;
     }
-    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-html ul li, 
+    /*.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-html ul li, 
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-html ol li, 
     .contact-form-wrp div.wpforms-container-full .wpforms-form .wpforms-field-html ul li, 
     .contact-form-wrp div.wpforms-container-full .wpforms-form .wpforms-field-html ol li, 
@@ -709,7 +706,7 @@ textarea {
     .contact-form-wrp .wpforms-field-checkbox ul li{
         padding: 2px 24px 0px 32px!important;
         margin-bottom: 0px!important;
-    } 
+    } */
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button{
         padding: 16px 16px;
     }   
