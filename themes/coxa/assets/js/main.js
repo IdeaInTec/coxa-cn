@@ -398,8 +398,18 @@ $('.treatmentSlider').on('afterChange', function(){
     $(".slick-current").prev().removeClass('nextdiv').addClass('prevdiv');
 });
 
-
-if( $('.treatment-sec').length ){
+function TreatmentSecMrgnLft(){
+  var windowWidth2 = $(window).width();
+  var conW = $('.container').width();
+  var conLW2 = windowWidth - conW;
+  var conLW = conLW2 / 2;
+  $('.treatment-cntlr').css('margin-left', conLW);
+}
+TreatmentSecMrgnLft();
+$(window).resize(function(){
+  TreatmentSecMrgnLft();
+});
+/*if( $('.treatment-sec').length ){
   var conW = $('.container').width();
   var conLW2 = windowWidth - conW;
   var conLW = conLW2 / 2;
@@ -413,7 +423,7 @@ $(window).resize(function(){
     var conLW = conLW2 / 2;
     $('.treatment-cntlr').css('margin-left', conLW);
   }
-});
+});*/
 
 if( $('.tmreviewSlider').length ){
     $('.tmreviewSlider').slick({
