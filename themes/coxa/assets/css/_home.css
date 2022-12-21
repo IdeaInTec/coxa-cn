@@ -562,6 +562,9 @@
 	.pg-banner-cntlr {
 		min-height: 404px;
 	}
+	.has_bg_content_slide .banner-bg{
+		height: 460px;
+	}
 }
 @media(max-width: 767px){
 	.intro-sec {
@@ -656,6 +659,18 @@
 	.locations-sec .sec-entry-hdr-title{
 		font-size: 32px;
 	}
+	.has_bg_content_slide .banner-bg{
+		height: 487px;
+	}
+	.has_bg_content_slide .slick-list{
+		overflow: initial;
+	}
+	.has_bg_content_slide .bnr-recommended{
+		bottom: -50px;
+	}
+	.has_bg_content_slide .banner-cntlr{
+		padding: 50px 0;
+	}
 }
 @media(max-width: 575px){
 	.treatmentSlider .slick-list.draggable {
@@ -693,6 +708,9 @@
 	}
 	.custom-prev-next-cntlr {
 	    max-width: 87%;
+	}
+	.has_bg_content_slide .bnr-recommended{
+		bottom: -34px;
 	}
 }
 @media(max-width: 479px){
