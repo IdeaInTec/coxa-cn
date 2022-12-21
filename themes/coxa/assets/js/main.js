@@ -257,24 +257,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
-/* BS form Validator*/
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
+
 
 
 /* innerpage buttons */
@@ -306,16 +289,6 @@ $(".dft-fl-btn" ).each(function( index ) {
     }
   });
 });
-
-
-/*---- RS ----*/ 
-
-
-
-
-
-
-
 
 if( $('.bannerBgSlider').length ){
     $('.bannerBgSlider').slick({
@@ -399,22 +372,6 @@ $('.treatmentSlider').on('afterChange', function(){
 });
 
 
-if( $('.treatment-sec').length ){
-  var conW = $('.container').width();
-  var conLW2 = windowWidth - conW;
-  var conLW = conLW2 / 2;
-  $('.treatment-cntlr').css('margin-left', conLW);
-}
-$(window).resize(function(){
-  var windowWidth2 = $(window).width();
-  if( $('.treatment-sec').length ){
-    var conW = $('.container').width();
-    var conLW2 = windowWidth2 - conW;
-    var conLW = conLW2 / 2;
-    $('.treatment-cntlr').css('margin-left', conLW);
-  }
-});
-
 if( $('.tmreviewSlider').length ){
     $('.tmreviewSlider').slick({
       dots: true,
@@ -429,15 +386,6 @@ if( $('.tmreviewSlider').length ){
       prevArrow: '.revw-left',
     });
 }
-
-
-// $('#onepagenav').onePageNav({
-//   currentClass: 'active',
-//   changeHash: false,
-//   scrollSpeed: 750,
-//   scrollThreshold: 0.5,
-//   filter: '',
-// });
 
 if( $('.tlPatientReviewSlider').length ){
     $('.tlPatientReviewSlider').slick({
@@ -454,17 +402,13 @@ if( $('.tlPatientReviewSlider').length ){
     });
 }
 
-
-
-
-/*---- NZ ----*/ 
- $('.faq-accordion-hdr').on('click', function(){ 
-    $(this).parents('.faq-accordion-menu').toggleClass('active');
-    $(this).parents('.faq-grd').siblings().find('.faq-accordion-menu').removeClass('active'); 
-    $(this).parents('.faq-grd').find('.faq-accordion-des').slideToggle(300);
-    $(this).parents('.faq-grd').siblings().find('.faq-accordion-des').slideUp(300);
-    $('.faq-accordion-menu').removeClass('topactiove');
-  });
+$('.faq-accordion-hdr').on('click', function(){ 
+  $(this).parents('.faq-accordion-menu').toggleClass('active');
+  $(this).parents('.faq-grd').siblings().find('.faq-accordion-menu').removeClass('active'); 
+  $(this).parents('.faq-grd').find('.faq-accordion-des').slideToggle(300);
+  $(this).parents('.faq-grd').siblings().find('.faq-accordion-des').slideUp(300);
+  $('.faq-accordion-menu').removeClass('topactiove');
+});
 
 if( $('.reviewSlider2').length ){
     $('.reviewSlider2').slick({
@@ -601,8 +545,7 @@ function autoHeightAnimate(element, time){
         element.height(curHeight); // Reset to Default Height
         element.stop().animate({ height: autoHeight }, time); // Animate to Auto Height
 }
-
-/*---- SK ----*/ 
+ 
 
 if( $('.reviewSlider').length ){
     $('.reviewSlider').slick({
@@ -684,9 +627,6 @@ if( $('.counter-number').length ){
   });
 }
 
-
-
-/*---- MSI ----*/ 
 if( $('.teamGrdSlider').length ){
   $('.teamGrdSlider').slick({
     dots: true,
@@ -783,9 +723,6 @@ if( $('.afterBeforeEffect').length ){
 }
 
 
-
-
-/*---- MIN ----*/ 
 var windowHeighT = $(window).height();
 var headerHeight = $('.header').outerHeight();
 console.log(windowHeighT);
@@ -806,11 +743,44 @@ if (windowWidth > 767) {
 }
 
 
-$('#contact-select2').select2();
-$('#contact-select3').select2();
+if( $('#contact-select2').length ){
+  $('#contact-select2').select2();
+}
+
+if( $('#contact-select3').length ){
+  $('#contact-select3').select2();
+}
+
+treatmentSecMrgnLft();
+$(window).resize(function(){
+  TreatmentSecMrgnLft();
+});
+function treatmentSecMrgnLft(){
+  var windowWidth = $(window).width();
+  var conW = $('.container').width();
+  var conLW2 = windowWidth - conW;
+  var conLW = conLW2 / 2;
+  $('.treatment-cntlr').css('margin-left', conLW);
+}
 
 
-
-
+/* BS form Validator*/
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
 
 })(jQuery);
