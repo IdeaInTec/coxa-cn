@@ -257,24 +257,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
-/* BS form Validator*/
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
+
 
 
 /* innerpage buttons */
@@ -389,7 +372,6 @@ $('.treatmentSlider').on('afterChange', function(){
 });
 
 
-
 if( $('.tmreviewSlider').length ){
     $('.tmreviewSlider').slick({
       dots: true,
@@ -404,15 +386,6 @@ if( $('.tmreviewSlider').length ){
       prevArrow: '.revw-left',
     });
 }
-
-
-// $('#onepagenav').onePageNav({
-//   currentClass: 'active',
-//   changeHash: false,
-//   scrollSpeed: 750,
-//   scrollThreshold: 0.5,
-//   filter: '',
-// });
 
 if( $('.tlPatientReviewSlider').length ){
     $('.tlPatientReviewSlider').slick({
@@ -429,17 +402,13 @@ if( $('.tlPatientReviewSlider').length ){
     });
 }
 
-
-
-
-/*---- NZ ----*/ 
- $('.faq-accordion-hdr').on('click', function(){ 
-    $(this).parents('.faq-accordion-menu').toggleClass('active');
-    $(this).parents('.faq-grd').siblings().find('.faq-accordion-menu').removeClass('active'); 
-    $(this).parents('.faq-grd').find('.faq-accordion-des').slideToggle(300);
-    $(this).parents('.faq-grd').siblings().find('.faq-accordion-des').slideUp(300);
-    $('.faq-accordion-menu').removeClass('topactiove');
-  });
+$('.faq-accordion-hdr').on('click', function(){ 
+  $(this).parents('.faq-accordion-menu').toggleClass('active');
+  $(this).parents('.faq-grd').siblings().find('.faq-accordion-menu').removeClass('active'); 
+  $(this).parents('.faq-grd').find('.faq-accordion-des').slideToggle(300);
+  $(this).parents('.faq-grd').siblings().find('.faq-accordion-des').slideUp(300);
+  $('.faq-accordion-menu').removeClass('topactiove');
+});
 
 if( $('.reviewSlider2').length ){
     $('.reviewSlider2').slick({
@@ -795,6 +764,23 @@ function treatmentSecMrgnLft(){
 }
 
 
-
+/* BS form Validator*/
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
 
 })(jQuery);
