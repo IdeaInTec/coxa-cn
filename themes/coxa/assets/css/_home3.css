@@ -154,6 +154,16 @@
 	margin-bottom: 16px;
 	color: #333333;
 }
+.locations-des-title > a{
+    color: #333333;
+    text-decoration: none;
+    padding: 0!important;
+    margin-right: 0!important;
+    border: none!important;
+}
+.locations-des-title > a:hover{
+    color: #A37D36;
+}
 .locations-sec-grid-item .locations-area{
 	margin-bottom: 35px;
 	border-bottom: 2px solid #A37D36;
