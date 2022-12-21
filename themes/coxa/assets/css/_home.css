@@ -699,6 +699,11 @@
 		height: 264px;
 	}
 }
+@media(max-width: 359px){
+	.pg-banner-btn a{
+		font-size: 14.5px!important;
+	}
+}
 @media(max-width: 374px){
 	.start-module{
 		padding-bottom: 5px;

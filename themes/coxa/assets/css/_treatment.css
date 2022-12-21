@@ -42,17 +42,22 @@
 	font-weight: 400;
 	margin-bottom: 24px;
 }
-.treatment-page-con-cntlr .pm-grd-btn a {
+.treatment-page-con-cntlr .teamGrdSlider .pm-grd-btn a {
     padding: 0;
     color: #29467D;
     font-weight: 600;
     text-transform: capitalize;
     text-decoration: none;
     padding-bottom: 1px;
+    border: 0;
+    border-radius: 0;
     border-bottom: 1px dotted #29467D;
 }
-.treatment-page-con-cntlr .pm-grd-btn a:hover{
+.treatment-page-con-cntlr .teamGrdSlider .pm-grd-btn a:hover{
 	color: #A37D36;
+	background: transparent;
+	letter-spacing: 1px;
+	border-bottom-color: #A37D36;
 }
 .treatment-page-con-cntlr .profile-module ul{
 	justify-content: center;
@@ -230,6 +235,9 @@
 	.our-equionment-page-con-cntlr .cta-section{
 		margin-top: 20px;
 		padding-bottom: 50px;
+	}
+	.treatment-page-con-cntlr .team-grd-item-col {
+	    padding-bottom: 60px;
 	}
 }
 @media(max-width: 575px){

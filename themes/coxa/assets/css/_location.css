@@ -100,7 +100,8 @@
 	.about-intro-sec .about-intro-sec .office-social {
 		margin-bottom: 0;
 	}
-	.lt-page-con-cntlr .tl-team-sec .profile-module {
+	.lt-page-con-cntlr .tl-team-sec .profile-module,
+	.treatment-page-con-cntlr .tl-team-sec .profile-module {
 		max-width: 360px;
 	}
 	.practice-gallery.tl-practice-gallery{
