@@ -662,9 +662,9 @@
 	.has_bg_content_slide .banner-bg{
 		height: 487px;
 	}
-	.has_bg_content_slide .slick-list{
+	/*.has_bg_content_slide .slick-list{
 		overflow: initial;
-	}
+	}*/
 	.has_bg_content_slide .bnr-recommended{
 		bottom: -50px;
 	}
