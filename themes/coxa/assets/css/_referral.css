@@ -812,7 +812,6 @@ textarea {
         top: 9px;
     }
 }
-
 @media(max-width: 359px){
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input::placeholder,
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field textarea::placeholder{
