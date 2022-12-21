@@ -24,7 +24,7 @@
 .galler-sec .practice-gallery-grids .practice-gallery-grid-col {
 	width: 20%;
 	padding: 0 12px;
-	margin-bottom: 22px;
+	margin-bottom: 40px;
 }
 .galler-sec .practice-gallery-grid-img-cntlr .practice-gallery-grid-img {
     height: 370px;
@@ -308,6 +308,7 @@
 @media(max-width: 991px){
 	.galler-sec .practice-gallery-grids .practice-gallery-grid-col{
 		width: 33.3333%;
+		margin-bottom: 30px;
 	}
 	.galler-sec{
 		padding-bottom: 75px!important;
@@ -339,6 +340,7 @@
 @media(max-width: 767px){
 	.galler-sec .practice-gallery-grids .practice-gallery-grid-col{
 		width: 50%;
+		margin-bottom: 24px;
 	}
 	.galler-sec .practice-gallery-grid-img-cntlr .practice-gallery-grid-img {
 	    height: 328px;
