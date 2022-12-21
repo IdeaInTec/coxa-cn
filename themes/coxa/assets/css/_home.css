@@ -682,6 +682,7 @@
 	}
 	.pg-banner-btn, .banner-btn {
 		padding: 0 8px;
+		margin-bottom: 10px;
 	}
 	.pg-banner-btn a{
 		font-size: 16px!important;
