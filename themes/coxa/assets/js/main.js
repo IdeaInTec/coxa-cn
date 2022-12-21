@@ -307,16 +307,6 @@ $(".dft-fl-btn" ).each(function( index ) {
   });
 });
 
-
-/*---- RS ----*/ 
-
-
-
-
-
-
-
-
 if( $('.bannerBgSlider').length ){
     $('.bannerBgSlider').slick({
       dots: false,
@@ -398,32 +388,7 @@ $('.treatmentSlider').on('afterChange', function(){
     $(".slick-current").prev().removeClass('nextdiv').addClass('prevdiv');
 });
 
-function TreatmentSecMrgnLft(){
-  var windowWidth = $(window).width();
-  var conW = $('.container').width();
-  var conLW2 = windowWidth - conW;
-  var conLW = conLW2 / 2;
-  $('.treatment-cntlr').css('margin-left', conLW);
-}
-TreatmentSecMrgnLft();
-$(window).resize(function(){
-  TreatmentSecMrgnLft();
-});
-/*if( $('.treatment-sec').length ){
-  var conW = $('.container').width();
-  var conLW2 = windowWidth - conW;
-  var conLW = conLW2 / 2;
-  $('.treatment-cntlr').css('margin-left', conLW);
-}
-$(window).resize(function(){
-  var windowWidth2 = $(window).width();
-  if( $('.treatment-sec').length ){
-    var conW = $('.container').width();
-    var conLW2 = windowWidth2 - conW;
-    var conLW = conLW2 / 2;
-    $('.treatment-cntlr').css('margin-left', conLW);
-  }
-});*/
+
 
 if( $('.tmreviewSlider').length ){
     $('.tmreviewSlider').slick({
@@ -611,8 +576,7 @@ function autoHeightAnimate(element, time){
         element.height(curHeight); // Reset to Default Height
         element.stop().animate({ height: autoHeight }, time); // Animate to Auto Height
 }
-
-/*---- SK ----*/ 
+ 
 
 if( $('.reviewSlider').length ){
     $('.reviewSlider').slick({
@@ -694,9 +658,6 @@ if( $('.counter-number').length ){
   });
 }
 
-
-
-/*---- MSI ----*/ 
 if( $('.teamGrdSlider').length ){
   $('.teamGrdSlider').slick({
     dots: true,
@@ -793,9 +754,6 @@ if( $('.afterBeforeEffect').length ){
 }
 
 
-
-
-/*---- MIN ----*/ 
 var windowHeighT = $(window).height();
 var headerHeight = $('.header').outerHeight();
 console.log(windowHeighT);
@@ -816,9 +774,25 @@ if (windowWidth > 767) {
 }
 
 
-$('#contact-select2').select2();
-$('#contact-select3').select2();
+if( $('#contact-select2').length ){
+  $('#contact-select2').select2();
+}
 
+if( $('#contact-select3').length ){
+  $('#contact-select3').select2();
+}
+
+treatmentSecMrgnLft();
+$(window).resize(function(){
+  TreatmentSecMrgnLft();
+});
+function treatmentSecMrgnLft(){
+  var windowWidth = $(window).width();
+  var conW = $('.container').width();
+  var conLW2 = windowWidth - conW;
+  var conLW = conLW2 / 2;
+  $('.treatment-cntlr').css('margin-left', conLW);
+}
 
 
 
