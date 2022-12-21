@@ -34,6 +34,7 @@
 }
 .testimonials-pg-content-cntlr .practice-gallery {
     padding: 80px 0 70px!important;
+    margin-top: 0;
 }
 .testimonials-pg-content-cntlr .why-choose-sec{
 	padding: 70px 0 80px;
@@ -47,5 +48,8 @@
 @media(max-width: 767px){
     .testimonials-pg-content-cntlr .practice-gallery-grids .practice-gallery-grid-col{
         margin-bottom: 24px;
+    }
+    .testimonials-pg-content-cntlr .review-grids-sec{
+        padding-bottom: 60px;
     }
 }
