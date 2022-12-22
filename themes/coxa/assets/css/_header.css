@@ -329,6 +329,7 @@ nav.main-nav > ul > li.menu-item-has-megamenu:hover > a:after{
 nav.main-nav > ul > li.menu-item-has-megamenu{
     position: initial;
 }
+nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu,
 nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu{
     background: #11345E;
     padding: 30px 20px 6px;
@@ -349,6 +350,8 @@ nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu{
     box-sizing: border-box;
     border: 1px solid #A37D36;
     visibility: hidden;
+    width: initial;
+    box-shadow: none;
 }
 
 nav.main-nav > ul > li.menu-item-has-megamenu:hover > ul.submenu{
@@ -360,15 +363,19 @@ nav.main-nav > ul > li.menu-item-has-megamenu:hover > ul.submenu{
     visibility: visible;
     z-index: 9999;
 }
+nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu,
 nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu{
     display: flex;
     flex-wrap: wrap;
 }
+nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu > .menu-item-has-children,
 nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children{
     padding: 0 10px;
     margin-bottom: 24px;
     width: 20%;
+    border: none;
 }
+nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu > .menu-item-has-children > a,
 nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > a{
     display: inline-block;
     text-decoration: none;
@@ -384,19 +391,24 @@ nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-chil
     margin-bottom: 18px;
     text-align: center;
 }
+nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu > .menu-item-has-children > a:hover,
 nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > a:hover{
     background: #c6ad78;
 }
 nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > .sub-menu{
 
 }
+nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu > .menu-item-has-children > .sub-menu > li,
 nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > .sub-menu > li{
     line-height: 1;
     margin-bottom: 17px;
+    border: none;
 }
+nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu > .menu-item-has-children > .sub-menu > li:last-of-type,
 nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > .sub-menu > li:last-of-type{
     margin-bottom: 0;
 }
+nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu > .menu-item-has-children > .sub-menu > li a,
 nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > .sub-menu > li a{
     font-weight: 400;
     font-size: 13.5px;
@@ -405,11 +417,14 @@ nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-chil
     display: inline-block;
     text-decoration: none;
     position: relative;
+    padding: 0;
     padding-left: 18px;
 }
+nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu > .menu-item-has-children > .sub-menu > li a:hover,
 nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > .sub-menu > li a:hover{
     color: #EACC95;
 }
+nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu > .menu-item-has-children > .sub-menu > li a:after,
 nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > .sub-menu > li a:after{
     position: absolute;
     top: 1px;
@@ -672,6 +687,7 @@ body.allWork .hamburger-icon span:nth-child(2) {
     nav.main-nav ul li a{
         font-size: 14px;
     }
+    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu > .menu-item-has-children > .sub-menu > li a,
     nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > .sub-menu > li a,
     nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > a,
     nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
@@ -816,6 +832,7 @@ body.allWork .hamburger-icon span:nth-child(2) {
         margin-bottom: 17px;
         width: 100%;
     }
+    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu > .menu-item-has-children > a,
     nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > a{
         background: transparent;
         padding: 0;
