@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html <?php language_attributes(); ?>>
 <head>
-	<title>Home</title>
-  <meta charset="utf-8">
+	<meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme-color" content="#11345E">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-  <!--   <?php $favicon = get_theme_mod('favicon'); if(!empty($favicon)) { ?> 
+  <?php $favicon = get_theme_mod('favicon'); if(!empty($favicon)) { ?> 
   <link rel="shortcut icon" href="<?php echo $favicon; ?>" />
-  <?php } ?> -->
+  <?php } ?>
 
   <?php wp_head(); ?>
 
@@ -21,7 +19,7 @@
   
 
 </head>
-<body>
+<body <?php body_class(); ?>>
   <svg style="display: none;">
     <symbol id="prev-line" width="66" height="20" viewBox="0 0 66 20" xmlns="http://www.w3.org/2000/svg">
       <path d="M1.11612 9.11612C0.62796 9.60428 0.62796 10.3957 1.11612 10.8839L9.07107 18.8388C9.55922 19.327 10.3507 19.327 10.8388 18.8388C11.327 18.3507 11.327 17.5592 10.8388 17.0711L3.76777 10L10.8388 2.92894C11.327 2.44078 11.327 1.64933 10.8388 1.16117C10.3507 0.673015 9.55922 0.673015 9.07107 1.16117L1.11612 9.11612ZM66 8.75L2 8.75001L2 11.25L66 11.25L66 8.75Z"/>
@@ -82,6 +80,15 @@
   <div class="page-body-cntlr">
     <div class="bdoverlay"></div>
     <div class="main-header-gap"></div>
+
+    <?php 
+    $logoID = get_field('logo', 'options');
+    $link = get_field('link', 'options');
+    $link_02 = get_field('link_02', 'options');
+    $facebook = get_field('facebook', 'options');
+    $twitter = get_field('twitter', 'options');
+    $instagram = get_field('instagram', 'options');
+    ?>
     <header class="header">
       <div class="topbar">
         <div class="container">
@@ -90,22 +97,29 @@
               <div class="topbar-cntlr">
                 <div class="topbar-left hide-md">
                   <div class="topbar-menu">
-                    <ul class="reset-list">
-                      <li><a href="#">Implant Dentistry</a></li>
-                      <li><a href="#">Cosmetic Dentistry</a></li>
-                      <li><a href="#">Teeth Straightening</a></li>
-                    </ul>
+                    <?php 
+                    $Topbarmenu = array( 
+                      'theme_location' => 'cbv_Topbar_menu', 
+                      'menu_class' => 'clearfix reset-list',
+                      'container' => '',
+                      'container_class' => ''
+                    );
+                    wp_nav_menu( $Topbarmenu ); 
+                    ?>
                   </div>
                 </div>
                 <div class="topbar-right-cntlr hide-md">
                   <div class="topbar-right">
+                    <?php if (is_array($link) && !empty($link['url'])): ?>
                     <div class="book-appointment-btn">
-                      <a href="#">Book Appointment Online</a>
+                      <?php printf('<a href="%s">%s</a>',$link['url'],$link['title']); ?>
                     </div>
+                    <?php endif; ?>
                     <div class="hdr-socials">
                       <ul class="reset-list">
+                        <?php if(!empty($facebook)): ?>
                         <li>
-                          <a target="_blank" href="#">
+                          <a target="_blank" href="<?php echo $facebook; ?>">
                             <i>
                               <svg class="hdr-facebook-icon" width="8" height="13" viewBox="0 0 8 13" fill="#fff">
                                 <use xlink:href="#hdr-facebook-icon"></use> 
@@ -113,8 +127,9 @@
                             </i>
                           </a>
                         </li>
+                        <?php endif; if(!empty($twitter)): ?>
                         <li>
-                          <a target="_blank" href="#">
+                          <a target="_blank" href="<?php echo $twitter; ?>">
                             <i>
                               <svg class="hdr-twitter-icon" width="16" height="13" viewBox="0 0 16 13" fill="#fff">
                                 <use xlink:href="#hdr-twitter-icon"></use> 
@@ -122,8 +137,9 @@
                             </i>
                           </a>
                         </li>
+                        <?php endif; if(!empty($instagram)): ?>
                         <li>
-                          <a target="_blank" href="#">
+                          <a target="_blank" href="<?php echo $instagram; ?>">
                             <i>
                               <svg class="hdr-instagram-icon" width="16" height="15" viewBox="0 0 16 15" fill="#fff">
                                 <use xlink:href="#hdr-instagram-icon"></use> 
@@ -131,6 +147,7 @@
                             </i>
                           </a>
                         </li>
+                        <?php endif; ?>
                       </ul>
                     </div>
                   </div>
@@ -156,97 +173,26 @@
             <div class="col-md-12">
               <div class="header-inr clearfix">
                 <div class="hdr-lft">
-                  <div class="logo">
-                    <a href="#"><img src="<?php echo THEME_URI;  ?>/assets/images/logo.svg"></a>
-                  </div>
+                  <?php if( !empty($logoID) ): ?>
+                    <div class="logo">
+                      <a href="<?php echo esc_url(home_url('/')); ?>">
+                        <?php echo cbv_get_image_tag($logoID); ?>
+                      </a>
+                    </div>
+                  <?php endif; ?>
                 </div>
                 <div class="hdr-rgt"> 
                   <div class="hdr-menu hide-md">
                     <nav class="main-nav">
-                      <ul class="clearfix reset-list">
-                        <li class="current-menu-item"><a href="#">Home</a></li>
-                        <li class="menu-item-has-children">
-                          <a href="#">About Us</a>
-                          <ul class="sub-menu co-sub-menu">
-                            <li><a href="#">Submenu 1</a></li>
-                            <li><a href="#">Submenu 2</a></li>
-                            <li><a href="#">Submenu 3</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Why Choose Us</a></li>
-                        <li class="menu-item-has-megamenu">
-                          <a href="#">Treatments</a>
-                          <ul class="megamenu co-sub-menu">
-                            <li class="menu-item-has-children">
-                              <a href="#">Implant Dentistry</a>
-                              <ul class="sub-menu">
-                                <li><a href="#">Single Tooth Implant</a></li>
-                                <li><a href="#">Multiple Teeth Replacement</a></li>
-                                <li><a href="#">Implant-Retained Dentures</a></li>
-                                <li><a href="#">PRGF</a></li>
-                              </ul>
-                            </li>
-                            <li class="menu-item-has-children">
-                              <a href="#">Cosmetic Dentistry</a>
-                              <ul class="sub-menu">
-                                <li><a href="#">Veneers</a></li>
-                                <li><a href="#">Composite Bonding</a></li>
-                                <li><a href="#">White fillings</a></li>
-                                <li><a href="#">Teeth Whitening</a></li>
-                                <li><a href="#">Teeth Straightening</a></li>
-                                <li><a href="#">Facial Aesthetics</a></li>
-                              </ul>
-                            </li>
-                            <li class="menu-item-has-children">
-                              <a href="#">Restorative Dentistry</a>
-                              <ul class="sub-menu">
-                                <li><a href="#">Fillings</a></li>
-                                <li><a href="#">Bridges</a></li>
-                                <li><a href="#">Crowns</a></li>
-                                <li><a href="#">Dentures</a></li>
-                              </ul>
-                            </li>
-                            <li class="menu-item-has-children">
-                              <a href="#">General Dentistry</a>
-                              <ul class="sub-menu">
-                                <li><a href="#">Emergencies</a></li>
-                                <li><a href="#">Hygiene Services</a></li>
-                                <li><a href="#">Dental Examinations</a></li>
-                                <li><a href="#">Children’s Dentistry</a></li>
-                                <li><a href="#">Root Canal</a></li>
-                                <li><a href="#">Oral Surgery</a></li>
-                              </ul>
-                            </li>
-                            <li class="menu-item-has-children">
-                              <a href="#">Other Treatments</a>
-                              <ul class="sub-menu">
-                                <li><a href="#">Periodontal Treatments</a></li>
-                                <li><a href="#">Laser Dentistry</a></li>
-                                <li><a href="#">3D Scanning</a></li>
-                                <li><a href="#">3D Digital Imaging</a></li>
-                                <li><a href="#">Computer Assisted Plan</a></li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Gallery</a></li>
-                        <li class="menu-item-has-children">
-                          <a href="#">Fees</a>
-                          <ul class="sub-menu co-sub-menu">
-                            <li><a href="#">Submenu 1</a></li>
-                            <li><a href="#">Submenu 2</a></li>
-                            <li><a href="#">Submenu 3</a></li>
-                          </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                          <a href="#">Contact us</a>
-                          <ul class="sub-menu co-sub-menu">
-                            <li><a href="#">Submenu 1</a></li>
-                            <li><a href="#">Submenu 2</a></li>
-                            <li><a href="#">Submenu 3</a></li>
-                          </ul>
-                        </li>
-                      </ul>
+                      <?php 
+                      $Mainmenu = array( 
+                        'theme_location' => 'cbv_main_menu', 
+                        'menu_class' => 'clearfix reset-list',
+                        'container' => '',
+                        'container_class' => ''
+                      );
+                      wp_nav_menu( $Mainmenu ); 
+                      ?>
                     </nav>
                   </div>
                   <div class="hamburgar-cntlr show-md">
@@ -267,11 +213,13 @@
     <div class="xs-mobile-menu">
       <div class="xs-pop-up-menu-inr">
         <div class="xs-pop-up-menu-top">
-          <div class="logo">
-            <a href="#">
-              <img src="phpassets/images/logo.svg">
-            </a>
-          </div>
+          <?php if( !empty($logoID) ): ?>
+            <div class="logo">
+              <a href="<?php echo esc_url(home_url('/')); ?>">
+                <?php echo cbv_get_image_tag($logoID); ?>
+              </a>
+            </div>
+          <?php endif; ?>
           <div class="hamburgar-cntlr">
             <div class="hamburger-icon">
               <span></span>
@@ -283,116 +231,47 @@
         <div class="xs-pop-menu-con">
           <div class="xs-menu">
             <nav class="main-nav">
-              <ul class="clearfix reset-list">
-                <li class="current-menu-item"><a href="#">Home</a></li>
-                <li class="menu-item-has-children">
-                  <a href="#">About Us</a>
-                  <ul class="sub-menu co-sub-menu">
-                    <li><a href="#">Submenu 1</a></li>
-                    <li><a href="#">Submenu 2</a></li>
-                    <li><a href="#">Submenu 3</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Why Choose Us</a></li>
-                <li class="menu-item-has-megamenu">
-                  <a href="#">Treatments</a>
-                  <ul class="megamenu co-sub-menu">
-                    <li class="menu-item-has-children">
-                      <a href="#">Implant Dentistry</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Single Tooth Implant</a></li>
-                        <li><a href="#">Multiple Teeth Replacement</a></li>
-                        <li><a href="#">Implant-Retained Dentures</a></li>
-                        <li><a href="#">PRGF</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="#">Cosmetic Dentistry</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Veneers</a></li>
-                        <li><a href="#">Composite Bonding</a></li>
-                        <li><a href="#">White fillings</a></li>
-                        <li><a href="#">Teeth Whitening</a></li>
-                        <li><a href="#">Teeth Straightening</a></li>
-                        <li><a href="#">Facial Aesthetics</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="#">Restorative Dentistry</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Fillings</a></li>
-                        <li><a href="#">Bridges</a></li>
-                        <li><a href="#">Crowns</a></li>
-                        <li><a href="#">Dentures</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="#">General Dentistry</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Emergencies</a></li>
-                        <li><a href="#">Hygiene Services</a></li>
-                        <li><a href="#">Dental Examinations</a></li>
-                        <li><a href="#">Children’s Dentistry</a></li>
-                        <li><a href="#">Root Canal</a></li>
-                        <li><a href="#">Oral Surgery</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="#">Other Treatments</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Periodontal Treatments</a></li>
-                        <li><a href="#">Laser Dentistry</a></li>
-                        <li><a href="#">3D Scanning</a></li>
-                        <li><a href="#">3D Digital Imaging</a></li>
-                        <li><a href="#">Computer Assisted Plan</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="#">Gallery</a></li>
-                <li class="menu-item-has-children">
-                  <a href="#">Fees</a>
-                  <ul class="sub-menu co-sub-menu">
-                    <li><a href="#">Submenu 1</a></li>
-                    <li><a href="#">Submenu 2</a></li>
-                    <li><a href="#">Submenu 3</a></li>
-                  </ul>
-                </li>
-                <li class="menu-item-has-children">
-                  <a href="#">Contact us</a>
-                  <ul class="sub-menu co-sub-menu">
-                    <li><a href="#">Submenu 1</a></li>
-                    <li><a href="#">Submenu 2</a></li>
-                    <li><a href="#">Submenu 3</a></li>
-                  </ul>
-                </li>
-              </ul>
+              <?php 
+              $Mainmenu = array( 
+                'theme_location' => 'cbv_main_menu', 
+                'menu_class' => 'clearfix reset-list',
+                'container' => '',
+                'container_class' => ''
+              );
+              wp_nav_menu( $Mainmenu ); 
+              ?>
             </nav>
           </div>
           <div class="topbar-left show-md">
             <div class="topbar-menu">
-              <ul class="reset-list">
-                <li><a href="#">Implant Dentistry</a></li>
-                <li><a href="#">Cosmetic Dentistry</a></li>
-                <li><a href="#">Teeth Straightening</a></li>
-              </ul>
+              <?php 
+              $Topbarmenu = array( 
+                'theme_location' => 'cbv_Topbar_menu', 
+                'menu_class' => 'clearfix reset-list',
+                'container' => '',
+                'container_class' => ''
+              );
+              wp_nav_menu( $Topbarmenu ); 
+              ?>
             </div>
           </div>
         </div>
         <div class="xs-pop-up-menu-btm">
           <div class="hdr-socials">
             <ul class="reset-list">
+              <?php if(!empty($facebook)): ?>
+                <li>
+                  <a target="_blank" href="<?php echo $facebook; ?>">
+                    <i>
+                      <svg class="hdr-facebook-icon" width="8" height="13" viewBox="0 0 8 13" fill="#fff">
+                        <use xlink:href="#hdr-facebook-icon"></use> 
+                      </svg>
+                    </i>
+                  </a>
+                </li>
+              <?php endif; if(!empty($twitter)): ?>
               <li>
-                <a target="_blank" href="#">
-                  <i>
-                    <svg class="hdr-facebook-icon" width="8" height="13" viewBox="0 0 8 13" fill="#fff">
-                      <use xlink:href="#hdr-facebook-icon"></use> 
-                    </svg>
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="#">
+                <a target="_blank" href="<?php echo $twitter; ?>">
                   <i>
                     <svg class="hdr-twitter-icon" width="16" height="13" viewBox="0 0 16 13" fill="#fff">
                       <use xlink:href="#hdr-twitter-icon"></use> 
@@ -400,16 +279,18 @@
                   </i>
                 </a>
               </li>
-              <li>
-                <a target="_blank" href="#">
-                  <i>
-                    <svg class="hdr-instagram-icon" width="16" height="15" viewBox="0 0 16 15" fill="#fff">
-                      <use xlink:href="#hdr-instagram-icon"></use> 
-                    </svg>
-                  </i>
-                </a>
-              </li>
-            </ul>
+            <?php endif; if(!empty($instagram)): ?>
+            <li>
+              <a target="_blank" href="<?php echo $instagram; ?>">
+                <i>
+                  <svg class="hdr-instagram-icon" width="16" height="15" viewBox="0 0 16 15" fill="#fff">
+                    <use xlink:href="#hdr-instagram-icon"></use> 
+                  </svg>
+                </i>
+              </a>
+            </li>
+          <?php endif; ?>
+        </ul>
           </div>
         </div>
       </div>
