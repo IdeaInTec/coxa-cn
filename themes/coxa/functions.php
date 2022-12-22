@@ -40,8 +40,8 @@ if( !function_exists('cbv_theme_setup') ){
 
         register_nav_menus( array(
             'cbv_main_menu' => __( 'Main Menu', 'coxa' ),
-            'cbv_main_menu_top' => __( 'Top Menu', 'coxa' ),
-            'cbv_mobiel_main_menu' => __( 'Mobaile Menu', 'coxa' ),
+            'cbv_Topbar_menu' => __( 'Topbar Menu', 'coxa' ),
+            'cbv_mobaile_main_menu' => __( 'Mobaile Menu', 'coxa' ),
             'cbv_footer_menu_1' => __( 'Footer Menu 1', 'coxa' ),
             'cbv_footer_menu_2' => __( 'Footer Menu 2', 'coxa' ),
             'cbv_footer_menu_3' => __( 'Footer Menu 3', 'coxa' ),
