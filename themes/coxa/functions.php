@@ -58,15 +58,18 @@ Enqueue Scripts->>
 function cbv_theme_scripts(){
     include_once( THEME_DIR . '/enq-scripts/popper.php' );
     include_once( THEME_DIR . '/enq-scripts/bootstrap.php' );
-    include_once( THEME_DIR . '/enq-scripts/fonts.php' );
     include_once( THEME_DIR . '/enq-scripts/fancybox.php' );
+    include_once( THEME_DIR . '/enq-scripts/fonts.php' );
     include_once( THEME_DIR . '/enq-scripts/slick.php' );
-    include_once( THEME_DIR . '/enq-scripts/swiper.php' );
+    include_once( THEME_DIR . '/enq-scripts/google.maps.php' );
     include_once( THEME_DIR . '/enq-scripts/matchheight.php' );
-    include_once( THEME_DIR . '/enq-scripts/animate.php' );
+    include_once( THEME_DIR . '/enq-scripts/app.php' );
     include_once( THEME_DIR . '/enq-scripts/select2.php' );
-    include_once( THEME_DIR . '/enq-scripts/flatpickr.php' );
-    
+    include_once( THEME_DIR . '/enq-scripts/counterup.php' );
+    include_once( THEME_DIR . '/enq-scripts/parallaxie.php' );
+    include_once( THEME_DIR . '/enq-scripts/waypoints.php' );
+    include_once( THEME_DIR . '/enq-scripts/twentytwenty.php' );
+    include_once( THEME_DIR . '/enq-scripts/animate.php' );
     include_once( THEME_DIR . '/enq-scripts/theme.default.php' );
 }
 
@@ -74,12 +77,8 @@ add_action( 'wp_enqueue_scripts', 'cbv_theme_scripts');
 /**
 Includes->>
 */
-include_once(THEME_DIR .'/inc/widgets-area.php');
-include_once(THEME_DIR .'/inc/class-cbv_attributes-widgets.php');
-include_once(THEME_DIR .'/inc/shortcode.php');
 include_once(THEME_DIR .'/inc/breadcrumbs.php');
 include_once(THEME_DIR .'/inc/cbv-functions.php');
-include_once(THEME_DIR .'/inc/wc-functions.php');
 /**
 ACF Option pages->>
 */
@@ -123,21 +122,6 @@ if ( ! is_admin() ) {
     //add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
 }
 
-add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
-function my_wp_nav_menu_objects( $items, $args ) {
-    // loop
-    foreach( $items as &$item ) {
-        // vars
-        $icon = get_field('icon', $item);   
-        // append icon
-        if( $icon ) {   
-            $item->title .= ' <img src="'.$icon.'"/>';  
-        }
-        
-    }
-    // return
-    return $items;
-}
 
 function has_banner(){
     if( is_front_page()){
