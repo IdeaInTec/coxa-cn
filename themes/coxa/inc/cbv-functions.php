@@ -94,8 +94,6 @@ function phone_preg( $show_telefoon ){
   $show_telefoon = trim(str_replace($spacialArry, $replaceArray, $show_telefoon));
   return $show_telefoon;
 }
-
-f
 function get_id_by_page_template( $pagetemplate ){
     $pageID = '';
     if( !empty($pagetemplate) ){
