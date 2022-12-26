@@ -785,6 +785,7 @@ $faqs = get_field('faqs', $thisID);
 $showhidetreatment = get_field('showhidetreatment', $thisID);
 if($showhidetreatment):
 $chtreatment = get_field('chtreatment', $thisID);
+$link = $chtreatment['link'];
 ?>
 <section class="treatment-sec">
   <div class="treatment-cntlr">
@@ -804,13 +805,13 @@ $chtreatment = get_field('chtreatment', $thisID);
           </ul>
         </div> 
       </div>
-      <h2 class="fl-h4 treatment-title">Choose a Treatment to get started</h2>
-      <div class="treatment-desc hide-md">
-        <p>Nunc sollicitudin diam ante vitae quis ac. Morbi sapien, blandit et cursus suspendisse accumsan. Odio erat etiam purus bibendum fusce tristique aliquam non. </p>
-      </div>
+      <?php if(!empty($chtreatment['title'])) echo('<h2 class="fl-h4 treatment-title">'.$chtreatment['title'].'</h2>'); ?>
+      <?php if(!empty($chtreatment['description'])) echo('<div class="treatment-desc hide-md">'.wpautop($chtreatment['description']).'</div>'); ?>
+      <?php if(is_array($link) && !empty($link['url'])): ?>
       <div class="treatment-btn hide-md">
-        <a class="cdc-btn" href="#">Book Appointment Online</a>
+        <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title']); ?>
       </div>
+      <?php endif; ?>
     </div>
     <div class="treatment-rgt">
       <div class="custom-prev-next-cntlr">
