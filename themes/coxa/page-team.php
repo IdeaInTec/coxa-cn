@@ -1,73 +1,84 @@
 <?php 
 /*Template Name: Team*/
 get_header(); 
+$thisID = get_the_ID();
+$banner = get_field('banner', $thisID);
+$bg_image = cbv_get_image_src($banner['image']);
+$custom_titel = $banner['title'];
+$page_titel = !empty($custom_titel)?$custom_titel:get_the_title($thisID);
+$description = $banner['description'];
+$link_1 = $banner['link_1'];
+$link_2 = $banner['link_2'];
 ?>
 <section class="page-banner">
   <div class="banner-black-bg"></div>
-  <div class="page-bnr-bg parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/team-pg-banner-bg.jpg);"></div>
-  <div class="bnr-vdo d-none">
-    <video id="bt-vdo" autoplay="true" muted="" loop>
-      <source src="<?php echo THEME_URI; ?>/assets/images/videos/placeholder-video.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="pg-banner-cntlr">
-          <div class="pg-banner-desc-cntlr">
-            <h1 class="pg-banner-title fl-h3">Meet Our Team</h1>
-            <div class="diamond-module">
-              <ul class="reset-list">
-                <li>
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                </li>
-                <li>
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                </li>
-                <li>
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                </li>
-              </ul>
-            </div> 
-            <div class="pg-banner-desc">
-              <p>Lobortis donec tellus urna amet, fringilla eget donec viverra. Sed lectus convallis mauris vestibulum. Habitant quis risus ac nisl eget etiam id.</p>
-            </div>
-            <div class="pg-banner-btns">
-              <div class="pg-banner-btn pg-banner-btn-01">
-                <a class="cdc-btn" href="#">Book Appointment</a>
-              </div>
+  <?php if(!empty($bg_image)) echo('<div class="page-bnr-bg parallaxie" style="background-image: url('.$bg_image.')"></div>'); ?>
+  <?php if( !empty($banner['video']) ): ?>
+    <div class="bnr-vdo">
+      <video id="bt-vdo" autoplay="true" muted="" loop>
+        <source src="<?php echo $banner['video']; ?>" type="video/mp4">
+        </video>
+      </div>
+    <?php endif; ?>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="pg-banner-cntlr">
+            <div class="pg-banner-desc-cntlr">
+              <h1 class="pg-banner-title fl-h3"><?php echo $page_titel; ?></h1>
+              <div class="diamond-module">
+                <ul class="reset-list">
+                  <li>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                  </li>
+                  <li>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                  </li>
+                  <li>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                  </li>
+                </ul>
+              </div> 
+              <?php if(!empty($description)): ?>
+                <div class="pg-banner-desc">
+                  <?php echo wpautop($description); ?>
+                </div>
+              <?php endif; ?>
+              <div class="pg-banner-btns">
+                <?php if(is_array($link_1) && !empty($link_1['url'])): ?>
+                <div class="pg-banner-btn pg-banner-btn-01">
+                  <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link_1['url'],$link_1['title'] ); ?>
+                </div>
+              <?php endif; if(is_array($link_2) && !empty($link_2['url'])):?>
               <div class="pg-banner-btn pg-banner-btn-02">
-                <a class="cdc-trnsprnt-btn" href="#">Contact Us</a>
+                <?php printf('<a class="cdc-trnsprnt-btn" href="%s">%s</a>',$link_2['url'],$link_2['title'] ); ?>
               </div>
-            </div>
+            <?php endif; ?>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>
+</section> 
+
 <div class="team-pg-content-cntlr">
+
   <section class="counter-sec">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="counter-cntlr">
+            <?php 
+            $team_states = get_field('team_states', $thisID); 
+            foreach ($team_states as $team_state):
+            ?>
             <div class="counter-col-01 counter-col" >
-              <h2 class="fl-h1 counter-number-title"><span class="counter-number">30</span>+</h2>
+              <?php if(!empty($team_state['value'])) echo('<h2 class="fl-h1 counter-number-title"><span class="counter-number">30</span>+</h2>'); ?>
+              
               <p>Years Experience</p>
             </div> 
-            <div class="counter-col-02 counter-col">
-              <h2 class="fl-h1 counter-number-title"><span class="counter-number">25</span>+</h2>
-              <p>Specialist Team Members</p>
-            </div>
-            <div class="counter-col-03 counter-col">
-              <h2 class="fl-h1 counter-number-title"><span class="counter-number">50</span>+</h2>
-              <p>Dentistry Qualifications</p>
-            </div>
-            <div class="counter-col-01 counter-col">
-              <h2 class="fl-h1 counter-number-title"><span class="counter-number">12</span>+</h2>
-              <p>Nationalities </p>
-            </div>
+            <?php endforeach; ?>
           </div>
         </div>
       </div>
@@ -475,6 +486,13 @@ get_header();
       </div>
     </div>
   </section>
+
+  <?php 
+$showhidetreatment = get_field('showhidetreatment', $thisID);
+if($showhidetreatment):
+$chtreatment = get_field('chtreatment', $thisID);
+$link = $chtreatment['link'];
+?>
 <section class="treatment-sec">
   <div class="treatment-cntlr">
     <div class="treatment-lft">
@@ -493,13 +511,13 @@ get_header();
           </ul>
         </div> 
       </div>
-      <h2 class="fl-h4 treatment-title">Choose a Treatment to get started</h2>
-      <div class="treatment-desc hide-md">
-        <p>Nunc sollicitudin diam ante vitae quis ac. Morbi sapien, blandit et cursus suspendisse accumsan. Odio erat etiam purus bibendum fusce tristique aliquam non. </p>
-      </div>
+      <?php if(!empty($chtreatment['title'])) echo('<h2 class="fl-h4 treatment-title">'.$chtreatment['title'].'</h2>'); ?>
+      <?php if(!empty($chtreatment['description'])) echo('<div class="treatment-desc hide-md">'.wpautop($chtreatment['description']).'</div>'); ?>
+      <?php if(is_array($link) && !empty($link['url'])): ?>
       <div class="treatment-btn hide-md">
-        <a class="cdc-btn" href="#">Book Appointment Online</a>
+        <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title']); ?>
       </div>
+      <?php endif; ?>
     </div>
     <div class="treatment-rgt">
       <div class="custom-prev-next-cntlr">
@@ -619,4 +637,5 @@ get_header();
     </div>
   </div>
 </section>
+<?php endif; ?>
 <?php get_footer(); ?>
