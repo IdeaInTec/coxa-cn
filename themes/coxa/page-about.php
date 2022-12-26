@@ -1,113 +1,139 @@
 <?php 
 /*Template Name: About*/
 get_header(); 
+$thisID = get_the_ID();
+$banner = get_field('banner', $thisID);
+$bg_image = cbv_get_image_src($banner['image']);
+$custom_titel = $banner['title'];
+$page_titel = !empty($custom_titel)?$custom_titel:get_the_title($thisID);
+$description = $banner['description'];
+$link_1 = $banner['link_1'];
+$link_2 = $banner['link_2'];
 ?>
 <section class="page-banner">
   <div class="banner-black-bg"></div>
-  <div class="page-bnr-bg parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/about-pg-banner-bg.jpg);"></div>
-  <div class="bnr-vdo d-none">
-    <video id="bt-vdo" autoplay="true" muted="" loop>
-      <source src="<?php echo THEME_URI; ?>/assets/images/videos/placeholder-video.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="pg-banner-cntlr">
-          <div class="pg-banner-desc-cntlr">
-            <h1 class="pg-banner-title fl-h3">About Us</h1>
-            <div class="diamond-module">
-              <ul class="reset-list">
-                <li>
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                </li>
-                <li>
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                </li>
-                <li>
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                </li>
-              </ul>
-            </div> 
-            <div class="pg-banner-desc">
-              <p>Experts in Dentistry for over 30 years</p>
-            </div>
-            <div class="pg-banner-btns">
-              <div class="pg-banner-btn pg-banner-btn-01">
-                <a class="cdc-btn" href="#">Contact Us</a>
-              </div>
+  <?php if(!empty($bg_image)) echo('<div class="page-bnr-bg parallaxie" style="background-image: url('.$bg_image.')"></div>'); ?>
+  <?php if( !empty($banner['video']) ): ?>
+    <div class="bnr-vdo">
+      <video id="bt-vdo" autoplay="true" muted="" loop>
+        <source src="<?php echo $banner['video']; ?>" type="video/mp4">
+        </video>
+      </div>
+    <?php endif; ?>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="pg-banner-cntlr">
+            <div class="pg-banner-desc-cntlr">
+              <h1 class="pg-banner-title fl-h3"><?php echo $page_titel; ?></h1>
+              <div class="diamond-module">
+                <ul class="reset-list">
+                  <li>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                  </li>
+                  <li>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                  </li>
+                  <li>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                  </li>
+                </ul>
+              </div> 
+              <?php if(!empty($description)): ?>
+                <div class="pg-banner-desc">
+                  <?php echo wpautop($description); ?>
+                </div>
+              <?php endif; ?>
+              <div class="pg-banner-btns">
+                <?php if(is_array($link_1) && !empty($link_1['url'])): ?>
+                <div class="pg-banner-btn pg-banner-btn-01">
+                  <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link_1['url'],$link_1['title'] ); ?>
+                </div>
+              <?php endif; if(is_array($link_2) && !empty($link_2['url'])):?>
               <div class="pg-banner-btn pg-banner-btn-02">
-                <a class="cdc-trnsprnt-btn" href="#">Our Practice</a>
+                <?php printf('<a class="cdc-trnsprnt-btn" href="%s">%s</a>',$link_2['url'],$link_2['title'] ); ?>
               </div>
-            </div>
+            <?php endif; ?>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </section>
 
-
+<?php 
+$intro = get_field('intro', $thisID);
+$description = $intro['description'];
+$image_1 = $intro['image_1'];
+$image_2 = $intro['image_2'];
+$link = $intro['link'];
+?>
 <div class="about-page-con-cntlr">      
   <section class="about-intro-sec has-inline-bg double-image-module">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-            <div class="abtis-img-text-row">
-              <div class="abtis-img-text-row-inr">
-                <div class="abtis-img-txt-col abtis-row-img">
-                  <div class="abtis-row-img-inner">
-                    <img class="single-image"src="<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-02.png" alt="">
-                    <div class="double-image">
-                      <img class="double-image-main" src="<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-02.png" alt="">
-                      <img class="double-image-sub" src="<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-03.png" alt="">
-                    </div>
+          <div class="abtis-img-text-row">
+            <div class="abtis-img-text-row-inr">
+              <div class="abtis-img-txt-col abtis-row-img">
+                <div class="abtis-row-img-inner">
+                  <?php if(!empty($image_1)): ?>
                     <div class="abtis-row-main-img-cntrl">
-                      <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/tremnt-main-img-01.jpg);">
+                      <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($image_1); ?>);">
                       </div>
                     </div>
-                    <div class="abtis-row-sub-img-cntlr">
-                      <div class="abtis-row-sub-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-03.png);">
-                      </div>
+                  <?php endif; if(!empty($image_2)): ?>
+                  <div class="abtis-row-sub-img-cntlr">
+                    <div class="abtis-row-sub-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($image_2); ?>);">
                     </div>
                   </div>
-                </div>
-                <div class="abtis-img-txt-col abtis-row-text">
-                  <div class="abtis-row-text-inr">
-                    <div class="diamond-module">
-                      <ul class="reset-list">
-                        <li>
-                          <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                        </li>
-                        <li>
-                          <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                        </li>
-                        <li>
-                          <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                        </li>
-                      </ul>
-                    </div>
-                    <h2 class="fl-h4">Who we are</h2>
-                    <p>Fermentum et tristique dictumst ipsum dolor turpis arcu nibh integer. Mauris volutpat dictum cras sagittis leo platea tincidunt. Scelerisque turpis tortor, purus nec eget mauris tempor lacus. Varius amet egestas cursus quam proin magna varius sit. Dui ut in massa nibh ut. Commodo et sapien semper imperdiet dolor nunc id sit consectetur. Fames amet, turpis in at in senectus, in felis amet euismod vitae potenti praesents.</p>
-                    <p>Aenean in sed mi malesuada quis purus facilisis vel senectus. Purus aliquet consequat dignissim aliquam bibendum pulvinar faucibus et enim. Sapien faucibus mattis quis nunc vulputate habitant scelerisque. Non tincidunt enim adipiscing lectus euismod turpis vel non massa, ultricies condimentum dui.</p>
-                    <div class="abtis-intro-des-btn">
-                      <a class="cdc-btn" href="#">See our practice</a>
-                    </div>
-                  </div>                          
-                </div>
+                <?php endif; ?>
               </div>
             </div>
+            <div class="abtis-img-txt-col abtis-row-text">
+              <div class="abtis-row-text-inr">
+                <div class="diamond-module">
+                  <ul class="reset-list">
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                  </ul>
+                </div>
+                <?php if(!empty($intro['title'])) echo('<h2 class="fl-h4">'.$intro['title'].'</h2>'); ?>
+                <?php echo wpautop($description); ?>
+                <?php if(is_array($link) && !empty($link['url'])): ?>
+                <div class="abtis-intro-des-btn">
+                  <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title'] ); ?>
+                </div>
+              <?php endif; ?>
+            </div>                          
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</div>
+</section>
+
+<?php 
+$showhideteam = get_field('showhideteam', $thisID);
+if($showhideteam):
+  $ourteam = get_field('ourteam', $thisID);
+  ?>
   <section class="about-team-sec">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="sec-entry-hdr-cntlr">
             <div class="sec-entry-hdr">
-              <h2 class="sec-entry-hdr-title fl-h4">Meet Our Specialist Team</h2>
+              <?php if(!empty($ourteam['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'.$ourteam['title'].'</h2>'); ?>
               <div class="diamond-module">
                 <ul class="reset-list">
                   <li>
@@ -121,7 +147,7 @@ get_header();
                   </li>
                 </ul>
               </div>                
-              <p>Amet a aliquam tellus, ut. Fringilla sagittis ut a pellentesque accumsan.<br> Ipsum malesuada vitae fusce semper nec scelerisque a.</p>
+              <?php echo wpautop($ourteam['description']); ?>
             </div>
           </div>
           <div class="profile-module">                
@@ -201,203 +227,77 @@ get_header();
       </div>
     </div>
   </section>
+<?php endif; ?>
+
+
+<?php 
+$showhidedifferent = get_field('showhidedifferent', $thisID);
+if($showhidedifferent):
+  $mdifferent = get_field('mdifferent', $thisID);
+  $link = $mdifferent['link'];
+  ?>
   <section class="about-intro-sec has-inline-bg">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-            <div class="abtis-img-text-row abtis-lft-img-row">
-              <div class="abtis-img-text-row-inr">
+          <div class="abtis-img-text-row abtis-lft-img-row">
+            <div class="abtis-img-text-row-inr">
+              <?php if(!empty($mdifferent['image'])): ?>
                 <div class="abtis-img-txt-col abtis-row-img">
                   <div class="abtis-row-img-inner">
-                    <img class="single-image"src="<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-02.jpg" alt="">
-                    <div class="double-image">
-                      <img class="double-image-main" src="<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-02.png" alt="">
-                      <img class="double-image-sub" src="<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-03.png" alt="">
-                    </div>
                     <div class="abtis-row-main-img-cntrl">
-                      <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/tremnt-main-img-01.jpg);">
-                      </div>
-                    </div>
-                    <div class="abtis-row-sub-img-cntlr">
-                      <div class="abtis-row-sub-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/about-us-intro-sub-img-01.jpg);">
+                      <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($mdifferent['image']); ?>);">
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="abtis-img-txt-col abtis-row-text">
-                  <div class="abtis-row-text-inr">
-                    <div class="diamond-module">
-                      <ul class="reset-list">
-                        <li>
-                          <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                        </li>
-                        <li>
-                          <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                        </li>
-                        <li>
-                          <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                        </li>
-                      </ul>
-                    </div>
-                    <h2 class="fl-h4">What makes us different?</h2>
-                    <p>Fermentum et tristique dictumst ipsum dolor turpis arcu nibh integer. Mauris volutpat dictum cras sagittis leo platea tincidunt. Scelerisque turpis tortor, purus nec eget mauris tempor lacus. Varius amet egestas cursus quam proin magna varius sit. Dui ut in massa nibh ut. Commodo et sapien semper imperdiet dolor nunc id sit consectetur. Fames amet, turpis in at in senectus, in felis amet euismod vitae potenti praesents.</p>
-                    <p>Aenean in sed mi malesuada quis purus facilisis vel senectus. Purus aliquet consequat dignissim aliquam bibendum pulvinar faucibus et enim. Sapien faucibus mattis quis nunc vulputate habitant scelerisque. Non tincidunt enim adipiscing lectus euismod turpis vel non massa, ultricies condimentum dui.</p>
-                    <div class="abtis-intro-des-btn hide-sm">
-                      <a class="cdc-btn" href="#">See our equipment</a>
-                    </div>
-                  </div>                          
-                </div>
-              </div>
+              <?php endif; ?>
+              <div class="abtis-img-txt-col abtis-row-text">
+                <div class="abtis-row-text-inr">
+                  <div class="diamond-module">
+                    <ul class="reset-list">
+                      <li>
+                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                      <li>
+                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                      <li>
+                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <?php if(!empty($mdifferent['title'])) echo('<h2 class="fl-h4">'.$mdifferent['title'].'</h2>'); ?>
+                  <?php echo wpautop($mdifferent['description']); ?>
+                  <?php if(is_array($link) && !empty($link['url'])): ?>
+                  <div class="abtis-intro-des-btn hide-sm">
+                    <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title'] ); ?>
+                  </div>
+                <?php endif; ?>
+              </div>                          
             </div>
-        </div>
-      </div>
-    </div>
-  </section> 
-<section class="why-choose-sec parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/why-choose-bg-img.png);">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="sec-entry-hdr-cntlr">
-          <div class="sec-entry-hdr">
-            <h3 class="sec-entry-hdr-title fl-h4">Why Choose Us?</h3>
-            <div class="diamond-module">
-              <ul class="reset-list">
-                <li>
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                </li>
-                <li>
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                </li>
-                <li>
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                </li>
-              </ul>
-            </div>                
-            <p>Amet a aliquam tellus, ut. Fringilla sagittis ut a pellentesque accumsan.<br> Ipsum malesuada vitae fusce semper nec scelerisque a.</p>
-          </div>
-        </div>
-        <div class="why-choose-grids-cntlr">
-          <div class="why-choose-grids">
-            <div class="why-choose-grid-col">
-              <div class="why-choose-grid-item">
-                <div class="why-choose-grid-img">
-                  <i>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-1.svg" alt="">
-                  </i>
-                </div>
-                <div class="why-choose-grid-des mHc">
-                  <h4 class="why-choose-grid-title fl-h5 mHc1">Free Consultation</h4>
-                  <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                </div>
-              </div>
-            </div>
-            <div class="why-choose-grid-col">
-              <div class="why-choose-grid-item">
-                <div class="why-choose-grid-img">
-                  <i>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-2.svg" alt="">
-                  </i>
-                </div>
-                <div class="why-choose-grid-des mHc">
-                  <h4 class="why-choose-grid-title fl-h5 mHc1">Bespoke Treatments</h4>
-                  <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                </div>
-              </div>
-            </div>
-            <div class="why-choose-grid-col">
-              <div class="why-choose-grid-item">
-                <div class="why-choose-grid-img">
-                  <i>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-3.svg" alt="">
-                  </i>
-                </div>
-                <div class="why-choose-grid-des mHc">
-                  <h4 class="why-choose-grid-title fl-h5 mHc1">Locally Owned</h4>
-                  <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                </div>
-              </div>
-            </div>
-            <div class="why-choose-grid-col">
-              <div class="why-choose-grid-item">
-                <div class="why-choose-grid-img">
-                  <i>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-4.svg" alt="">
-                  </i>
-                </div>
-                <div class="why-choose-grid-des mHc">
-                  <h4 class="why-choose-grid-title fl-h5 mHc1">Modern Equipment</h4>
-                  <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                </div>
-              </div>
-            </div>
-            <div class="why-choose-grid-col">
-              <div class="why-choose-grid-item">
-                <div class="why-choose-grid-img">
-                  <i>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-5.svg" alt="">
-                  </i>
-                </div>
-                <div class="why-choose-grid-des mHc">
-                  <h4 class="why-choose-grid-title fl-h5 mHc1">Rated 5 Stars</h4>
-                  <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                </div>
-              </div>
-            </div>
-            <div class="why-choose-grid-col">
-              <div class="why-choose-grid-item">
-                <div class="why-choose-grid-img">
-                  <i>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-6.svg" alt="">
-                  </i>
-                </div>
-                <div class="why-choose-grid-des mHc">
-                  <h4 class="why-choose-grid-title fl-h5 mHc1">Friendly Team</h4>
-                  <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                </div>
-              </div>
-            </div>
-            <div class="why-choose-grid-col">
-              <div class="why-choose-grid-item">
-                <div class="why-choose-grid-img">
-                  <i>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-7-1.png" alt="">
-                  </i>
-                </div>
-                <div class="why-choose-grid-des mHc">
-                  <h4 class="why-choose-grid-title fl-h5 mHc1">30 Years Experience</h4>
-                  <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                </div>
-              </div>
-            </div>
-            <div class="why-choose-grid-col">
-              <div class="why-choose-grid-item">
-                <div class="why-choose-grid-img">
-                  <i>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-8.svg" alt="">
-                  </i>
-                </div>
-                <div class="why-choose-grid-des mHc">
-                  <h4 class="why-choose-grid-title fl-h5 mHc1">Luxury Practice</h4>
-                  <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="why-choose-grid-btn hide-sm">
-            <a href="#" class="cdc-btn">Find More Reasons</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-  <section class="review-sec">
+</section> 
+<?php endif; ?>
+
+<?php 
+$showhidewch = get_field('showhidewch', $thisID);
+if($showhidewch):
+  $why_choose = get_field('why_choose', $thisID);
+  $link = $why_choose['link'];
+  $features = $why_choose['features'];
+  ?>
+  <section class="why-choose-sec parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/why-choose-bg-img.png);">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="sec-entry-hdr-cntlr">
             <div class="sec-entry-hdr">
-              <h2 class="sec-entry-hdr-title fl-h4">Patient Reviews</h2>
+              <?php if(!empty($why_choose['title'])) echo('<h3 class="sec-entry-hdr-title fl-h4">'.$why_choose['title'].'</h3>'); ?>
               <div class="diamond-module">
                 <ul class="reset-list">
                   <li>
@@ -411,7 +311,68 @@ get_header();
                   </li>
                 </ul>
               </div>                
-              <p>Amet a aliquam tellus, ut. Fringilla sagittis ut a pellentesque accumsan.<br> Ipsum malesuada vitae fusce semper nec scelerisque a.</p>
+              <?php echo wpautop($why_choose['description']); ?>
+            </div>
+          </div>
+          <div class="why-choose-grids-cntlr">
+            <div class="why-choose-grids">
+              <?php foreach ($features as $feature): ?>
+
+                <div class="why-choose-grid-col">
+                  <div class="why-choose-grid-item">
+                    <?php if(!empty($feature['icon'])): ?>
+                      <div class="why-choose-grid-img">
+                        <i>
+                          <?php echo cbv_get_image_tag($feature['icon']); ?>
+                        </i>
+                      </div>
+                    <?php endif; ?>
+                    <div class="why-choose-grid-des mHc">
+                      <?php if(!empty($feature['title'])) echo('<h4 class="why-choose-grid-title fl-h5 mHc1">'.$feature['title'].'</h4>'); ?>
+                      <?php echo wpautop($feature['description']); ?>
+                    </div>
+                  </div>
+                </div>
+              <?php endforeach; ?>
+            </div>
+            <?php if(is_array($link) && !empty($link['url'])): ?>
+            <div class="why-choose-grid-btn hide-sm">
+              <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title'] ); ?>
+            </div>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+
+<?php 
+$showhidepr = get_field('showhidewch', $thisID);
+if($showhidepr):
+  $previews = get_field('previews', $thisID);
+  ?>
+  <section class="review-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sec-entry-hdr-cntlr">
+            <div class="sec-entry-hdr">
+              <?php if(!empty($previews['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'.$previews['title'].'</h2>'); ?>
+              <div class="diamond-module">
+                <ul class="reset-list">
+                  <li>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                  </li>
+                  <li>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                  </li>
+                  <li>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                  </li>
+                </ul>
+              </div>                
+              <?php echo wpautop($previews['description']); ?>
             </div>
           </div>
           <div class="review-grids-cntlr">
@@ -434,11 +395,11 @@ get_header();
                   </div>
                   <h3 class="review-tstmnl-mgs fl-h5 mHc">“Very kind and friendly staff as well a highly qualified skilled dentists!”</h3>
                   <div class="review-pro-des testimonial-text mHc1"data-status="closed">
-                  <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-                </div>
-                <div class="review-pro-des-btn review-pro-des-btn-col-3">
-                  <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
-                </div>
+                    <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
+                  </div>
+                  <div class="review-pro-des-btn review-pro-des-btn-col-3">
+                    <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
+                  </div>
                   <div class="review-pro-name">
                     <strong class="review-pro-title">Chloe Jones</strong>
                     <span>Cardiff</span>
@@ -463,11 +424,11 @@ get_header();
                   </div>
                   <h3 class="review-tstmnl-mgs fl-h5 mHc">“Best experience I have ever had with a dentist in Newport”</h3>
                   <div class="review-pro-des testimonial-text mHc1"data-status="closed">
-                  <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-                </div>
-                <div class="review-pro-des-btn review-pro-des-btn-col-3">
-                  <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
-                </div>
+                    <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
+                  </div>
+                  <div class="review-pro-des-btn review-pro-des-btn-col-3">
+                    <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
+                  </div>
                   <div class="review-pro-name">
                     <strong class="review-pro-title">Bob Ross</strong>
                     <span>Newport</span>
@@ -492,11 +453,11 @@ get_header();
                   </div>
                   <h3 class="review-tstmnl-mgs fl-h5 mHc">“Thank you for all the time you spent with me and giving me back my smile”</h3>
                   <div class="review-pro-des testimonial-text mHc1"data-status="closed">
-                  <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-                </div>
-                <div class="review-pro-des-btn review-pro-des-btn-col-3">
-                  <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
-                </div>
+                    <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
+                  </div>
+                  <div class="review-pro-des-btn review-pro-des-btn-col-3">
+                    <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
+                  </div>
                   <div class="review-pro-name">
                     <strong class="review-pro-title">Chloe Jones</strong>
                     <span>Cardiff</span>
@@ -521,12 +482,12 @@ get_header();
                   </div>
                   <h3 class="review-tstmnl-mgs fl-h5 mHc">“Very kind and friendly staff as well a highly qualified skilled dentists!”</h3>
                   <div class="review-pro-des testimonial-text mHc1"data-status="closed">
-                  <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis<span id="dots">....</span><span id="more_text">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                </div>
-                <div class="review-pro-des-btn review-pro-des-btn-col-3">
-                  <button onclick="myFunction()" id="rdmore_bnt">Read more</button>
-                  <button onclick="myFunction()" id="rdless_bnt">Read less</button>
-                </div>
+                    <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis<span id="dots">....</span><span id="more_text">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                  </div>
+                  <div class="review-pro-des-btn review-pro-des-btn-col-3">
+                    <button onclick="myFunction()" id="rdmore_bnt">Read more</button>
+                    <button onclick="myFunction()" id="rdless_bnt">Read less</button>
+                  </div>
                   <div class="review-pro-name">
                     <strong class="review-pro-title">Chloe Jones</strong>
                     <span>Cardiff</span>
@@ -565,51 +526,60 @@ get_header();
       </div>
     </div>
   </section>
-  <section class="cta-section">
-    <div class="container-lg">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="cta-module-cntlr">
-            <div class="cta-module-wrp parallaxie " style="background-image: url(<?php echo THEME_URI; ?>/assets/images/about-cta-sec-bg.jpg);">
-              <div class="cta-module">
-                <div class="cta-module-des-ctlr">
-                  <div class="diamond-module">
-                    <ul class="reset-list">
-                      <li>
-                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                      </li>
-                      <li>
-                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                      </li>
-                      <li>
-                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="cta-module-des">
-                    <h2 class="cta-module-des-title fl-h2"><strong>Book </strong>Appointment Online</h2>
-                    <p>Praesent imperdiet leo in odio in bibendum aliquet. Est consectetur amet, porttitor turpis. Scelerisque sed eu auctor fringilla nunc.</p>
-                  </div>
+<?php endif; ?>
+
+
+<section class="cta-section">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="cta-module-cntlr">
+          <div class="cta-module-wrp parallaxie " style="background-image: url(<?php echo THEME_URI; ?>/assets/images/about-cta-sec-bg.jpg);">
+            <div class="cta-module">
+              <div class="cta-module-des-ctlr">
+                <div class="diamond-module">
+                  <ul class="reset-list">
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                  </ul>
                 </div>
-                <div class="cta-btn-ctlr">
-                  <div class="cta-btn">
-                    <a href="#" class="cdc-btn">Book Appointment</a>                     
-                  </div>
+                <div class="cta-module-des">
+                  <h2 class="cta-module-des-title fl-h2"><strong>Book </strong>Appointment Online</h2>
+                  <p>Praesent imperdiet leo in odio in bibendum aliquet. Est consectetur amet, porttitor turpis. Scelerisque sed eu auctor fringilla nunc.</p>
+                </div>
+              </div>
+              <div class="cta-btn-ctlr">
+                <div class="cta-btn">
+                  <a href="#" class="cdc-btn">Book Appointment</a>                     
                 </div>
               </div>
             </div>
-          </div>            
-        </div>
+          </div>
+        </div>            
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<?php 
+$showhidefaq = get_field('showhidefaq', $thisID);
+if($showhidefaq):
+$faqs = get_field('faqs', $thisID);
+?>
 <section class="faq-sec">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="sec-entry-hdr-cntlr">
           <div class="sec-entry-hdr">
-            <h3 class="sec-entry-hdr-title fl-h4">Frequently Asked Questions</h3>
+            <?php if(!empty($faqs['title'])) echo('<h3 class="sec-entry-hdr-title fl-h4">'.$faqs['title'].'</h3>'); ?>
             <div class="diamond-module">
               <ul class="reset-list">
                 <li>
@@ -623,7 +593,7 @@ get_header();
                 </li>
               </ul>
             </div>                
-            <p>Amet a aliquam tellus, ut. Fringilla sagittis ut a pellentesque accumsan.<br> Ipsum malesuada vitae fusce semper nec scelerisque a.</p>
+            <?php echo wpautop($faqs['description']); ?>
           </div>
         </div>
         <div class="faq-sec-inner">
@@ -809,151 +779,160 @@ get_header();
     </div>
   </div>
 </section> 
-  <section class="treatment-sec">
-    <div class="treatment-cntlr">
-      <div class="treatment-lft">
-        <div class="hide-md">
-          <div class="diamond-module">
-            <ul class="reset-list">
-              <li>
-                <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-              </li>
-              <li>
-                <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-              </li>
-              <li>
-                <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-              </li>
-            </ul>
-          </div> 
+<?php endif; ?>
+
+<?php 
+$showhidetreatment = get_field('showhidetreatment', $thisID);
+if($showhidetreatment):
+$chtreatment = get_field('chtreatment', $thisID);
+?>
+<section class="treatment-sec">
+  <div class="treatment-cntlr">
+    <div class="treatment-lft">
+      <div class="hide-md">
+        <div class="diamond-module">
+          <ul class="reset-list">
+            <li>
+              <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+            </li>
+            <li>
+              <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+            </li>
+            <li>
+              <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+            </li>
+          </ul>
+        </div> 
+      </div>
+      <h2 class="fl-h4 treatment-title">Choose a Treatment to get started</h2>
+      <div class="treatment-desc hide-md">
+        <p>Nunc sollicitudin diam ante vitae quis ac. Morbi sapien, blandit et cursus suspendisse accumsan. Odio erat etiam purus bibendum fusce tristique aliquam non. </p>
+      </div>
+      <div class="treatment-btn hide-md">
+        <a class="cdc-btn" href="#">Book Appointment Online</a>
+      </div>
+    </div>
+    <div class="treatment-rgt">
+      <div class="custom-prev-next-cntlr">
+        <div class="custom-prev">
+          <span class="arrow-left prv-nxt-btn">
+            <svg class="prev-line" width="66" height="20" viewBox="0 0 66 20" fill="#29467D">
+              <use xlink:href="#prev-line"></use> 
+            </svg>
+          </span>
         </div>
-        <h2 class="fl-h4 treatment-title">Choose a Treatment to get started</h2>
-        <div class="treatment-desc hide-md">
-          <p>Nunc sollicitudin diam ante vitae quis ac. Morbi sapien, blandit et cursus suspendisse accumsan. Odio erat etiam purus bibendum fusce tristique aliquam non. </p>
-        </div>
-        <div class="treatment-btn hide-md">
-          <a class="cdc-btn" href="#">Book Appointment Online</a>
+        <div class="custom-next">
+          <span class="arrow-right prv-nxt-btn">
+            <svg class="next-line" width="66" height="20" viewBox="0 0 66 20" fill="#29467D">
+              <use xlink:href="#next-line"></use> 
+            </svg>
+          </span>
         </div>
       </div>
-      <div class="treatment-rgt">
-        <div class="custom-prev-next-cntlr">
-          <div class="custom-prev">
-            <span class="arrow-left prv-nxt-btn">
-              <svg class="prev-line" width="66" height="20" viewBox="0 0 66 20" fill="#29467D">
-                <use xlink:href="#prev-line"></use> 
-              </svg>
-            </span>
-          </div>
-          <div class="custom-next">
-            <span class="arrow-right prv-nxt-btn">
-              <svg class="next-line" width="66" height="20" viewBox="0 0 66 20" fill="#29467D">
-                <use xlink:href="#next-line"></use> 
-              </svg>
-            </span>
+      <div class="treatment-grids treatmentSlider">
+        <div class="trtmnt-grd-cntlr">
+          <div class="trtmnt-grd">
+            <div class="trtmnt-grd-img-cntlr">
+              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
+              <a href="#" class="overlay-link"></a>
+            </div>
+            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Dental Implants</a></h3>
+            <div class="trtmnt-grd-desc">
+              <p>Viverra morbi massa eu, dolor. Praesent sit elit porttitor morbi fringilla in eget sed elementum. Blandit lacus eu sit integer vel. Quis tincidunt sapien consequat malesuada egestas tempor nunc, et. Ut imperdiet ullamcorper arcu enim, porttitor donec. </p>
+            </div>
           </div>
         </div>
-        <div class="treatment-grids treatmentSlider">
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Dental Implants</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Viverra morbi massa eu, dolor. Praesent sit elit porttitor morbi fringilla in eget sed elementum. Blandit lacus eu sit integer vel. Quis tincidunt sapien consequat malesuada egestas tempor nunc, et. Ut imperdiet ullamcorper arcu enim, porttitor donec. </p>
-              </div>
+        <div class="trtmnt-grd-cntlr">
+          <div class="trtmnt-grd">
+            <div class="trtmnt-grd-img-cntlr">
+              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-02.jpg);"></div>
+              <a href="#" class="overlay-link"></a>
+            </div>
+            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Cosnetic Dentistry</a></h3>
+            <div class="trtmnt-grd-desc">
+              <p>Et pellentesque netus tempus in pharetra rhoncus, sit. Gravida ornare viverra ac at egestas. Viverra lectus in praesent vitae.</p>
             </div>
           </div>
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-02.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Cosnetic Dentistry</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Et pellentesque netus tempus in pharetra rhoncus, sit. Gravida ornare viverra ac at egestas. Viverra lectus in praesent vitae.</p>
-              </div>
+        </div>
+        <div class="trtmnt-grd-cntlr">
+          <div class="trtmnt-grd">
+            <div class="trtmnt-grd-img-cntlr">
+              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-03.jpg);"></div>
+              <a href="#" class="overlay-link"></a>
+            </div>
+            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Private Dentistry</a></h3>
+            <div class="trtmnt-grd-desc">
+              <p>Et gravida tempus, diam non. Cras pulvinar pulvinar amet, at feugiat lorem quis magna. Mi cras praesent in tellus consectetur varius id tristique. Malesuada id enim gravida cras duis.</p>
             </div>
           </div>
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-03.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Private Dentistry</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Et gravida tempus, diam non. Cras pulvinar pulvinar amet, at feugiat lorem quis magna. Mi cras praesent in tellus consectetur varius id tristique. Malesuada id enim gravida cras duis.</p>
-              </div>
+        </div>
+        <div class="trtmnt-grd-cntlr">
+          <div class="trtmnt-grd">
+            <div class="trtmnt-grd-img-cntlr">
+              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
+              <a href="#" class="overlay-link"></a>
+            </div>
+            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Teeth Whitening</a></h3>
+            <div class="trtmnt-grd-desc">
+              <p>Enim maecenas ipsum malesuada ultrices arcu risus lacus tempus pretium. Urna, cursus sapien, tristique sed sed condimentum fusce nisi. Id sit duis viverra orci nisi molestie viverra nisl, neque. Suspendisse sed vehicula arcu cras et. Dignissim sed semper leo sollicitudin malesuada adipiscing faucibus euismod.</p>
             </div>
           </div>
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Teeth Whitening</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Enim maecenas ipsum malesuada ultrices arcu risus lacus tempus pretium. Urna, cursus sapien, tristique sed sed condimentum fusce nisi. Id sit duis viverra orci nisi molestie viverra nisl, neque. Suspendisse sed vehicula arcu cras et. Dignissim sed semper leo sollicitudin malesuada adipiscing faucibus euismod.</p>
-              </div>
+        </div>
+        <div class="trtmnt-grd-cntlr">
+          <div class="trtmnt-grd">
+            <div class="trtmnt-grd-img-cntlr">
+              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
+              <a href="#" class="overlay-link"></a>
+            </div>
+            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Dental Implants</a></h3>
+            <div class="trtmnt-grd-desc">
+              <p>Viverra morbi massa eu, dolor. Praesent sit elit porttitor morbi fringilla in eget sed elementum. Blandit lacus eu sit integer vel. Quis tincidunt sapien consequat malesuada egestas tempor nunc, et. Ut imperdiet ullamcorper arcu enim, porttitor donec. </p>
             </div>
           </div>
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Dental Implants</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Viverra morbi massa eu, dolor. Praesent sit elit porttitor morbi fringilla in eget sed elementum. Blandit lacus eu sit integer vel. Quis tincidunt sapien consequat malesuada egestas tempor nunc, et. Ut imperdiet ullamcorper arcu enim, porttitor donec. </p>
-              </div>
+        </div>
+        <div class="trtmnt-grd-cntlr">
+          <div class="trtmnt-grd">
+            <div class="trtmnt-grd-img-cntlr">
+              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-02.jpg);"></div>
+              <a href="#" class="overlay-link"></a>
+            </div>
+            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Cosnetic Dentistry</a></h3>
+            <div class="trtmnt-grd-desc">
+              <p>Et pellentesque netus tempus in pharetra rhoncus, sit. Gravida ornare viverra ac at egestas. Viverra lectus in praesent vitae.</p>
             </div>
           </div>
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-02.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Cosnetic Dentistry</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Et pellentesque netus tempus in pharetra rhoncus, sit. Gravida ornare viverra ac at egestas. Viverra lectus in praesent vitae.</p>
-              </div>
+        </div>
+        <div class="trtmnt-grd-cntlr">
+          <div class="trtmnt-grd">
+            <div class="trtmnt-grd-img-cntlr">
+              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-03.jpg);"></div>
+              <a href="#" class="overlay-link"></a>
+            </div>
+            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Private Dentistry</a></h3>
+            <div class="trtmnt-grd-desc">
+              <p>Et gravida tempus, diam non. Cras pulvinar pulvinar amet, at feugiat lorem quis magna. Mi cras praesent in tellus consectetur varius id tristique. Malesuada id enim gravida cras duis.</p>
             </div>
           </div>
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-03.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Private Dentistry</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Et gravida tempus, diam non. Cras pulvinar pulvinar amet, at feugiat lorem quis magna. Mi cras praesent in tellus consectetur varius id tristique. Malesuada id enim gravida cras duis.</p>
-              </div>
+        </div>
+        <div class="trtmnt-grd-cntlr">
+          <div class="trtmnt-grd">
+            <div class="trtmnt-grd-img-cntlr">
+              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
+              <a href="#" class="overlay-link"></a>
             </div>
-          </div>
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Teeth Whitening</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Enim maecenas ipsum malesuada ultrices arcu risus lacus tempus pretium. Urna, cursus sapien, tristique sed sed condimentum fusce nisi. Id sit duis viverra orci nisi molestie viverra nisl, neque. Suspendisse sed vehicula arcu cras et. Dignissim sed semper leo sollicitudin malesuada adipiscing faucibus euismod.</p>
-              </div>
+            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Teeth Whitening</a></h3>
+            <div class="trtmnt-grd-desc">
+              <p>Enim maecenas ipsum malesuada ultrices arcu risus lacus tempus pretium. Urna, cursus sapien, tristique sed sed condimentum fusce nisi. Id sit duis viverra orci nisi molestie viverra nisl, neque. Suspendisse sed vehicula arcu cras et. Dignissim sed semper leo sollicitudin malesuada adipiscing faucibus euismod.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<?php endif; ?>
 </div>
+
 <div class="cox-profile-modal">
   <div class="modal fade" id="profile-modal" tabindex="-1" aria-labelledby="" aria-hidden="true">
     <div class="modal-dialog">
