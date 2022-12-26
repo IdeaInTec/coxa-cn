@@ -74,9 +74,9 @@ $link_2 = $banner['link_2'];
             foreach ($team_states as $team_state):
             ?>
             <div class="counter-col-01 counter-col" >
-              <?php if(!empty($team_state['value'])) echo('<h2 class="fl-h1 counter-number-title"><span class="counter-number">30</span>+</h2>'); ?>
+              <?php if(!empty($team_state['value'])) echo('<h2 class="fl-h1 counter-number-title"><span class="counter-number">'.$team_state['value'].'</span>'.$team_state['sufix'].'</h2>'); ?>
               
-              <p>Years Experience</p>
+             <?php echo wpautop($team_state['title']); ?>
             </div> 
             <?php endforeach; ?>
           </div>
