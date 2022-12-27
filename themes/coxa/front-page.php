@@ -13,9 +13,9 @@ $link_2 = $banner['link_2'];
   <div class="banner-black-bg"></div>
   	<?php if(is_array($banner_bg) && !empty($banner_bg) ): ?>
 	  <div class="banner-bg-cntlr bannerBgSlider">
-	  	<?php foreach ($banner_bg as $banner_item): ?>
+	  	<?php foreach ($banner_bg as $banner_item_bg): ?>
 	    <div class="bannerBgSlider-item">
-	      <div class="banner-bg bnrparallaxie parallaxie-bg-Size_auto" style="background-image: url(<?php echo cbv_get_image_src($banner_item); ?>);"></div>
+	      <div class="banner-bg bnrparallaxie parallaxie-bg-Size_auto" style="background-image: url(<?php echo cbv_get_image_src($banner_item_bg); ?>);"></div>
 	    </div>
 	  	<?php endforeach; ?>
 	  </div>
