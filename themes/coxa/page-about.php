@@ -3,50 +3,7 @@
 get_header(); 
 $thisID = get_the_ID();
 ?>
-<section class="page-banner">
-      <div class="banner-black-bg"></div>
-      <div class="page-bnr-bg parallaxie" style="background-image: url(assets/images/about-pg-banner-bg.jpg);"></div>
-      <div class="bnr-vdo d-none">
-        <video id="bt-vdo" autoplay="true" muted="" loop>
-          <source src="assets/images/videos/placeholder-video.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="pg-banner-cntlr">
-              <div class="pg-banner-desc-cntlr">
-                <h1 class="pg-banner-title fl-h3">About Us</h1>
-                <div class="diamond-module">
-                  <ul class="reset-list">
-                    <li>
-                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                    <li>
-                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                    <li>
-                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                  </ul>
-                </div> 
-                <div class="pg-banner-desc">
-                  <p>Experts in Dentistry for over 30 years</p>
-                </div>
-                <div class="pg-banner-btns">
-                  <div class="pg-banner-btn pg-banner-btn-01">
-                    <a class="cdc-btn" href="#">Contact Us</a>
-                  </div>
-                  <div class="pg-banner-btn pg-banner-btn-02">
-                    <a class="cdc-trnsprnt-btn" href="#">Our Practice</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<?php get_template_part('templates/page', 'banner'); ?>
 
 <?php 
 $intro = get_field('intro', $thisID);
