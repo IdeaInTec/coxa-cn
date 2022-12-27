@@ -382,15 +382,19 @@ $wch_link = $why_choose['link'];
 		</div>
 	</div>
 </section>
-<?php endif; ?>
-
+<?php 
+endif; 
+$showhidepr = get_field('showhidepr', HOMEID);
+if($showhidepr):
+$previews = get_field('previews', HOMEID);
+?>
 <section class="review-sec">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="sec-entry-hdr-cntlr">
 					<div class="sec-entry-hdr">
-						<h3 class="sec-entry-hdr-title fl-h4">Patient Reviews</h3>
+						<?php if(!empty($previews['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'. $previews['title'] .'</h2>'); ?>
 						<div class="diamond-module">
 							<ul class="reset-list">
 								<li>
@@ -404,7 +408,7 @@ $wch_link = $why_choose['link'];
 								</li>
 							</ul>
 						</div>                
-						<p>Amet a aliquam tellus, ut. Fringilla sagittis ut a pellentesque accumsan.<br> Ipsum malesuada vitae fusce semper nec scelerisque a.</p>
+						<?php echo wpautop($previews['description']); ?>
 					</div>
 				</div>
 				<div class="review-grids-cntlr">
@@ -530,13 +534,19 @@ $wch_link = $why_choose['link'];
 		</div>
 	</div>
 </section>
-
+<?php 
+endif; 
+$showhidepromo = get_field('showhidepromo', HOMEID);
+if($showhidepromo):
+$hpromo = get_field('hpromo', HOMEID);
+$hpromo_link = $hpromo['link'];
+?>
 <section class="cta-section">
 	<div class="container-lg">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="cta-module-cntlr">
-					<div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/cta-sec-bg.jpg);">
+					<div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo cbv_get_image_src($hpromo['bg_image']); ?>);">
 						<div class="cta-module">
 							<div class="cta-module-des-ctlr">
 								<div class="diamond-module">
@@ -553,14 +563,16 @@ $wch_link = $why_choose['link'];
 									</ul>
 								</div>
 								<div class="cta-module-des">
-									<h2 class="cta-module-des-title fl-h2"><strong>New </strong>to the area?</h2>
-									<p>If you’ve recently moved to Cardiff and need a dentist, or simply fancy changing, get in touch. <br> We are more than happy to talk to you about how we can help.</p>
+									<?php if(!empty($hpromo['title'])) echo('<h2 class="cta-module-des-title fl-h2">'. $hpromo['title'] .'</h2>'); ?>
+									<?php echo wpautop($hpromo['description']); ?>
 								</div>
 							</div>
 							<div class="cta-btn-ctlr">
+								<?php if(is_array($hpromo_link) && !empty($hpromo_link['url'])): ?>
 								<div class="cta-btn">
-									<a href="#" class="cdc-btn">See Our Locaitons</a>                     
+									<?php printf('<a class="cdc-btn" href="%s">%s</a>',$hpromo_link['url'],$hpromo_link['title'] ); ?>
 								</div>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -569,14 +581,19 @@ $wch_link = $why_choose['link'];
 		</div>
 	</div>
 </section>
-
+<?php 
+endif; 
+$showhidefaq = get_field('showhidefaq', HOMEID);
+if($showhidefaq):
+$faqs = get_field('faqs', HOMEID);
+?>
 <section class="faq-sec">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="sec-entry-hdr-cntlr">
 					<div class="sec-entry-hdr">
-						<h3 class="sec-entry-hdr-title fl-h4">Frequently Asked Questions</h3>
+						<?php if(!empty($faqs['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'. $faqs['title'] .'</h2>'); ?>
 						<div class="diamond-module">
 							<ul class="reset-list">
 								<li>
@@ -590,7 +607,7 @@ $wch_link = $why_choose['link'];
 								</li>
 							</ul>
 						</div>                
-						<p>Amet a aliquam tellus, ut. Fringilla sagittis ut a pellentesque accumsan.<br> Ipsum malesuada vitae fusce semper nec scelerisque a.</p>
+						<?php echo wpautop($faqs['description']); ?>
 					</div>
 				</div>
 				<div class="faq-sec-inner">
@@ -776,14 +793,19 @@ $wch_link = $why_choose['link'];
 		</div>
 	</div>
 </section> 
-
+<?php 
+endif; 
+$showhideloc = get_field('showhideloc', HOMEID);
+if($showhideloc):
+$ourloc = get_field('ourloc', HOMEID);
+?>
 <section class="locations-sec">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="sec-entry-hdr-cntlr">
 					<div class="sec-entry-hdr">
-						<h3 class="sec-entry-hdr-title fl-h4">Our Locations</h3>
+						<?php if(!empty($ourloc['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'. $ourloc['title'] .'</h2>'); ?>
 						<div class="diamond-module">
 							<ul class="reset-list">
 								<li>
@@ -797,7 +819,7 @@ $wch_link = $why_choose['link'];
 								</li>
 							</ul>
 						</div>                
-						<p>Amet a aliquam tellus, ut. Fringilla sagittis ut a pellentesque accumsan.<br> Ipsum malesuada vitae fusce semper nec scelerisque a.</p>
+						<?php echo wpautop($ourloc['title']); ?>
 					</div>
 				</div>
 				<div class="locations-sec-inner">
@@ -1081,6 +1103,6 @@ $wch_link = $why_choose['link'];
 		</div>
 	</div>
 </section>
-
+<?php endif; ?>
 
 <?php get_footer(); ?>
