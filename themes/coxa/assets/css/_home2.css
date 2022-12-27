@@ -257,6 +257,9 @@
 .revw-next{
 	right: -35px;
 }
+.cta-module-cntlr{
+    background: #29467D;
+}
 .cta-module-wrp {
     padding: 35px;
     background-repeat: no-repeat!important;
