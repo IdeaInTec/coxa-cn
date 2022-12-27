@@ -1,44 +1,25 @@
 <?php 
 get_header(); 
+$thisID = get_the_ID();
 $banner = get_field('banner', HOMEID);
+$banner_bg = $banner['gallery'];
+$custom_titel = $banner['title'];
+$page_titel = !empty($custom_titel)?$custom_titel:get_the_title($thisID);
+$link_1 = $banner['link_1'];
+$link_2 = $banner['link_2'];
 ?>
 
-<section class="banner ">
+<section class="banner <?php echo (!empty($banner['description'])? '': 'diamond-module-none'); ?>">
   <div class="banner-black-bg"></div>
-  <div class="banner-bg-cntlr bannerBgSlider">
-    <div class="bannerBgSlider-item">
-      <div class="banner-bg bnrparallaxie parallaxie-bg-Size_auto" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/banner-bg.jpg);"></div>
-      <div class="bnr-vdo d-none ">
-        <video id="bt-vdo" autoplay="true" muted="" loop>
-          <source src="assets/images/videos/placeholder-video.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <div class="bannerBgSlider-item">
-      <div class="banner-bg bnrparallaxie parallaxie-bg-Size_auto" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/banner-bg.jpg);"></div>
-      <div class="bnr-vdo d-none ">
-        <video id="bt-vdo" autoplay="true" muted="" loop>
-          <source src="assets/images/videos/placeholder-video.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <div class="bannerBgSlider-item">
-      <div class="banner-bg bnrparallaxie parallaxie-bg-Size_auto" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/banner-bg.jpg);"></div>
-      <div class="bnr-vdo d-none">
-        <video id="bt-vdo" autoplay="true" muted="" loop>
-          <source src="assets/images/videos/placeholder-video.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div class="bannerBgSlider-item">
-    <div class="bannerBgSlider-item">
-      <div class="banner-bg bnrparallaxie parallaxie-bg-Size_auto" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/banner-bg.jpg);"></div>
-      <div class="bnr-vdo d-none ">
-        <video id="bt-vdo" autoplay="true" muted="" loop>
-          <source src="assets/images/videos/placeholder-video.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-  </div>
+  	<?php if(is_array($banner_bg) && !empty($banner_bg) ): ?>
+	  <div class="banner-bg-cntlr bannerBgSlider">
+	  	<?php foreach ($banner_bg as $banner_item): ?>
+	    <div class="bannerBgSlider-item">
+	      <div class="banner-bg bnrparallaxie parallaxie-bg-Size_auto" style="background-image: url(<?php echo cbv_get_image_src($banner_item); ?>);"></div>
+	    </div>
+	  	<?php endforeach; ?>
+	  </div>
+	  <?php endif;?>
   <div class="bnr-prev-next-cntlr">
     <div class="container">
       <div class="row">
@@ -69,7 +50,7 @@ $banner = get_field('banner', HOMEID);
         <div class="col-md-12">
           <div class="banner-cntlr">
             <div class="banner-desc-cntlr">
-              <h2 class="banner-title fl-h1"><span>Smile</span> you’re in safe hands</h2>
+              <h2 class="banner-title fl-h1"><?php echo($page_titel); ?></h2>
               <div class="diamond-module">
                 <ul class="reset-list">
                   <li>
@@ -83,16 +64,17 @@ $banner = get_field('banner', HOMEID);
                   </li>
                 </ul>
               </div> 
-              <div class="banner-desc">
-                <p>With years of experience, cutting-edge technology, dedicated <br> support staff and a luxury environment in South Wales</p>
-              </div>
+              <?php if(!empty($banner['description'])) echo ('<div class="banner-desc">'.wpautop($banner['description']).'</div>'); ?>
               <div class="banner-btns">
+              	<?php if(is_array($link_1) && !empty($link_1['url'])): ?>
                 <div class="banner-btn banner-btn-01">
-                  <a class="cdc-btn" href="#">Why Choose Us</a>
+                  <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link_1['url'],$link_1['title'] ); ?>
                 </div>
+                <?php endif; if(is_array($link_2) && !empty($link_2['url'])):?>
                 <div class="banner-btn banner-btn-02 hide-sm">
-                  <a class="cdc-trnsprnt-btn" href="#">Our Practice</a>
+                  <?php printf('<a class="cdc-trnsprnt-btn" href="%s">%s</a>',$link_2['url'],$link_2['title'] ); ?>
                 </div>
+                <?php endif; ?>
               </div>
             </div>
             <div class="bnr-recommended">
@@ -115,7 +97,7 @@ $banner = get_field('banner', HOMEID);
                   </li>
                 </ul>
               </div>
-              <span>Recommended by our <a href="#">patients</a></span>
+              <span>Recommended by our <a target="_blank" href="#">patients</a></span>
             </div>
           </div>
         </div>
