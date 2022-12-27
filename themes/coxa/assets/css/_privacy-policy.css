@@ -1,7 +1,7 @@
 .privacy-plcy-des{
 	padding: 45px 0 105px;
 }
-.privacy-plcy-des .privacy-plcy-des-title, 
+/*.privacy-plcy-des .privacy-plcy-des-title, 
 .privacy-plcy-des-sub-title{
 	color: #333333;
 	font-weight: 600;
@@ -11,4 +11,22 @@
 }
 .privacy-plcy-des-sub-title{
 	font-size: 16px;
+}*/
+body.privacy-policy h1,
+body.privacy-policy h2,
+body.privacy-policy h3,
+body.privacy-policy h4,
+body.privacy-policy h5,
+body.privacy-policy h6{
+	color: #333333;
+	font-weight: 600;
+}
+body.privacy-policy h6{
+	font-size: 16px;
+}
+body.privacy-policy p{
+	color: #707070;
+}
+body.privacy-policy .pg-banner-title{
+	color: #fff;
 }
