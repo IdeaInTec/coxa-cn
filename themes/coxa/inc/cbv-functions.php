@@ -111,27 +111,14 @@ function get_id_by_page_template( $pagetemplate ){
     }
   return $pageID;
 }
-function product_placeholder($format = 'src'){
-  $placehoder = get_field('placeholder', 'options');
+
+function treatment_placeholder($format = 'src'){
+  $placehoder = get_field('treatment', 'options');
   if( !empty($placehoder) ){
       if( $format == 'src' ){
-        $placeholder = !empty($placehoder['product'])? cbv_get_image_src($placehoder['product']):'';
+        $placeholder = !empty($placehoder)? cbv_get_image_src($placehoder):'';
       }else{
-        $placeholder = !empty($placehoder['product'])? cbv_get_image_tag($placehoder['product']):'';
-      }
-      return $placeholder;
-  }
-  return '';
-
-}
-
-function blog_placeholder($format = 'src'){
-  $placehoder = get_field('placeholder', 'options');
-  if( !empty($placehoder) ){
-      if( $format == 'src' ){
-        $placeholder = !empty($placehoder['blog'])? cbv_get_image_src($placehoder['blog']):'';
-      }else{
-        $placeholder = !empty($placehoder['blog'])? cbv_get_image_tag($placehoder['blog']):'';
+        $placeholder = !empty($placehoder)? cbv_get_image_tag($placehoder):'';
       }
       return $placeholder;
   }
@@ -140,12 +127,12 @@ function blog_placeholder($format = 'src'){
 }
 
 function banner_placeholder($format = 'src'){
-  $placehoder = get_field('placeholder', 'options');
+  $placehoder = get_field('banner', 'options');
   if( !empty($placehoder) ){
       if( $format == 'src' ){
-        $placeholder = !empty($placehoder['banner'])? cbv_get_image_src($placehoder['banner']):'';
+        $placeholder = !empty($placehoder)? cbv_get_image_src($placehoder):'';
       }else{
-        $placeholder = !empty($placehoder['banner'])? cbv_get_image_tag($placehoder['banner']):'';
+        $placeholder = !empty($placehoder)? cbv_get_image_tag($placehoder):'';
       }
       return $placeholder;
   }
