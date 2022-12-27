@@ -83,8 +83,9 @@
 
     <?php 
     $logoID = get_field('logo', 'options');
-    $link = get_field('link', 'options');
-    $link_02 = get_field('link_02', 'options');
+    $desktop_btn = get_field('desktop_btn', 'options');
+    $mbtn_1 = get_field('mbtn_1', 'options');
+    $mbtn_2 = get_field('mbtn_2', 'options');
     $facebook = get_field('facebook', 'options');
     $twitter = get_field('twitter', 'options');
     $instagram = get_field('instagram', 'options');
@@ -110,9 +111,9 @@
                 </div>
                 <div class="topbar-right-cntlr hide-md">
                   <div class="topbar-right">
-                    <?php if (is_array($link) && !empty($link['url'])): ?>
+                    <?php if (is_array($desktop_btn) && !empty($desktop_btn['url'])): ?>
                     <div class="book-appointment-btn">
-                      <?php printf('<a href="%s">%s</a>',$link['url'],$link['title']); ?>
+                      <?php printf('<a href="%s">%s</a>',$desktop_btn['url'],$desktop_btn['title']); ?>
                     </div>
                     <?php endif; ?>
                     <div class="hdr-socials">
@@ -154,12 +155,15 @@
                 </div>
                 <div class="mobile-buttons-cntlr show-md">
                   <div class="mobile-buttons">
+                    <?php if (is_array($mbtn_1) && !empty($mbtn_1['url'])): ?>
                     <div class="mobile-btn-col mobile-btn-col-01">
-                      <a href="#">request a callback</a>
+                      <?php printf('<a href="%s">%s</a>',$mbtn_1['url'],$mbtn_1['title']); ?>
                     </div>
+                    <?php endif; if (is_array($mbtn_2) && !empty($mbtn_2['url'])): ?>
                     <div class="mobile-btn-col mobile-btn-col-02">
-                      <a href="#">Book Online</a>
+                      <?php printf('<a href="%s">%s</a>',$mbtn_2['url'],$mbtn_2['title']); ?>
                     </div>
+                    <?php endif; ?>
                   </div>
                 </div>
               </div>
