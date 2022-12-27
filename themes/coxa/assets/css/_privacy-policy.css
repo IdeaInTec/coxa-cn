@@ -1,18 +1,18 @@
 .privacy-plcy-des{
 	padding: 45px 0 105px;
 }
-body.privacy-policy .privacy-plcy-des h1,
-body.privacy-policy .privacy-plcy-des h2,
-body.privacy-policy .privacy-plcy-des h3,
-body.privacy-policy .privacy-plcy-des h4,
-body.privacy-policy .privacy-plcy-des h5,
-body.privacy-policy .privacy-plcy-des h6{
+.privacy-plcy-des h1,
+.privacy-plcy-des h2,
+.privacy-plcy-des h3,
+.privacy-plcy-des h4,
+.privacy-plcy-des h5,
+.privacy-plcy-des h6{
 	color: #333333;
 	font-weight: 600;
 }
-body.privacy-policy .privacy-plcy-des h6{
+.privacy-plcy-des h6{
 	font-size: 16px;
 }
-body.privacy-policy .privacy-plcy-des p{
+.privacy-plcy-des p{
 	color: #707070;
 }
