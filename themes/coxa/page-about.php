@@ -296,6 +296,8 @@ endif;
 $showhidepr = get_field('showhidepr', $thisID);
 if($showhidepr):
 $previews = get_field('previews', $thisID);
+$link_1 = $previews['link_1'];
+$link_2 = $previews['link_2'];
 ?>
 <section class="review-sec">
   <div class="container">
@@ -457,16 +459,14 @@ $previews = get_field('previews', $thisID);
             </div>
           </div>              
         </div>
+        <?php if(!empty($link_1['url']) && !empty($link_2['url'])): ?>
         <div class="review-grid-btns hide-sm">
           <ul class="reset-list">
-            <li>
-              <a href="#" class="cdc-btn">See Patient Reviews</a>
-            </li>
-            <li>
-              <a href="#" class="cdc-trnsprnt-btn">See Dentist Reviews</a>
-            </li>
+            <?php if(is_array($link_1) && !empty($link_1['url'])) printf('<li><a href="#" class="cdc-btn">See Patient Reviews</a></li>',$link_1['url'],$link_1['title']); ?>
+            <?php if(is_array($link_2) && !empty($link_2['url'])) printf('<li><a href="#" class="cdc-trnsprnt-btn">See Patient Reviews</a></li>',$link_2['url'],$link_2['title']); ?>
           </ul>
         </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
