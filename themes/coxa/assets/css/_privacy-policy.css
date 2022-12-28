@@ -1,14 +1,18 @@
 .privacy-plcy-des{
 	padding: 45px 0 105px;
 }
-.privacy-plcy-des .privacy-plcy-des-title, 
-.privacy-plcy-des-sub-title{
+.privacy-plcy-des h1,
+.privacy-plcy-des h2,
+.privacy-plcy-des h3,
+.privacy-plcy-des h4,
+.privacy-plcy-des h5,
+.privacy-plcy-des h6{
 	color: #333333;
 	font-weight: 600;
 }
+.privacy-plcy-des h6{
+	font-size: 16px;
+}
 .privacy-plcy-des p{
 	color: #707070;
-}
-.privacy-plcy-des-sub-title{
-	font-size: 16px;
 }

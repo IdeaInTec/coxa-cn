@@ -8,86 +8,42 @@ $link_1 = $banner['link_1'];
 $link_2 = $banner['link_2'];
 
 ?>
-
-<section class="page-banner">
-  <?php get_template_part('templates/banner-social', 'media'); ?>
-  <div class="page-banner-wrap">
-    <div class="page-bnr-overlay"></div>
-    <?php if( !empty($banner['upload_video']) ): ?>
-      <div class="bnr-vdo">
-        <video id="bt-vdo" autoplay="true" muted="" loop>
-          <source src="<?php echo $banner['upload_video']; ?>" type="video/mp4">
-          </video>
-      </div>
-    <?php else: ?>
-      <?php if( !empty($desktop_banner) ): ?>
-      <div class="page-banner-bg inline-bg hide-xs" style="background-image: url('<?php echo $desktop_banner; ?>')"></div>
-      <?php endif; if( !empty($mobiel_banner) ):?>
-      <div class="page-banner-bg inline-bg show-xs" style="background-image: url('<?php echo $mobiel_banner; ?>')"></div>
-      <?php endif; ?>
-    <?php endif; ?>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="page-banner-cntlr">
-            <h1 class="fl-h1-54 page-banner-title" data-aos="fade-up4" data-aos-delay="200"><?php echo $page_titel; ?></h1>
-            <div class="breadcrumb-cntlr hide-sm" data-aos="fade-up5" data-aos-delay="300">
-              <ul class="reset-list clearfix">
-                <li class="home">
-                  <a href="<?php cbv_site_url(); ?>">
-                    <span class="item"><?php _e('Home', 'printout'); ?></span>
-                  </a>
-                </li>
-                <li class="active">
-                  <span><?php the_title(); ?></span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="page-banner">
+<section class="page-banner <?php echo (!empty($banner['description'])? '': 'diamond-module-none'); ?>">
   <div class="banner-black-bg"></div>
-  <div class="page-bnr-bg parallaxie" style="background-image: url(assets/images/about-pg-banner-bg.jpg);"></div>
-  <div class="bnr-vdo d-none">
-    <video id="bt-vdo" autoplay="true" muted="" loop>
-      <source src="assets/images/videos/placeholder-video.mp4" type="video/mp4">
-      </video>
-    </div>
+      <?php if( !empty($banner_bg) ): ?>
+      <div class="page-bnr-bg parallaxie" style="background-image: url('<?php echo $banner_bg; ?>')"></div>
+      <?php endif;?>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="pg-banner-cntlr">
             <div class="pg-banner-desc-cntlr">
-              <h1 class="pg-banner-title fl-h3">About Us</h1>
+              <h1 class="pg-banner-title fl-h3"><?php echo ($page_titel); ?></h1>
               <div class="diamond-module">
                 <ul class="reset-list">
                   <li>
-                    <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                   </li>
                   <li>
-                    <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                   </li>
                   <li>
-                    <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                   </li>
                 </ul>
               </div> 
-              <div class="pg-banner-desc">
-                <p>Experts in Dentistry for over 30 years</p>
-              </div>
+              <?php if(!empty($banner['description'])) echo ('<div class="pg-banner-desc">'.wpautop($banner['description']).'</div>'); ?>
               <div class="pg-banner-btns">
-                <div class="pg-banner-btn pg-banner-btn-01">
-                  <a class="cdc-btn" href="#">Contact Us</a>
-                </div>
-                <div class="pg-banner-btn pg-banner-btn-02">
-                  <a class="cdc-trnsprnt-btn" href="#">Our Practice</a>
-                </div>
+                <div class="pg-banner-btns">
+                  <?php if(is_array($link_1) && !empty($link_1['url'])): ?>
+                  <div class="pg-banner-btn pg-banner-btn-01">
+                    <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link_1['url'],$link_1['title'] ); ?>
+                  </div>
+                  <?php endif; if(is_array($link_2) && !empty($link_2['url'])):?>
+                  <div class="pg-banner-btn pg-banner-btn-02">
+                    <?php printf('<a class="cdc-trnsprnt-btn" href="%s">%s</a>',$link_2['url'],$link_2['title'] ); ?>
+                  </div>
+                  <?php endif; ?>
               </div>
             </div>
           </div>

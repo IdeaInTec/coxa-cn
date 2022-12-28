@@ -3,59 +3,12 @@
 get_header(); 
 $thisID = get_the_ID();
 ?>
-<section class="page-banner">
-      <div class="banner-black-bg"></div>
-      <div class="page-bnr-bg parallaxie" style="background-image: url(assets/images/about-pg-banner-bg.jpg);"></div>
-      <div class="bnr-vdo d-none">
-        <video id="bt-vdo" autoplay="true" muted="" loop>
-          <source src="assets/images/videos/placeholder-video.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="pg-banner-cntlr">
-              <div class="pg-banner-desc-cntlr">
-                <h1 class="pg-banner-title fl-h3">About Us</h1>
-                <div class="diamond-module">
-                  <ul class="reset-list">
-                    <li>
-                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                    <li>
-                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                    <li>
-                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                  </ul>
-                </div> 
-                <div class="pg-banner-desc">
-                  <p>Experts in Dentistry for over 30 years</p>
-                </div>
-                <div class="pg-banner-btns">
-                  <div class="pg-banner-btn pg-banner-btn-01">
-                    <a class="cdc-btn" href="#">Contact Us</a>
-                  </div>
-                  <div class="pg-banner-btn pg-banner-btn-02">
-                    <a class="cdc-trnsprnt-btn" href="#">Our Practice</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+<?php get_template_part('templates/page', 'banner'); ?>
+<div class="about-page-con-cntlr"> 
 <?php 
 $intro = get_field('intro', $thisID);
-$description = $intro['description'];
-$image_1 = $intro['image_1'];
-$image_2 = $intro['image_2'];
 $link = $intro['link'];
-?>
-<div class="about-page-con-cntlr">      
+?>     
   <section class="about-intro-sec has-inline-bg double-image-module">
     <div class="container">
       <div class="row">
@@ -64,14 +17,14 @@ $link = $intro['link'];
             <div class="abtis-img-text-row-inr">
               <div class="abtis-img-txt-col abtis-row-img">
                 <div class="abtis-row-img-inner">
-                  <?php if(!empty($image_1)): ?>
+                  <?php if(!empty($intro['image_1'])): ?>
                     <div class="abtis-row-main-img-cntrl">
-                      <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($image_1); ?>);">
+                      <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($intro['image_1']); ?>);">
                       </div>
                     </div>
-                  <?php endif; if(!empty($image_2)): ?>
+                  <?php endif; if(!empty($intro['image_2'])): ?>
                   <div class="abtis-row-sub-img-cntlr">
-                    <div class="abtis-row-sub-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($image_2); ?>);">
+                    <div class="abtis-row-sub-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($intro['image_2']); ?>);">
                     </div>
                   </div>
                 <?php endif; ?>
@@ -93,7 +46,7 @@ $link = $intro['link'];
                   </ul>
                 </div>
                 <?php if(!empty($intro['title'])) echo('<h2 class="fl-h4">'.$intro['title'].'</h2>'); ?>
-                <?php echo wpautop($description); ?>
+                <?php echo wpautop($intro['description']); ?>
                 <?php if(is_array($link) && !empty($link['url'])): ?>
                 <div class="abtis-intro-des-btn">
                   <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title'] ); ?>
@@ -274,7 +227,7 @@ if($showhidedifferent):
 $showhidewch = get_field('showhidewch', $thisID);
 if($showhidewch):
   ?>
-<section class="why-choose-sec parallaxie" style="background-image: url(assets/images/why-choose-bg-img.png);">
+<section class="why-choose-sec parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/why-choose-bg-img.png);">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -284,13 +237,13 @@ if($showhidewch):
                 <div class="diamond-module">
                   <ul class="reset-list">
                     <li>
-                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                     </li>
                     <li>
-                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                     </li>
                     <li>
-                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                     </li>
                   </ul>
                 </div>                
@@ -303,7 +256,7 @@ if($showhidewch):
                   <div class="why-choose-grid-item">
                     <div class="why-choose-grid-img">
                       <i>
-                        <img src="assets/images/why-ch-grd-icon-1.svg" alt="">
+                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-1.svg" alt="">
                       </i>
                     </div>
                     <div class="why-choose-grid-des mHc">
@@ -316,7 +269,7 @@ if($showhidewch):
                   <div class="why-choose-grid-item">
                     <div class="why-choose-grid-img">
                       <i>
-                        <img src="assets/images/why-ch-grd-icon-2.svg" alt="">
+                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-2.svg" alt="">
                       </i>
                     </div>
                     <div class="why-choose-grid-des mHc">
@@ -329,7 +282,7 @@ if($showhidewch):
                   <div class="why-choose-grid-item">
                     <div class="why-choose-grid-img">
                       <i>
-                        <img src="assets/images/why-ch-grd-icon-3.svg" alt="">
+                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-3.svg" alt="">
                       </i>
                     </div>
                     <div class="why-choose-grid-des mHc">
@@ -342,7 +295,7 @@ if($showhidewch):
                   <div class="why-choose-grid-item">
                     <div class="why-choose-grid-img">
                       <i>
-                        <img src="assets/images/why-ch-grd-icon-4.svg" alt="">
+                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-4.svg" alt="">
                       </i>
                     </div>
                     <div class="why-choose-grid-des mHc">
@@ -355,7 +308,7 @@ if($showhidewch):
                   <div class="why-choose-grid-item">
                     <div class="why-choose-grid-img">
                       <i>
-                        <img src="assets/images/why-ch-grd-icon-5.svg" alt="">
+                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-5.svg" alt="">
                       </i>
                     </div>
                     <div class="why-choose-grid-des mHc">
@@ -368,7 +321,7 @@ if($showhidewch):
                   <div class="why-choose-grid-item">
                     <div class="why-choose-grid-img">
                       <i>
-                        <img src="assets/images/why-ch-grd-icon-6.svg" alt="">
+                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-6.svg" alt="">
                       </i>
                     </div>
                     <div class="why-choose-grid-des mHc">
@@ -381,7 +334,7 @@ if($showhidewch):
                   <div class="why-choose-grid-item">
                     <div class="why-choose-grid-img">
                       <i>
-                        <img src="assets/images/why-ch-grd-icon-7-1.png" alt="">
+                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-7-1.png" alt="">
                       </i>
                     </div>
                     <div class="why-choose-grid-des mHc">
@@ -394,7 +347,7 @@ if($showhidewch):
                   <div class="why-choose-grid-item">
                     <div class="why-choose-grid-img">
                       <i>
-                        <img src="assets/images/why-ch-grd-icon-8.svg" alt="">
+                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-8.svg" alt="">
                       </i>
                     </div>
                     <div class="why-choose-grid-des mHc">
@@ -415,7 +368,7 @@ if($showhidewch):
 <?php endif; ?>
 
 <?php 
-$showhidepr = get_field('showhidewch', $thisID);
+$showhidepr = get_field('showhidepr', $thisID);
 if($showhidepr):
   $previews = get_field('previews', $thisID);
   ?>
