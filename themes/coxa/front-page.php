@@ -7,11 +7,12 @@ $custom_titel = $banner['title'];
 $page_titel = !empty($custom_titel)?$custom_titel:get_the_title($thisID);
 $link_1 = $banner['link_1'];
 $link_2 = $banner['link_2'];
-?>
 
+?>
+<?php if(is_array($banner_bg) && !empty($banner_bg) ): ?>
 <section class="banner <?php echo (!empty($banner['description'])? '': 'diamond-module-none'); ?>">
   <div class="banner-black-bg"></div>
-  	<?php if(is_array($banner_bg) && !empty($banner_bg) ): ?>
+  	
 	  <div class="banner-bg-cntlr bannerBgSlider">
 	  	<?php foreach ($banner_bg as $banner_item_bg): ?>
 	    <div class="bannerBgSlider-item">
@@ -19,7 +20,7 @@ $link_2 = $banner['link_2'];
 	    </div>
 	  	<?php endforeach; ?>
 	  </div>
-	  <?php endif;?>
+	  
   <div class="bnr-prev-next-cntlr">
     <div class="container">
       <div class="row">
@@ -105,6 +106,7 @@ $link_2 = $banner['link_2'];
     </div>
   </div>
 </section>
+<?php endif;?>
 <?php 
 $showhidetreatment = get_field('showhidetreatment', HOMEID);
 if($showhidetreatment):
@@ -260,6 +262,7 @@ endif;
 $intro = get_field('intro', HOMEID);
 $intro_link_1 = $intro['link_1'];
 $intro_link_2 = $intro['link_2'];
+if(!empty($intro['title']) && !empty($intro['description'])):
 ?>
 <section class="intro-sec">
 	<div class="container">
@@ -302,13 +305,14 @@ $intro_link_2 = $intro['link_2'];
 	</div>
 </section>
 <?php 
+endif;
 $showhidewch = get_field('showhidewch', HOMEID);
 if($showhidewch):
 $why_choose = get_field('why_choose', HOMEID);
 $wch_link = $why_choose['link'];
 ?>
 
-<section class="why-choose-sec parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/why-choose-bg-img.png);">
+<section class="why-choose-sec parallaxie" style="background-image: url(<?php echo cbv_get_image_src($why_choose['background_image']); ?>);">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -335,6 +339,7 @@ $wch_link = $why_choose['link'];
 					<div class="why-choose-grids">
 						<?php 
 						$features = $why_choose['features'];
+						if(!empty($features)):
 						foreach ($features as $feature):
 						?>
 						<div class="why-choose-grid-col">
@@ -352,7 +357,7 @@ $wch_link = $why_choose['link'];
 								</div>
 							</div>
 						</div>
-						<?php endforeach; ?>
+						<?php  endforeach; endif; ?>
 					</div>
 						<?php if(is_array($wch_link) && !empty($wch_link['url'])): ?>
 						<div class="why-choose-grid-btn hide-sm">

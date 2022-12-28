@@ -190,6 +190,12 @@
 	margin-bottom: 20px;
 	font-weight: 600;
 }
+.diamond-module-none .pg-banner-title{
+	margin-bottom: 0;
+}
+.diamond-module-none .pg-banner-btns{
+	margin-top: 30px!important;
+}
 .pg-banner-title{
 	margin-bottom: 16px;
 }

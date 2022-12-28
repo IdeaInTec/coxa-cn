@@ -8,6 +8,7 @@ $thisID = get_the_ID();
 <?php 
 $intro = get_field('intro', $thisID);
 $link = $intro['link'];
+  if(!empty($intro['title']) && !empty($intro['description']) && !empty($link['url'])):
 ?>     
   <section class="about-intro-sec has-inline-bg double-image-module">
     <div class="container">
@@ -60,8 +61,8 @@ $link = $intro['link'];
   </div>
 </div>
 </section>
-
 <?php 
+endif;
 $showhideteam = get_field('showhideteam', $thisID);
 if($showhideteam):
   $ourteam = get_field('ourteam', $thisID);
@@ -226,145 +227,67 @@ if($showhidedifferent):
 <?php 
 $showhidewch = get_field('showhidewch', $thisID);
 if($showhidewch):
-  ?>
-<section class="why-choose-sec parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/why-choose-bg-img.png);">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="sec-entry-hdr-cntlr">
-              <div class="sec-entry-hdr">
-                <h3 class="sec-entry-hdr-title fl-h4">Why Choose Us?</h3>
-                <div class="diamond-module">
-                  <ul class="reset-list">
-                    <li>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                    <li>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                    <li>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                  </ul>
-                </div>                
-                <p>Amet a aliquam tellus, ut. Fringilla sagittis ut a pellentesque accumsan.<br> Ipsum malesuada vitae fusce semper nec scelerisque a.</p>
-              </div>
-            </div>
-            <div class="why-choose-grids-cntlr">
-              <div class="why-choose-grids">
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-1.svg" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">Free Consultation</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-2.svg" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">Bespoke Treatments</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-3.svg" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">Locally Owned</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-4.svg" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">Modern Equipment</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-5.svg" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">Rated 5 Stars</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-6.svg" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">Friendly Team</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-7-1.png" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">30 Years Experience</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-8.svg" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">Luxury Practice</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="why-choose-grid-btn hide-sm">
-                <a href="#" class="cdc-btn">Find More Reasons</a>
-              </div>
-            </div>
+$why_choose = get_field('why_choose', HOMEID);
+$wch_link = $why_choose['link'];
+?>
+
+<section class="why-choose-sec parallaxie" style="background-image: url(<?php echo cbv_get_image_src($why_choose['background_image']); ?>);">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sec-entry-hdr-cntlr">
+          <div class="sec-entry-hdr">
+            <?php if(!empty($why_choose['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'. $why_choose['title'] .'</h2>'); ?>
+            <div class="diamond-module">
+              <ul class="reset-list">
+                <li>
+                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                </li>
+                <li>
+                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                </li>
+                <li>
+                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                </li>
+              </ul>
+            </div>                
+            <?php echo wpautop($why_choose['description']); ?>
           </div>
         </div>
+        <div class="why-choose-grids-cntlr">
+          <div class="why-choose-grids">
+            <?php 
+            $features = $why_choose['features'];
+            if(!empty($features)):
+            foreach ($features as $feature):
+            ?>
+            <div class="why-choose-grid-col">
+              <div class="why-choose-grid-item">
+                <?php if(!empty($feature['icon'])): ?>
+                <div class="why-choose-grid-img">
+                  <i>
+                    <?php echo cbv_get_image_tag($feature['icon']); ?>
+                  </i>
+                </div>
+                <?php endif; ?>
+                <div class="why-choose-grid-des mHc">
+                  <?php if(!empty($feature['title'])) echo('<h4 class="why-choose-grid-title fl-h5 mHc1">'. $feature['title'] .'</h4>'); ?>
+                  <?php echo wpautop($feature['description']); ?>
+                </div>
+              </div>
+            </div>
+            <?php  endforeach; endif; ?>
+          </div>
+            <?php if(is_array($wch_link) && !empty($wch_link['url'])): ?>
+            <div class="why-choose-grid-btn hide-sm">
+              <?php printf('<a class="cdc-btn" href="%s">%s</a>',$wch_link['url'],$wch_link['title'] ); ?>
+            </div>
+            <?php endif; ?>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 <?php endif; ?>
 
 <?php 
