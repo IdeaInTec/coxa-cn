@@ -30,7 +30,7 @@ $thisID = get_the_ID();
                     </li>
                   </ul>
                 </div>                
-               <?php echo wpautop($intro['description']); ?>                    
+               <?php if(!empty($intro['description'])) echo wpautop($intro['description']); ?>                    
               </div>
               <div class="fees-tab">
                 <div class="fees-tab-hdr show-sm">

@@ -117,57 +117,24 @@ $i = 1;
 foreach ($blocks as $block):
 $link = $block['link'];
 ?>
-	<section class="about-intro-sec has-inline-bg">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="abtis-img-text-row <?php echo ($i%2 == 1)? 'abtis-lft-img-row': null; ?>">
-						<div class="abtis-img-text-row-inr">
-							<?php if(!empty($block['image']) && isset($block['image'])): ?>
-							<div class="abtis-img-txt-col abtis-row-img">
-								<div class="abtis-row-img-inner">
-									<div class="abtis-row-main-img-cntrl">
-										<div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($block['image']); ?>);">
-										</div>
+<section class="about-intro-sec has-inline-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="abtis-img-text-row <?php echo ($i%2 == 1)? 'abtis-lft-img-row': null; ?>">
+					<div class="abtis-img-text-row-inr">
+						<?php if(!empty($block['image']) && isset($block['image'])): ?>
+						<div class="abtis-img-txt-col abtis-row-img">
+							<div class="abtis-row-img-inner">
+								<div class="abtis-row-main-img-cntrl">
+									<div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($block['image']); ?>);">
 									</div>
 								</div>
 							</div>
-							<?php endif; ?>
-							<div class="abtis-img-txt-col abtis-row-text">
-								<div class="abtis-row-text-inr">
-									<div class="diamond-module">
-										<ul class="reset-list">
-											<li>
-												<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-											</li>
-											<li>
-												<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-											</li>
-											<li>
-												<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-											</li>
-										</ul>
-									</div>
-									<?php if(!empty($block['title'])) echo('<h2 class="fl-h4">'.$block['title'].'</h2>'); ?>
-									<?php if(!empty($block['description'])) echo wpautop($block['description']); ?>
-									<?php if(is_array($link) && !empty($link['url'])) printf('<div class="abtis-intro-des-btn"><a class="cdc-btn" href="%s">%s</a></div>',$link['url'],$link['title']); ?>
-								</div>                          
-							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-<?php $i++; endforeach; endif; ?>
-
-	<section class="practice-gallery why-choose-sec  parallaxie parallaxie-bg-Size_auto" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/why-choose-bg-img.jpg);">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="sec-entry-hdr-cntlr">
-						<div class="sec-entry-hdr">
-							<h2 class="sec-entry-hdr-title fl-h4">Practice Gallery</h2>
+					<?php endif; ?>
+					<div class="abtis-img-txt-col abtis-row-text">
+						<div class="abtis-row-text-inr">
 							<div class="diamond-module">
 								<ul class="reset-list">
 									<li>
@@ -180,161 +147,206 @@ $link = $block['link'];
 										<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 									</li>
 								</ul>
-							</div>                
-							<p>Amet a aliquam tellus, ut. Fringilla sagittis ut a pellentesque accumsan.<br> Ipsum malesuada vitae fusce semper nec scelerisque a.</p>
-						</div>
-					</div>
-					<div class="practice-gallery-grids-cntlr">
-						<div class="practice-gallery-grids">
-							<div class="practice-gallery-grid-col">
-								<div class="practice-gallery-grid-item">
-									<div class="practice-gallery-grid-img-cntlr">
-										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg);"></div>
-									</div>
-									<div class="practice-gallery-grid-des">
-										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Teatment Room</a></h3>
-									</div>
-								</div>
 							</div>
-							<div class="practice-gallery-grid-col">
-								<div class="practice-gallery-grid-item">
-									<div class="practice-gallery-grid-img-cntlr">
-										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-02.jpg);"></div>
-									</div>
-									<div class="practice-gallery-grid-des">
-										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Dental Implant Room</a></h3>
-									</div>
-								</div>
-							</div>
-							<div class="practice-gallery-grid-col">
-								<div class="practice-gallery-grid-item">
-									<div class="practice-gallery-grid-img-cntlr">
-										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-03.jpg);"></div>
-									</div>
-									<div class="practice-gallery-grid-des">
-										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Cosmetic Dentistry Room</a></h3>
-									</div>
-								</div>
-							</div>
-							<div class="practice-gallery-grid-col">
-								<div class="practice-gallery-grid-item">
-									<div class="practice-gallery-grid-img-cntlr">
-										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-04.jpg);"></div>
-									</div>
-									<div class="practice-gallery-grid-des">
-										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Specialist Chair</a></h3>
-									</div>
-								</div>
-							</div>
-							<div class="practice-gallery-grid-col">
-								<div class="practice-gallery-grid-item">
-									<div class="practice-gallery-grid-img-cntlr">
-										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-11.jpg);"></div>
-									</div>
-									<div class="practice-gallery-grid-des">
-										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Teatment Room</a></h3>
-									</div>
-								</div>
-							</div>
-							<div class="practice-gallery-grid-col">
-								<div class="practice-gallery-grid-item">
-									<div class="practice-gallery-grid-img-cntlr">
-										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-05.jpg);"></div>
-									</div>
-									<div class="practice-gallery-grid-des">
-										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Dental Implant Room</a></h3>
-									</div>
-								</div>
-							</div>
-							<div class="practice-gallery-grid-col">
-								<div class="practice-gallery-grid-item">
-									<div class="practice-gallery-grid-img-cntlr">
-										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-12.jpg);"></div>
-									</div>
-									<div class="practice-gallery-grid-des">
-										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Cosmetic Dentistry Room</a></h3>
-									</div>
-								</div>
-							</div>
-							<div class="practice-gallery-grid-col">
-								<div class="practice-gallery-grid-item">
-									<div class="practice-gallery-grid-img-cntlr">
-										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-06.jpg);"></div>
-									</div>
-									<div class="practice-gallery-grid-des">
-										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Specialist Chair</a></h3>
-									</div>
-								</div>
-							</div>
-							<div class="practice-gallery-grid-col">
-								<div class="practice-gallery-grid-item">
-									<div class="practice-gallery-grid-img-cntlr">
-										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-07.jpg);"></div>
-									</div>
-									<div class="practice-gallery-grid-des">
-										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Teatment Room</a></h3>
-									</div>
-								</div>
-							</div>
-							<div class="practice-gallery-grid-col">
-								<div class="practice-gallery-grid-item">
-									<div class="practice-gallery-grid-img-cntlr">
-										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-08.jpg);"></div>
-									</div>
-									<div class="practice-gallery-grid-des">
-										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Dental Implant Room</a></h3>
-									</div>
-								</div>
-							</div>
-							<div class="practice-gallery-grid-col">
-								<div class="practice-gallery-grid-item">
-									<div class="practice-gallery-grid-img-cntlr">
-										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-09.jpg);"></div>
-									</div>
-									<div class="practice-gallery-grid-des">
-										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Cosmetic Dentistry Room</a></h3>
-									</div>
-								</div>
-							</div>
-							<div class="practice-gallery-grid-col">
-								<div class="practice-gallery-grid-item">
-									<div class="practice-gallery-grid-img-cntlr">
-										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-10.jpg);"></div>
-									</div>
-									<div class="practice-gallery-grid-des">
-										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Specialist Chair</a></h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="practice-gallery-grid-btn">
-							<a href="#" class="cdc-btn">See the full gallery</a>
-						</div>
+							<?php if(!empty($block['title'])) echo('<h2 class="fl-h4">'.$block['title'].'</h2>'); ?>
+							<?php if(!empty($block['description'])) echo wpautop($block['description']); ?>
+							<?php if(is_array($link) && !empty($link['url'])) printf('<div class="abtis-intro-des-btn"><a class="cdc-btn" href="%s">%s</a></div>',$link['url'],$link['title']); ?>
+						</div>                          
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-
+	</div>
+</div>
+</section>
+<?php $i++; endforeach; endif; ?>
+<?php 
+$showhidegallery = get_field('showhidegallery', $thisID);
+if($showhidegallery):
+$gallery = get_field('gallery', $thisID);
+$link = $gallery['link']
+?>
+<section class="practice-gallery why-choose-sec  parallaxie parallaxie-bg-Size_auto" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/why-choose-bg-img.jpg);">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="sec-entry-hdr-cntlr">
+					<div class="sec-entry-hdr">
+						<?php if(!empty($gallery['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'.$gallery['title'].'</h2>'); ?>
+						<div class="diamond-module">
+							<ul class="reset-list">
+								<li>
+									<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+								</li>
+								<li>
+									<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+								</li>
+								<li>
+									<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+								</li>
+							</ul>
+						</div>                
+						<?php if(!empty($gallery['description'])) echo wpautop($gallery['description']); ?>
+					</div>
+				</div>
+				<div class="practice-gallery-grids-cntlr">
+					<div class="practice-gallery-grids">
+						<div class="practice-gallery-grid-col">
+							<div class="practice-gallery-grid-item">
+								<div class="practice-gallery-grid-img-cntlr">
+									<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+									<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg);"></div>
+								</div>
+								<div class="practice-gallery-grid-des">
+									<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Teatment Room</a></h3>
+								</div>
+							</div>
+						</div>
+						<div class="practice-gallery-grid-col">
+							<div class="practice-gallery-grid-item">
+								<div class="practice-gallery-grid-img-cntlr">
+									<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+									<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-02.jpg);"></div>
+								</div>
+								<div class="practice-gallery-grid-des">
+									<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Dental Implant Room</a></h3>
+								</div>
+							</div>
+						</div>
+						<div class="practice-gallery-grid-col">
+							<div class="practice-gallery-grid-item">
+								<div class="practice-gallery-grid-img-cntlr">
+									<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+									<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-03.jpg);"></div>
+								</div>
+								<div class="practice-gallery-grid-des">
+									<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Cosmetic Dentistry Room</a></h3>
+								</div>
+							</div>
+						</div>
+						<div class="practice-gallery-grid-col">
+							<div class="practice-gallery-grid-item">
+								<div class="practice-gallery-grid-img-cntlr">
+									<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+									<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-04.jpg);"></div>
+								</div>
+								<div class="practice-gallery-grid-des">
+									<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Specialist Chair</a></h3>
+								</div>
+							</div>
+						</div>
+						<div class="practice-gallery-grid-col">
+							<div class="practice-gallery-grid-item">
+								<div class="practice-gallery-grid-img-cntlr">
+									<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+									<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-11.jpg);"></div>
+								</div>
+								<div class="practice-gallery-grid-des">
+									<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Teatment Room</a></h3>
+								</div>
+							</div>
+						</div>
+						<div class="practice-gallery-grid-col">
+							<div class="practice-gallery-grid-item">
+								<div class="practice-gallery-grid-img-cntlr">
+									<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+									<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-05.jpg);"></div>
+								</div>
+								<div class="practice-gallery-grid-des">
+									<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Dental Implant Room</a></h3>
+								</div>
+							</div>
+						</div>
+						<div class="practice-gallery-grid-col">
+							<div class="practice-gallery-grid-item">
+								<div class="practice-gallery-grid-img-cntlr">
+									<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+									<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-12.jpg);"></div>
+								</div>
+								<div class="practice-gallery-grid-des">
+									<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Cosmetic Dentistry Room</a></h3>
+								</div>
+							</div>
+						</div>
+						<div class="practice-gallery-grid-col">
+							<div class="practice-gallery-grid-item">
+								<div class="practice-gallery-grid-img-cntlr">
+									<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+									<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-06.jpg);"></div>
+								</div>
+								<div class="practice-gallery-grid-des">
+									<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Specialist Chair</a></h3>
+								</div>
+							</div>
+						</div>
+						<div class="practice-gallery-grid-col">
+							<div class="practice-gallery-grid-item">
+								<div class="practice-gallery-grid-img-cntlr">
+									<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+									<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-07.jpg);"></div>
+								</div>
+								<div class="practice-gallery-grid-des">
+									<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Teatment Room</a></h3>
+								</div>
+							</div>
+						</div>
+						<div class="practice-gallery-grid-col">
+							<div class="practice-gallery-grid-item">
+								<div class="practice-gallery-grid-img-cntlr">
+									<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+									<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-08.jpg);"></div>
+								</div>
+								<div class="practice-gallery-grid-des">
+									<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Dental Implant Room</a></h3>
+								</div>
+							</div>
+						</div>
+						<div class="practice-gallery-grid-col">
+							<div class="practice-gallery-grid-item">
+								<div class="practice-gallery-grid-img-cntlr">
+									<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+									<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-09.jpg);"></div>
+								</div>
+								<div class="practice-gallery-grid-des">
+									<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Cosmetic Dentistry Room</a></h3>
+								</div>
+							</div>
+						</div>
+						<div class="practice-gallery-grid-col">
+							<div class="practice-gallery-grid-item">
+								<div class="practice-gallery-grid-img-cntlr">
+									<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+									<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-10.jpg);"></div>
+								</div>
+								<div class="practice-gallery-grid-des">
+									<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Specialist Chair</a></h3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php if(is_array($link) && !empty($link['url'])): ?>
+					<div class="practice-gallery-grid-btn">
+						<?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title']); ?>
+					</div>
+					<?php endif; ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<?php 
+endif; 
+$showhideloc = get_field('showhideloc', $thisID);
+if($showhideloc):
+	$locations = get_field('locations', $thisID);
+	?>
 	<section class="locations-sec">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="sec-entry-hdr-cntlr">
 						<div class="sec-entry-hdr">
-							<h3 class="sec-entry-hdr-title fl-h4">Discover Our Dental Practices</h3>
+							<?php if(!empty($locations['title'])) echo('<h3 class="sec-entry-hdr-title fl-h4">'.$locations['title'].'</h3>'); ?>
 							<div class="diamond-module">
 								<ul class="reset-list">
 									<li>
@@ -348,7 +360,7 @@ $link = $block['link'];
 									</li>
 								</ul>
 							</div>                
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec, sed amet eget dui. Pharetra, magnis lacus tellus, nunc. Hendrerit sit consequat et sem eget scelerisque nunc ac lobortis. Consequat, velit hac vulputate non suspendisse arcu blandit lorem aliquam. Fermentum, etiam risus vestibulum a vel. Scelerisque diam facilisi morbi justo, ultrices amet. Et sociis dui facilisis sociis elit scelerisque metus ut. Elit amet nunc, tristique sit in.</p>
+							<?php if(!empty($locations['description'])) echo wpautop($locations['description']); ?>
 						</div>
 					</div>
 					<div class="locations-sec-inner">
@@ -633,12 +645,19 @@ $link = $block['link'];
 		</div>
 	</section>
 
+	<?php 
+endif; 
+$showhidepromo = get_field('showhidepromo', $thisID); 
+if($showhidepromo):
+	$promo = get_field('promo', $thisID); 
+	$promo_link = $promo['link'];
+	?>
 	<section class="cta-section">
 		<div class="container-lg">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="cta-module-cntlr">
-						<div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/cta-sec-bg2.jpg);">
+						<div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo cbv_get_image_src($promo['bg_image']); ?>);">
 							<div class="cta-module">
 								<div class="cta-module-des-ctlr">
 									<div class="diamond-module">
@@ -655,30 +674,38 @@ $link = $block['link'];
 										</ul>
 									</div>
 									<div class="cta-module-des">
-										<h2 class="cta-module-des-title fl-h2"><strong>Welcoming </strong>New Patients</h2>
-										<p>If you’ve recently moved to Cardiff and need a dentist, or simply fancy changing, get in touch. <br> We are more than happy to talk to you about how we can help.</p>
+										<?php if(!empty($promo['title'])) echo('<h2 class="cta-module-des-title fl-h2">'. $promo['title'] .'</h2>'); ?>
+										<?php echo wpautop($promo['description']); ?>
 									</div>
 								</div>
 								<div class="cta-btn-ctlr">
+									<?php if(is_array($promo_link) && !empty($promo_link['url'])): ?>
 									<div class="cta-btn">
-										<a href="#" class="cdc-btn">Contact Us</a>                     
+										<?php printf('<a class="cdc-btn" href="%s">%s</a>',$promo_link['url'],$promo_link['title'] ); ?>
 									</div>
-								</div>
+								<?php endif; ?>
 							</div>
 						</div>
-					</div>            
-				</div>
+					</div>
+				</div>            
 			</div>
 		</div>
-	</section>
-
+	</div>
+</section>
+<?php 
+endif;
+$showhideteam = get_field('showhideteam', $thisID); 
+if($showhideteam):
+$team = get_field('team', $thisID); 
+$link = $team['link'];
+?>
 	<section class="wco-team-sec">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="sec-entry-hdr-cntlr">
 						<div class="sec-entry-hdr">
-							<h2 class="sec-entry-hdr-title fl-h4">Meet Our Friendly Team</h2>
+							<?php if(!empty($team['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'.$team['title'].'</h2>'); ?>
 							<div class="diamond-module">
 								<ul class="reset-list">
 									<li>
@@ -692,7 +719,7 @@ $link = $block['link'];
 									</li>
 								</ul>
 							</div>                
-							<p>Amet a aliquam tellus, ut. Fringilla sagittis ut a pellentesque accumsan.<br> Ipsum malesuada vitae fusce semper nec scelerisque a.</p>
+							<?php if(!empty($team['description'])) echo wpautop($team['description']); ?>
 						</div>
 					</div>
 					<div class="profile-module">
@@ -830,22 +857,29 @@ $link = $block['link'];
 								</div>
 							</div>
 						</div>
+						<?php if(is_array($link) && !empty($link['url'])): ?>
 						<div class="wco-team-btn">
-							<a class="cdc-btn" href="#">Meet all the team</a>
+							<?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title'] ); ?>
 						</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>      
-
+<?php 
+endif;
+$showhidefaq = get_field('showhidefaq', $thisID); 
+if($showhidefaq):
+$faqs = get_field('faqs', $thisID); 
+?>
 	<section class="faq-sec">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="sec-entry-hdr-cntlr">
 						<div class="sec-entry-hdr">
-							<h3 class="sec-entry-hdr-title fl-h4">Frequently Asked Questions</h3>
+							<?php if(!empty($team['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'.$team['title'].'</h2>'); ?>
 							<div class="diamond-module">
 								<ul class="reset-list">
 									<li>
@@ -859,7 +893,7 @@ $link = $block['link'];
 									</li>
 								</ul>
 							</div>                
-							<p>Amet a aliquam tellus, ut. Fringilla sagittis ut a pellentesque accumsan.<br> Ipsum malesuada vitae fusce semper nec scelerisque a.</p>
+							<?php if(!empty($faqs['description'])) echo wpautop($faqs['description']); ?>
 						</div>
 					</div>
 					<div class="faq-sec-inner">
@@ -1045,7 +1079,7 @@ $link = $block['link'];
 			</div>
 		</div>
 	</section> 
-
+<?php endif; ?>
 </div>
 
 
