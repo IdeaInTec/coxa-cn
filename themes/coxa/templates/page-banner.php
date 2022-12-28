@@ -33,19 +33,19 @@ $link_2 = $banner['link_2'];
                 </ul>
               </div> 
               <?php if(!empty($banner['description'])) echo ('<div class="pg-banner-desc">'.wpautop($banner['description']).'</div>'); ?>
+              <?php if(!empty($link_2['url']) && !empty($link_1['url'])): ?>
               <div class="pg-banner-btns">
-                <div class="pg-banner-btns">
-                  <?php if(is_array($link_1) && !empty($link_1['url'])): ?>
-                  <div class="pg-banner-btn pg-banner-btn-01">
-                    <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link_1['url'],$link_1['title'] ); ?>
-                  </div>
-                  <?php endif; if(is_array($link_2) && !empty($link_2['url'])):?>
-                  <div class="pg-banner-btn pg-banner-btn-02">
-                    <?php printf('<a class="cdc-trnsprnt-btn" href="%s">%s</a>',$link_2['url'],$link_2['title'] ); ?>
-                  </div>
-                  <?php endif; ?>
+                <?php if(is_array($link_1) && !empty($link_1['url'])): ?>
+                <div class="pg-banner-btn pg-banner-btn-01">
+                  <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link_1['url'],$link_1['title'] ); ?>
+                </div>
+                <?php endif; if(is_array($link_2) && !empty($link_2['url'])):?>
+                <div class="pg-banner-btn pg-banner-btn-02">
+                  <?php printf('<a class="cdc-trnsprnt-btn" href="%s">%s</a>',$link_2['url'],$link_2['title'] ); ?>
+                </div>
+                <?php endif; ?>
               </div>
-            </div>
+              <?php endif; ?>
           </div>
         </div>
       </div>
