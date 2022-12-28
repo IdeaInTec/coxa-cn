@@ -7,11 +7,12 @@ $custom_titel = $banner['title'];
 $page_titel = !empty($custom_titel)?$custom_titel:get_the_title($thisID);
 $link_1 = $banner['link_1'];
 $link_2 = $banner['link_2'];
-?>
 
+?>
+<?php if(is_array($banner_bg) && !empty($banner_bg) ): ?>
 <section class="banner <?php echo (!empty($banner['description'])? '': 'diamond-module-none'); ?>">
   <div class="banner-black-bg"></div>
-  	<?php if(is_array($banner_bg) && !empty($banner_bg) ): ?>
+  	
 	  <div class="banner-bg-cntlr bannerBgSlider">
 	  	<?php foreach ($banner_bg as $banner_item_bg): ?>
 	    <div class="bannerBgSlider-item">
@@ -19,7 +20,7 @@ $link_2 = $banner['link_2'];
 	    </div>
 	  	<?php endforeach; ?>
 	  </div>
-	  <?php endif;?>
+	  
   <div class="bnr-prev-next-cntlr">
     <div class="container">
       <div class="row">
@@ -105,6 +106,7 @@ $link_2 = $banner['link_2'];
     </div>
   </div>
 </section>
+<?php endif;?>
 <?php 
 $showhidetreatment = get_field('showhidetreatment', HOMEID);
 if($showhidetreatment):
