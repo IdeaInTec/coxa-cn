@@ -510,13 +510,13 @@ $link_2 = $previews['link_2'];
 					</div>              
 				</div>
 				<?php if(!empty($link_1['url']) && !empty($link_2['url'])): ?>
-				<div class="review-grid-btns hide-sm">
-					<ul class="reset-list">
-						<?php if(is_array($link_1) && !empty($link_1['url'])) printf('<li><a href="#" class="cdc-btn">See Patient Reviews</a></li>',$link_1['url'],$link_1['title']); ?>
-						<?php if(is_array($link_2) && !empty($link_2['url'])) printf('<li><a href="#" class="cdc-trnsprnt-btn">See Patient Reviews</a></li>',$link_2['url'],$link_2['title']); ?>
-					</ul>
-				</div>
-				<?php endif; ?>
+        <div class="review-grid-btns hide-sm">
+          <ul class="reset-list">
+            <?php if(is_array($link_1) && !empty($link_1['url'])) printf('<li><a href="%s" class="cdc-btn">%s</a></li>',$link_1['url'],$link_1['title']); ?>
+            <?php if(is_array($link_2) && !empty($link_2['url'])) printf('<li><a href="%s" class="cdc-trnsprnt-btn">%s</a></li>',$link_2['url'],$link_2['title']); ?>
+          </ul>
+        </div>
+        <?php endif; ?>
 			</div>
 		</div>
 	</div>
