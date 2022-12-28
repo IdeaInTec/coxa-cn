@@ -262,6 +262,7 @@ endif;
 $intro = get_field('intro', HOMEID);
 $intro_link_1 = $intro['link_1'];
 $intro_link_2 = $intro['link_2'];
+if(!empty($intro['title']) && !empty($intro['description'])):
 ?>
 <section class="intro-sec">
 	<div class="container">
@@ -304,6 +305,7 @@ $intro_link_2 = $intro['link_2'];
 	</div>
 </section>
 <?php 
+endif;
 $showhidewch = get_field('showhidewch', HOMEID);
 if($showhidewch):
 $why_choose = get_field('why_choose', HOMEID);
@@ -337,6 +339,7 @@ $wch_link = $why_choose['link'];
 					<div class="why-choose-grids">
 						<?php 
 						$features = $why_choose['features'];
+						if(!empty($features)):
 						foreach ($features as $feature):
 						?>
 						<div class="why-choose-grid-col">
@@ -354,7 +357,7 @@ $wch_link = $why_choose['link'];
 								</div>
 							</div>
 						</div>
-						<?php endforeach; ?>
+						<?php  endforeach; endif; ?>
 					</div>
 						<?php if(is_array($wch_link) && !empty($wch_link['url'])): ?>
 						<div class="why-choose-grid-btn hide-sm">
