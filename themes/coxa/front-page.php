@@ -312,7 +312,7 @@ $why_choose = get_field('why_choose', HOMEID);
 $wch_link = $why_choose['link'];
 ?>
 
-<section class="why-choose-sec parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/why-choose-bg-img.png);">
+<section class="why-choose-sec parallaxie" style="background-image: url(<?php echo cbv_get_image_src($why_choose['background_image']); ?>);">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
