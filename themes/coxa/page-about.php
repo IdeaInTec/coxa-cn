@@ -501,7 +501,7 @@ $link_2 = $previews['link_2'];
                       </div>
                       <div class="cta-module-des">
                         <?php if(!empty($promo['title'])) echo('<h2 class="cta-module-des-title fl-h2">'. $promo['title'] .'</h2>'); ?>
-                        <?php echo wpautop($promo['description']); ?>
+                        <?php if(!empty($promo['description'])) echo wpautop($promo['description']); ?>
                       </div>
                     </div>
                     <div class="cta-btn-ctlr">

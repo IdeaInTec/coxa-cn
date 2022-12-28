@@ -6,14 +6,17 @@ $thisID = get_the_ID();
 <?php get_template_part('templates/page', 'banner'); ?>
 
 <div class="team-pg-content-cntlr">
-<?php if(!empty($team_states)): ?>
+<?php 
+$team_states = get_field('team_states', $thisID); 
+if(!empty($team_states)): 
+  ?>
   <section class="counter-sec">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="counter-cntlr">
             <?php 
-            $team_states = get_field('team_states', $thisID); 
+            
             
             foreach ($team_states as $team_state):
             ?>
