@@ -2,11 +2,9 @@
 $thisID = get_the_ID();
 $banner = get_field('banner', $thisID);
 $banner_bg = !empty($banner['image'])?cbv_get_image_src($banner['image']):banner_placeholder();
-$custom_titel = $banner['title'];
-$page_titel = !empty($custom_titel)?$custom_titel:get_the_title($thisID);
+$page_titel = !empty($banner['title'])?$banner['title']:get_the_title($thisID);
 $link_1 = $banner['link_1'];
 $link_2 = $banner['link_2'];
-
 ?>
 <section class="page-banner <?php echo (!empty($banner['description'])? '': 'diamond-module-none'); ?>">
   <div class="banner-black-bg"></div>
