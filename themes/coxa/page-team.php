@@ -6,7 +6,7 @@ $thisID = get_the_ID();
 <?php get_template_part('templates/page', 'banner'); ?>
 
 <div class="team-pg-content-cntlr">
-
+<?php if(!empty($team_states)): ?>
   <section class="counter-sec">
     <div class="container">
       <div class="row">
@@ -14,6 +14,7 @@ $thisID = get_the_ID();
           <div class="counter-cntlr">
             <?php 
             $team_states = get_field('team_states', $thisID); 
+            
             foreach ($team_states as $team_state):
             ?>
             <div class="counter-col-01 counter-col" >
@@ -21,12 +22,13 @@ $thisID = get_the_ID();
               
              <?php echo wpautop($team_state['title']); ?>
             </div> 
-            <?php endforeach; ?>
+            <?php endforeach;  ?>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <?php  endif; ?>
   <section class="profile-sec">
     <div class="container">
       <div class="row">
@@ -391,46 +393,55 @@ $thisID = get_the_ID();
       </div>
     </div>
   </div>
-  <section class="cta-section">
-    <div class="container-lg">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="cta-module-cntlr">
-            <div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/cta-sec-bg.jpg);">
-              <div class="cta-module">
-                <div class="cta-module-des-ctlr">
-                  <div class="diamond-module">
-                    <ul class="reset-list">
-                      <li>
-                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                      </li>
-                      <li>
-                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                      </li>
-                      <li>
-                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="cta-module-des">
-                    <h2 class="cta-module-des-title fl-h2"><em>Book</em> Appointment Online</h2>
-                    <p>Praesent imperdiet leo in odio in bibendum aliquet. Est consectetur amet, porttitor turpis. Scelerisque sed eu auctor fringilla nunc.</p>
-                  </div>
+   <?php 
+$showhidepromo = get_field('showhidepromo', $thisID);
+if($showhidepromo):
+$promo = get_field('promo', $thisID);
+$promo_link = $promo['link'];
+?>
+<section class="cta-section">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="cta-module-cntlr">
+          <div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo cbv_get_image_src($promo['bg_image']); ?>);">
+            <div class="cta-module">
+              <div class="cta-module-des-ctlr">
+                <div class="diamond-module">
+                  <ul class="reset-list">
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                  </ul>
                 </div>
-                <div class="cta-btn-ctlr">
-                  <div class="cta-btn">
-                    <a href="#" class="cdc-btn">Book Appointment</a>                     
-                  </div>
+                <div class="cta-module-des">
+                  <?php if(!empty($promo['title'])) echo('<h2 class="cta-module-des-title fl-h2">'. $promo['title'] .'</h2>'); ?>
+                  <?php echo wpautop($promo['description']); ?>
                 </div>
               </div>
+              <div class="cta-btn-ctlr">
+                <?php if(is_array($promo_link) && !empty($promo_link['url'])): ?>
+                <div class="cta-btn">
+                  <?php printf('<a class="cdc-btn" href="%s">%s</a>',$promo_link['url'],$promo_link['title'] ); ?>
+                </div>
+                <?php endif; ?>
+              </div>
             </div>
-          </div>            
-        </div>
+          </div>
+        </div>            
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <?php 
+<?php 
+endif;
 $showhidetreatment = get_field('showhidetreatment', $thisID);
 if($showhidetreatment):
 $chtreatment = get_field('chtreatment', $thisID);

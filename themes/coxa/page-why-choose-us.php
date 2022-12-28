@@ -8,6 +8,7 @@ get_template_part('templates/page', 'banner');
 <div class="why-choose-us-page-cntlr">
 	<?php 
 	$intro = get_field('intro', $thisID);
+  if(!empty($intro)):
 	?>
     <section class="counter-sec">
       <div class="container">
@@ -29,12 +30,13 @@ get_template_part('templates/page', 'banner');
                     </li>
                   </ul>
                 </div>                
-                <?php echo wpautop($intro['description']); ?>
+                <?php if(!empty($intro['description'])) echo wpautop($intro['description']); ?>
               </div>
             </div>
             <div class="counter-cntlr">
             	<?php 
             	$key_points = $intro['key_points']; 
+              if(!empty($key_points)):
             	foreach ($key_points as $key_point):
             		?>
             		<div class="counter-col-01 counter-col" >
@@ -42,13 +44,13 @@ get_template_part('templates/page', 'banner');
 
             			<?php echo wpautop($key_point['title']); ?>
             		</div> 
-            	<?php endforeach; ?>
+            	<?php endforeach; endif; ?>
             </div>
           </div>
         </div>
       </section>
-
       <?php 
+      endif;
       $showhidewch = get_field('showhidewch', $thisID); 
       if ($showhidewch):
       	$why_choose = get_field('why_choose', HOMEID);
