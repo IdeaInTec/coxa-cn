@@ -8,25 +8,17 @@ $link_1 = $banner['link_1'];
 $link_2 = $banner['link_2'];
 
 ?>
-<section class="page-banner">
+<section class="page-banner <?php echo (!empty($banner['description'])? '': 'diamond-module-none'); ?>">
   <div class="banner-black-bg"></div>
-  <?php if( !empty($banner['video']) ): ?>
-      <div class="bnr-vdo">
-        <video id="bt-vdo" autoplay="true" muted="" loop>
-          <source src="<?php echo $banner['video']; ?>" type="video/mp4">
-          </video>
-      </div>
-    <?php else: ?>
       <?php if( !empty($banner_bg) ): ?>
       <div class="page-bnr-bg parallaxie" style="background-image: url('<?php echo $banner_bg; ?>')"></div>
       <?php endif;?>
-    <?php endif; ?>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="pg-banner-cntlr">
             <div class="pg-banner-desc-cntlr">
-              <?php if(!empty($banner['title'])) echo ('<h1 class="pg-banner-title fl-h3">'.$banner['title'].'</h1>'); ?>
+              <h1 class="pg-banner-title fl-h3"><?php echo ($page_titel); ?></h1>
               <div class="diamond-module">
                 <ul class="reset-list">
                   <li>

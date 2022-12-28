@@ -1,6 +1,9 @@
 .banner{
 	position: relative;
 }
+.diamond-module-none .diamond-module{
+	display: none!important;
+}
 .banner-black-bg{
 	position: absolute;
 	top: 0;
