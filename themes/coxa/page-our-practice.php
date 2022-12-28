@@ -21,18 +21,18 @@ $thisID = get_the_ID();
 								<div class="diamond-module">
 									<ul class="reset-list">
 										<li>
-											<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+											<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 										</li>
 										<li>
-											<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+											<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 										</li>
 										<li>
-											<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+											<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 										</li>
 									</ul>
-								</div>
-								<h2 class="sec-entry-hdr-title fl-h4">Expert Treatments</h2>           
-								<p>Nunc sollicitudin diam ante vitae quis ac. Morbi sapien, blandit et cursus suspendisse accumsan. Odio erat etiam purus bibendum fusce tristique aliquam non. </p>
+								</div> 
+								<?php if(!empty($experttreatment['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'. $experttreatment['title'] .'</h2>'); ?>        
+								<?php if(!empty($experttreatment['description'])) echo wpautop($experttreatment['description']); ?>
 							</div>
 						</div>
 						<div class="expert-treatment-grds">
@@ -40,7 +40,7 @@ $thisID = get_the_ID();
 								<div class="ex-trmnt-grd-item">
 									<div class="ex-trmnt-grd-item-img-cntlr">
 										<a href="#" class="overlay-link"></a>
-										<div class="ex-trmnt-grd-item-img inline-bg" style="background: url('assets/images/ex-trmnt-img-01.jpg');"></div>
+										<div class="ex-trmnt-grd-item-img inline-bg" style="background: url('<?php echo THEME_URI; ?>/assets/images/ex-trmnt-img-01.jpg');"></div>
 									</div>
 									<div class="ex-trmnt-grd-item-des">
 										<h3 class="ex-trmnt-grd-des-title fl-h5"><a href="#">Cosmetic Dentistry</a></h3>
@@ -51,7 +51,7 @@ $thisID = get_the_ID();
 								<div class="ex-trmnt-grd-item">
 									<div class="ex-trmnt-grd-item-img-cntlr">
 										<a href="#" class="overlay-link"></a>
-										<div class="ex-trmnt-grd-item-img inline-bg" style="background: url('assets/images/gallery-04.jpg');"></div>
+										<div class="ex-trmnt-grd-item-img inline-bg" style="background: url('<?php echo THEME_URI; ?>/assets/images/gallery-04.jpg');"></div>
 									</div>
 									<div class="ex-trmnt-grd-item-des">
 										<h3 class="ex-trmnt-grd-des-title fl-h5"><a href="#">Cosmetic Dentistry</a></h3>
@@ -62,7 +62,7 @@ $thisID = get_the_ID();
 								<div class="ex-trmnt-grd-item">
 									<div class="ex-trmnt-grd-item-img-cntlr">
 										<a href="#" class="overlay-link"></a>
-										<div class="ex-trmnt-grd-item-img inline-bg" style="background: url('assets/images/ex-trmnt-img-04.jpg');"></div>
+										<div class="ex-trmnt-grd-item-img inline-bg" style="background: url('<?php echo THEME_URI; ?>/assets/images/ex-trmnt-img-04.jpg');"></div>
 									</div>
 									<div class="ex-trmnt-grd-item-des">
 										<h3 class="ex-trmnt-grd-des-title fl-h5"><a href="#">Cosmetic Dentistry</a></h3>
@@ -73,7 +73,7 @@ $thisID = get_the_ID();
 								<div class="ex-trmnt-grd-item">
 									<div class="ex-trmnt-grd-item-img-cntlr">
 										<a href="#" class="overlay-link"></a>
-										<div class="ex-trmnt-grd-item-img inline-bg" style="background: url('assets/images/ex-trmnt-img-03.jpg');"></div>
+										<div class="ex-trmnt-grd-item-img inline-bg" style="background: url('<?php echo THEME_URI; ?>/assets/images/ex-trmnt-img-03.jpg');"></div>
 									</div>
 									<div class="ex-trmnt-grd-item-des">
 										<h3 class="ex-trmnt-grd-des-title fl-h5"><a href="#">Cosmetic Dentistry</a></h3>
@@ -84,7 +84,7 @@ $thisID = get_the_ID();
 								<div class="ex-trmnt-grd-item">
 									<div class="ex-trmnt-grd-item-img-cntlr">
 										<a href="#" class="overlay-link"></a>
-										<div class="ex-trmnt-grd-item-img inline-bg" style="background: url('assets/images/ex-trmnt-img-05.jpg');"></div>
+										<div class="ex-trmnt-grd-item-img inline-bg" style="background: url('<?php echo THEME_URI; ?>/assets/images/ex-trmnt-img-05.jpg');"></div>
 									</div>
 									<div class="ex-trmnt-grd-item-des">
 										<h3 class="ex-trmnt-grd-des-title fl-h5"><a href="#">Cosmetic Dentistry</a></h3>
@@ -95,7 +95,7 @@ $thisID = get_the_ID();
 								<div class="ex-trmnt-grd-item">
 									<div class="ex-trmnt-grd-item-img-cntlr">
 										<a href="#" class="overlay-link"></a>
-										<div class="ex-trmnt-grd-item-img inline-bg" style="background: url('assets/images/ex-trmnt-img-06.jpg');"></div>
+										<div class="ex-trmnt-grd-item-img inline-bg" style="background: url('<?php echo THEME_URI; ?>/assets/images/ex-trmnt-img-06.jpg');"></div>
 									</div>
 									<div class="ex-trmnt-grd-item-des">
 										<h3 class="ex-trmnt-grd-des-title fl-h5"><a href="#">Cosmetic Dentistry</a></h3>
@@ -108,53 +108,49 @@ $thisID = get_the_ID();
 			</div>
 		</div>
 	</section>
-	<?php 
-	endif;
-	?>
+<?php 
+endif;
+$showhideblock = get_field('showhideblock', $thisID);
+if($showhideblock):
+$blocks = get_field('blocks', $thisID);
+$i = 1;
+foreach ($blocks as $block):
+$link = $block['link'];
+?>
 	<section class="about-intro-sec has-inline-bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="abtis-img-text-row abtis-lft-img-row">
+					<div class="abtis-img-text-row <?php echo ($i%2 == 1)? 'abtis-lft-img-row': null; ?>">
 						<div class="abtis-img-text-row-inr">
+							<?php if(!empty($block['image']) && isset($block['image'])): ?>
 							<div class="abtis-img-txt-col abtis-row-img">
 								<div class="abtis-row-img-inner">
-									<img class="single-image"src="assets/images/about-us-intro-img-02.jpg" alt="">
-									<div class="double-image">
-										<img class="double-image-main" src="assets/images/about-us-intro-img-02.png" alt="">
-										<img class="double-image-sub" src="assets/images/about-us-intro-img-03.png" alt="">
-									</div>
 									<div class="abtis-row-main-img-cntrl">
-										<div class="abtis-row-main-img inline-bg" style="background-image: url(assets/images/tremnt-main-img-01.jpg);">
-										</div>
-									</div>
-									<div class="abtis-row-sub-img-cntlr">
-										<div class="abtis-row-sub-img inline-bg" style="background-image: url(assets/images/about-us-intro-sub-img-01.jpg);">
+										<div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($block['image']); ?>);">
 										</div>
 									</div>
 								</div>
 							</div>
+							<?php endif; ?>
 							<div class="abtis-img-txt-col abtis-row-text">
 								<div class="abtis-row-text-inr">
 									<div class="diamond-module">
 										<ul class="reset-list">
 											<li>
-												<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+												<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 											</li>
 											<li>
-												<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+												<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 											</li>
 											<li>
-												<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+												<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 											</li>
 										</ul>
 									</div>
-									<h2 class="fl-h4">Open to New Patients</h2>
-									<p>Fermentum et tristique dictumst ipsum dolor turpis arcu nibh integer. Mauris volutpat dictum cras sagittis leo platea tincidunt. Scelerisque turpis tortor, purus nec eget mauris tempor lacus. Varius amet egestas cursus quam proin magna varius sit. Dui ut in massa nibh ut. Commodo et sapien semper imperdiet dolor nunc id sit consectetur. Fames amet, turpis in at in senectus, in felis amet euismod vitae potenti praesents.</p>
-									<p>Aenean in sed mi malesuada quis purus facilisis vel senectus. Purus aliquet consequat dignissim aliquam bibendum pulvinar faucibus et enim. Sapien faucibus mattis quis nunc vulputate habitant scelerisque. Non tincidunt enim adipiscing lectus euismod turpis vel non massa, ultricies condimentum dui.</p>
-									<div class="abtis-intro-des-btn">
-										<a class="cdc-btn" href="#">Find Out More</a>
-									</div>
+									<?php if(!empty($block['title'])) echo('<h2 class="fl-h4">'.$block['title'].'</h2>'); ?>
+									<?php if(!empty($block['description'])) echo wpautop($block['description']); ?>
+									<?php if(is_array($link) && !empty($link['url'])) printf('<div class="abtis-intro-des-btn"><a class="cdc-btn" href="%s">%s</a></div>',$link['url'],$link['title']); ?>
 								</div>                          
 							</div>
 						</div>
@@ -163,60 +159,9 @@ $thisID = get_the_ID();
 			</div>
 		</div>
 	</section>
-	<section class="about-intro-sec has-inline-bg">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="abtis-img-text-row">
-						<div class="abtis-img-text-row-inr">
-							<div class="abtis-img-txt-col abtis-row-img">
-								<div class="abtis-row-img-inner">
-									<img class="single-image"src="assets/images/about-us-intro-img-02.png" alt="">
-									<div class="double-image">
-										<img class="double-image-main" src="assets/images/about-us-intro-img-02.png" alt="">
-										<img class="double-image-sub" src="assets/images/about-us-intro-img-03.png" alt="">
-									</div>
-									<div class="abtis-row-main-img-cntrl">
-										<div class="abtis-row-main-img inline-bg" style="background-image: url(assets/images/practice-intro-img-01.jpg);">
-										</div>
-									</div>
-									<div class="abtis-row-sub-img-cntlr">
-										<div class="abtis-row-sub-img inline-bg" style="background-image: url(assets/images/about-us-intro-img-03.png);">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="abtis-img-txt-col abtis-row-text">
-								<div class="abtis-row-text-inr">
-									<div class="diamond-module">
-										<ul class="reset-list">
-											<li>
-												<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
-											</li>
-											<li>
-												<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
-											</li>
-											<li>
-												<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
-											</li>
-										</ul>
-									</div>
-									<h2 class="fl-h4">Modern Equipment</h2>
-									<p>Fermentum et tristique dictumst ipsum dolor turpis arcu nibh integer. Mauris volutpat dictum cras sagittis leo platea tincidunt. Scelerisque turpis tortor, purus nec eget mauris tempor lacus. Varius amet egestas cursus quam proin magna varius sit. Dui ut in massa nibh ut. Commodo et sapien semper imperdiet dolor nunc id sit consectetur. Fames amet, turpis in at in senectus, in felis amet euismod vitae potenti praesents.</p> 
-									<p>Aenean in sed mi malesuada quis purus facilisis vel senectus. Purus aliquet consequat dignissim aliquam bibendum pulvinar faucibus et enim. Sapien faucibus mattis quis nunc vulputate habitant scelerisque. Non tincidunt enim adipiscing lectus euismod turpis vel non massa, ultricies condimentum dui.</p>
-									<div class="abtis-intro-des-btn">
-										<a class="cdc-btn" href="#">See Our Equipment</a>
-									</div>
-								</div>                          
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<?php $i++; endforeach; endif; ?>
 
-	<section class="practice-gallery why-choose-sec  parallaxie parallaxie-bg-Size_auto" style="background-image: url(assets/images/why-choose-bg-img.jpg);">
+	<section class="practice-gallery why-choose-sec  parallaxie parallaxie-bg-Size_auto" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/why-choose-bg-img.jpg);">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -226,13 +171,13 @@ $thisID = get_the_ID();
 							<div class="diamond-module">
 								<ul class="reset-list">
 									<li>
-										<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+										<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 									</li>
 									<li>
-										<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+										<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 									</li>
 									<li>
-										<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+										<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 									</li>
 								</ul>
 							</div>                
@@ -244,8 +189,8 @@ $thisID = get_the_ID();
 							<div class="practice-gallery-grid-col">
 								<div class="practice-gallery-grid-item">
 									<div class="practice-gallery-grid-img-cntlr">
-										<a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-01.jpg);"></div>
+										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg);"></div>
 									</div>
 									<div class="practice-gallery-grid-des">
 										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Teatment Room</a></h3>
@@ -255,8 +200,8 @@ $thisID = get_the_ID();
 							<div class="practice-gallery-grid-col">
 								<div class="practice-gallery-grid-item">
 									<div class="practice-gallery-grid-img-cntlr">
-										<a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-02.jpg);"></div>
+										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-02.jpg);"></div>
 									</div>
 									<div class="practice-gallery-grid-des">
 										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Dental Implant Room</a></h3>
@@ -266,8 +211,8 @@ $thisID = get_the_ID();
 							<div class="practice-gallery-grid-col">
 								<div class="practice-gallery-grid-item">
 									<div class="practice-gallery-grid-img-cntlr">
-										<a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-03.jpg);"></div>
+										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-03.jpg);"></div>
 									</div>
 									<div class="practice-gallery-grid-des">
 										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Cosmetic Dentistry Room</a></h3>
@@ -277,8 +222,8 @@ $thisID = get_the_ID();
 							<div class="practice-gallery-grid-col">
 								<div class="practice-gallery-grid-item">
 									<div class="practice-gallery-grid-img-cntlr">
-										<a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-04.jpg);"></div>
+										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-04.jpg);"></div>
 									</div>
 									<div class="practice-gallery-grid-des">
 										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Specialist Chair</a></h3>
@@ -288,8 +233,8 @@ $thisID = get_the_ID();
 							<div class="practice-gallery-grid-col">
 								<div class="practice-gallery-grid-item">
 									<div class="practice-gallery-grid-img-cntlr">
-										<a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-11.jpg);"></div>
+										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-11.jpg);"></div>
 									</div>
 									<div class="practice-gallery-grid-des">
 										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Teatment Room</a></h3>
@@ -299,8 +244,8 @@ $thisID = get_the_ID();
 							<div class="practice-gallery-grid-col">
 								<div class="practice-gallery-grid-item">
 									<div class="practice-gallery-grid-img-cntlr">
-										<a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-05.jpg);"></div>
+										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-05.jpg);"></div>
 									</div>
 									<div class="practice-gallery-grid-des">
 										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Dental Implant Room</a></h3>
@@ -310,8 +255,8 @@ $thisID = get_the_ID();
 							<div class="practice-gallery-grid-col">
 								<div class="practice-gallery-grid-item">
 									<div class="practice-gallery-grid-img-cntlr">
-										<a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-12.jpg);"></div>
+										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-12.jpg);"></div>
 									</div>
 									<div class="practice-gallery-grid-des">
 										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Cosmetic Dentistry Room</a></h3>
@@ -321,8 +266,8 @@ $thisID = get_the_ID();
 							<div class="practice-gallery-grid-col">
 								<div class="practice-gallery-grid-item">
 									<div class="practice-gallery-grid-img-cntlr">
-										<a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-06.jpg);"></div>
+										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-06.jpg);"></div>
 									</div>
 									<div class="practice-gallery-grid-des">
 										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Specialist Chair</a></h3>
@@ -332,8 +277,8 @@ $thisID = get_the_ID();
 							<div class="practice-gallery-grid-col">
 								<div class="practice-gallery-grid-item">
 									<div class="practice-gallery-grid-img-cntlr">
-										<a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-07.jpg);"></div>
+										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-07.jpg);"></div>
 									</div>
 									<div class="practice-gallery-grid-des">
 										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Teatment Room</a></h3>
@@ -343,8 +288,8 @@ $thisID = get_the_ID();
 							<div class="practice-gallery-grid-col">
 								<div class="practice-gallery-grid-item">
 									<div class="practice-gallery-grid-img-cntlr">
-										<a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-08.jpg);"></div>
+										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-08.jpg);"></div>
 									</div>
 									<div class="practice-gallery-grid-des">
 										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Dental Implant Room</a></h3>
@@ -354,8 +299,8 @@ $thisID = get_the_ID();
 							<div class="practice-gallery-grid-col">
 								<div class="practice-gallery-grid-item">
 									<div class="practice-gallery-grid-img-cntlr">
-										<a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-09.jpg);"></div>
+										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-09.jpg);"></div>
 									</div>
 									<div class="practice-gallery-grid-des">
 										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Cosmetic Dentistry Room</a></h3>
@@ -365,8 +310,8 @@ $thisID = get_the_ID();
 							<div class="practice-gallery-grid-col">
 								<div class="practice-gallery-grid-item">
 									<div class="practice-gallery-grid-img-cntlr">
-										<a href="assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(assets/images/practice-gallery-10.jpg);"></div>
+										<a href="<?php echo THEME_URI; ?>/assets/images/practice-gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
+										<div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/practice-gallery-10.jpg);"></div>
 									</div>
 									<div class="practice-gallery-grid-des">
 										<h3 class="practice-gallery-grid-title fl-h6"><a href="#">Specialist Chair</a></h3>
@@ -393,13 +338,13 @@ $thisID = get_the_ID();
 							<div class="diamond-module">
 								<ul class="reset-list">
 									<li>
-										<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+										<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 									</li>
 									<li>
-										<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+										<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 									</li>
 									<li>
-										<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+										<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 									</li>
 								</ul>
 							</div>                
@@ -411,7 +356,7 @@ $thisID = get_the_ID();
 							<div class="locations-sec-grid-item mHc">
 								<div class="locations-sec-grid-item-inner">
 									<div class="locations-area">
-										<img src="assets/images/locations-image.jpg" alt="">
+										<img src="<?php echo THEME_URI; ?>/assets/images/locations-image.jpg" alt="">
 									</div>
 									<div class="locations-des mHc1">
 										<div class="locations-title-cntrl">
@@ -476,7 +421,7 @@ $thisID = get_the_ID();
 							<div class="locations-sec-grid-item mHc">
 								<div class="locations-sec-grid-item-inner">
 									<div class="locations-area">
-										<img src="assets/images/locations-image.jpg" alt="">
+										<img src="<?php echo THEME_URI; ?>/assets/images/locations-image.jpg" alt="">
 									</div>
 									<div class="locations-des mHc1">
 										<div class="locations-title-cntrl">
@@ -540,7 +485,7 @@ $thisID = get_the_ID();
 							<div class="locations-sec-grid-item mHc">
 								<div class="locations-sec-grid-item-inner">
 									<div class="locations-area">
-										<img src="assets/images/locations-image.jpg" alt="">
+										<img src="<?php echo THEME_URI; ?>/assets/images/locations-image.jpg" alt="">
 									</div>
 									<div class="locations-des mHc1">
 										<div class="locations-title-cntrl">
@@ -604,7 +549,7 @@ $thisID = get_the_ID();
 							<div class="locations-sec-grid-item mHc">
 								<div class="locations-sec-grid-item-inner">
 									<div class="locations-area">
-										<img src="assets/images/locations-image.jpg" alt="">
+										<img src="<?php echo THEME_URI; ?>/assets/images/locations-image.jpg" alt="">
 									</div>
 									<div class="locations-des mHc1">
 										<div class="locations-title-cntrl">
@@ -693,19 +638,19 @@ $thisID = get_the_ID();
 			<div class="row">
 				<div class="col-md-12">
 					<div class="cta-module-cntlr">
-						<div class="cta-module-wrp parallaxie" style="background-image: url(assets/images/cta-sec-bg2.jpg);">
+						<div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/cta-sec-bg2.jpg);">
 							<div class="cta-module">
 								<div class="cta-module-des-ctlr">
 									<div class="diamond-module">
 										<ul class="reset-list">
 											<li>
-												<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+												<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 											</li>
 											<li>
-												<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+												<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 											</li>
 											<li>
-												<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+												<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 											</li>
 										</ul>
 									</div>
@@ -737,13 +682,13 @@ $thisID = get_the_ID();
 							<div class="diamond-module">
 								<ul class="reset-list">
 									<li>
-										<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+										<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 									</li>
 									<li>
-										<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+										<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 									</li>
 									<li>
-										<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+										<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 									</li>
 								</ul>
 							</div>                
@@ -755,7 +700,7 @@ $thisID = get_the_ID();
 							<div class="team-grd-item-col">
 								<div class="pro-mdul-grd">
 									<div class="pm-grd-img-cntlr">
-										<div class="pm-grd-img inline-bg" style="background-image: url(assets/images/pm-grd-img-01.jpg);"></div>
+										<div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-01.jpg);"></div>
 									</div>
 									<div class="pm-grd-desc-cntlr mHc">
 										<h5 class="fl-h5 pm-grd-title mHc1"><a href="#">David Cox</a></h5>
@@ -777,7 +722,7 @@ $thisID = get_the_ID();
 							<div class="team-grd-item-col">
 								<div class="pro-mdul-grd">
 									<div class="pm-grd-img-cntlr">
-										<div class="pm-grd-img inline-bg" style="background-image: url(assets/images/pm-grd-img-02.jpg);"></div>
+										<div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-02.jpg);"></div>
 									</div>
 									<div class="pm-grd-desc-cntlr mHc">
 										<h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Robert Hitchcock</a></h5>
@@ -799,7 +744,7 @@ $thisID = get_the_ID();
 							<div class="team-grd-item-col">
 								<div class="pro-mdul-grd">
 									<div class="pm-grd-img-cntlr">
-										<div class="pm-grd-img inline-bg" style="background-image: url(assets/images/pm-grd-img-07.jpg);"></div>
+										<div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-07.jpg);"></div>
 									</div>
 									<div class="pm-grd-desc-cntlr mHc">
 										<h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Katy Robinson</a></h5>
@@ -821,7 +766,7 @@ $thisID = get_the_ID();
 							<div class="team-grd-item-col">
 								<div class="pro-mdul-grd">
 									<div class="pm-grd-img-cntlr">
-										<div class="pm-grd-img inline-bg" style="background-image: url(assets/images/pm-grd-img-01.jpg);"></div>
+										<div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-01.jpg);"></div>
 									</div>
 									<div class="pm-grd-desc-cntlr mHc">
 										<h5 class="fl-h5 pm-grd-title mHc1"><a href="#">David Cox</a></h5>
@@ -843,7 +788,7 @@ $thisID = get_the_ID();
 							<div class="team-grd-item-col">
 								<div class="pro-mdul-grd">
 									<div class="pm-grd-img-cntlr">
-										<div class="pm-grd-img inline-bg" style="background-image: url(assets/images/pm-grd-img-02.jpg);"></div>
+										<div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-02.jpg);"></div>
 									</div>
 									<div class="pm-grd-desc-cntlr mHc">
 										<h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Robert Hitchcock</a></h5>
@@ -865,7 +810,7 @@ $thisID = get_the_ID();
 							<div class="team-grd-item-col">
 								<div class="pro-mdul-grd">
 									<div class="pm-grd-img-cntlr">
-										<div class="pm-grd-img inline-bg" style="background-image: url(assets/images/pm-grd-img-07.jpg);"></div>
+										<div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-07.jpg);"></div>
 									</div>
 									<div class="pm-grd-desc-cntlr mHc">
 										<h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Katy Robinson</a></h5>
@@ -904,13 +849,13 @@ $thisID = get_the_ID();
 							<div class="diamond-module">
 								<ul class="reset-list">
 									<li>
-										<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+										<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 									</li>
 									<li>
-										<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+										<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 									</li>
 									<li>
-										<i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+										<i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
 									</li>
 								</ul>
 							</div>                
