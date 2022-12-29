@@ -119,6 +119,7 @@ $link = $intro['link'];
   						<div class="why-choose-grid-btn hide-sm">
   							<?php printf('<a class="cdc-btn" href="%s">%s</a>',$wch_link['url'],$wch_link['title'] ); ?>
   						</div>
+
   					<?php endif; ?>
   				</div>
   			</div>
@@ -128,60 +129,114 @@ $link = $intro['link'];
 <?php endif; ?>
 
 <?php 
-$showhidedifferent = get_field('showhidedifferent', $thisID);
-if($showhidedifferent):
-  $ourpractice = get_field('ourpractice', $thisID);
-  $link = $ourpractice['link'];
-  ?>
-  <section class="about-intro-sec has-inline-bg">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="abtis-img-text-row abtis-lft-img-row">
-            <div class="abtis-img-text-row-inr">
-              <?php if(!empty($ourpractice['image'])): ?>
-                <div class="abtis-img-txt-col abtis-row-img">
-                  <div class="abtis-row-img-inner">
-                    <div class="abtis-row-main-img-cntrl">
-                      <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($ourpractice['image']); ?>);">
-                      </div>
+$showhidepractice = get_field('showhidepractice', $thisID);
+if($showhidepractice):
+$ourpractice = get_field('ourpractice', $thisID);
+$link_1 = $ourpractice['link_1'];
+$link_2 = $ourpractice['link_2'];
+?>
+<section class="about-intro-sec has-inline-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="abtis-img-text-row abtis-lft-img-row">
+          <div class="abtis-img-text-row-inr">
+            <?php if(!empty($ourpractice['image'])): ?>
+              <div class="abtis-img-txt-col abtis-row-img">
+                <div class="abtis-row-img-inner">
+                  <div class="abtis-row-main-img-cntrl">
+                    <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($ourpractice['image']); ?>);">
                     </div>
                   </div>
                 </div>
-              <?php endif; ?>
-              <div class="abtis-img-txt-col abtis-row-text">
-                <div class="abtis-row-text-inr">
-                  <div class="diamond-module">
-                    <ul class="reset-list">
-                      <li>
-                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                      </li>
-                      <li>
-                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                      </li>
-                      <li>
-                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                      </li>
-                    </ul>
+              </div>
+            <?php endif; ?>
+            <div class="abtis-img-txt-col abtis-row-text">
+              <div class="abtis-row-text-inr">
+                <div class="diamond-module">
+                  <ul class="reset-list">
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                  </ul>
+                </div>
+                <?php if(!empty($ourpractice['title'])) echo('<h2 class="fl-h4">'.$ourpractice['title'].'</h2>'); ?>
+                <?php echo wpautop($ourpractice['description']); ?>
+              
+                <div class="pm-grd-btns-cntlr">
+                  <?php if(is_array($link_1) && !empty($link_1['url'])): ?>
+                  <div class="pm-grd-btn pm-grd-btn-01">
+                    <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link_1['url'],$link_1['title'] ); ?>
                   </div>
-                  <?php if(!empty($ourpractice['title'])) echo('<h2 class="fl-h4">'.$ourpractice['title'].'</h2>'); ?>
-                  <?php echo wpautop($ourpractice['description']); ?>
-                  <?php if(is_array($link) && !empty($link['url'])): ?>
-                  <div class="abtis-intro-des-btn hide-sm">
-                    <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title'] ); ?>
+                <?php endif; if(is_array($link_2) && !empty($link_2['url'])): ?>
+                  <div class="pm-grd-btn pm-grd-btn-02">
+                    <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link_2['url'],$link_2['title'] ); ?>
                   </div>
-                <?php endif; ?>
-              </div>                          
-            </div>
+                <?php endif;?>
+                </div>
+            </div>                          
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </section> 
 <?php endif; ?>
 
-
+<?php 
+    $showhidepromo = get_field('showhidepromo', $thisID); 
+    if($showhidepromo):
+      $promo = get_field('promo', $thisID); 
+      $promo_link = $promo['link'];
+      ?>
+      <section class="cta-section">
+        <div class="container-lg">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="cta-module-cntlr">
+                <div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo cbv_get_image_src($promo['bg_image']); ?>);">
+                  <div class="cta-module">
+                    <div class="cta-module-des-ctlr">
+                      <div class="diamond-module">
+                        <ul class="reset-list">
+                          <li>
+                            <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                          </li>
+                          <li>
+                            <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                          </li>
+                          <li>
+                            <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="cta-module-des">
+                        <?php if(!empty($promo['title'])) echo('<h2 class="cta-module-des-title fl-h2">'. $promo['title'] .'</h2>'); ?>
+                        <?php if(!empty($promo['description'])) echo wpautop($promo['description']); ?>
+                      </div>
+                    </div>
+                    <div class="cta-btn-ctlr">
+                      <?php if(is_array($promo_link) && !empty($promo_link['url'])): ?>
+                      <div class="cta-btn">
+                        <?php printf('<a class="cdc-btn" href="%s">%s</a>',$promo_link['url'],$promo_link['title'] ); ?>
+                      </div>
+                    <?php endif; ?>
+                  </div>
+                </div>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </section>
+<?php endif; ?>
 
 
 
