@@ -62,7 +62,6 @@ $link = $intro['link'];
 </section>
 
 
-
 <?php 
   $showhideequpments = get_field('showhideequpments', $thisID);
   if($showhideequpments):
@@ -101,18 +100,6 @@ $link = $intro['link'];
   </div>
 </section>
 <?php endif;?>
-
-
-
-
-
-
-
-
-
-
-
-
 
 <?php 
   $showhidewch = get_field('showhidewch', $thisID); 
@@ -441,8 +428,6 @@ $link_2 = $ourpractice['link_2'];
     </div>
   </section>
   <?php endif; ?>
-    </div>
-
-
+</div>
 
 <?php get_footer(); ?>
