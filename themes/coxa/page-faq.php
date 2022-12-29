@@ -30,7 +30,7 @@ $thisID = get_the_ID();
                     </li>
                   </ul>
                 </div>                
-               <?php echo wpautop($intro['description']); ?>                    
+               <?php if(!empty($intro['description'])) echo wpautop($intro['description']); ?>                    
               </div>
               <div class="fees-tab">
                 <div class="fees-tab-hdr show-sm">
@@ -542,38 +542,45 @@ $thisID = get_the_ID();
                   </div>
                 </div>
               </div>
-              <div class="faq-grid-item-col" >
-                <div class="cta-module-cntlr">
-                  <div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/cta-sec-bg.jpg);">
-                    <div class="cta-module">
-                      <div class="cta-module-des-ctlr">
-                        <div class="diamond-module">
-                          <ul class="reset-list">
-                            <li>
-                              <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                            </li>
-                            <li>
-                              <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                            </li>
-                            <li>
-                              <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                            </li>
-                          </ul>
+              <?php 
+                $promo1 = get_field('promo1', $thisID); 
+                $promo1_link = $promo1['link'];
+                if(!empty($promo1['title']) && !empty($promo1['description']) && !empty($promo1_link['url'])):
+                ?>
+                <div class="faq-grid-item-col" >
+                  <div class="cta-module-cntlr">
+                    <div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo cbv_get_image_src($promo1['bg_image']); ?>);">
+                      <div class="cta-module">
+                        <div class="cta-module-des-ctlr">
+                          <div class="diamond-module">
+                            <ul class="reset-list">
+                              <li>
+                                <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                              </li>
+                              <li>
+                                <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                              </li>
+                              <li>
+                                <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="cta-module-des">
+                            <?php if(!empty($promo1['title'])) echo('<h2 class="cta-module-des-title fl-h2">'. $promo1['title'] .'</h2>'); ?>
+                            <?php echo wpautop($promo1['description']); ?>
+                          </div>
                         </div>
-                        <div class="cta-module-des">
-                          <h2 class="cta-module-des-title fl-h2"><strong>New </strong>to the area?</h2>
-                          <p>If you’ve recently moved to Cardiff and need a dentist, or simply fancy changing, get in touch. We are more than happy to talk to you about how we can help.</p>
-                        </div>
-                      </div>
-                      <div class="cta-btn-ctlr">
-                        <div class="cta-btn">
-                          <a href="#" class="cdc-btn">See Our Locaitons</a>                     
-                        </div>
+                        <div class="cta-btn-ctlr">
+                          <?php if(is_array($promo1_link) && !empty($promo1_link['url'])): ?>
+                          <div class="cta-btn">
+                            <?php printf('<a class="cdc-btn" href="%s">%s</a>',$promo1_link['url'],$promo1_link['title'] ); ?>
+                          </div>
+                        <?php endif; ?>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              <?php endif; ?>
               <div class="faq-grid-item-col" id="new-patient-questions">
                 <h3 class="faq-grd-title fl-h5">New Patient Questions</h3>
                 <div class="faq-grd-cntlr">
@@ -1039,38 +1046,45 @@ $thisID = get_the_ID();
                   </div>
                 </div>
               </div>
-              <div class="faq-grid-item-col">
-                <div class="cta-module-cntlr">
-                  <div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/faq-cta-sec-bg.jpg);">
-                    <div class="cta-module">
-                      <div class="cta-module-des-ctlr">
-                        <div class="diamond-module">
-                          <ul class="reset-list">
-                            <li>
-                              <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                            </li>
-                            <li>
-                              <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                            </li>
-                            <li>
-                              <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                            </li>
-                          </ul>
+              <?php               
+                $promo2 = get_field('promo2', $thisID); 
+                $promo2_link = $promo2['link'];
+                if(!empty($promo2['title']) && !empty($promo2['description']) && !empty($promo2_link['url'])):
+                ?>
+                <div class="faq-grid-item-col" >
+                  <div class="cta-module-cntlr">
+                    <div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo cbv_get_image_src($promo2['bg_image']); ?>);">
+                      <div class="cta-module">
+                        <div class="cta-module-des-ctlr">
+                          <div class="diamond-module">
+                            <ul class="reset-list">
+                              <li>
+                                <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                              </li>
+                              <li>
+                                <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                              </li>
+                              <li>
+                                <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="cta-module-des">
+                            <?php if(!empty($promo2['title'])) echo('<h2 class="cta-module-des-title fl-h2">'. $promo2['title'] .'</h2>'); ?>
+                            <?php echo wpautop($promo2['description']); ?>
+                          </div>
                         </div>
-                        <div class="cta-module-des">
-                          <h2 class="cta-module-des-title fl-h2"><strong>Contact </strong>Us</h2>
-                          <p>Praesent imperdiet leo in odio in bibendum aliquet. Est consectetur amet, porttitor turpis. Scelerisque sed eu auctor fringilla nunc.</p>
-                        </div>
+                        <?php if(is_array($promo2_link) && !empty($promo2_link['url'])): ?>
+                        <div class="cta-btn-ctlr">
+                          <div class="cta-btn">
+                            <?php printf('<a class="cdc-btn" href="%s">%s</a>',$promo2_link['url'],$promo2_link['title'] ); ?>
+                          </div>
                       </div>
-                      <div class="cta-btn-ctlr">
-                        <div class="cta-btn">
-                          <a href="#" class="cdc-btn">Contact Us</a>                     
-                        </div>
-                      </div>
+                      <?php endif; ?>
                     </div>
                   </div>
                 </div>
-              </div>
+              <?php endif; ?>
             </div>
           </div>
         </div>

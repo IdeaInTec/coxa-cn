@@ -8,6 +8,7 @@ $thisID = get_the_ID();
 <?php 
 $intro = get_field('intro', $thisID);
 $link = $intro['link'];
+if(!empty($intro['title']) && !empty($intro['description']) && !empty($link['url'])):
 ?>     
   <section class="about-intro-sec has-inline-bg double-image-module">
     <div class="container">
@@ -60,535 +61,465 @@ $link = $intro['link'];
   </div>
 </div>
 </section>
-
 <?php 
+endif;
 $showhideteam = get_field('showhideteam', $thisID);
 if($showhideteam):
-  $ourteam = get_field('ourteam', $thisID);
-  ?>
-  <section class="about-team-sec">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="sec-entry-hdr-cntlr">
-            <div class="sec-entry-hdr">
-              <?php if(!empty($ourteam['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'.$ourteam['title'].'</h2>'); ?>
-              <div class="diamond-module">
-                <ul class="reset-list">
-                  <li>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                  </li>
-                  <li>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                  </li>
-                  <li>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                  </li>
-                </ul>
-              </div>                
-              <?php echo wpautop($ourteam['description']); ?>
-            </div>
+$ourteam = get_field('ourteam', $thisID);
+$link = $ourteam['link'];
+?>
+<section class="about-team-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sec-entry-hdr-cntlr">
+          <div class="sec-entry-hdr">
+            <?php if(!empty($ourteam['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'.$ourteam['title'].'</h2>'); ?>
+            <div class="diamond-module">
+              <ul class="reset-list">
+                <li>
+                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                </li>
+                <li>
+                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                </li>
+                <li>
+                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                </li>
+              </ul>
+            </div>                
+            <?php echo wpautop($ourteam['description']); ?>
           </div>
-          <div class="profile-module">                
-            <ul class="reset-list">
-              <li>
-                <div class="pro-mdul-grd">
-                  <div class="pm-grd-img-cntlr">
-                    <div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-01.jpg);"></div>
-                  </div>
-                  <div class="pm-grd-desc-cntlr mHc">
-                    <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">David Cox</a></h5>
-                    <div class="pm-grd-assist mHc2">
-                      <span class="pm-grd-assist-name">Practice Principal<span class="pm-grd-assist-no">GDC No: 65106</span></span>
-                    </div>
-                    <span class="pm-grd-addr mHc3">BDS (Wales, 1990), MSc (Dental Implantology, 2014)</span>
-                    <div class="pm-grd-desc">
-                      <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
-                    </div>
-                    <div class="pm-grd-btns-cntlr">                          
-                      <div class="pm-grd-btn pm-grd-btn-02">
-                        <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="pro-mdul-grd">
-                  <div class="pm-grd-img-cntlr">
-                    <div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-02.jpg);"></div>
-                  </div>
-                  <div class="pm-grd-desc-cntlr mHc">
-                    <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Robert Hitchcock</a></h5>
-                    <div class="pm-grd-assist mHc2">
-                      <span class="pm-grd-assist-name">Practice Principal<span class="pm-grd-assist-no">GDC No: 69354</span></span>
-                    </div>
-                    <span class="pm-grd-addr mHc3">BDS (Newcastle, 1993)</span>
-                    <div class="pm-grd-desc">
-                      <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
-                    </div>
-                    <div class="pm-grd-btns-cntlr">                          
-                      <div class="pm-grd-btn pm-grd-btn-02">
-                        <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="pro-mdul-grd">
-                  <div class="pm-grd-img-cntlr">
-                    <div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-07.jpg);"></div>
-                  </div>
-                  <div class="pm-grd-desc-cntlr mHc">
-                    <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Katy Robinson</a></h5>
-                    <div class="pm-grd-assist mHc2">
-                      <span class="pm-grd-assist-name">Associate Dentist<span class="pm-grd-assist-no">GDC No: 114378</span></span>
-                    </div>
-                    <span class="pm-grd-addr mHc3">BDS (Cardiff Dental School, 2007), MJDF RCS (Eng)</span>
-                    <div class="pm-grd-desc">
-                      <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
-                    </div>
-                    <div class="pm-grd-btns-cntlr">                          
-                      <div class="pm-grd-btn pm-grd-btn-02">
-                        <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>              
-          <div class="about-team-sec-btn text-center">
-            <a class="cdc-btn" href="#">Meet all the team</a>
-          </div>              
         </div>
+        <div class="profile-module">                
+          <ul class="reset-list">
+            <li>
+              <div class="pro-mdul-grd">
+                <div class="pm-grd-img-cntlr">
+                  <div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-01.jpg);"></div>
+                </div>
+                <div class="pm-grd-desc-cntlr mHc">
+                  <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">David Cox</a></h5>
+                  <div class="pm-grd-assist mHc2">
+                    <span class="pm-grd-assist-name">Practice Principal<span class="pm-grd-assist-no">GDC No: 65106</span></span>
+                  </div>
+                  <span class="pm-grd-addr mHc3">BDS (Wales, 1990), MSc (Dental Implantology, 2014)</span>
+                  <div class="pm-grd-desc">
+                    <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
+                  </div>
+                  <div class="pm-grd-btns-cntlr">                          
+                    <div class="pm-grd-btn pm-grd-btn-02">
+                      <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pro-mdul-grd">
+                <div class="pm-grd-img-cntlr">
+                  <div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-02.jpg);"></div>
+                </div>
+                <div class="pm-grd-desc-cntlr mHc">
+                  <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Robert Hitchcock</a></h5>
+                  <div class="pm-grd-assist mHc2">
+                    <span class="pm-grd-assist-name">Practice Principal<span class="pm-grd-assist-no">GDC No: 69354</span></span>
+                  </div>
+                  <span class="pm-grd-addr mHc3">BDS (Newcastle, 1993)</span>
+                  <div class="pm-grd-desc">
+                    <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
+                  </div>
+                  <div class="pm-grd-btns-cntlr">                          
+                    <div class="pm-grd-btn pm-grd-btn-02">
+                      <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pro-mdul-grd">
+                <div class="pm-grd-img-cntlr">
+                  <div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-07.jpg);"></div>
+                </div>
+                <div class="pm-grd-desc-cntlr mHc">
+                  <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Katy Robinson</a></h5>
+                  <div class="pm-grd-assist mHc2">
+                    <span class="pm-grd-assist-name">Associate Dentist<span class="pm-grd-assist-no">GDC No: 114378</span></span>
+                  </div>
+                  <span class="pm-grd-addr mHc3">BDS (Cardiff Dental School, 2007), MJDF RCS (Eng)</span>
+                  <div class="pm-grd-desc">
+                    <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
+                  </div>
+                  <div class="pm-grd-btns-cntlr">                          
+                    <div class="pm-grd-btn pm-grd-btn-02">
+                      <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>  
+        <?php if(is_array($link) && !empty($link['url'])): ?>            
+        <div class="about-team-sec-btn text-center">
+          <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title']); ?>
+        </div> 
+        <?php endif; ?>             
       </div>
     </div>
-  </section>
+  </div>
+</section>
 <?php endif; ?>
 
 
 <?php 
 $showhidedifferent = get_field('showhidedifferent', $thisID);
 if($showhidedifferent):
-  $mdifferent = get_field('mdifferent', $thisID);
-  $link = $mdifferent['link'];
-  ?>
-  <section class="about-intro-sec has-inline-bg">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="abtis-img-text-row abtis-lft-img-row">
-            <div class="abtis-img-text-row-inr">
-              <?php if(!empty($mdifferent['image'])): ?>
-                <div class="abtis-img-txt-col abtis-row-img">
-                  <div class="abtis-row-img-inner">
-                    <div class="abtis-row-main-img-cntrl">
-                      <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($mdifferent['image']); ?>);">
-                      </div>
+$mdifferent = get_field('mdifferent', $thisID);
+$link = $mdifferent['link'];
+?>
+<section class="about-intro-sec has-inline-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="abtis-img-text-row abtis-lft-img-row">
+          <div class="abtis-img-text-row-inr">
+            <?php if(!empty($mdifferent['image'])): ?>
+              <div class="abtis-img-txt-col abtis-row-img">
+                <div class="abtis-row-img-inner">
+                  <div class="abtis-row-main-img-cntrl">
+                    <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($mdifferent['image']); ?>);">
                     </div>
                   </div>
                 </div>
+              </div>
+            <?php endif; ?>
+            <div class="abtis-img-txt-col abtis-row-text">
+              <div class="abtis-row-text-inr">
+                <div class="diamond-module">
+                  <ul class="reset-list">
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                    <li>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                    </li>
+                  </ul>
+                </div>
+                <?php if(!empty($mdifferent['title'])) echo('<h2 class="fl-h4">'.$mdifferent['title'].'</h2>'); ?>
+                <?php echo wpautop($mdifferent['description']); ?>
+                <?php if(is_array($link) && !empty($link['url'])): ?>
+                <div class="abtis-intro-des-btn hide-sm">
+                  <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title'] ); ?>
+                </div>
               <?php endif; ?>
-              <div class="abtis-img-txt-col abtis-row-text">
-                <div class="abtis-row-text-inr">
-                  <div class="diamond-module">
-                    <ul class="reset-list">
-                      <li>
-                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                      </li>
-                      <li>
-                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                      </li>
-                      <li>
-                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                      </li>
-                    </ul>
-                  </div>
-                  <?php if(!empty($mdifferent['title'])) echo('<h2 class="fl-h4">'.$mdifferent['title'].'</h2>'); ?>
-                  <?php echo wpautop($mdifferent['description']); ?>
-                  <?php if(is_array($link) && !empty($link['url'])): ?>
-                  <div class="abtis-intro-des-btn hide-sm">
-                    <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title'] ); ?>
-                  </div>
-                <?php endif; ?>
-              </div>                          
-            </div>
+            </div>                          
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </section> 
 <?php endif; ?>
 
 <?php 
 $showhidewch = get_field('showhidewch', $thisID);
 if($showhidewch):
-  ?>
-<section class="why-choose-sec parallaxie" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/why-choose-bg-img.png);">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="sec-entry-hdr-cntlr">
-              <div class="sec-entry-hdr">
-                <h3 class="sec-entry-hdr-title fl-h4">Why Choose Us?</h3>
-                <div class="diamond-module">
-                  <ul class="reset-list">
-                    <li>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                    <li>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                    <li>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                  </ul>
-                </div>                
-                <p>Amet a aliquam tellus, ut. Fringilla sagittis ut a pellentesque accumsan.<br> Ipsum malesuada vitae fusce semper nec scelerisque a.</p>
-              </div>
-            </div>
-            <div class="why-choose-grids-cntlr">
-              <div class="why-choose-grids">
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-1.svg" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">Free Consultation</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-2.svg" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">Bespoke Treatments</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-3.svg" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">Locally Owned</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-4.svg" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">Modern Equipment</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-5.svg" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">Rated 5 Stars</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-6.svg" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">Friendly Team</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-7-1.png" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">30 Years Experience</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="why-choose-grid-col">
-                  <div class="why-choose-grid-item">
-                    <div class="why-choose-grid-img">
-                      <i>
-                        <img src="<?php echo THEME_URI; ?>/assets/images/why-ch-grd-icon-8.svg" alt="">
-                      </i>
-                    </div>
-                    <div class="why-choose-grid-des mHc">
-                      <h4 class="why-choose-grid-title fl-h5 mHc1">Luxury Practice</h4>
-                      <p>Odio aliquam vel urna ut faucibus nisi id aliquet. Congue adipiscing ultrices porta velit donec mollis gravida.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="why-choose-grid-btn hide-sm">
-                <a href="#" class="cdc-btn">Find More Reasons</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-<?php endif; ?>
+$why_choose = get_field('why_choose', HOMEID);
+$wch_link = $why_choose['link'];
+?>
 
-<?php 
-$showhidepr = get_field('showhidepr', $thisID);
-if($showhidepr):
-  $previews = get_field('previews', $thisID);
-  ?>
-  <section class="review-sec">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="sec-entry-hdr-cntlr">
-            <div class="sec-entry-hdr">
-              <?php if(!empty($previews['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'.$previews['title'].'</h2>'); ?>
-              <div class="diamond-module">
-                <ul class="reset-list">
-                  <li>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                  </li>
-                  <li>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                  </li>
-                  <li>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                  </li>
-                </ul>
-              </div>                
-              <?php echo wpautop($previews['description']); ?>
-            </div>
-          </div>
-          <div class="review-grids-cntlr">
-            <div class="review-grids reviewSliderGrd3 review-pro-des-btn-col-3-cntlr"> 
-              <div class="review-grid-col">
-                <div class="review-grid-item">
-                  <div class="review-pro-img">
-                    <i>
-                      <img src="<?php echo THEME_URI; ?>/assets/images/review-pro-img-1.jpg" alt="">
-                    </i>
-                  </div>
-                  <div class="review-pro-rating">
-                    <span>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/rating-star-icon.svg" alt=""></i>
-                    </span>
-                  </div>
-                  <h3 class="review-tstmnl-mgs fl-h5 mHc">“Very kind and friendly staff as well a highly qualified skilled dentists!”</h3>
-                  <div class="review-pro-des testimonial-text mHc1"data-status="closed">
-                    <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-                  </div>
-                  <div class="review-pro-des-btn review-pro-des-btn-col-3">
-                    <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
-                  </div>
-                  <div class="review-pro-name">
-                    <strong class="review-pro-title">Chloe Jones</strong>
-                    <span>Cardiff</span>
-                  </div>
-                </div>
-              </div>
-              <div class="review-grid-col">
-                <div class="review-grid-item">
-                  <div class="review-pro-img">
-                    <i>
-                      <img src="<?php echo THEME_URI; ?>/assets/images/review-pro-img-2.jpg" alt="">
-                    </i>
-                  </div>
-                  <div class="review-pro-rating">
-                    <span>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/rating-star-icon.svg" alt=""></i>
-                    </span>
-                  </div>
-                  <h3 class="review-tstmnl-mgs fl-h5 mHc">“Best experience I have ever had with a dentist in Newport”</h3>
-                  <div class="review-pro-des testimonial-text mHc1"data-status="closed">
-                    <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-                  </div>
-                  <div class="review-pro-des-btn review-pro-des-btn-col-3">
-                    <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
-                  </div>
-                  <div class="review-pro-name">
-                    <strong class="review-pro-title">Bob Ross</strong>
-                    <span>Newport</span>
-                  </div>
-                </div>
-              </div>
-              <div class="review-grid-col">
-                <div class="review-grid-item">
-                  <div class="review-pro-img">
-                    <i>
-                      <img src="<?php echo THEME_URI; ?>/assets/images/review-pro-img-3.jpg" alt="">
-                    </i>
-                  </div>
-                  <div class="review-pro-rating">
-                    <span>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/rating-star-icon.svg" alt=""></i>
-                    </span>
-                  </div>
-                  <h3 class="review-tstmnl-mgs fl-h5 mHc">“Thank you for all the time you spent with me and giving me back my smile”</h3>
-                  <div class="review-pro-des testimonial-text mHc1"data-status="closed">
-                    <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-                  </div>
-                  <div class="review-pro-des-btn review-pro-des-btn-col-3">
-                    <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
-                  </div>
-                  <div class="review-pro-name">
-                    <strong class="review-pro-title">Chloe Jones</strong>
-                    <span>Cardiff</span>
-                  </div>
-                </div>
-              </div> 
-              <div class="review-grid-col">
-                <div class="review-grid-item">
-                  <div class="review-pro-img">
-                    <i>
-                      <img src="<?php echo THEME_URI; ?>/assets/images/review-pro-img-1.jpg" alt="">
-                    </i>
-                  </div>
-                  <div class="review-pro-rating">
-                    <span>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/rating-star-icon.svg" alt=""></i>
-                    </span>
-                  </div>
-                  <h3 class="review-tstmnl-mgs fl-h5 mHc">“Very kind and friendly staff as well a highly qualified skilled dentists!”</h3>
-                  <div class="review-pro-des testimonial-text mHc1"data-status="closed">
-                    <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis<span id="dots">....</span><span id="more_text">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                  </div>
-                  <div class="review-pro-des-btn review-pro-des-btn-col-3">
-                    <button onclick="myFunction()" id="rdmore_bnt">Read more</button>
-                    <button onclick="myFunction()" id="rdless_bnt">Read less</button>
-                  </div>
-                  <div class="review-pro-name">
-                    <strong class="review-pro-title">Chloe Jones</strong>
-                    <span>Cardiff</span>
-                  </div>
-                </div>
-              </div>                 
-            </div>
-            <div class="review-prev-next">
-              <div class="revw-prev">
-                <span class="revw-left">
-                  <svg class="revw-left-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#29467D">
-                    <use xlink:href="#revw-left-arrow"></use> 
-                  </svg>
-                </span>
-              </div>
-              <div class="revw-next">
-                <span class="revw-right">
-                  <svg class="revw-right-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#29467D">
-                    <use xlink:href="#revw-right-arrow"></use> 
-                  </svg>
-                </span>
-              </div>
-            </div>              
-          </div>
-          <div class="review-grid-btns hide-sm">
-            <ul class="reset-list">
-              <li>
-                <a href="#" class="cdc-btn">See Patient Reviews</a>
-              </li>
-              <li>
-                <a href="#" class="cdc-trnsprnt-btn">See Dentist Reviews</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<?php endif; ?>
-
-
-<section class="cta-section">
-  <div class="container-lg">
+<section class="why-choose-sec parallaxie" style="background-image: url(<?php echo cbv_get_image_src($why_choose['background_image']); ?>);">
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="cta-module-cntlr">
-          <div class="cta-module-wrp parallaxie " style="background-image: url(<?php echo THEME_URI; ?>/assets/images/about-cta-sec-bg.jpg);">
-            <div class="cta-module">
-              <div class="cta-module-des-ctlr">
-                <div class="diamond-module">
-                  <ul class="reset-list">
-                    <li>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                    <li>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                    <li>
-                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                    </li>
-                  </ul>
+        <div class="sec-entry-hdr-cntlr">
+          <div class="sec-entry-hdr">
+            <?php if(!empty($why_choose['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'. $why_choose['title'] .'</h2>'); ?>
+            <div class="diamond-module">
+              <ul class="reset-list">
+                <li>
+                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                </li>
+                <li>
+                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                </li>
+                <li>
+                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                </li>
+              </ul>
+            </div>                
+            <?php echo wpautop($why_choose['description']); ?>
+          </div>
+        </div>
+        <div class="why-choose-grids-cntlr">
+          <div class="why-choose-grids">
+            <?php 
+            $features = $why_choose['features'];
+            if(!empty($features)):
+            foreach ($features as $feature):
+            ?>
+            <div class="why-choose-grid-col">
+              <div class="why-choose-grid-item">
+                <?php if(!empty($feature['icon'])): ?>
+                <div class="why-choose-grid-img">
+                  <i>
+                    <?php echo cbv_get_image_tag($feature['icon']); ?>
+                  </i>
                 </div>
-                <div class="cta-module-des">
-                  <h2 class="cta-module-des-title fl-h2"><strong>Book </strong>Appointment Online</h2>
-                  <p>Praesent imperdiet leo in odio in bibendum aliquet. Est consectetur amet, porttitor turpis. Scelerisque sed eu auctor fringilla nunc.</p>
-                </div>
-              </div>
-              <div class="cta-btn-ctlr">
-                <div class="cta-btn">
-                  <a href="#" class="cdc-btn">Book Appointment</a>                     
+                <?php endif; ?>
+                <div class="why-choose-grid-des mHc">
+                  <?php if(!empty($feature['title'])) echo('<h4 class="why-choose-grid-title fl-h5 mHc1">'. $feature['title'] .'</h4>'); ?>
+                  <?php echo wpautop($feature['description']); ?>
                 </div>
               </div>
             </div>
+            <?php  endforeach; endif; ?>
           </div>
-        </div>            
+            <?php if(is_array($wch_link) && !empty($wch_link['url'])): ?>
+            <div class="why-choose-grid-btn hide-sm">
+              <?php printf('<a class="cdc-btn" href="%s">%s</a>',$wch_link['url'],$wch_link['title'] ); ?>
+            </div>
+            <?php endif; ?>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
 <?php 
+endif;
+$showhidepr = get_field('showhidepr', $thisID);
+if($showhidepr):
+$previews = get_field('previews', $thisID);
+$link_1 = $previews['link_1'];
+$link_2 = $previews['link_2'];
+?>
+<section class="review-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sec-entry-hdr-cntlr">
+          <div class="sec-entry-hdr">
+            <?php if(!empty($previews['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'.$previews['title'].'</h2>'); ?>
+            <div class="diamond-module">
+              <ul class="reset-list">
+                <li>
+                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                </li>
+                <li>
+                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                </li>
+                <li>
+                  <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                </li>
+              </ul>
+            </div>                
+            <?php echo wpautop($previews['description']); ?>
+          </div>
+        </div>
+        <div class="review-grids-cntlr">
+          <div class="review-grids reviewSliderGrd3 review-pro-des-btn-col-3-cntlr"> 
+            <div class="review-grid-col">
+              <div class="review-grid-item">
+                <div class="review-pro-img">
+                  <i>
+                    <img src="<?php echo THEME_URI; ?>/assets/images/review-pro-img-1.jpg" alt="">
+                  </i>
+                </div>
+                <div class="review-pro-rating">
+                  <span>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/rating-star-icon.svg" alt=""></i>
+                  </span>
+                </div>
+                <h3 class="review-tstmnl-mgs fl-h5 mHc">“Very kind and friendly staff as well a highly qualified skilled dentists!”</h3>
+                <div class="review-pro-des testimonial-text mHc1"data-status="closed">
+                  <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
+                </div>
+                <div class="review-pro-des-btn review-pro-des-btn-col-3">
+                  <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
+                </div>
+                <div class="review-pro-name">
+                  <strong class="review-pro-title">Chloe Jones</strong>
+                  <span>Cardiff</span>
+                </div>
+              </div>
+            </div>
+            <div class="review-grid-col">
+              <div class="review-grid-item">
+                <div class="review-pro-img">
+                  <i>
+                    <img src="<?php echo THEME_URI; ?>/assets/images/review-pro-img-2.jpg" alt="">
+                  </i>
+                </div>
+                <div class="review-pro-rating">
+                  <span>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/rating-star-icon.svg" alt=""></i>
+                  </span>
+                </div>
+                <h3 class="review-tstmnl-mgs fl-h5 mHc">“Best experience I have ever had with a dentist in Newport”</h3>
+                <div class="review-pro-des testimonial-text mHc1"data-status="closed">
+                  <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
+                </div>
+                <div class="review-pro-des-btn review-pro-des-btn-col-3">
+                  <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
+                </div>
+                <div class="review-pro-name">
+                  <strong class="review-pro-title">Bob Ross</strong>
+                  <span>Newport</span>
+                </div>
+              </div>
+            </div>
+            <div class="review-grid-col">
+              <div class="review-grid-item">
+                <div class="review-pro-img">
+                  <i>
+                    <img src="<?php echo THEME_URI; ?>/assets/images/review-pro-img-3.jpg" alt="">
+                  </i>
+                </div>
+                <div class="review-pro-rating">
+                  <span>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/rating-star-icon.svg" alt=""></i>
+                  </span>
+                </div>
+                <h3 class="review-tstmnl-mgs fl-h5 mHc">“Thank you for all the time you spent with me and giving me back my smile”</h3>
+                <div class="review-pro-des testimonial-text mHc1"data-status="closed">
+                  <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
+                </div>
+                <div class="review-pro-des-btn review-pro-des-btn-col-3">
+                  <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
+                </div>
+                <div class="review-pro-name">
+                  <strong class="review-pro-title">Chloe Jones</strong>
+                  <span>Cardiff</span>
+                </div>
+              </div>
+            </div> 
+            <div class="review-grid-col">
+              <div class="review-grid-item">
+                <div class="review-pro-img">
+                  <i>
+                    <img src="<?php echo THEME_URI; ?>/assets/images/review-pro-img-1.jpg" alt="">
+                  </i>
+                </div>
+                <div class="review-pro-rating">
+                  <span>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/rating-star-icon.svg" alt=""></i>
+                  </span>
+                </div>
+                <h3 class="review-tstmnl-mgs fl-h5 mHc">“Very kind and friendly staff as well a highly qualified skilled dentists!”</h3>
+                <div class="review-pro-des testimonial-text mHc1"data-status="closed">
+                  <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis<span id="dots">....</span><span id="more_text">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                </div>
+                <div class="review-pro-des-btn review-pro-des-btn-col-3">
+                  <button onclick="myFunction()" id="rdmore_bnt">Read more</button>
+                  <button onclick="myFunction()" id="rdless_bnt">Read less</button>
+                </div>
+                <div class="review-pro-name">
+                  <strong class="review-pro-title">Chloe Jones</strong>
+                  <span>Cardiff</span>
+                </div>
+              </div>
+            </div>                 
+          </div>
+          <div class="review-prev-next">
+            <div class="revw-prev">
+              <span class="revw-left">
+                <svg class="revw-left-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#29467D">
+                  <use xlink:href="#revw-left-arrow"></use> 
+                </svg>
+              </span>
+            </div>
+            <div class="revw-next">
+              <span class="revw-right">
+                <svg class="revw-right-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#29467D">
+                  <use xlink:href="#revw-right-arrow"></use> 
+                </svg>
+              </span>
+            </div>
+          </div>              
+        </div>
+        <?php if(!empty($link_1['url']) && !empty($link_2['url'])): ?>
+        <div class="review-grid-btns hide-sm">
+          <ul class="reset-list">
+            <?php if(is_array($link_1) && !empty($link_1['url'])) printf('<li><a href="%s" class="cdc-btn">%s</a></li>',$link_1['url'],$link_1['title']); ?>
+            <?php if(is_array($link_2) && !empty($link_2['url'])) printf('<li><a href="%s" class="cdc-trnsprnt-btn">%s</a></li>',$link_2['url'],$link_2['title']); ?>
+          </ul>
+        </div>
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
+</section>
+<?php 
+    endif; 
+    $showhidepromo = get_field('showhidepromo', $thisID); 
+    if($showhidepromo):
+      $promo = get_field('promo', $thisID); 
+      $promo_link = $promo['link'];
+      ?>
+      <section class="cta-section">
+        <div class="container-lg">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="cta-module-cntlr">
+                <div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo cbv_get_image_src($promo['bg_image']); ?>);">
+                  <div class="cta-module">
+                    <div class="cta-module-des-ctlr">
+                      <div class="diamond-module">
+                        <ul class="reset-list">
+                          <li>
+                            <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                          </li>
+                          <li>
+                            <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                          </li>
+                          <li>
+                            <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="cta-module-des">
+                        <?php if(!empty($promo['title'])) echo('<h2 class="cta-module-des-title fl-h2">'. $promo['title'] .'</h2>'); ?>
+                        <?php if(!empty($promo['description'])) echo wpautop($promo['description']); ?>
+                      </div>
+                    </div>
+                    <div class="cta-btn-ctlr">
+                      <?php if(is_array($promo_link) && !empty($promo_link['url'])): ?>
+                      <div class="cta-btn">
+                        <?php printf('<a class="cdc-btn" href="%s">%s</a>',$promo_link['url'],$promo_link['title'] ); ?>
+                      </div>
+                    <?php endif; ?>
+                  </div>
+                </div>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </section>
+<?php 
+endif;
 $showhidefaq = get_field('showhidefaq', $thisID);
 if($showhidefaq):
 $faqs = get_field('faqs', $thisID);
