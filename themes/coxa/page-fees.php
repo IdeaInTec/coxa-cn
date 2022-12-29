@@ -30,145 +30,39 @@ get_template_part('templates/page', 'banner');
                         <span>Select treatment fees</span>
                       </div>
                       <ul class="reset-list">
-                        <li><a href="#examination">Examination Fees</a></li>
-                        <li><a href="#assessment">Assessment & Scan Fees</a></li>
-                        <li><a href="#dentistry">General Dentistry Fees</a></li>
-                        <li><a href="#treatment">Treatment Fees</a></li>
+                        <li><a href="#fees-scrool-btn-1">Examination Fees</a></li>
+                        <li><a href="#fees-scrool-btn-2">Assessment & Scan Fees</a></li>
+                        <li><a href="#fees-scrool-btn-3">General Dentistry Fees</a></li>
+                        <li><a href="#fees-scrool-btn-4">Treatment Fees</a></li>
                       </ul>
                     </div>
                   </div>
-                  <div class="fees-module-cntlr" id="examination">
-                    <h3 class="fl-h4 fees-module-title">Examination Fees</h3>
-                    <div class="fees-module">
-                      <ul class="reset-list">
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">Regular Patient Examination</span>
-                            <strong class="fees-module-item-prize">from £39</strong>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">New Patient Examination</span>
-                            <strong class="fees-module-item-prize">from £49</strong>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="fees-module-cntlr" id="assessment">
-                    <h3 class="fl-h4 fees-module-title">Assessment & Scan Fees</h3>
-                    <div class="fees-module">
-                      <ul class="reset-list">
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">Full Periodontal Case Assessment</span>
-                            <strong class="fees-module-item-prize">from £82</strong>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">Implant Case Assessment</span>
-                            <strong class="fees-module-item-prize">from £85</strong>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">3D CBCT Scan</span>
-                            <strong class="fees-module-item-prize">from £125</strong>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="fees-module-cntlr" id="dentistry">
-                    <h3 class="fl-h4 fees-module-title">General Dentistry Fees</h3>
-                    <div class="fees-module">
-                      <ul class="reset-list">
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">White Fillings</span>
-                            <strong class="fees-module-item-prize">from £46</strong>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">Root Canal Treatment</span>
-                            <strong class="fees-module-item-prize">from £260</strong>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">Tooth Coloured Crowns</span>
-                            <strong class="fees-module-item-prize">from £325</strong>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="fees-module-cntlr" id="treatment">
-                    <h3 class="fl-h4 fees-module-title">Treatment Fees</h3>
-                    <div class="fees-module">
-                      <ul class="reset-list">
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">Dental Implants</span>
-                            <strong class="fees-module-item-prize">from £1390</strong>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">Implant retained Crown</span>
-                            <strong class="fees-module-item-prize">from £780</strong>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">Implant Retained Lower Denture</span>
-                            <strong class="fees-module-item-prize">from £3800</strong>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">Implant retained Full Upper Denture</span>
-                            <strong class="fees-module-item-prize">from £6800</strong>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">Teeth Whitening</span>
-                            <strong class="fees-module-item-prize">from £325</strong>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">Orthodontic Tooth Alignment</span>
-                            <strong class="fees-module-item-prize">from £1520</strong>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">Laser Soft Tissue Treatments</span>
-                            <strong class="fees-module-item-prize">from £76</strong>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">Anti Wrinkle Treatment</span>
-                            <strong class="fees-module-item-prize">from £200</strong>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="fees-module-item">
-                            <span class="fees-module-item-name">Hygienist Appointments</span>
-                            <strong class="fees-module-item-prize">from £56</strong>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  	<?php 
+                  		$i = 1;
+                  		foreach( $fees as $fee ): 
+	                  		$title = $fee['title'];
+	                  		$items = $fee['items'];
+                  	?>
+					<div class="fees-module-cntlr" id="fees-scrool-btn-<?php echo $i; ?>">
+						<?php if(!empty($title)) echo('<h3 class="fl-h4 fees-module-title">' .$title. '</h3>'); ?>
+						<div class="fees-module">
+						  <ul class="reset-list">
+						  	<?php 
+						  		foreach( $items as $item ):
+						  			$title = $item['title'];
+						  			$value = $item['value'];
+						  	?>
+						    <li>
+						      <div class="fees-module-item">
+						        <span class="fees-module-item-name"><?php echo $title; ?></span>
+						        <strong class="fees-module-item-prize">from £<?php echo $value; ?></strong>
+						      </div>
+						    </li>
+							<?php endforeach; ?>
+						  </ul>
+						</div>
+					</div>
+              		<?php $i++; endforeach; ?>
                 </div>
               </div>
             </div>
