@@ -542,6 +542,7 @@ $faqs = get_field('faqs', HOMEID);
 						<?php
               while($faq_loop->have_posts()):$faq_loop->the_post();
                 global $post;
+                $faq_link = get_field('link', $post->ID);
             ?>
 						<div class="faq-grd">
 							<div class="faq-grd-item">
@@ -562,8 +563,10 @@ $faqs = get_field('faqs', HOMEID);
 										</div>
 									</div>
 									<div class="faq-accordion-des active">
-										<?php the_content(); ?>
-										<a href="#" class="cdc-btn">Find Out More</a>
+										<?php 
+											the_content(); 
+											if( is_array($faq_link) && !empty($faq_link['url']) ) printf('<a class="cdc-btn" href="%s" target="%s">%s</a>',$faq_link['url'], $faq_link['target'], $faq_link['title'] );
+										?>
 									</div>
 								</div>
 							</div>
@@ -607,7 +610,7 @@ $ourloc = get_field('ourloc', HOMEID);
 				</div>
 				<?php
 					$locIDs = $ourloc['select_locations'];
-		      if( !empty($previewIDs) ){
+		      if( !empty($locIDs) ){
 		        $locIDs = is_array($locIDs)?$locIDs : array($locIDs);
 		        $loc_args = array(
 		          'post_type' => 'location',
@@ -627,7 +630,6 @@ $ourloc = get_field('ourloc', HOMEID);
 				<div class="locations-sec-inner">
 					<div class="locations-sec-grids locationSlider">
 					<?php
-            if($loc_loop->have_posts()):
               while($loc_loop->have_posts()):$loc_loop->the_post();
                 global $post;
                 $overview = get_field('overview', $post->ID);
@@ -647,8 +649,8 @@ $ourloc = get_field('ourloc', HOMEID);
 									<div class="office-time-zoon mHc2">
 										<h5 class="office-des-title">Opening Hours:</h5>
 										<?php 
-											foreach( $overview['opening_hours'] as $open_hour){ 
-												if( !empty($open_hour) ) printf('<span>%s</span>', $open_hour);
+											foreach( $overview['opening_hours'] as $open_hour):
+												if( !empty($open_hour['text']) ) printf('<span>%s</span>', $open_hour['text']);
 											endforeach; 
 									  ?>
 									</div>
