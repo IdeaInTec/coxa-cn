@@ -7,21 +7,23 @@
 	$description = get_field('description');
 ?>
 
-<section class="privacy-policy-sec">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="privacy-plcy-sec-inr">
-          <div class="privacy-plcy-sec-cntlr">
-            <div class="privacy-plcy-des">
-              <?php if(!empty($description)) echo $description; ?>
+<div class="default-page-con-cntlr">
+  <section class="privacy-policy-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="privacy-plcy-sec-inr">
+            <div class="privacy-plcy-sec-cntlr">
+              <div class="privacy-plcy-des">
+                <?php if(!empty($description)) echo $description; ?>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 
 
 <?php get_footer(); ?>
