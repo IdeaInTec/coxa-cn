@@ -373,6 +373,37 @@ $faqs = get_field('faqs', $thisID);
 </section> 
 <?php endif; ?>
 
+<section class="maps-sec">
+        <div class="maps-sec-inr">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5889072554382!2d-3.180398984262356!3d51.52075757963731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e1c66ea171f1d%3A0x4b62f04a67e2abdc!2s9%20Rhyd-Y-Penau%20Rd%2C%20Cardiff%20CF23%206PX%2C%20UK!5e0!3m2!1sen!2sbd!4v1667131835577!5m2!1sen!2sbd" width="100%" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="map-loc-desc-inr">
+            <div class="map-loc-desc-cntlr">
+              <div class="map-loc-desc-item">
+                <div class="map-item-img-cntlr">
+                  <img src="assets/images/map-cnt-des.jpg">
+                </div>
+                <div class="map-item-des-cntlr">
+                  <h5 class="fl-h6 map-loc-title">Cox & Hitchcock Dental Group</h5>
+                  <div class="map-item-loc-phn">
+                    <ul class="reset-list">
+                      <li><a class="map-location" href="#">9 Rhyd Y Penau Road Cyncoed, Cardiff, CF23 6PX</a></li>
+                      <li><a class="map-phn" href="tel:02920761100">02920 761100</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="map-des-btn">
+                  <a class="cdc-btn" href="#">Get Directions</a>
+                </div>
+                <div class="map-des-btm-arrow-cntr">
+                  <div class="map-des-btm-arrow-img">
+                    <img src="assets/images/bottom-arrow.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 </div>
 
