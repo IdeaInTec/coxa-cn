@@ -55,7 +55,7 @@ get_template_part('templates/page', 'banner');
 						    <li>
 						      <div class="fees-module-item">
 						        <span class="fees-module-item-name"><?php echo $title; ?></span>
-						        <strong class="fees-module-item-prize">from £<?php echo $value; ?></strong>
+						        <strong class="fees-module-item-prize"><?php echo $value; ?></strong>
 						      </div>
 						    </li>
 							<?php endforeach; ?>
