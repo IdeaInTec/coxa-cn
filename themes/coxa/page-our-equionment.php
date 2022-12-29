@@ -4,7 +4,7 @@ get_header();
 $thisID = get_the_ID();
 ?>
 <?php get_template_part('templates/page', 'banner'); ?>
-<div class="about-page-con-cntlr"> 
+<div class="our-equionment-page-con-cntlr"> 
 <?php 
 $intro = get_field('intro', $thisID);
 $link = $intro['link'];
