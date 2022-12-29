@@ -540,13 +540,15 @@ $faqs = get_field('faqs', HOMEID);
 				<div class="faq-sec-inner">
 					<div class="faq-grds">
 						<?php
+							$i = 1;
               while($faq_loop->have_posts()):$faq_loop->the_post();
                 global $post;
                 $faq_link = get_field('link', $post->ID);
+                $active = $i == 1? 'active': '';
             ?>
 						<div class="faq-grd">
 							<div class="faq-grd-item">
-								<div class="faq-accordion-menu active">
+								<div class="faq-accordion-menu <?php echo $active; ?>">
 									<div class="faq-accordion-hdr">
 										<h4 class="faq-accordion-title fl-h6"><?php the_title(); ?></h4>
 										<div class="faq-accordion-icon-box">
@@ -555,14 +557,14 @@ $faqs = get_field('faqs', HOMEID);
 													<use xlink:href="#faq-list-icon-svg"></use> 
 												</svg>
 											</i>
-											<i class="faq-active-icon">
-												<svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-													<use xlink:href="#faq-list-icon-active-svg"></use> 
+											<i class="faq-<?php echo $active; ?>-icon">
+												<svg class="faq-list-icon-<?php echo $active; ?>-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+													<use xlink:href="#faq-list-icon-<?php echo $active; ?>-svg"></use> 
 												</svg>
 											</i>
 										</div>
 									</div>
-									<div class="faq-accordion-des active">
+									<div class="faq-accordion-des <?php echo $active; ?>">
 										<?php 
 											the_content(); 
 											if( is_array($faq_link) && !empty($faq_link['url']) ) printf('<a class="cdc-btn" href="%s" target="%s">%s</a>',$faq_link['url'], $faq_link['target'], $faq_link['title'] );
@@ -571,7 +573,7 @@ $faqs = get_field('faqs', HOMEID);
 								</div>
 							</div>
 						</div>
-						<?php endwhile; ?>
+						<?php $i++; endwhile; ?>
 					</div>
 				</div>
 				<?php wp_reset_postdata();endif;?>
@@ -605,7 +607,7 @@ $ourloc = get_field('ourloc', HOMEID);
 								</li>
 							</ul>
 						</div>                
-						<?php echo wpautop($ourloc['title']); ?>
+						<?php echo wpautop($ourloc['description']); ?>
 					</div>
 				</div>
 				<?php
