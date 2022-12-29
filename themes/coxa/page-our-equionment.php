@@ -62,6 +62,58 @@ $link = $intro['link'];
 </section>
 
 
+
+<?php 
+  $showhideequpments = get_field('showhideequpments', $thisID);
+  if($showhideequpments):
+    $equipments = get_field('equipments', $thisID);
+?>
+<section class="treatments-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="treatments-sec-inr">
+          
+          <div class="treatment-grds">
+            <?php foreach($equipments as $equipment):?>
+              <div class="treatment-grd-item-col">
+                <div class="treatment-grd-item">
+                  <div class="treatment-grd-img-cntlr">
+                    <?php if(!empty($equipment['image'])):?>
+                    <div class="treatment-grd-img">
+                      <?php echo cbv_get_image_tag($equipment['image']);?>
+                    </div>
+                  <?php endif;?>
+                  </div>
+                  <div class="treatment-grd-des">
+                    <?php 
+                    if(!empty($equipment['title'])) echo '<h3 class="treatment-grd-des-title fl-h5">'.$equipment['title'].'</h3>';
+                    if(!empty($equipment['image_subtitle'])) echo '<h6 class="treatment-grd-des-subtitle">'. $equipment['image_subtitle'] .'</h6>';
+                    echo wpautop($equipment['description']);?>
+                  </div>
+                </div>
+              </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<?php endif;?>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php 
   $showhidewch = get_field('showhidewch', $thisID); 
   if ($showhidewch):
@@ -238,7 +290,158 @@ $link_2 = $ourpractice['link_2'];
     </section>
 <?php endif; ?>
 
-
+    <?php 
+      $showhidetreatment = get_field('showhidetreatment', $thisID);
+      if($showhidetreatment):
+        $chtreatment = get_field('chtreatment', $thisID);
+        $link = $chtreatment['link'];
+        ?>
+  <section class="treatment-sec">
+    <div class="treatment-cntlr">
+      <div class="treatment-lft">
+        <div class="hide-md">
+          <div class="diamond-module">
+            <ul class="reset-list">
+              <li>
+                <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+              </li>
+              <li>
+                <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+              </li>
+              <li>
+                <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+              </li>
+            </ul>
+          </div> 
+        </div>
+        <?php if(!empty($chtreatment['title'])) echo('<h2 class="fl-h4 treatment-title">'.$chtreatment['title'].'</h2>'); ?>
+        <?php if(!empty($chtreatment['description'])) echo('<div class="treatment-desc hide-md">'.wpautop($chtreatment['description']).'</div>'); ?>
+        <?php if(is_array($link) && !empty($link['url'])): ?>
+        <div class="treatment-btn hide-md">
+          <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title']); ?>
+        </div>
+        <?php endif; ?>
+      </div>
+      <div class="treatment-rgt">
+        <div class="custom-prev-next-cntlr">
+          <div class="custom-prev">
+            <span class="arrow-left prv-nxt-btn">
+              <svg class="prev-line" width="66" height="20" viewBox="0 0 66 20" fill="#29467D">
+                <use xlink:href="#prev-line"></use> 
+              </svg>
+            </span>
+          </div>
+          <div class="custom-next">
+            <span class="arrow-right prv-nxt-btn">
+              <svg class="next-line" width="66" height="20" viewBox="0 0 66 20" fill="#29467D">
+                <use xlink:href="#next-line"></use> 
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="treatment-grids treatmentSlider">
+          <div class="trtmnt-grd-cntlr">
+            <div class="trtmnt-grd">
+              <div class="trtmnt-grd-img-cntlr">
+                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
+                <a href="#" class="overlay-link"></a>
+              </div>
+              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Dental Implants</a></h3>
+              <div class="trtmnt-grd-desc">
+                <p>Viverra morbi massa eu, dolor. Praesent sit elit porttitor morbi fringilla in eget sed elementum. Blandit lacus eu sit integer vel. Quis tincidunt sapien consequat malesuada egestas tempor nunc, et. Ut imperdiet ullamcorper arcu enim, porttitor donec. </p>
+              </div>
+            </div>
+          </div>
+          <div class="trtmnt-grd-cntlr">
+            <div class="trtmnt-grd">
+              <div class="trtmnt-grd-img-cntlr">
+                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-02.jpg);"></div>
+                <a href="#" class="overlay-link"></a>
+              </div>
+              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Cosnetic Dentistry</a></h3>
+              <div class="trtmnt-grd-desc">
+                <p>Et pellentesque netus tempus in pharetra rhoncus, sit. Gravida ornare viverra ac at egestas. Viverra lectus in praesent vitae.</p>
+              </div>
+            </div>
+          </div>
+          <div class="trtmnt-grd-cntlr">
+            <div class="trtmnt-grd">
+              <div class="trtmnt-grd-img-cntlr">
+                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-03.jpg);"></div>
+                <a href="#" class="overlay-link"></a>
+              </div>
+              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Private Dentistry</a></h3>
+              <div class="trtmnt-grd-desc">
+                <p>Et gravida tempus, diam non. Cras pulvinar pulvinar amet, at feugiat lorem quis magna. Mi cras praesent in tellus consectetur varius id tristique. Malesuada id enim gravida cras duis.</p>
+              </div>
+            </div>
+          </div>
+          <div class="trtmnt-grd-cntlr">
+            <div class="trtmnt-grd">
+              <div class="trtmnt-grd-img-cntlr">
+                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
+                <a href="#" class="overlay-link"></a>
+              </div>
+              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Teeth Whitening</a></h3>
+              <div class="trtmnt-grd-desc">
+                <p>Enim maecenas ipsum malesuada ultrices arcu risus lacus tempus pretium. Urna, cursus sapien, tristique sed sed condimentum fusce nisi. Id sit duis viverra orci nisi molestie viverra nisl, neque. Suspendisse sed vehicula arcu cras et. Dignissim sed semper leo sollicitudin malesuada adipiscing faucibus euismod.</p>
+              </div>
+            </div>
+          </div>
+          <div class="trtmnt-grd-cntlr">
+            <div class="trtmnt-grd">
+              <div class="trtmnt-grd-img-cntlr">
+                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
+                <a href="#" class="overlay-link"></a>
+              </div>
+              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Dental Implants</a></h3>
+              <div class="trtmnt-grd-desc">
+                <p>Viverra morbi massa eu, dolor. Praesent sit elit porttitor morbi fringilla in eget sed elementum. Blandit lacus eu sit integer vel. Quis tincidunt sapien consequat malesuada egestas tempor nunc, et. Ut imperdiet ullamcorper arcu enim, porttitor donec. </p>
+              </div>
+            </div>
+          </div>
+          <div class="trtmnt-grd-cntlr">
+            <div class="trtmnt-grd">
+              <div class="trtmnt-grd-img-cntlr">
+                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-02.jpg);"></div>
+                <a href="#" class="overlay-link"></a>
+              </div>
+              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Cosnetic Dentistry</a></h3>
+              <div class="trtmnt-grd-desc">
+                <p>Et pellentesque netus tempus in pharetra rhoncus, sit. Gravida ornare viverra ac at egestas. Viverra lectus in praesent vitae.</p>
+              </div>
+            </div>
+          </div>
+          <div class="trtmnt-grd-cntlr">
+            <div class="trtmnt-grd">
+              <div class="trtmnt-grd-img-cntlr">
+                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-03.jpg);"></div>
+                <a href="#" class="overlay-link"></a>
+              </div>
+              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Private Dentistry</a></h3>
+              <div class="trtmnt-grd-desc">
+                <p>Et gravida tempus, diam non. Cras pulvinar pulvinar amet, at feugiat lorem quis magna. Mi cras praesent in tellus consectetur varius id tristique. Malesuada id enim gravida cras duis.</p>
+              </div>
+            </div>
+          </div>
+          <div class="trtmnt-grd-cntlr">
+            <div class="trtmnt-grd">
+              <div class="trtmnt-grd-img-cntlr">
+                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
+                <a href="#" class="overlay-link"></a>
+              </div>
+              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Teeth Whitening</a></h3>
+              <div class="trtmnt-grd-desc">
+                <p>Enim maecenas ipsum malesuada ultrices arcu risus lacus tempus pretium. Urna, cursus sapien, tristique sed sed condimentum fusce nisi. Id sit duis viverra orci nisi molestie viverra nisl, neque. Suspendisse sed vehicula arcu cras et. Dignissim sed semper leo sollicitudin malesuada adipiscing faucibus euismod.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
+    </div>
 
 
 
