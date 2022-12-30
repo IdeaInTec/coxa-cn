@@ -890,34 +890,7 @@ $link = $chtreatment['link'];
             </i>
           </button>
         </div>
-        <div class="modal-body">
-          <div class="pro-modal-con-cntlr">
-            <div class="pro-modal-con-lft">
-              <div class="pro-modal-img-cntlr">
-                <img src="<?php echo THEME_URI; ?>/assets/images/modal-pro-img.jpg" alt="">
-              </div>
-            </div>
-            <div class="pro-modal-con-rgt">
-              <div class="pro-modal-des-cntlr">
-                <h2 class="pro-modal-title fl-h3">David Cox</h2>
-                <h2 class="pro-modal-assist-name fl-h5">Practice Principal <span>GDC No: 65106</span></h2>
-                <div class="pro-modal-addr">
-                  <span>BDS (Wales, 1990), MSc (Dental Implantology, 2014)</span>
-                </div>
-                <div class="pro-modal-des">
-                  <p>Following graduation from The University Hospital of Wales in 1990, David initially pursued a career in Cardiff Dental Hospital with house officer posts in General Anaesthesia and Maxillofacial Surgery, later moving to a General Practice position. After a short three years as an associate, he moved to Llanthewy Road, becoming the Principal in 1995. Following the opening of the Rhyd – y- Penau Road surgery in 1999, he was joined by Bob Hitchcock, forming the Cox & Hitchcock Partnership.</p>
-                  <p>His initial interest in Implantology stemmed from undergraduate research at Otago University in New Zealand. He has extensive post-graduate training in Dental Implantology and is a committed member of the ITI (International Team for Implantology) and ADI (Association of Dental Implantology). Quality post-graduate education is essential for professional development. Keeping abreast of the latest techniques and applying an evidence-based approach has resulted in extensive travels nationwide, throughout Europe and the USA, seeking education to broaden his knowledge base from leading clinicians, institutions and companies.</p>
-                  <p>In 2014, he completed with distinction an MSc in Dental Implantology at Bristol University.</p>
-                  <p>He works closely with Straumann Implant systems, but also has extensive experience with many other manufacturers, ensuring he provides scientifically proven care serving the best interest of his patients.</p>
-                  <p>Having thoroughly researched Peri-implant disease as part of his dissertation, he has a keen interest in this field, and often treats patients referred to him with compromised diseased implants, as well as treating individuals with periodontal (Gum) disease, often with the adjunctive use of laser technology (WATERLASE IPLUS®).</p>
-                  <p>As well as a previous member of the Dental panel at SmithKline Beecham (later GlaxoSmithKline), he has lectured post-graduate dentists, mentors, Implantologists, and annually holds discussion groups/seminars with undergraduate Dental students.</p>
-                </div>
-              </div>
-              <div class="pro-modal-btn">
-                <a class="cdc-btn" href="#">Book Private Consultation</a>
-              </div>
-            </div>
-          </div>
+        <div class="modal-body" id="teamDetail">
         </div>
       </div>
     </div>
@@ -925,32 +898,37 @@ $link = $chtreatment['link'];
 </div>
 <script type="text/javascript">
 function getTeamDetailsById(id){
-  var hostName = window.location.origin;
-  var ajax_url = hostName + '/projects/2022/coxa/wp-admin/admin-ajax.php';
-  jQuery.ajax({
-    type: 'POST',
-    url: ajax_url,
-    dataType: 'JSON',
-    data: {
-      action: 'get_team_detail_by_id',
-      gallery_id: id,
-      port: '01'
-    },
-    beforeSend:function(xhr){
-    },
-    success: function(res) {
-      console.log(res);
-      if(typeof(res.team) != "undefined" && res.team != ''){
-
-      }else{
-
+  if(jQuery('#teamDetail').length){
+    var hostName = window.location.origin;
+    var ajax_url = hostName + '/projects/2022/coxa/wp-admin/admin-ajax.php';
+    jQuery.ajax({
+      type: 'POST',
+      url: ajax_url,
+      dataType: 'JSON',
+      data: {
+        action: 'get_team_detail_by_id',
+        team_id: id,
+        port: '01'
+      },
+      beforeSend:function(xhr){
+        jQuery('#teamDetail').html('');
+      },
+      success: function(res) {
+        console.log(res);
+        if(typeof(res.team) != "undefined" && res.team != ''){
+          function showLazyLoadingData(){
+            jQuery('#teamDetail').html(res.team);
+          }  
+          setTimeout(showLazyLoadingData, 500)
+        }else{
+          jQuery('#teamDetail').html('<p>Something was wrong! Please try again.</p>');
+        }
+      },
+      error: function(err) {
+        console.error(err);
       }
-    },
-    error: function(err) {
-      console.error(err);
-    }
-  })
-
+    })
+  }
   return false;
 }
 </script>
