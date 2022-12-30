@@ -91,81 +91,73 @@ $link = $ourteam['link'];
             <?php echo wpautop($ourteam['description']); ?>
           </div>
         </div>
+        <?php
+          $teamIDs = $ourteam['select_team'];
+          if( !empty($teamIDs) ){
+            $teamIDs = is_array($teamIDs)?$teamIDs : array($teamIDs);
+            $args = array(
+              'post_type' => 'team',
+              'orderby' => 'rand',
+              'post__in' => $teamIDs,
+            );
+          }else{
+            $args = array(
+              'post_type' => 'team',
+              'posts_per_page' => 3,
+              'orderby' => 'rand'
+            );
+          }
+          $loop = new WP_Query($args);
+          if($loop->have_posts()):
+        ?>
         <div class="profile-module">                
           <ul class="reset-list">
+            <?php 
+              while($loop->have_posts()):$loop->the_post();
+                global $post;
+                $thumbID = get_post_thumbnail_id($post->ID);
+                $image_url = !empty($thumbID)? cbv_get_image_src($thumbID) : '';
+                $designation = get_field('designation', $post->ID);
+                $gdc_no = get_field('gdc_no', $post->ID);
+                $experience = get_field('experience', $post->ID);
+            ?>
             <li>
               <div class="pro-mdul-grd">
                 <div class="pm-grd-img-cntlr">
-                  <div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-01.jpg);"></div>
+                  <div class="pm-grd-img inline-bg" style="background-image: url(<?php echo $image_url; ?>);"></div>
                 </div>
                 <div class="pm-grd-desc-cntlr mHc">
-                  <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">David Cox</a></h5>
+                  <h5 class="fl-h5 pm-grd-title mHc1"><a href="#"><?php the_title(); ?></a></h5>
+                  <?php if( !empty($designation) || !empty($gdc_no) ): ?>
                   <div class="pm-grd-assist mHc2">
-                    <span class="pm-grd-assist-name">Practice Principal<span class="pm-grd-assist-no">GDC No: 65106</span></span>
+                    <span class="pm-grd-assist-name"><?php if( !empty($designation) ) printf('%s', $designation); if( !empty($gdc_no) ) printf('<span class="pm-grd-assist-no">GDC No: %s</span>', $gdc_no); ?></span>
                   </div>
-                  <span class="pm-grd-addr mHc3">BDS (Wales, 1990), MSc (Dental Implantology, 2014)</span>
+                  <?php endif; 
+                    if( !empty($experience) ) printf('<span class="pm-grd-addr mHc3">%s</span>', $experience);
+                  ?>
+                  
+                  <?php if( !empty(get_the_excerpt()) ): ?>
                   <div class="pm-grd-desc">
-                    <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
+                    <p><?php echo get_the_excerpt(); ?>...</p>
                   </div>
+                  <?php endif; ?>
                   <div class="pm-grd-btns-cntlr">                          
                     <div class="pm-grd-btn pm-grd-btn-02">
-                      <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
+                      <a class="cdc-trnsprnt-btn" href="#" onclick="getGalleryById(<?php echo $post->ID; ?>)" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
                     </div>
                   </div>
                 </div>
               </div>
             </li>
-            <li>
-              <div class="pro-mdul-grd">
-                <div class="pm-grd-img-cntlr">
-                  <div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-02.jpg);"></div>
-                </div>
-                <div class="pm-grd-desc-cntlr mHc">
-                  <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Robert Hitchcock</a></h5>
-                  <div class="pm-grd-assist mHc2">
-                    <span class="pm-grd-assist-name">Practice Principal<span class="pm-grd-assist-no">GDC No: 69354</span></span>
-                  </div>
-                  <span class="pm-grd-addr mHc3">BDS (Newcastle, 1993)</span>
-                  <div class="pm-grd-desc">
-                    <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
-                  </div>
-                  <div class="pm-grd-btns-cntlr">                          
-                    <div class="pm-grd-btn pm-grd-btn-02">
-                      <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="pro-mdul-grd">
-                <div class="pm-grd-img-cntlr">
-                  <div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-07.jpg);"></div>
-                </div>
-                <div class="pm-grd-desc-cntlr mHc">
-                  <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Katy Robinson</a></h5>
-                  <div class="pm-grd-assist mHc2">
-                    <span class="pm-grd-assist-name">Associate Dentist<span class="pm-grd-assist-no">GDC No: 114378</span></span>
-                  </div>
-                  <span class="pm-grd-addr mHc3">BDS (Cardiff Dental School, 2007), MJDF RCS (Eng)</span>
-                  <div class="pm-grd-desc">
-                    <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
-                  </div>
-                  <div class="pm-grd-btns-cntlr">                          
-                    <div class="pm-grd-btn pm-grd-btn-02">
-                      <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
+            <?php endwhile; ?>
           </ul>
         </div>  
         <?php if(is_array($link) && !empty($link['url'])): ?>            
         <div class="about-team-sec-btn text-center">
           <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title']); ?>
         </div> 
-        <?php endif; ?>             
+        <?php endif; ?>   
+        <?php wp_reset_postdata();endif;?>          
       </div>
     </div>
   </div>
@@ -931,4 +923,35 @@ $link = $chtreatment['link'];
     </div>
   </div>
 </div>
+<script type="text/javascript">
+function getGalleryById(id){
+  var hostName = window.location.origin;
+  var ajax_url = hostName + '/wp-admin/admin-ajax.php';
+  jQuery.ajax({
+    type: 'POST',
+    url: ajax_url,
+    dataType: 'JSON',
+    data: {
+      action: 'get_gallery_detail_by_id',
+      gallery_id: id,
+      port: '01'
+    },
+    beforeSend:function(xhr){
+    },
+    success: function(res) {
+      console.log(res);
+      if(typeof(res.gallery) != "undefined" && res.gallery != ''){
+
+      }else{
+
+      }
+    },
+    error: function(err) {
+      console.error(err);
+    }
+  })
+
+  return false;
+}
+</script>
 <?php get_footer(); ?>
