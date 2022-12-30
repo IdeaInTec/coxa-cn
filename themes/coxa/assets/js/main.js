@@ -831,3 +831,32 @@ function treatmentSecMrgnLft(){
 
 
 })(jQuery);
+
+function getGalleryById(id){
+  var hostName = window.location.origin;
+  var ajax_url = hostName + '/wp-admin/admin-ajax.php';
+  jQuery.ajax({
+    type: 'POST',
+    url: ajax_url,
+    dataType: 'JSON',
+    data: {
+      action: 'get_gallery_detail_by_id',
+      gallery_id: id,
+      port: '01'
+    },
+    beforeSend:function(xhr){
+    },
+    success: function(res) {
+      if(typeof(res.gallery) != "undefined" && res.gallery != ''){
+
+      }else{
+
+      }
+    },
+    error: function(err) {
+      console.error(err);
+    }
+  })
+
+  return false;
+}
