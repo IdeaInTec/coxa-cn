@@ -145,8 +145,8 @@ function get_gallery_detail_by_id(){
     $data = array();
     if (isset( $_POST["port"] ) && $_POST["port"] == '01' && isset($_POST["gallery_id"]) && !empty($_POST["gallery_id"]) ) {
         $output = '';
-
-        $data['catfeed'] = $output;
+        $output .= $_POST["gallery_id"];
+        $data['gallery'] = $output;
         echo json_encode($data);
         wp_die();
     }
