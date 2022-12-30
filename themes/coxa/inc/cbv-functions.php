@@ -141,17 +141,56 @@ function banner_placeholder($format = 'src'){
 }
 
 
-function get_gallery_detail_by_id(){
+function get_team_detail_by_id(){
     $data = array();
-    if (isset( $_POST["port"] ) && $_POST["port"] == '01' && isset($_POST["gallery_id"]) && !empty($_POST["gallery_id"]) ) {
+    if (isset( $_POST["port"] ) && $_POST["port"] == '01' && isset($_POST["team_id"]) && !empty($_POST["team_id"]) ) {
+      $teamID = $_POST["team_id"];
         $output = '';
-        $output .= $_POST["gallery_id"];
-        $data['gallery'] = $output;
+        $args = array(
+          'post_type' => 'team',
+          'posts_per_page' => 1,
+          'post__in' => array($teamID),
+        );
+        $loop = new WP_Query($args);
+        if($loop->have_posts()){
+          while($loop->have_posts()){ $loop->the_post();
+          global $post;
+          $thumbID = get_post_thumbnail_id($post->ID);
+          $image_url = !empty($thumbID)? cbv_get_image_src($thumbID) : '';
+          $designation = get_field('designation', $post->ID);
+          $gdc_no = get_field('gdc_no', $post->ID);
+          $experience = get_field('experience', $post->ID);
+          $output .='<div class="pro-modal-con-cntlr">';
+            $output .='<div class="pro-modal-con-lft">';
+              $output .='<div class="pro-modal-img-cntlr">';
+                $output .='<img src="'.THEME_URI.'/assets/images/modal-pro-img.jpg" alt="">';
+              $output .='</div>';
+            $output .='</div>';
+            $output .='<div class="pro-modal-con-rgt">';
+              $output .='<div class="pro-modal-des-cntlr">';
+                $output .='<h2 class="pro-modal-title fl-h3">David Cox</h2>';
+                $output .='<h2 class="pro-modal-assist-name fl-h5">Practice Principal <span>GDC No: 65106</span></h2>';
+                $output .='<div class="pro-modal-addr">';
+                  $output .='<span>BDS (Wales, 1990), MSc (Dental Implantology, 2014)</span>';
+                $output .='</div>';
+                $output .='<div class="pro-modal-des">';
+
+                $output .='</div>';
+              $output .='</div>';
+              $output .='<div class="pro-modal-btn">';
+                $output .='<a class="cdc-btn" href="#">Book Private Consultation</a>';
+              $output .='</div>';
+            $output .='</div>';
+          $output .='</div>';
+          }
+        }
+        wp_reset_postdata();
+        $data['team'] = $output;
         echo json_encode($data);
         wp_die();
     }
     return false;
 }
 
-add_action('wp_ajax_get_gallery_detail_by_id', 'get_gallery_detail_by_id');
-add_action('wp_ajax_nopriv_get_gallery_detail_by_id', 'get_gallery_detail_by_id');
+add_action('wp_ajax_get_team_detail_by_id', 'get_team_detail_by_id');
+add_action('wp_ajax_nopriv_get_team_detail_by_id', 'get_team_detail_by_id');
