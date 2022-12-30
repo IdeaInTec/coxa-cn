@@ -345,18 +345,32 @@ $link_2 = $previews['link_2'];
 				</div>
 				<?php
 					$previewIDs = $previews['select_reviews'];
+					$previewTaxID = $previews['select_category'];
+					$review_tax = array();
+					if( !empty($previewTaxID) ){
+						$review_tax = array(
+							array(
+								'taxonomy'	=> 'testimonial_cat',
+								'field' => 'term_id',
+								'terms'	=> $previewTaxID
+							)
+						);
+					}
+					
 		      if( !empty($previewIDs) ){
 		        $previewIDs = is_array($previewIDs)?$previewIDs : array($previewIDs);
 		        $targs = array(
 		          'post_type' => 'testimonial',
 		          'orderby' => 'rand',
 		          'post__in' => $previewIDs,
+		          'tax_query' => $review_tax
 		        );
 		      }else{
 		        $targs = array(
 		          'post_type' => 'testimonial',
 		          'posts_per_page' => 4,
 		          'orderby' => 'rand',
+		          'tax_query' => $review_tax
 		        );
 		      }
 		      $tloop = new WP_Query($targs);
@@ -635,6 +649,7 @@ $ourloc = get_field('ourloc', HOMEID);
               while($loc_loop->have_posts()):$loc_loop->the_post();
                 global $post;
                 $overview = get_field('overview', $post->ID);
+                $direction_link = $overview['direction_url'];
             ?>
 						<div class="locations-sec-grid-item mHc">
 							<div class="locations-sec-grid-item-inner">
@@ -645,7 +660,7 @@ $ourloc = get_field('ourloc', HOMEID);
 									<div class="locations-title-cntrl">
 										<h4 class="locations-des-title fl-h5"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 										<a href="<?php the_permalink(); ?>" class="cdc-btn">See Practice</a>
-										<a href="#" class="cdc-trnsprnt-btn">Get Directions</a>
+										<?php if( !empty($direction_link) ) printf('<a href="%s" class="cdc-trnsprnt-btn">Get Directions</a>', $direction_link); ?>
 									</div>
 									<?php if( $overview ): if( !empty($overview['opening_hours'] ) ): ?>
 									<div class="office-time-zoon mHc2">

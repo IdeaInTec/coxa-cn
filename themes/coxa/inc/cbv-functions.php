@@ -139,3 +139,19 @@ function banner_placeholder($format = 'src'){
   return '';
 
 }
+
+
+function get_gallery_detail_by_id(){
+    $data = array();
+    if (isset( $_POST["port"] ) && $_POST["port"] == '01' && isset($_POST["gallery_id"]) && !empty($_POST["gallery_id"]) ) {
+        $output = '';
+
+        $data['catfeed'] = $output;
+        echo json_encode($data);
+        wp_die();
+    }
+    return false;
+}
+
+add_action('wp_ajax_get_gallery_detail_by_id', 'get_gallery_detail_by_id');
+add_action('wp_ajax_nopriv_get_gallery_detail_by_id', 'get_gallery_detail_by_id');
