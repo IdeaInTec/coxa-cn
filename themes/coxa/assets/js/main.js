@@ -831,3 +831,38 @@ function treatmentSecMrgnLft(){
 
 
 })(jQuery);
+
+function getTeamDetailsById(id){
+  if(jQuery('#teamDetail').length){
+    var hostName = window.location.origin;
+    var ajax_url = hostName + '/projects/2022/coxa/wp-admin/admin-ajax.php';
+    jQuery.ajax({
+      type: 'POST',
+      url: ajax_url,
+      dataType: 'JSON',
+      data: {
+        action: 'get_team_detail_by_id',
+        team_id: id,
+        port: '01'
+      },
+      beforeSend:function(xhr){
+        jQuery('#teamDetail').html('');
+      },
+      success: function(res) {
+        console.log(res);
+        if(typeof(res.team) != "undefined" && res.team != ''){
+          function showLazyLoadingData(){
+            jQuery('#teamDetail').html(res.team);
+          }  
+          setTimeout(showLazyLoadingData, 500)
+        }else{
+          jQuery('#teamDetail').html('<p>Something was wrong! Please try again.</p>');
+        }
+      },
+      error: function(err) {
+        console.error(err);
+      }
+    })
+  }
+  return false;
+}
