@@ -44,8 +44,9 @@ $ourloc = get_field('ourloc', $thisID);
 		      }else{
 		        $loc_args = array(
 		          'post_type' => 'location',
-		          'posts_per_page' => 4,
-		          'orderby' => 'rand',
+		          'posts_per_page' => 6,
+		          'orderby' => 'menu_order',
+		          'order'	=> 'asc'
 		        );
 		      }
 		      $loc_loop = new WP_Query($loc_args);
@@ -57,6 +58,7 @@ $ourloc = get_field('ourloc', $thisID);
               while($loc_loop->have_posts()):$loc_loop->the_post();
                 global $post;
                 $overview = get_field('overview', $post->ID);
+                $direction_link = $overview['direction_url'];
             ?>
 						<div class="locations-sec-grid-item mHc">
 							<div class="locations-sec-grid-item-inner">
@@ -67,7 +69,7 @@ $ourloc = get_field('ourloc', $thisID);
 									<div class="locations-title-cntrl">
 										<h4 class="locations-des-title fl-h5"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 										<a href="<?php the_permalink(); ?>" class="cdc-btn">See Practice</a>
-										<a href="#" class="cdc-trnsprnt-btn">Get Directions</a>
+										<?php if( !empty($direction_link) ) printf('<a href="%s" class="cdc-trnsprnt-btn">Get Directions</a>', $direction_link); ?>
 									</div>
 									<?php if( $overview ): if( !empty($overview['opening_hours'] ) ): ?>
 									<div class="office-time-zoon mHc2">
@@ -188,13 +190,39 @@ $faqs = get_field('faqs', $thisID);
             <?php echo wpautop($faqs['description']); ?>
           </div>
         </div>
+        <?php
+          $faqIDs = $faqs['select_faq'];
+          if( !empty($faqIDs) ){
+            $faqIDs = is_array($faqIDs)?$faqIDs : array($faqIDs);
+            $faq_args = array(
+              'post_type' => 'faq',
+              'orderby' => 'rand',
+              'post__in' => $faqIDs,
+            );
+          }else{
+            $faq_args = array(
+              'post_type' => 'faq',
+              'posts_per_page' => 7,
+              'orderby' => 'rand',
+            );
+          }
+          $faq_loop = new WP_Query($faq_args);
+          if($faq_loop->have_posts()):
+        ?>
         <div class="faq-sec-inner">
           <div class="faq-grds">
+            <?php
+              $i = 1;
+              while($faq_loop->have_posts()):$faq_loop->the_post();
+                global $post;
+                $faq_link = get_field('link', $post->ID);
+                $active = $i == 1? 'active': '';
+            ?>
             <div class="faq-grd">
               <div class="faq-grd-item">
-                <div class="faq-accordion-menu active">
+                <div class="faq-accordion-menu <?php echo $active; ?>">
                   <div class="faq-accordion-hdr">
-                    <h4 class="faq-accordion-title fl-h6">Where are the Cox & Hitchock is the practices?</h4>
+                    <h4 class="faq-accordion-title fl-h6"><?php the_title(); ?></h4>
                     <div class="faq-accordion-icon-box">
                       <i class="faq-icon">
                         <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
@@ -208,165 +236,19 @@ $faqs = get_field('faqs', $thisID);
                       </i>
                     </div>
                   </div>
-                  <div class="faq-accordion-des active">
-                    <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
-                    <a href="#" class="cdc-btn">Find Out More</a>
+                  <div class="faq-accordion-des <?php echo $active; ?>">
+                    <?php 
+                      the_content(); 
+                      if( is_array($faq_link) && !empty($faq_link['url']) ) printf('<a class="cdc-btn" href="%s" target="%s">%s</a>',$faq_link['url'], $faq_link['target'], $faq_link['title'] );
+                    ?>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="faq-grd">
-              <div class="faq-grd-item">
-                <div class="faq-accordion-menu">
-                  <div class="faq-accordion-hdr">
-                    <h4 class="faq-accordion-title fl-h6">What is the difference between NHS and Private dentistry? </h4>
-                    <div class="faq-accordion-icon-box">
-                      <i class="faq-icon">
-                        <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-svg"></use> 
-                        </svg>
-                      </i>
-                      <i class="faq-active-icon">
-                        <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-active-svg"></use> 
-                        </svg>
-                      </i>
-                    </div>
-                  </div>
-                  <div class="faq-accordion-des">
-                    <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
-                    <a href="#" class="cdc-btn">Find Out More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq-grd">
-              <div class="faq-grd-item">
-                <div class="faq-accordion-menu">
-                  <div class="faq-accordion-hdr">
-                    <h4 class="faq-accordion-title fl-h6">How do I make an appointment?</h4>
-                    <div class="faq-accordion-icon-box">
-                      <i class="faq-icon">
-                        <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-svg"></use> 
-                        </svg>
-                      </i>
-                      <i class="faq-active-icon">
-                        <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-active-svg"></use> 
-                        </svg>
-                      </i>
-                    </div>
-                  </div>
-                  <div class="faq-accordion-des">
-                    <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
-                    <a href="#" class="cdc-btn">Find Out More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq-grd">
-              <div class="faq-grd-item">
-                <div class="faq-accordion-menu">
-                  <div class="faq-accordion-hdr">
-                    <h4 class="faq-accordion-title fl-h6">Do you offer dentistry for children?</h4>
-                    <div class="faq-accordion-icon-box">
-                      <i class="faq-icon">
-                        <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-svg"></use> 
-                        </svg>
-                      </i>
-                      <i class="faq-active-icon">
-                        <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-active-svg"></use> 
-                        </svg>
-                      </i>
-                    </div>
-                  </div>
-                  <div class="faq-accordion-des">
-                    <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
-                    <a href="#" class="cdc-btn">Find Out More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq-grd">
-              <div class="faq-grd-item">
-                <div class="faq-accordion-menu">
-                  <div class="faq-accordion-hdr">
-                    <h4 class="faq-accordion-title fl-h6">Are you accepting new patients?</h4>
-                    <div class="faq-accordion-icon-box">
-                      <i class="faq-icon">
-                        <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-svg"></use> 
-                        </svg>
-                      </i>
-                      <i class="faq-active-icon">
-                        <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-active-svg"></use> 
-                        </svg>
-                      </i>
-                    </div>
-                  </div>
-                  <div class="faq-accordion-des">
-                    <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
-                    <a href="#" class="cdc-btn">Find Out More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq-grd">
-              <div class="faq-grd-item">
-                <div class="faq-accordion-menu">
-                  <div class="faq-accordion-hdr">
-                    <h4 class="faq-accordion-title fl-h6">What are the fees for your treatments?</h4>
-                    <div class="faq-accordion-icon-box">
-                      <i class="faq-icon">
-                        <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-svg"></use> 
-                        </svg>
-                      </i>
-                      <i class="faq-active-icon">
-                        <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-active-svg"></use> 
-                        </svg>
-                      </i>
-                    </div>
-                  </div>
-                  <div class="faq-accordion-des">
-                    <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
-                    <a href="#" class="cdc-btn">Find Out More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq-grd">
-              <div class="faq-grd-item">
-                <div class="faq-accordion-menu">
-                  <div class="faq-accordion-hdr">
-                    <h4 class="faq-accordion-title fl-h6">What are the locations of your dentist practices?</h4>
-                    <div class="faq-accordion-icon-box">
-                      <i class="faq-icon">
-                        <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-svg"></use> 
-                        </svg>
-                      </i>
-                      <i class="faq-active-icon">
-                        <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-active-svg"></use> 
-                        </svg>
-                      </i>
-                    </div>
-                  </div>
-                  <div class="faq-accordion-des">
-                    <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
-                    <a href="#" class="cdc-btn">Find Out More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <?php $i++; endwhile; ?>
           </div>
         </div>
+        <?php wp_reset_postdata();endif;?>
       </div>
     </div>
   </div>

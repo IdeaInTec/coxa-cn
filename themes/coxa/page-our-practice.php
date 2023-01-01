@@ -673,17 +673,17 @@ $faqs = get_field('faqs', $thisID);
 										<div class="faq-accordion-hdr">
 											<h4 class="faq-accordion-title fl-h6"><?php the_title(); ?></h4>
 											<div class="faq-accordion-icon-box">
-												<i class="faq-icon">
-													<svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-														<use xlink:href="#faq-list-icon-svg"></use> 
-													</svg>
-												</i>
-												<i class="faq-<?php echo $active; ?>-icon">
-													<svg class="faq-list-icon-<?php echo $active; ?>-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-														<use xlink:href="#faq-list-icon-<?php echo $active; ?>-svg"></use> 
-													</svg>
-												</i>
-											</div>
+						                      <i class="faq-icon">
+						                        <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+						                          <use xlink:href="#faq-list-icon-svg"></use> 
+						                        </svg>
+						                      </i>
+						                      <i class="faq-active-icon">
+						                        <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+						                          <use xlink:href="#faq-list-icon-active-svg"></use> 
+						                        </svg>
+						                      </i>
+						                    </div>
 										</div>
 										<div class="faq-accordion-des <?php echo $active; ?>">
 										<?php 
