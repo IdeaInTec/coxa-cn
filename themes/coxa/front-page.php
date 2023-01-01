@@ -180,7 +180,7 @@ $treatmentIDs = $chtreatment['select_treatment'];
           while($loop->have_posts()):$loop->the_post();
             global $post;
             $thumbID = get_post_thumbnail_id(get_the_ID());
-            $image_url = !empty($thumbID)? cbv_get_image_src($thumbID) : '';
+            $image_url = !empty($thumbID)? cbv_get_image_src($thumbID) : treatment_placeholder();
 				?>
 				<div class="trtmnt-grd-cntlr">
 					<div class="trtmnt-grd">

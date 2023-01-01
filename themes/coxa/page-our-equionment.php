@@ -227,65 +227,62 @@ $link_2 = $ourpractice['link_2'];
   </div>
 </div>
 </section> 
-<?php endif; ?>
-
-<?php 
-    $showhidepromo = get_field('showhidepromo', $thisID); 
-    if($showhidepromo):
-      $promo = get_field('promo', $thisID); 
-      $promo_link = $promo['link'];
-      ?>
-      <section class="cta-section">
-        <div class="container-lg">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="cta-module-cntlr">
-                <div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo cbv_get_image_src($promo['bg_image']); ?>);">
-                  <div class="cta-module">
-                    <div class="cta-module-des-ctlr">
-                      <div class="diamond-module">
-                        <ul class="reset-list">
-                          <li>
-                            <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                          </li>
-                          <li>
-                            <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                          </li>
-                          <li>
-                            <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="cta-module-des">
-                        <?php if(!empty($promo['title'])) echo('<h2 class="cta-module-des-title fl-h2">'. $promo['title'] .'</h2>'); ?>
-                        <?php if(!empty($promo['description'])) echo wpautop($promo['description']); ?>
-                      </div>
-                    </div>
-                    <div class="cta-btn-ctlr">
-                      <?php if(is_array($promo_link) && !empty($promo_link['url'])): ?>
-                      <div class="cta-btn">
-                        <?php printf('<a class="cdc-btn" href="%s">%s</a>',$promo_link['url'],$promo_link['title'] ); ?>
-                      </div>
-                    <?php endif; ?>
+<?php endif; 
+  $showhidepromo = get_field('showhidepromo', $thisID); 
+  if($showhidepromo):
+    $promo = get_field('promo', $thisID); 
+    $promo_link = $promo['link'];
+?>
+  <section class="cta-section">
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="cta-module-cntlr">
+            <div class="cta-module-wrp parallaxie" style="background-image: url(<?php echo cbv_get_image_src($promo['bg_image']); ?>);">
+              <div class="cta-module">
+                <div class="cta-module-des-ctlr">
+                  <div class="diamond-module">
+                    <ul class="reset-list">
+                      <li>
+                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                      <li>
+                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                      <li>
+                        <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="cta-module-des">
+                    <?php if(!empty($promo['title'])) echo('<h2 class="cta-module-des-title fl-h2">'. $promo['title'] .'</h2>'); ?>
+                    <?php if(!empty($promo['description'])) echo wpautop($promo['description']); ?>
                   </div>
                 </div>
+                <div class="cta-btn-ctlr">
+                  <?php if(is_array($promo_link) && !empty($promo_link['url'])): ?>
+                  <div class="cta-btn">
+                    <?php printf('<a class="cdc-btn" href="%s">%s</a>',$promo_link['url'],$promo_link['title'] ); ?>
+                  </div>
+                <?php endif; ?>
               </div>
-            </div>            
+            </div>
           </div>
-        </div>
+        </div>            
       </div>
-    </section>
-<?php endif; ?>
-
-    <?php 
-      $showhidetreatment = get_field('showhidetreatment', $thisID);
-      if($showhidetreatment):
-        $chtreatment = get_field('chtreatment', $thisID);
-        $link = $chtreatment['link'];
-        ?>
+    </div>
+  </div>
+</section>
+<?php endif;
+  $showhidetreatment = get_field('showhidetreatment', $thisID);
+  if($showhidetreatment):
+    $chtreatment = get_field('chtreatments', $thisID);
+    $link = $chtreatment['link'];
+?>
   <section class="treatment-sec">
     <div class="treatment-cntlr">
       <div class="treatment-lft">
+        <?php if(!empty($chtreatment['title'])): ?>
         <div class="hide-md">
           <div class="diamond-module">
             <ul class="reset-list">
@@ -301,14 +298,36 @@ $link_2 = $ourpractice['link_2'];
             </ul>
           </div> 
         </div>
-        <?php if(!empty($chtreatment['title'])) echo('<h2 class="fl-h4 treatment-title">'.$chtreatment['title'].'</h2>'); ?>
-        <?php if(!empty($chtreatment['description'])) echo('<div class="treatment-desc hide-md">'.wpautop($chtreatment['description']).'</div>'); ?>
-        <?php if(is_array($link) && !empty($link['url'])): ?>
+        <?php 
+          echo('<h2 class="fl-h4 treatment-title">'.$chtreatment['title'].'</h2>'); 
+          endif;
+          if(!empty($chtreatment['description'])) echo('<div class="treatment-desc hide-md">'.wpautop($chtreatment['description']).'</div>'); 
+          if(is_array($link) && !empty($link['url'])): 
+        ?>
         <div class="treatment-btn hide-md">
           <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title']); ?>
         </div>
         <?php endif; ?>
       </div>
+      <?php
+        $treatmentIDs = $chtreatment['select_treatment'];
+        if( !empty($treatmentIDs) ){
+          $treatmentIDs = is_array($treatmentIDs)?$treatmentIDs : array($treatmentIDs);
+          $args = array(
+            'post_type' => 'treatment',
+            'orderby' => 'rand',
+            'post__in' => $treatmentIDs,
+          );
+        }else{
+          $args = array(
+            'post_type' => 'treatment',
+            'posts_per_page' => 4,
+            'orderby' => 'rand'
+          );
+        }
+        $loop = new WP_Query($args);
+        if($loop->have_posts()):
+      ?>
       <div class="treatment-rgt">
         <div class="custom-prev-next-cntlr">
           <div class="custom-prev">
@@ -327,104 +346,28 @@ $link_2 = $ourpractice['link_2'];
           </div>
         </div>
         <div class="treatment-grids treatmentSlider">
+          <?php 
+            while($loop->have_posts()):$loop->the_post();
+              global $post;
+              $thumbID = get_post_thumbnail_id(get_the_ID());
+              $image_url = !empty($thumbID)?cbv_get_image_src($thumbID):treatment_placeholder();
+          ?>
           <div class="trtmnt-grd-cntlr">
             <div class="trtmnt-grd">
               <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
+                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo $image_url; ?>);"></div>
+                <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
               </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Dental Implants</a></h3>
+              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
               <div class="trtmnt-grd-desc">
-                <p>Viverra morbi massa eu, dolor. Praesent sit elit porttitor morbi fringilla in eget sed elementum. Blandit lacus eu sit integer vel. Quis tincidunt sapien consequat malesuada egestas tempor nunc, et. Ut imperdiet ullamcorper arcu enim, porttitor donec. </p>
+                <?php the_excerpt(); ?>
               </div>
             </div>
           </div>
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-02.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Cosnetic Dentistry</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Et pellentesque netus tempus in pharetra rhoncus, sit. Gravida ornare viverra ac at egestas. Viverra lectus in praesent vitae.</p>
-              </div>
-            </div>
-          </div>
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-03.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Private Dentistry</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Et gravida tempus, diam non. Cras pulvinar pulvinar amet, at feugiat lorem quis magna. Mi cras praesent in tellus consectetur varius id tristique. Malesuada id enim gravida cras duis.</p>
-              </div>
-            </div>
-          </div>
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Teeth Whitening</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Enim maecenas ipsum malesuada ultrices arcu risus lacus tempus pretium. Urna, cursus sapien, tristique sed sed condimentum fusce nisi. Id sit duis viverra orci nisi molestie viverra nisl, neque. Suspendisse sed vehicula arcu cras et. Dignissim sed semper leo sollicitudin malesuada adipiscing faucibus euismod.</p>
-              </div>
-            </div>
-          </div>
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Dental Implants</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Viverra morbi massa eu, dolor. Praesent sit elit porttitor morbi fringilla in eget sed elementum. Blandit lacus eu sit integer vel. Quis tincidunt sapien consequat malesuada egestas tempor nunc, et. Ut imperdiet ullamcorper arcu enim, porttitor donec. </p>
-              </div>
-            </div>
-          </div>
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-02.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Cosnetic Dentistry</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Et pellentesque netus tempus in pharetra rhoncus, sit. Gravida ornare viverra ac at egestas. Viverra lectus in praesent vitae.</p>
-              </div>
-            </div>
-          </div>
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-03.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Private Dentistry</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Et gravida tempus, diam non. Cras pulvinar pulvinar amet, at feugiat lorem quis magna. Mi cras praesent in tellus consectetur varius id tristique. Malesuada id enim gravida cras duis.</p>
-              </div>
-            </div>
-          </div>
-          <div class="trtmnt-grd-cntlr">
-            <div class="trtmnt-grd">
-              <div class="trtmnt-grd-img-cntlr">
-                <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
-                <a href="#" class="overlay-link"></a>
-              </div>
-              <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Teeth Whitening</a></h3>
-              <div class="trtmnt-grd-desc">
-                <p>Enim maecenas ipsum malesuada ultrices arcu risus lacus tempus pretium. Urna, cursus sapien, tristique sed sed condimentum fusce nisi. Id sit duis viverra orci nisi molestie viverra nisl, neque. Suspendisse sed vehicula arcu cras et. Dignissim sed semper leo sollicitudin malesuada adipiscing faucibus euismod.</p>
-              </div>
-            </div>
-          </div>
+          <?php endwhile; ?>
         </div>
       </div>
+      <?php wp_reset_postdata();endif;?>
     </div>
   </section>
   <?php endif; ?>
