@@ -203,6 +203,38 @@ get_template_part('templates/page', 'banner');
                   </div>
                   <?php endwhile; ?>
                 </div>
+                <div class="team-prev-next">
+                  <div class="revw-prev">
+                    <span class="revw-left">
+                      <svg class="revw-left-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#29467D">
+                        <use xlink:href="#revw-left-arrow"></use> 
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="revw-next">
+                    <span class="revw-right">
+                      <svg class="revw-right-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#29467D">
+                        <use xlink:href="#revw-right-arrow"></use> 
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="xs-team-prev-next">
+                  <div class="revw-prev">
+                    <span class="revw-left">
+                      <svg class="prev-line" width="66" height="20" viewBox="0 0 66 20" fill="#29467D">
+                        <use xlink:href="#prev-line"></use> 
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="revw-next">
+                    <span class="revw-right">
+                      <svg class="next-line" width="66" height="20" viewBox="0 0 66 20" fill="#29467D">
+                        <use xlink:href="#next-line"></use> 
+                      </svg>
+                    </span>
+                  </div>
+                </div> 
                 <?php if(is_array($ourteam_link) && !empty($ourteam_link['url'])): ?>
                 <div class="wco-team-btn">
                   <?php printf('<a class="cdc-btn" href="%s">%s</a>',$ourteam_link['url'],$ourteam_link['title'] ); ?>
@@ -375,14 +407,14 @@ get_template_part('templates/page', 'banner');
                 <div class="review-prev-next">
                   <div class="revw-prev">
                     <span class="revw-left">
-                      <svg class="revw-left-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#EACC95">
+                      <svg class="revw-left-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#29467D">
                         <use xlink:href="#revw-left-arrow"></use> 
                       </svg>
                     </span>
                   </div>
                   <div class="revw-next">
                     <span class="revw-right">
-                      <svg class="revw-right-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#EACC95">
+                      <svg class="revw-right-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#29467D">
                         <use xlink:href="#revw-right-arrow"></use> 
                       </svg>
                     </span>

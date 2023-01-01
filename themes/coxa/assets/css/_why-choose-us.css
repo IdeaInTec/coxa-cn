@@ -59,7 +59,9 @@
     height: 90px;
     -webkit-line-clamp:3;
 }
-
+.why-choose-us-page-cntlr .counter-sec .sec-entry-hdr-cntlr{
+    padding-bottom: 85px;
+}
 
 
 
@@ -75,6 +77,9 @@
 }
 @media(max-width: 991px){
     .why-choose-us-page-cntlr .counter-sec {        
+        padding-bottom: 60px;
+    }
+    .why-choose-us-page-cntlr .counter-sec .sec-entry-hdr-cntlr {
         padding-bottom: 60px;
     }
 }
@@ -93,6 +98,27 @@
     .review-pro-des-btn-fullwidth-cntlr .review-grid-item{
         padding: 0 20px;
         padding-bottom: 30px;
+    }
+    .why-choose-us-page-cntlr .counter-sec .sec-entry-hdr-cntlr {
+        padding-bottom: 40px;
+    }
+    .why-choose-us-page-cntlr .team-grds{
+        display: block;
+    }
+    .why-choose-us-page-cntlr .xs-team-prev-next{
+        position: absolute;
+        bottom: 130px;
+        left: 0;
+        right: 0;
+    }
+    .why-choose-us-page-cntlr .revw-prev {
+        left: 0;
+    }
+    .why-choose-us-page-cntlr .revw-next {
+        right: 0;
+    }
+    .why-choose-us-page-cntlr .team-grd-item-col{
+        padding-bottom: 50px;
     }
 }
 @media(max-width: 575px){
