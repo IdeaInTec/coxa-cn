@@ -809,7 +809,7 @@ body.allWork .hamburger-icon span:nth-child(2) {
         -ms-transition: all 0.5s;
         -webkit-transition: all 0.5s;
     }
-    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu.sub-menu-arrow > a:before,
+    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu.current-menu-item > a:before,
     nav.main-nav > ul > li.menu-item-has-megamenu.sub-menu-arrow > a:before,
     nav.main-nav > ul > li.menu-item-has-children.sub-menu-arrow > a:before {
         transform: rotate(-180deg)!important;
