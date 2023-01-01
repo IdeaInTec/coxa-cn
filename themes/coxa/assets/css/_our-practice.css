@@ -137,7 +137,7 @@
     opacity: 0;
     visibility: hidden;
 }
-.ex-trmnt-grd-item-img-cntlr:before{
+.ex-trmnt-grd-item-img:before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -145,12 +145,14 @@
     right: 0;
     height: 4px;
     background: #A37D36;
-    transition: .5s;
-    -ms-transition: .5s;
-    -webkit-transition: .5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    visibility: visible;
 }
-.ex-trmnt-grd-item:hover .ex-trmnt-grd-item-img-cntlr:before{
+.ex-trmnt-grd-item-img-cntlr:hover:before{
     opacity: 0;
+    visibility: hidden;
 }
 .ex-trmnt-grd-item-img{
     width: 100%;
@@ -176,7 +178,7 @@
 .ex-trmnt-grd-des-title a:hover{
     color: #A37D36;
 }
-.ex-trmnt-grd-item:hover .ex-trmnt-grd-item-img-cntlr:after{
+.ex-trmnt-grd-item-img-cntlr:hover:after{
     opacity: 1;
     visibility: visible;
 }
