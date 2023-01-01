@@ -405,7 +405,16 @@
     .pratice-pg-con-cntlr .practice-gallery-grid-btn {
         padding-top: 20px;
     }
+    .ex-trmnt-grd-item{
+        margin: 0 auto;
+        max-width: 400px;
+        width: 100%;
+    }
 }
 @media(max-width: 479px){
-    
+    .ex-trmnt-grd-item{
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+    }
 }
