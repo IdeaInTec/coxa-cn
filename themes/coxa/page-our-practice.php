@@ -622,7 +622,7 @@ $faqs = get_field('faqs', $thisID);
 				<div class="col-md-12">
 					<div class="sec-entry-hdr-cntlr">
 						<div class="sec-entry-hdr">
-							<?php if(!empty($team['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'.$team['title'].'</h2>'); ?>
+							<?php if(!empty($faqs['title'])) echo('<h2 class="sec-entry-hdr-title fl-h4">'.$faqs['title'].'</h2>'); ?>
 							<div class="diamond-module">
 								<ul class="reset-list">
 									<li>

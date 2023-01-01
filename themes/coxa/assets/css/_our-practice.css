@@ -137,6 +137,9 @@
     opacity: 0;
     visibility: hidden;
 }
+.page-template-page-our-practice .pm-grd-title{
+    margin-bottom: 17px;
+}
 .ex-trmnt-grd-item-img:before{
     content: '';
     position: absolute;
