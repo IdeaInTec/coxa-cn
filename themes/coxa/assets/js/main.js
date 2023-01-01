@@ -14,10 +14,10 @@ if( $('.hamburgar-cntlr').length ){
   });
 }
 if(windowWidth <=991){
-    if( $('.main-nav ul > li').length ){
-      $('.main-nav ul > li').click(function(e){
+    if( $('.main-nav > ul > li').length ){
+      $('.main-nav > ul > li').click(function(e){
         e.preventDefault();
-       $('.main-nav ul > li.sub-menu-arrow').removeClass('sub-menu-arrow'); 
+       $('.main-nav > ul > li.sub-menu-arrow').removeClass('sub-menu-arrow'); 
        $(this).toggleClass('sub-menu-arrow');
        $(this).find('.sub-menu').slideToggle(300);
        $(this).siblings().find('.sub-menu').slideUp(300);
