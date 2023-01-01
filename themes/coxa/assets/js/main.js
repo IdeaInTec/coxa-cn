@@ -760,10 +760,7 @@ if( $('#contact-select3').length ){
   $('#contact-select3').select2();
 }
 
-treatmentSecMrgnLft();
-$(window).resize(function(){
-  TreatmentSecMrgnLft();
-});
+
 function treatmentSecMrgnLft(){
   var windowWidth = $(window).width();
   var conW = $('.container').width();
@@ -771,7 +768,10 @@ function treatmentSecMrgnLft(){
   var conLW = conLW2 / 2;
   $('.treatment-cntlr').css('margin-left', conLW);
 }
-
+treatmentSecMrgnLft();
+$(window).resize(function(){
+  treatmentSecMrgnLft();
+});
 
 /* BS form Validator*/
 (function() {
