@@ -215,7 +215,7 @@ $link_2 = $ourpractice['link_2'];
                   </div>
                 <?php endif; if(is_array($link_2) && !empty($link_2['url'])): ?>
                   <div class="pm-grd-btn pm-grd-btn-02">
-                    <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link_2['url'],$link_2['title'] ); ?>
+                    <?php printf('<a class="cdc-trnsprnt-btn" href="%s">%s</a>',$link_2['url'],$link_2['title'] ); ?>
                   </div>
                 <?php endif;?>
                 </div>
