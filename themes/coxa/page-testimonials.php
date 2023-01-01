@@ -3,22 +3,52 @@
 get_header(); 
 $thisID = get_the_ID();
 get_template_part('templates/page', 'banner');
-?>
 
+$previewIDs = get_field('select_reviews', $thisID);
+if( !empty($previewIDs) ){
+  $previewIDs = is_array($previewIDs)?$previewIDs : array($previewIDs);
+  $targs = array(
+    'post_type' => 'testimonial',
+    'post__in' => $previewIDs,
+    'orderby' => 'menu_order',
+    'order' => 'asc'
+  );
+}else{
+  $targs = array(
+    'post_type' => 'testimonial',
+    'posts_per_page' => -1,
+    'orderby' => 'menu_order',
+    'order' => 'asc'
+  );
+}
+$tloop = new WP_Query($targs);
+?>
 <div class="testimonials-pg-content-cntlr">
   <section class="review-grids-sec">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="review-grids-cntlr full-width-review">
+            <?php if($tloop->have_posts()): ?>
             <div class="review-grids tmreviewSlider review-pro-des-btn-fullwidth-cntlr"> 
+            <?php
+              while($tloop->have_posts()):$tloop->the_post();
+                global $post;
+                $thumbID = get_post_thumbnail_id(get_the_ID());
+                $image_tag = !empty($thumbID)? cbv_get_image_tag($thumbID) : '';
+                $name = get_field('name', $post->ID);
+                $position = get_field('position', $post->ID);
+                $quote_text = get_field('quote_text', $post->ID);
+            ?>
               <div class="review-grid-col">
                 <div class="review-grid-item">
+                  <?php if( !empty($image_tag) ): ?>
                   <div class="review-pro-img">
                     <i>
-                      <img src="<?php echo THEME_URI;?>/assets/images/review-pro-img-1.jpg" alt="">
+                      <?php echo $image_tag; ?>
                     </i>
                   </div>
+                  <?php endif; ?>
                   <div class="review-pro-rating">
                     <span>
                       <i><img src="<?php echo THEME_URI;?>/assets/images/star-icon.svg" alt=""></i>
@@ -28,164 +58,23 @@ get_template_part('templates/page', 'banner');
                       <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
                     </span>
                   </div>
-                  <h3 class="review-tstmnl-mgs fl-h5 mHc">“Very kind and friendly staff as well a <br> highly qualified skilled dentists!”</h3>
-                  <div class="review-pro-des mHc1"data-status="closed">
-                    <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis. Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis</p>
+                  <?php if(!empty($quote_text)) printf('<h3 class="review-tstmnl-mgs fl-h5 mHc">%s</h4>', $quote_text); if(!empty(get_the_content())): ?>
+                  <div class="review-pro-des testimonial-text mHc1"data-status="closed">
+                    <?php the_content(); ?>
                   </div>
+                  <?php endif; ?>
                   <div class="review-pro-des-btn review-pro-des-btn-fullwidth">
                     <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
                   </div>
                   <div class="review-pro-name">
-                    <strong class="review-pro-title">Chloe Jones</strong>
-                    <span>Cardiff</span>
+                    <?php 
+                      if(!empty($name)) printf('<strong class="review-pro-title">%s</strong>', $name); 
+                      if(!empty($position)) printf('<span>%s</span>', $position); 
+                    ?>
                   </div>
                 </div>
               </div>
-              <div class="review-grid-col">
-                <div class="review-grid-item">
-                  <div class="review-pro-img">
-                    <i>
-                      <img src="<?php echo THEME_URI;?>/assets/images/review-pro-img-2.jpg" alt="">
-                    </i>
-                  </div>
-                  <div class="review-pro-rating">
-                    <span>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                    </span>
-                  </div>
-                  <h3 class="review-tstmnl-mgs fl-h5 mHc">“Best experience I have ever had with a <br> dentist in Newport”</h3>
-                  <div class="review-pro-des mHc1"data-status="closed">
-                    <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis. Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis</p>
-                  </div>
-                  <div class="review-pro-des-btn review-pro-des-btn-fullwidth">
-                    <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
-                  </div>
-                  <div class="review-pro-name">
-                    <strong class="review-pro-title">Bob Ross</strong>
-                    <span>Newport</span>
-                  </div>
-                </div>
-              </div>
-              <div class="review-grid-col">
-                <div class="review-grid-item">
-                  <div class="review-pro-img">
-                    <i>
-                      <img src="<?php echo THEME_URI;?>/assets/images/review-pro-img-1.jpg" alt="">
-                    </i>
-                  </div>
-                  <div class="review-pro-rating">
-                    <span>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                    </span>
-                  </div>
-                  <h3 class="review-tstmnl-mgs fl-h5 mHc">“Very kind and friendly staff as well a <br> highly qualified skilled dentists!”</h3>
-                  <div class="review-pro-des mHc1"data-status="closed">
-                    <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis. Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis</p>
-                  </div>
-                  <div class="review-pro-des-btn review-pro-des-btn-fullwidth">
-                    <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
-                  </div>
-                  <div class="review-pro-name">
-                    <strong class="review-pro-title">Chloe Jones</strong>
-                    <span>Cardiff</span>
-                  </div>
-                </div>
-              </div>
-              <div class="review-grid-col">
-                <div class="review-grid-item">
-                  <div class="review-pro-img">
-                    <i>
-                      <img src="<?php echo THEME_URI;?>/assets/images/review-pro-img-2.jpg" alt="">
-                    </i>
-                  </div>
-                  <div class="review-pro-rating">
-                    <span>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                    </span>
-                  </div>
-                  <h3 class="review-tstmnl-mgs fl-h5 mHc">“Best experience I have ever had with a <br> dentist in Newport”</h3>
-                  <div class="review-pro-des mHc1"data-status="closed">
-                    <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis. Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis</p>
-                  </div>
-                  <div class="review-pro-des-btn review-pro-des-btn-fullwidth">
-                    <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
-                  </div>
-                  <div class="review-pro-name">
-                    <strong class="review-pro-title">Bob Ross</strong>
-                    <span>Newport</span>
-                  </div>
-                </div>
-              </div>
-              <div class="review-grid-col">
-                <div class="review-grid-item">
-                  <div class="review-pro-img">
-                    <i>
-                      <img src="<?php echo THEME_URI;?>/assets/images/review-pro-img-1.jpg" alt="">
-                    </i>
-                  </div>
-                  <div class="review-pro-rating">
-                    <span>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                    </span>
-                  </div>
-                  <h3 class="review-tstmnl-mgs fl-h5 mHc">“Very kind and friendly staff as well a <br> highly qualified skilled dentists!”</h3>
-                  <div class="review-pro-des mHc1"data-status="closed">
-                    <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis. Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis</p>
-                  </div>
-                  <div class="review-pro-des-btn review-pro-des-btn-fullwidth">
-                    <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
-                  </div>
-                  <div class="review-pro-name">
-                    <strong class="review-pro-title">Chloe Jones</strong>
-                    <span>Cardiff</span>
-                  </div>
-                </div>
-              </div>
-              <div class="review-grid-col">
-                <div class="review-grid-item">
-                  <div class="review-pro-img">
-                    <i>
-                      <img src="<?php echo THEME_URI;?>/assets/images/review-pro-img-2.jpg" alt="">
-                    </i>
-                  </div>
-                  <div class="review-pro-rating">
-                    <span>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                      <i><img src="<?php echo THEME_URI;?>/assets/images/rating-star-icon.svg" alt=""></i>
-                    </span>
-                  </div>
-                  <h3 class="review-tstmnl-mgs fl-h5 mHc">“Best experience I have ever had with a <br> dentist in Newport”</h3>
-                  <div class="review-pro-des mHc1"data-status="closed">
-                    <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis. Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis</p>
-                  </div>
-                  <div class="review-pro-des-btn review-pro-des-btn-fullwidth">
-                    <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
-                  </div>
-                  <div class="review-pro-name">
-                    <strong class="review-pro-title">Bob Ross</strong>
-                    <span>Newport</span>
-                  </div>
-                </div>
-              </div>
+              <?php endwhile; ?>
             </div>
             <div class="review-prev-next">
               <div class="revw-prev">
@@ -202,7 +91,10 @@ get_template_part('templates/page', 'banner');
                   </svg>
                 </span>
               </div>
-            </div>              
+            </div>       
+            <?php else: ?>
+
+            <?php endif; ?>       
           </div>
         </div>
       </div>
