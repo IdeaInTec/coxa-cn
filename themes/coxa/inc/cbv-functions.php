@@ -139,3 +139,72 @@ function banner_placeholder($format = 'src'){
   return '';
 
 }
+
+
+function get_team_detail_by_id(){
+    $data = array();
+    if (isset( $_POST["port"] ) && $_POST["port"] == '01' && isset($_POST["team_id"]) && !empty($_POST["team_id"]) ) {
+      $teamID = $_POST["team_id"];
+        $output = '';
+        $args = array(
+          'post_type' => 'team',
+          'posts_per_page' => 1,
+          'post__in' => array($teamID)
+        );
+        $loop = new WP_Query($args);
+        if($loop->have_posts()){
+          while($loop->have_posts()){ $loop->the_post();
+          global $post;
+          $thumbID = get_post_thumbnail_id($post->ID);
+          $image_tag = !empty($thumbID)? cbv_get_image_tag($thumbID) : '';
+          $designation = get_field('designation', $post->ID);
+          $gdc_no = get_field('gdc_no', $post->ID);
+          $experience = get_field('experience', $post->ID);
+          $link = get_field('link', $post->ID);
+          $output .='<div class="pro-modal-con-cntlr">';
+            if( !empty($image_tag) ){
+            $output .='<div class="pro-modal-con-lft">';
+              $output .='<div class="pro-modal-img-cntlr">';
+                $output .= $image_tag;
+              $output .='</div>';
+            $output .='</div>';
+            }
+            $output .='<div class="pro-modal-con-rgt">';
+              $output .='<div class="pro-modal-des-cntlr">';
+                $output .='<h2 class="pro-modal-title fl-h3">'.get_the_title().'</h2>';
+                if( !empty($designation) || !empty($gdc_no) ){
+                $output .='<h2 class="pro-modal-assist-name fl-h5">';
+                $output .= $designation;
+                if( !empty($gdc_no) ) $output .= '<span>GDC No: '.$gdc_no.'</span>';
+                $output .='</h2>';
+                }
+                if( !empty($experience) ){
+                  $output .='<div class="pro-modal-addr">';
+                    $output .='<span>'.$experience.'</span>';
+                  $output .='</div>';
+                }
+                if( get_the_content() ){
+                  $output .='<div class="pro-modal-des">';
+                  $output .= wpautop(get_the_content());
+                  $output .='</div>';
+                }
+              $output .='</div>';
+              if( is_array($link) && !empty($link['url']) ){
+              $output .='<div class="pro-modal-btn">';
+                $link_title = !empty($link['title'])?$link['title']: __('Book Private Consultation', 'coxa');
+                $output .='<a class="cdc-btn" href="'.$link['url'].'" target="'.$link['target'].'">'.$link_title.'</a>';
+              $output .='</div>';
+              }
+            $output .='</div>';
+          $output .='</div>';
+          }
+        }
+    }
+    wp_reset_postdata();
+    $data['team'] = $output;
+    echo json_encode($data);
+    wp_die();
+}
+
+add_action('wp_ajax_get_team_detail_by_id', 'get_team_detail_by_id');
+add_action('wp_ajax_nopriv_get_team_detail_by_id', 'get_team_detail_by_id');

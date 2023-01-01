@@ -91,81 +91,73 @@ $link = $ourteam['link'];
             <?php echo wpautop($ourteam['description']); ?>
           </div>
         </div>
+        <?php
+          $teamIDs = $ourteam['select_team'];
+          if( !empty($teamIDs) ){
+            $teamIDs = is_array($teamIDs)?$teamIDs : array($teamIDs);
+            $args = array(
+              'post_type' => 'team',
+              'orderby' => 'rand',
+              'post__in' => $teamIDs,
+            );
+          }else{
+            $args = array(
+              'post_type' => 'team',
+              'posts_per_page' => 3,
+              'orderby' => 'rand'
+            );
+          }
+          $loop = new WP_Query($args);
+          if($loop->have_posts()):
+        ?>
         <div class="profile-module">                
           <ul class="reset-list">
+            <?php 
+              while($loop->have_posts()):$loop->the_post();
+                global $post;
+                $thumbID = get_post_thumbnail_id($post->ID);
+                $image_url = !empty($thumbID)? cbv_get_image_src($thumbID) : '';
+                $designation = get_field('designation', $post->ID);
+                $gdc_no = get_field('gdc_no', $post->ID);
+                $experience = get_field('experience', $post->ID);
+            ?>
             <li>
               <div class="pro-mdul-grd">
                 <div class="pm-grd-img-cntlr">
-                  <div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-01.jpg);"></div>
+                  <div class="pm-grd-img inline-bg" style="background-image: url(<?php echo $image_url; ?>);"></div>
                 </div>
                 <div class="pm-grd-desc-cntlr mHc">
-                  <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">David Cox</a></h5>
+                  <h5 class="fl-h5 pm-grd-title mHc1"><a href="#" onclick="getTeamDetailsById(<?php echo $post->ID; ?>)" data-bs-toggle="modal" data-bs-target="#profile-modal"><?php the_title(); ?></a></h5>
+                  <?php if( !empty($designation) || !empty($gdc_no) ): ?>
                   <div class="pm-grd-assist mHc2">
-                    <span class="pm-grd-assist-name">Practice Principal<span class="pm-grd-assist-no">GDC No: 65106</span></span>
+                    <span class="pm-grd-assist-name"><?php if( !empty($designation) ) printf('%s', $designation); if( !empty($gdc_no) ) printf('<span class="pm-grd-assist-no">GDC No: %s</span>', $gdc_no); ?></span>
                   </div>
-                  <span class="pm-grd-addr mHc3">BDS (Wales, 1990), MSc (Dental Implantology, 2014)</span>
+                  <?php endif; 
+                    if( !empty($experience) ) printf('<span class="pm-grd-addr mHc3">%s</span>', $experience);
+                  ?>
+                  
+                  <?php if( !empty(get_the_excerpt()) ): ?>
                   <div class="pm-grd-desc">
-                    <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
+                    <p><?php echo get_the_excerpt(); ?>...</p>
                   </div>
+                  <?php endif; ?>
                   <div class="pm-grd-btns-cntlr">                          
                     <div class="pm-grd-btn pm-grd-btn-02">
-                      <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
+                      <a class="cdc-trnsprnt-btn" href="#" onclick="getTeamDetailsById(<?php echo $post->ID; ?>)" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
                     </div>
                   </div>
                 </div>
               </div>
             </li>
-            <li>
-              <div class="pro-mdul-grd">
-                <div class="pm-grd-img-cntlr">
-                  <div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-02.jpg);"></div>
-                </div>
-                <div class="pm-grd-desc-cntlr mHc">
-                  <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Robert Hitchcock</a></h5>
-                  <div class="pm-grd-assist mHc2">
-                    <span class="pm-grd-assist-name">Practice Principal<span class="pm-grd-assist-no">GDC No: 69354</span></span>
-                  </div>
-                  <span class="pm-grd-addr mHc3">BDS (Newcastle, 1993)</span>
-                  <div class="pm-grd-desc">
-                    <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
-                  </div>
-                  <div class="pm-grd-btns-cntlr">                          
-                    <div class="pm-grd-btn pm-grd-btn-02">
-                      <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="pro-mdul-grd">
-                <div class="pm-grd-img-cntlr">
-                  <div class="pm-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/pm-grd-img-07.jpg);"></div>
-                </div>
-                <div class="pm-grd-desc-cntlr mHc">
-                  <h5 class="fl-h5 pm-grd-title mHc1"><a href="#">Katy Robinson</a></h5>
-                  <div class="pm-grd-assist mHc2">
-                    <span class="pm-grd-assist-name">Associate Dentist<span class="pm-grd-assist-no">GDC No: 114378</span></span>
-                  </div>
-                  <span class="pm-grd-addr mHc3">BDS (Cardiff Dental School, 2007), MJDF RCS (Eng)</span>
-                  <div class="pm-grd-desc">
-                    <p>Id donec nulla nunc, netus aliquet feugiat amet ultrices. Urna sed vel velit aenean enim volutpat risus blandit. Pellentesque semper id feugiat tortor volutpat volutpat...</p>
-                  </div>
-                  <div class="pm-grd-btns-cntlr">                          
-                    <div class="pm-grd-btn pm-grd-btn-02">
-                      <a class="cdc-trnsprnt-btn" href="#" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
+            <?php endwhile; ?>
           </ul>
         </div>  
         <?php if(is_array($link) && !empty($link['url'])): ?>            
         <div class="about-team-sec-btn text-center">
           <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title']); ?>
         </div> 
-        <?php endif; ?>             
+        <?php endif; ?>   
+        <?php wp_reset_postdata();endif;?>          
       </div>
     </div>
   </div>
@@ -322,15 +314,59 @@ $link_2 = $previews['link_2'];
             <?php echo wpautop($previews['description']); ?>
           </div>
         </div>
+        <?php
+          $previewIDs = $previews['select_reviews'];
+          $previewTaxID = $previews['select_category'];
+          $review_tax = array();
+          if( !empty($previewTaxID) ){
+            $review_tax = array(
+              array(
+                'taxonomy'  => 'testimonial_cat',
+                'field' => 'term_id',
+                'terms' => $previewTaxID
+              )
+            );
+          }
+          
+          if( !empty($previewIDs) ){
+            $previewIDs = is_array($previewIDs)?$previewIDs : array($previewIDs);
+            $targs = array(
+              'post_type' => 'testimonial',
+              'orderby' => 'rand',
+              'post__in' => $previewIDs,
+              'tax_query' => $review_tax
+            );
+          }else{
+            $targs = array(
+              'post_type' => 'testimonial',
+              'posts_per_page' => 4,
+              'orderby' => 'rand',
+              'tax_query' => $review_tax
+            );
+          }
+          $tloop = new WP_Query($targs);
+          if($tloop->have_posts()):
+        ?>
         <div class="review-grids-cntlr">
           <div class="review-grids reviewSliderGrd3 review-pro-des-btn-col-3-cntlr"> 
+            <?php
+              while($tloop->have_posts()):$tloop->the_post();
+                global $post;
+                $thumbID = get_post_thumbnail_id(get_the_ID());
+                $image_tag = !empty($thumbID)? cbv_get_image_tag($thumbID) : '';
+                $name = get_field('name', $post->ID);
+                $position = get_field('position', $post->ID);
+                $quote_text = get_field('quote_text', $post->ID);
+            ?>
             <div class="review-grid-col">
               <div class="review-grid-item">
+                <?php if( !empty($image_tag) ): ?>
                 <div class="review-pro-img">
                   <i>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/review-pro-img-1.jpg" alt="">
+                    <?php echo $image_tag; ?>
                   </i>
                 </div>
+                <?php endif; ?>
                 <div class="review-pro-rating">
                   <span>
                     <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
@@ -340,107 +376,23 @@ $link_2 = $previews['link_2'];
                     <i><img src="<?php echo THEME_URI; ?>/assets/images/rating-star-icon.svg" alt=""></i>
                   </span>
                 </div>
-                <h3 class="review-tstmnl-mgs fl-h5 mHc">“Very kind and friendly staff as well a highly qualified skilled dentists!”</h3>
+                <?php if(!empty($quote_text)) printf('<h3 class="review-tstmnl-mgs fl-h5 mHc">%s</h4>', $quote_text); if(!empty(get_the_content())): ?>
                 <div class="review-pro-des testimonial-text mHc1"data-status="closed">
-                  <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
+                  <?php the_content(); ?>
                 </div>
+                <?php endif; ?>
                 <div class="review-pro-des-btn review-pro-des-btn-col-3">
                   <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
                 </div>
                 <div class="review-pro-name">
-                  <strong class="review-pro-title">Chloe Jones</strong>
-                  <span>Cardiff</span>
+                  <?php 
+                    if(!empty($name)) printf('<strong class="review-pro-title">%s</strong>', $name); 
+                    if(!empty($position)) printf('<span>%s</span>', $position); 
+                  ?>
                 </div>
               </div>
             </div>
-            <div class="review-grid-col">
-              <div class="review-grid-item">
-                <div class="review-pro-img">
-                  <i>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/review-pro-img-2.jpg" alt="">
-                  </i>
-                </div>
-                <div class="review-pro-rating">
-                  <span>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/rating-star-icon.svg" alt=""></i>
-                  </span>
-                </div>
-                <h3 class="review-tstmnl-mgs fl-h5 mHc">“Best experience I have ever had with a dentist in Newport”</h3>
-                <div class="review-pro-des testimonial-text mHc1"data-status="closed">
-                  <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-                </div>
-                <div class="review-pro-des-btn review-pro-des-btn-col-3">
-                  <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
-                </div>
-                <div class="review-pro-name">
-                  <strong class="review-pro-title">Bob Ross</strong>
-                  <span>Newport</span>
-                </div>
-              </div>
-            </div>
-            <div class="review-grid-col">
-              <div class="review-grid-item">
-                <div class="review-pro-img">
-                  <i>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/review-pro-img-3.jpg" alt="">
-                  </i>
-                </div>
-                <div class="review-pro-rating">
-                  <span>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/rating-star-icon.svg" alt=""></i>
-                  </span>
-                </div>
-                <h3 class="review-tstmnl-mgs fl-h5 mHc">“Thank you for all the time you spent with me and giving me back my smile”</h3>
-                <div class="review-pro-des testimonial-text mHc1"data-status="closed">
-                  <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-                </div>
-                <div class="review-pro-des-btn review-pro-des-btn-col-3">
-                  <button id="rdmore_bnt" data-text-closed="read more" data-text-open="read less">Read more</button>
-                </div>
-                <div class="review-pro-name">
-                  <strong class="review-pro-title">Chloe Jones</strong>
-                  <span>Cardiff</span>
-                </div>
-              </div>
-            </div> 
-            <div class="review-grid-col">
-              <div class="review-grid-item">
-                <div class="review-pro-img">
-                  <i>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/review-pro-img-1.jpg" alt="">
-                  </i>
-                </div>
-                <div class="review-pro-rating">
-                  <span>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/star-icon.svg" alt=""></i>
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/rating-star-icon.svg" alt=""></i>
-                  </span>
-                </div>
-                <h3 class="review-tstmnl-mgs fl-h5 mHc">“Very kind and friendly staff as well a highly qualified skilled dentists!”</h3>
-                <div class="review-pro-des testimonial-text mHc1"data-status="closed">
-                  <p>Malesuada praesent et penatibus eget hac leo facilisis. Consectetur venenatis adipiscing gravida erat odio sodales. Ipsum quis tincidunt neque, ullamcorper sed. Condimentum sed mi non lacus feugiat velit nec nec habitant. Pharetra rhoncus cras id rhoncus quis iaculis<span id="dots">....</span><span id="more_text">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                </div>
-                <div class="review-pro-des-btn review-pro-des-btn-col-3">
-                  <button onclick="myFunction()" id="rdmore_bnt">Read more</button>
-                  <button onclick="myFunction()" id="rdless_bnt">Read less</button>
-                </div>
-                <div class="review-pro-name">
-                  <strong class="review-pro-title">Chloe Jones</strong>
-                  <span>Cardiff</span>
-                </div>
-              </div>
-            </div>                 
+            <?php endwhile; ?>                 
           </div>
           <div class="review-prev-next">
             <div class="revw-prev">
@@ -467,6 +419,7 @@ $link_2 = $previews['link_2'];
           </ul>
         </div>
         <?php endif; ?>
+        <?php wp_reset_postdata();endif;?>
       </div>
     </div>
   </div>
@@ -547,192 +500,70 @@ $faqs = get_field('faqs', $thisID);
             <?php echo wpautop($faqs['description']); ?>
           </div>
         </div>
+        <?php
+          $faqIDs = $faqs['select_faq'];
+          if( !empty($faqIDs) ){
+            $faqIDs = is_array($faqIDs)?$faqIDs : array($faqIDs);
+            $faq_args = array(
+              'post_type' => 'faq',
+              'orderby' => 'rand',
+              'post__in' => $faqIDs,
+            );
+          }else{
+            $faq_args = array(
+              'post_type' => 'faq',
+              'posts_per_page' => 7,
+              'orderby' => 'rand',
+            );
+          }
+          $faq_loop = new WP_Query($faq_args);
+          if($faq_loop->have_posts()):
+        ?>
         <div class="faq-sec-inner">
           <div class="faq-grds">
+            <?php
+              $i = 1;
+              while($faq_loop->have_posts()):$faq_loop->the_post();
+                global $post;
+                $faq_link = get_field('link', $post->ID);
+                $active = $i == 1? 'active': '';
+            ?>
             <div class="faq-grd">
               <div class="faq-grd-item">
-                <div class="faq-accordion-menu active">
+                <div class="faq-accordion-menu <?php echo $active; ?>">
                   <div class="faq-accordion-hdr">
-                    <h4 class="faq-accordion-title fl-h6">Where are the Cox & Hitchock is the practices?</h4>
+                    <h4 class="faq-accordion-title fl-h6"><?php the_title(); ?></h4>
                     <div class="faq-accordion-icon-box">
                       <i class="faq-icon">
                         <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
                           <use xlink:href="#faq-list-icon-svg"></use> 
                         </svg>
                       </i>
-                      <i class="faq-active-icon">
-                        <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-active-svg"></use> 
+                      <i class="faq-<?php echo $active; ?>-icon">
+                        <svg class="faq-list-icon-<?php echo $active; ?>-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                          <use xlink:href="#faq-list-icon-<?php echo $active; ?>-svg"></use> 
                         </svg>
                       </i>
                     </div>
                   </div>
-                  <div class="faq-accordion-des active">
-                    <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
-                    <a href="#" class="cdc-btn">Find Out More</a>
+                  <div class="faq-accordion-des <?php echo $active; ?>">
+                    <?php 
+                      the_content(); 
+                      if( is_array($faq_link) && !empty($faq_link['url']) ) printf('<a class="cdc-btn" href="%s" target="%s">%s</a>',$faq_link['url'], $faq_link['target'], $faq_link['title'] );
+                    ?>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="faq-grd">
-              <div class="faq-grd-item">
-                <div class="faq-accordion-menu">
-                  <div class="faq-accordion-hdr">
-                    <h4 class="faq-accordion-title fl-h6">What is the difference between NHS and Private dentistry? </h4>
-                    <div class="faq-accordion-icon-box">
-                      <i class="faq-icon">
-                        <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-svg"></use> 
-                        </svg>
-                      </i>
-                      <i class="faq-active-icon">
-                        <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-active-svg"></use> 
-                        </svg>
-                      </i>
-                    </div>
-                  </div>
-                  <div class="faq-accordion-des">
-                    <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
-                    <a href="#" class="cdc-btn">Find Out More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq-grd">
-              <div class="faq-grd-item">
-                <div class="faq-accordion-menu">
-                  <div class="faq-accordion-hdr">
-                    <h4 class="faq-accordion-title fl-h6">How do I make an appointment?</h4>
-                    <div class="faq-accordion-icon-box">
-                      <i class="faq-icon">
-                        <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-svg"></use> 
-                        </svg>
-                      </i>
-                      <i class="faq-active-icon">
-                        <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-active-svg"></use> 
-                        </svg>
-                      </i>
-                    </div>
-                  </div>
-                  <div class="faq-accordion-des">
-                    <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
-                    <a href="#" class="cdc-btn">Find Out More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq-grd">
-              <div class="faq-grd-item">
-                <div class="faq-accordion-menu">
-                  <div class="faq-accordion-hdr">
-                    <h4 class="faq-accordion-title fl-h6">Do you offer dentistry for children?</h4>
-                    <div class="faq-accordion-icon-box">
-                      <i class="faq-icon">
-                        <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-svg"></use> 
-                        </svg>
-                      </i>
-                      <i class="faq-active-icon">
-                        <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-active-svg"></use> 
-                        </svg>
-                      </i>
-                    </div>
-                  </div>
-                  <div class="faq-accordion-des">
-                    <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
-                    <a href="#" class="cdc-btn">Find Out More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq-grd">
-              <div class="faq-grd-item">
-                <div class="faq-accordion-menu">
-                  <div class="faq-accordion-hdr">
-                    <h4 class="faq-accordion-title fl-h6">Are you accepting new patients?</h4>
-                    <div class="faq-accordion-icon-box">
-                      <i class="faq-icon">
-                        <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-svg"></use> 
-                        </svg>
-                      </i>
-                      <i class="faq-active-icon">
-                        <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-active-svg"></use> 
-                        </svg>
-                      </i>
-                    </div>
-                  </div>
-                  <div class="faq-accordion-des">
-                    <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
-                    <a href="#" class="cdc-btn">Find Out More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq-grd">
-              <div class="faq-grd-item">
-                <div class="faq-accordion-menu">
-                  <div class="faq-accordion-hdr">
-                    <h4 class="faq-accordion-title fl-h6">What are the fees for your treatments?</h4>
-                    <div class="faq-accordion-icon-box">
-                      <i class="faq-icon">
-                        <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-svg"></use> 
-                        </svg>
-                      </i>
-                      <i class="faq-active-icon">
-                        <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-active-svg"></use> 
-                        </svg>
-                      </i>
-                    </div>
-                  </div>
-                  <div class="faq-accordion-des">
-                    <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
-                    <a href="#" class="cdc-btn">Find Out More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq-grd">
-              <div class="faq-grd-item">
-                <div class="faq-accordion-menu">
-                  <div class="faq-accordion-hdr">
-                    <h4 class="faq-accordion-title fl-h6">What are the locations of your dentist practices?</h4>
-                    <div class="faq-accordion-icon-box">
-                      <i class="faq-icon">
-                        <svg class="faq-list-icon-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-svg"></use> 
-                        </svg>
-                      </i>
-                      <i class="faq-active-icon">
-                        <svg class="faq-list-icon-active-svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <use xlink:href="#faq-list-icon-active-svg"></use> 
-                        </svg>
-                      </i>
-                    </div>
-                  </div>
-                  <div class="faq-accordion-des">
-                    <p>Cras tortor tellus at sed id cras. Curabitur et lacus ante tortor dui euismod quam nisl. Montes, eget sed consectetur ultrices vestibulum pellentesque faucibus. Dolor neque sed eget turpis sed. Iaculis velit suscipit tellus pulvinar justo, habitant lectus pellentesque imperdiet. Dignissim congue pretium, nulla nulla gravida vitae at. Orci orci laoreet sit lacus sit nisi, sodales.</p>
-                    <a href="#" class="cdc-btn">Find Out More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <?php $i++; endwhile; ?>
           </div>
         </div>
+        <?php wp_reset_postdata();endif;?>
       </div>
     </div>
   </div>
 </section> 
-<?php endif; ?>
-
-<?php 
+<?php endif; 
 $showhidetreatment = get_field('showhidetreatment', $thisID);
 if($showhidetreatment):
 $chtreatment = get_field('chtreatment', $thisID);
@@ -764,6 +595,25 @@ $link = $chtreatment['link'];
       </div>
       <?php endif; ?>
     </div>
+    <?php
+      $treatmentIDs = $chtreatment['select_treatment'];
+      if( !empty($treatmentIDs) ){
+        $treatmentIDs = is_array($treatmentIDs)?$treatmentIDs : array($treatmentIDs);
+        $args = array(
+          'post_type' => 'treatment',
+          'orderby' => 'rand',
+          'post__in' => $treatmentIDs,
+        );
+      }else{
+        $args = array(
+          'post_type' => 'treatment',
+          'posts_per_page' => 4,
+          'orderby' => 'rand'
+        );
+      }
+      $loop = new WP_Query($args);
+      if($loop->have_posts()):
+    ?>
     <div class="treatment-rgt">
       <div class="custom-prev-next-cntlr">
         <div class="custom-prev">
@@ -782,153 +632,31 @@ $link = $chtreatment['link'];
         </div>
       </div>
       <div class="treatment-grids treatmentSlider">
+        <?php 
+          while($loop->have_posts()):$loop->the_post();
+            global $post;
+            $thumbID = get_post_thumbnail_id(get_the_ID());
+            $image_url = !empty($thumbID)? cbv_get_image_src($thumbID):treatment_placeholder();
+        ?>
         <div class="trtmnt-grd-cntlr">
           <div class="trtmnt-grd">
             <div class="trtmnt-grd-img-cntlr">
-              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
-              <a href="#" class="overlay-link"></a>
+              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo $image_url; ?>);"></div>
+              <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
             </div>
-            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Dental Implants</a></h3>
+            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <div class="trtmnt-grd-desc">
-              <p>Viverra morbi massa eu, dolor. Praesent sit elit porttitor morbi fringilla in eget sed elementum. Blandit lacus eu sit integer vel. Quis tincidunt sapien consequat malesuada egestas tempor nunc, et. Ut imperdiet ullamcorper arcu enim, porttitor donec. </p>
+              <?php the_excerpt(); ?>
             </div>
           </div>
         </div>
-        <div class="trtmnt-grd-cntlr">
-          <div class="trtmnt-grd">
-            <div class="trtmnt-grd-img-cntlr">
-              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-02.jpg);"></div>
-              <a href="#" class="overlay-link"></a>
-            </div>
-            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Cosnetic Dentistry</a></h3>
-            <div class="trtmnt-grd-desc">
-              <p>Et pellentesque netus tempus in pharetra rhoncus, sit. Gravida ornare viverra ac at egestas. Viverra lectus in praesent vitae.</p>
-            </div>
-          </div>
-        </div>
-        <div class="trtmnt-grd-cntlr">
-          <div class="trtmnt-grd">
-            <div class="trtmnt-grd-img-cntlr">
-              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-03.jpg);"></div>
-              <a href="#" class="overlay-link"></a>
-            </div>
-            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Private Dentistry</a></h3>
-            <div class="trtmnt-grd-desc">
-              <p>Et gravida tempus, diam non. Cras pulvinar pulvinar amet, at feugiat lorem quis magna. Mi cras praesent in tellus consectetur varius id tristique. Malesuada id enim gravida cras duis.</p>
-            </div>
-          </div>
-        </div>
-        <div class="trtmnt-grd-cntlr">
-          <div class="trtmnt-grd">
-            <div class="trtmnt-grd-img-cntlr">
-              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
-              <a href="#" class="overlay-link"></a>
-            </div>
-            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Teeth Whitening</a></h3>
-            <div class="trtmnt-grd-desc">
-              <p>Enim maecenas ipsum malesuada ultrices arcu risus lacus tempus pretium. Urna, cursus sapien, tristique sed sed condimentum fusce nisi. Id sit duis viverra orci nisi molestie viverra nisl, neque. Suspendisse sed vehicula arcu cras et. Dignissim sed semper leo sollicitudin malesuada adipiscing faucibus euismod.</p>
-            </div>
-          </div>
-        </div>
-        <div class="trtmnt-grd-cntlr">
-          <div class="trtmnt-grd">
-            <div class="trtmnt-grd-img-cntlr">
-              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
-              <a href="#" class="overlay-link"></a>
-            </div>
-            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Dental Implants</a></h3>
-            <div class="trtmnt-grd-desc">
-              <p>Viverra morbi massa eu, dolor. Praesent sit elit porttitor morbi fringilla in eget sed elementum. Blandit lacus eu sit integer vel. Quis tincidunt sapien consequat malesuada egestas tempor nunc, et. Ut imperdiet ullamcorper arcu enim, porttitor donec. </p>
-            </div>
-          </div>
-        </div>
-        <div class="trtmnt-grd-cntlr">
-          <div class="trtmnt-grd">
-            <div class="trtmnt-grd-img-cntlr">
-              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-02.jpg);"></div>
-              <a href="#" class="overlay-link"></a>
-            </div>
-            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Cosnetic Dentistry</a></h3>
-            <div class="trtmnt-grd-desc">
-              <p>Et pellentesque netus tempus in pharetra rhoncus, sit. Gravida ornare viverra ac at egestas. Viverra lectus in praesent vitae.</p>
-            </div>
-          </div>
-        </div>
-        <div class="trtmnt-grd-cntlr">
-          <div class="trtmnt-grd">
-            <div class="trtmnt-grd-img-cntlr">
-              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-03.jpg);"></div>
-              <a href="#" class="overlay-link"></a>
-            </div>
-            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Private Dentistry</a></h3>
-            <div class="trtmnt-grd-desc">
-              <p>Et gravida tempus, diam non. Cras pulvinar pulvinar amet, at feugiat lorem quis magna. Mi cras praesent in tellus consectetur varius id tristique. Malesuada id enim gravida cras duis.</p>
-            </div>
-          </div>
-        </div>
-        <div class="trtmnt-grd-cntlr">
-          <div class="trtmnt-grd">
-            <div class="trtmnt-grd-img-cntlr">
-              <div class="trtmnt-grd-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/trtmnt-grd-img-01.jpg);"></div>
-              <a href="#" class="overlay-link"></a>
-            </div>
-            <h3 class="fl-h5 trtmnt-grd-title mHc"><a href="#">Teeth Whitening</a></h3>
-            <div class="trtmnt-grd-desc">
-              <p>Enim maecenas ipsum malesuada ultrices arcu risus lacus tempus pretium. Urna, cursus sapien, tristique sed sed condimentum fusce nisi. Id sit duis viverra orci nisi molestie viverra nisl, neque. Suspendisse sed vehicula arcu cras et. Dignissim sed semper leo sollicitudin malesuada adipiscing faucibus euismod.</p>
-            </div>
-          </div>
-        </div>
+        <?php endwhile; ?>
       </div>
     </div>
+    <?php wp_reset_postdata();endif;?>
   </div>
 </section>
 <?php endif; ?>
 </div>
-
-<div class="cox-profile-modal">
-  <div class="modal fade" id="profile-modal" tabindex="-1" aria-labelledby="" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="" data-bs-dismiss="modal" aria-label="Close">
-            <i>
-              <svg class="modal-close-icon" width="22" height="22" viewBox="0 0 22 22" fill="#29467D">
-                <use xlink:href="#modal-close-icon"></use> 
-              </svg>
-            </i>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="pro-modal-con-cntlr">
-            <div class="pro-modal-con-lft">
-              <div class="pro-modal-img-cntlr">
-                <img src="<?php echo THEME_URI; ?>/assets/images/modal-pro-img.jpg" alt="">
-              </div>
-            </div>
-            <div class="pro-modal-con-rgt">
-              <div class="pro-modal-des-cntlr">
-                <h2 class="pro-modal-title fl-h3">David Cox</h2>
-                <h2 class="pro-modal-assist-name fl-h5">Practice Principal <span>GDC No: 65106</span></h2>
-                <div class="pro-modal-addr">
-                  <span>BDS (Wales, 1990), MSc (Dental Implantology, 2014)</span>
-                </div>
-                <div class="pro-modal-des">
-                  <p>Following graduation from The University Hospital of Wales in 1990, David initially pursued a career in Cardiff Dental Hospital with house officer posts in General Anaesthesia and Maxillofacial Surgery, later moving to a General Practice position. After a short three years as an associate, he moved to Llanthewy Road, becoming the Principal in 1995. Following the opening of the Rhyd – y- Penau Road surgery in 1999, he was joined by Bob Hitchcock, forming the Cox & Hitchcock Partnership.</p>
-                  <p>His initial interest in Implantology stemmed from undergraduate research at Otago University in New Zealand. He has extensive post-graduate training in Dental Implantology and is a committed member of the ITI (International Team for Implantology) and ADI (Association of Dental Implantology). Quality post-graduate education is essential for professional development. Keeping abreast of the latest techniques and applying an evidence-based approach has resulted in extensive travels nationwide, throughout Europe and the USA, seeking education to broaden his knowledge base from leading clinicians, institutions and companies.</p>
-                  <p>In 2014, he completed with distinction an MSc in Dental Implantology at Bristol University.</p>
-                  <p>He works closely with Straumann Implant systems, but also has extensive experience with many other manufacturers, ensuring he provides scientifically proven care serving the best interest of his patients.</p>
-                  <p>Having thoroughly researched Peri-implant disease as part of his dissertation, he has a keen interest in this field, and often treats patients referred to him with compromised diseased implants, as well as treating individuals with periodontal (Gum) disease, often with the adjunctive use of laser technology (WATERLASE IPLUS®).</p>
-                  <p>As well as a previous member of the Dental panel at SmithKline Beecham (later GlaxoSmithKline), he has lectured post-graduate dentists, mentors, Implantologists, and annually holds discussion groups/seminars with undergraduate Dental students.</p>
-                </div>
-              </div>
-              <div class="pro-modal-btn">
-                <a class="cdc-btn" href="#">Book Private Consultation</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<?php get_template_part('templates/team', 'modal'); ?>
 <?php get_footer(); ?>

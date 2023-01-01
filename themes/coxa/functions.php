@@ -66,7 +66,6 @@ function cbv_theme_scripts(){
     include_once( THEME_DIR . '/enq-scripts/select2.php' );
     include_once( THEME_DIR . '/enq-scripts/counterup.php' );
     include_once( THEME_DIR . '/enq-scripts/parallaxie.php' );
-    include_once( THEME_DIR . '/enq-scripts/waypoints.php' );
     include_once( THEME_DIR . '/enq-scripts/twentytwenty.php' );
     include_once( THEME_DIR . '/enq-scripts/animate.php' );
     include_once( THEME_DIR . '/enq-scripts/theme.default.php' );

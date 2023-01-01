@@ -45,6 +45,15 @@
 .testimonials-pg-content-cntlr .why-choose-sec .sec-entry-hdr-cntlr {
     padding-bottom: 60px;
 }
+.tmreviewSlider .review-grid-col{
+    display: none;
+}
+.tmreviewSlider .review-grid-col:first-child{
+    display: block;
+}
+.tmreviewSlider.slick-initialized .review-grid-col{
+    display: block;
+}
 @media(max-width: 767px){
     .testimonials-pg-content-cntlr .practice-gallery-grids .practice-gallery-grid-col{
         margin-bottom: 24px;
