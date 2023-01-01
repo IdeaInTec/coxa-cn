@@ -563,9 +563,7 @@ $faqs = get_field('faqs', $thisID);
     </div>
   </div>
 </section> 
-<?php endif; ?>
-
-<?php 
+<?php endif; 
 $showhidetreatment = get_field('showhidetreatment', $thisID);
 if($showhidetreatment):
 $chtreatment = get_field('chtreatment', $thisID);
@@ -638,7 +636,7 @@ $link = $chtreatment['link'];
           while($loop->have_posts()):$loop->the_post();
             global $post;
             $thumbID = get_post_thumbnail_id(get_the_ID());
-            $image_url = !empty($thumbID)? cbv_get_image_src($thumbID) : treatment_placeholder();
+            $image_url = !empty($thumbID)? cbv_get_image_src($thumbID):treatment_placeholder();
         ?>
         <div class="trtmnt-grd-cntlr">
           <div class="trtmnt-grd">
@@ -660,24 +658,5 @@ $link = $chtreatment['link'];
 </section>
 <?php endif; ?>
 </div>
-
-<div class="cox-profile-modal">
-  <div class="modal fade" id="profile-modal" tabindex="-1" aria-labelledby="" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="" data-bs-dismiss="modal" aria-label="Close">
-            <i>
-              <svg class="modal-close-icon" width="22" height="22" viewBox="0 0 22 22" fill="#29467D">
-                <use xlink:href="#modal-close-icon"></use> 
-              </svg>
-            </i>
-          </button>
-        </div>
-        <div class="modal-body" id="teamDetail">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<?php get_template_part('templates/team', 'modal'); ?>
 <?php get_footer(); ?>
