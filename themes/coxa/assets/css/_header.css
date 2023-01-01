@@ -847,11 +847,14 @@ body.allWork .hamburger-icon span:nth-child(2) {
     nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > a{
         background: transparent;
         padding: 0;
-        margin-bottom: 0;
+        margin-bottom: 8px;
     }
     nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > .sub-menu,
     nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > .sub-menu{
         padding-top: 17px
+    }
+    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu{
+        display: block!important;
     }
     .fixed-header .header .header-wrap{
         padding: 18px 0;  
