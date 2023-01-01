@@ -20,6 +20,7 @@ get_template_part('templates/page', 'banner');
                 <div class="fees-sec-entry-hdr">                
                   <?php if(!empty($description)) echo wpautop($description); ?>
                 </div>
+                <?php if( !empty($fees) ): ?>
                 <div class="fees-cntlr">
                   <div class="fees-tab">
                     <div class="fees-tab-hdr show-sm">
@@ -30,10 +31,13 @@ get_template_part('templates/page', 'banner');
                         <span>Select treatment fees</span>
                       </div>
                       <ul class="reset-list">
-                        <li><a href="#fees-scrool-btn-1">Examination Fees</a></li>
-                        <li><a href="#fees-scrool-btn-2">Assessment & Scan Fees</a></li>
-                        <li><a href="#fees-scrool-btn-3">General Dentistry Fees</a></li>
-                        <li><a href="#fees-scrool-btn-4">Treatment Fees</a></li>
+                      <?php 
+                        $i = 1;
+                        foreach( $fees as $fee ): 
+                          $title = $fee['title'];
+                      ?>
+                        <li><a href="#fees-scrool-btn-<?php echo $i; ?>"><?php printf('%s', $title); ?></a></li>
+                        <?php $i++; endforeach; ?>
                       </ul>
                     </div>
                   </div>
@@ -64,6 +68,7 @@ get_template_part('templates/page', 'banner');
           					</div>
               		<?php $i++; endforeach; ?>
                 </div>
+                <?php endif; ?>
               </div>
             </div>
           </div>
