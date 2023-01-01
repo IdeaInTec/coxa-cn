@@ -736,6 +736,7 @@ body.allWork .hamburger-icon span:nth-child(2) {
     nav.main-nav > ul > li.menu-item-has-children > a {
         padding-right: 0;
     }
+    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu,
     nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu,
     nav.main-nav > ul > li.menu-item-has-children > ul.sub-menu{
         position: static;
@@ -770,12 +771,14 @@ body.allWork .hamburger-icon span:nth-child(2) {
         border: none;
         padding:7px;
     }
+    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu li a,
     nav.main-nav > ul > li.menu-item-has-megamenu ul.submenu li a,
     nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
         padding: 0;
         font-size: 15px!important;
         color: #29467D!important;
     }
+    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu:hover > a:before,
     nav.main-nav > ul > li.menu-item-has-megamenu:hover > a:before,
     nav.main-nav > ul > li.menu-item-has-children:hover > a:before {
         transform: initial;
@@ -784,11 +787,12 @@ body.allWork .hamburger-icon span:nth-child(2) {
         -o-transform: initial;
         background-image: initial;
     }
-    
+    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > a,
     nav.main-nav > ul > li.menu-item-has-megamenu > a,
     nav.main-nav > ul > li.menu-item-has-children > a{
         padding-right: 0;
     }
+    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > a:before,
     nav.main-nav > ul > li.menu-item-has-megamenu > a:before,
     nav.main-nav > ul > li.menu-item-has-children > a:before{
         position: absolute;
@@ -805,6 +809,7 @@ body.allWork .hamburger-icon span:nth-child(2) {
         -ms-transition: all 0.5s;
         -webkit-transition: all 0.5s;
     }
+    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu.sub-menu-arrow > a:before,
     nav.main-nav > ul > li.menu-item-has-megamenu.sub-menu-arrow > a:before,
     nav.main-nav > ul > li.menu-item-has-children.sub-menu-arrow > a:before {
         transform: rotate(-180deg)!important;
@@ -822,6 +827,7 @@ body.allWork .hamburger-icon span:nth-child(2) {
     nav.main-nav > ul > li.menu-item-has-children.sub-menu-arrow > a{
         color: #EACC95;
     }
+    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > a:after,
     nav.main-nav > ul > li.menu-item-has-children > a:after,
     nav.main-nav > ul > li.menu-item-has-megamenu > a:after{
         display: none;
@@ -830,6 +836,8 @@ body.allWork .hamburger-icon span:nth-child(2) {
     nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li:last-child{
         margin-bottom: 0;
     }
+    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.sub-menu > .menu-item-has-children,
+    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.submenu > .menu-item-has-children ,
     nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children {
         padding: 0 0;
         margin-bottom: 17px;
@@ -841,6 +849,7 @@ body.allWork .hamburger-icon span:nth-child(2) {
         padding: 0;
         margin-bottom: 0;
     }
+    nav.main-nav > ul > li.menu-item-has-children.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > .sub-menu,
     nav.main-nav > ul > li.menu-item-has-megamenu > ul.submenu > .menu-item-has-children > .sub-menu{
         padding-top: 17px
     }
