@@ -93,7 +93,7 @@ $tloop = new WP_Query($targs);
               </div>
             </div>       
             <?php else: ?>
-
+              <div class="notfound"><p>No Results.</p></div>
             <?php endif; ?>       
           </div>
         </div>
