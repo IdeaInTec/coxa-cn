@@ -19,11 +19,6 @@ $thisID = get_the_ID();
 	        <div class="abtis-img-text-row-inr">
 	          <div class="abtis-img-txt-col abtis-row-img">
 	            <div class="abtis-row-img-inner">
-	              <img class="single-image"src="<?php echo THEME_URI; ?>/assets/images/treatment-main-img-02.jpg" alt="">
-	              <div class="double-image">
-	                <img class="double-image-main" src="<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-02.png" alt="">
-	                <img class="double-image-sub" src="<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-03.png" alt="">
-	              </div>
 	              <div class="abtis-row-main-img-cntrl">
 	                <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/treatment-main-img-022.jpg);">
 	                </div>
