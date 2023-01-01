@@ -47,7 +47,17 @@ var stickyOffset = $('.header').offset().top;
     }
   });
 
-  
+
+  if( $('.faq-accordion-des').length ){
+    $('.faq-accordion-des a').click(function(e){
+      e.preventDefault();
+      var scTo = $(this).data('to');
+      $('html, body').animate({
+        scrollTop: $(scTo).offset().top
+      }, 10);
+    });
+
+  }
 	if(windowWidth <=767){
     if( $('.fees-tab-inr').length ){
       $('.fees-tab-button').click(function(){
