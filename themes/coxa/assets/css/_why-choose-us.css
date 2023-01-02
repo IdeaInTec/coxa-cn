@@ -105,19 +105,23 @@
     .why-choose-us-page-cntlr .team-grds{
         display: block;
     }
-    .why-choose-us-page-cntlr .xs-team-prev-next{
+    .why-choose-us-page-cntlr .xs-team-prev-next,
+    .pratice-pg-con-cntlr .xs-team-prev-next{
         position: absolute;
         bottom: 130px;
         left: 0;
         right: 0;
     }
-    .why-choose-us-page-cntlr .revw-prev {
+    .why-choose-us-page-cntlr .revw-prev,
+    .pratice-pg-con-cntlr .revw-prev {
         left: 0;
     }
-    .why-choose-us-page-cntlr .revw-next {
+    .why-choose-us-page-cntlr .revw-next,
+    .pratice-pg-con-cntlr .revw-next {
         right: 0;
     }
-    .why-choose-us-page-cntlr .team-grd-item-col{
+    .why-choose-us-page-cntlr .team-grd-item-col,
+    .pratice-pg-con-cntlr .team-grd-item-col{
         padding-bottom: 50px;
     }
 }
