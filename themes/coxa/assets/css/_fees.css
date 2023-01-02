@@ -62,6 +62,7 @@
 	text-decoration: none;
 	padding-bottom: 3px;
 	border-bottom: 1px dashed #29467D;
+	text-transform: capitalize;
 }
 .fees-tab ul li.active a{
 	color: #EACC95;
@@ -78,6 +79,7 @@
 .fees-module-title{
 	text-align: center;
 	margin-bottom: 34px;
+	text-transform: capitalize;
 }
 .fees-module{
 	max-width: 637px;
