@@ -174,6 +174,7 @@ $ourteam = get_field('team', $thisID);
           if($loop->have_posts()):
         ?>
       <div class="profile-module">
+        <div class="profile-module-inr">
         <div class="team-grds teamGrdSlider">
             <?php 
               while($loop->have_posts()):$loop->the_post();
@@ -213,6 +214,7 @@ $ourteam = get_field('team', $thisID);
           </div>
           <?php endwhile; ?>
         </div>
+
         <div class="team-prev-next">
           <div class="revw-prev">
             <span class="revw-left">
@@ -245,6 +247,7 @@ $ourteam = get_field('team', $thisID);
             </span>
           </div>
         </div> 
+      </div>
       </div>
       <?php wp_reset_postdata();endif;?> 
     </div>
