@@ -685,4 +685,5 @@ $faqs = get_field('faqs', $thisID);
 </div>
 </section>
 </div>
+<?php get_template_part('templates/team', 'modal'); ?>
 <?php get_footer(); ?>
