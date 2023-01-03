@@ -56,6 +56,9 @@
 }
 
 .profile-module{
+	
+}
+.profile-module-inr{
 	position: relative;
 }
 .profile-module > ul{
@@ -224,7 +227,9 @@
 	.counter-col p{
 		font-size: 23px;
 	}
-	
+	.pratice-pg-con-cntlr .xs-team-prev-next{
+		bottom: 54px;
+	}
 }
 @media(max-width: 575px){
 	.counter-col{
