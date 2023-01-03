@@ -47,8 +47,8 @@ var stickyOffset = $('.header').offset().top;
   });
 
 
-  if( $('.faq-accordion-des').length ){
-    $('.faq-accordion-des a').click(function(e){
+  if( $('.referral-to-bottom').length ){
+    $('.referral-to-bottom').click(function(e){
       e.preventDefault();
       var scTo = $(this).data('to');
       $('html, body').animate({

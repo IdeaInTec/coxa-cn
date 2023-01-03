@@ -4,6 +4,10 @@ get_template_part('templates/page', 'banner');
 ?>
 
 <div class="treatment-page-con-cntlr">
+  <?php 
+  $intro = get_field('intro', $thisID); 
+  $ti_link = $intro['link'];
+  ?>
   <section class="about-intro-sec has-inline-bg">
     <div class="container">
       <div class="row">
@@ -12,14 +16,12 @@ get_template_part('templates/page', 'banner');
               <div class="abtis-img-text-row-inr">
                 <div class="abtis-img-txt-col abtis-row-img">
                   <div class="abtis-row-img-inner">
+                    <?php if(!empty($intro['image'])): ?>
                     <div class="abtis-row-main-img-cntrl">
-                      <div class="abtis-row-main-img inline-bg" style="background-image: url(assets/images/tremnt-main-img-01.jpg);">
+                      <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($intro['image']); ?>);">
                       </div>
                     </div>
-                    <div class="abtis-row-sub-img-cntlr">
-                      <div class="abtis-row-sub-img inline-bg" style="background-image: url(assets/images/about-us-intro-sub-img-01.jpg);">
-                      </div>
-                    </div>
+                    <?php endif; ?>
                   </div>
                 </div>
                 <div class="abtis-img-txt-col abtis-row-text">
@@ -27,22 +29,19 @@ get_template_part('templates/page', 'banner');
                     <div class="diamond-module">
                       <ul class="reset-list">
                         <li>
-                          <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                          <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                         </li>
                         <li>
-                          <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                          <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                         </li>
                         <li>
-                          <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                          <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                         </li>
                       </ul>
                     </div>
-                    <h2 class="fl-h4">What is a dental implant?</h2>
-                    <p>Fermentum et tristique dictumst ipsum dolor turpis arcu nibh integer. Mauris volutpat dictum cras sagittis leo platea tincidunt. Scelerisque turpis tortor, purus nec eget mauris tempor lacus. Varius amet egestas cursus quam proin magna varius sit. Dui ut in massa nibh ut. Commodo et sapien semper imperdiet dolor nunc id sit consectetur. Fames amet, turpis in at in senectus, in felis amet euismod vitae potenti praesents.</p>
-                    <p>Aenean in sed mi malesuada quis purus facilisis vel senectus. Purus aliquet consequat dignissim aliquam bibendum pulvinar faucibus et enim. Sapien faucibus mattis quis nunc vulputate habitant scelerisque. Non tincidunt enim adipiscing lectus euismod turpis vel non massa, ultricies condimentum dui.</p>
-                    <div class="abtis-intro-des-btn">
-                      <a class="cdc-btn" href="#">Treatment Fees</a>
-                    </div>
+                    <?php if(!empty($intro['title'])) printf('<h2 class="fl-h4">%s</h2>',$intro['title']);?>
+                    <?php if(!empty($intro['description'])) echo wpautop($intro['description']); ?>
+                    <?php if(is_array($ti_link) && !empty($ti_link['url'])) printf('<div class="abtis-intro-des-btn"><a class="cdc-btn" href="%s">%s</a></div>',$ti_link['url'],$ti_link['title']); ?>
                   </div>                          
                 </div>
               </div>
@@ -51,6 +50,11 @@ get_template_part('templates/page', 'banner');
       </div>
     </div>
   </section>
+  <?php 
+  $showhidewchtreat = get_field('showhidewchtreat', $thisID);
+  if($showhidewchtreat):
+  $treatments = get_field('treatments', $thisID);
+  ?>
   <section class="treatments-sec">
     <div class="container">
       <div class="row">
@@ -58,71 +62,60 @@ get_template_part('templates/page', 'banner');
           <div class="treatments-sec-inr">
             <div class="sec-entry-hdr-cntlr">
               <div class="sec-entry-hdr">
-                <h3 class="sec-entry-hdr-title fl-h4">Dental Implant Treatments</h3>
+                <?php if(!empty($treatments['title'])) printf('<h3 class="sec-entry-hdr-title fl-h4">%s</h3>',$treatments['title']);?>
                 <div class="diamond-module">
                   <ul class="reset-list">
                     <li>
-                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                     </li>
                     <li>
-                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                     </li>
                     <li>
-                      <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                      <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                     </li>
                   </ul>
                 </div>                
               </div>
             </div>
             <div class="treatment-grds">
+              <?php 
+              $treatments = $treatments['treatments'];
+              foreach($treatments as $treatment):
+              $tr_link = $treatment['link'];
+              ?>
               <div class="treatment-grd-item-col">
                 <div class="treatment-grd-item">
+                  <?php if(!empty($treatment['image'])): ?>
                   <div class="treatment-grd-img-cntlr">
                     <div class="treatment-grd-img">
-                      <img src="assets/images/treatment-img-01.jpg">
+                      <?php echo cbv_get_image_tag($treatment['image']); ?>
                     </div>
                   </div>
+                  <?php endif; ?>
                   <div class="treatment-grd-des">
-                    <h4 class="treatment-grd-des-title fl-h5">Single Tooth Replacement</h4>
-                    <h5 class="treatment-grd-des-subtitle">Image subtitle</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra consequat enim nunc dolor. Orci convallis pretium nulla fames. Ullamcorper non in iaculis aliquam auctor maecenas tellus. Amet consectetur nulla eu pellentesque phasellus.</p>
+                    <?php if(!empty($treatment['title'])) printf('<h4 class="treatment-grd-des-title fl-h5">%s</h4>',$treatment['title']);?>
+                    <?php if(!empty($treatment['subtitle'])) printf('<h5 class="treatment-grd-des-subtitle">%s</h5>',$treatment['subtitle']);?>
+                    <?php if(!empty($treatment['description'])) echo wpautop($treatment['description']); ?>
+                    <?php if(is_array($tr_link) && !empty($tr_link['url'])) printf('<div class="abtis-intro-des-btn"><a class="cdc-btn" href="%s">%s</a></div>',$tr_link['url'],$tr_link['title']); ?>
                   </div>
                 </div>
               </div>
-              <div class="treatment-grd-item-col">
-                <div class="treatment-grd-item">
-                  <div class="treatment-grd-img-cntlr">
-                    <div class="treatment-grd-img">
-                      <img src="assets/images/treatment-img-02.jpg">
-                    </div>
-                  </div>
-                  <div class="treatment-grd-des">
-                    <h4 class="treatment-grd-des-title fl-h5">Multiple Teeth Replacement</h4>
-                    <h5 class="treatment-grd-des-subtitle">Image subtitle</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra consequat enim nunc dolor. Orci convallis pretium nulla fames. Ullamcorper non in iaculis aliquam auctor maecenas tellus. Amet consectetur nulla eu pellentesque phasellus.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="treatment-grd-item-col">
-                <div class="treatment-grd-item">
-                  <div class="treatment-grd-img-cntlr">
-                    <div class="treatment-grd-img">
-                      <img src="assets/images/treatment-img-03.jpg">
-                    </div>
-                  </div>
-                  <div class="treatment-grd-des">
-                    <h4 class="treatment-grd-des-title fl-h5">Implant-Retained Dentures</h4>
-                    <h5 class="treatment-grd-des-subtitle">Image subtitle</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra consequat enim nunc dolor. Orci convallis pretium nulla fames. Ullamcorper non in iaculis aliquam auctor maecenas tellus. Amet consectetur nulla eu pellentesque phasellus.</p>
-                  </div>
-                </div>
-              </div>
+              <?php endforeach; ?>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+<?php 
+endif; 
+$showhideblock = get_field('showhideblock', $thisID);
+if($showhideblock):
+$block = get_field('block', $thisID);
+$blink = $block['link'];
+?>
+
   <section class="about-intro-sec has-inline-bg">
     <div class="container">
       <div class="row">
@@ -131,17 +124,8 @@ get_template_part('templates/page', 'banner');
               <div class="abtis-img-text-row-inr">
                 <div class="abtis-img-txt-col abtis-row-img">
                   <div class="abtis-row-img-inner">
-                    <img class="single-image"src="assets/images/treatment-intro-img-02.jpg" alt="">
-                    <div class="double-image">
-                      <img class="double-image-main" src="assets/images/about-us-intro-img-02.png" alt="">
-                      <img class="double-image-sub" src="assets/images/about-us-intro-img-03.png" alt="">
-                    </div>
                     <div class="abtis-row-main-img-cntrl">
-                      <div class="abtis-row-main-img inline-bg" style="background-image: url(assets/images/treatment-intro-img-03.jpg);">
-                      </div>
-                    </div>
-                    <div class="abtis-row-sub-img-cntlr">
-                      <div class="abtis-row-sub-img inline-bg" style="background-image: url(assets/images/about-us-intro-sub-img-01.jpg);">
+                      <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($block['image']); ?>);">
                       </div>
                     </div>
                   </div>
@@ -151,22 +135,19 @@ get_template_part('templates/page', 'banner');
                     <div class="diamond-module">
                       <ul class="reset-list">
                         <li>
-                          <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                          <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                         </li>
                         <li>
-                          <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                          <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                         </li>
                         <li>
-                          <i><img src="assets/images/sec-title-diamond.svg" alt=""></i>
+                          <i><img src="<?php echo THEME_URI; ?>/assets/images/sec-title-diamond.svg" alt=""></i>
                         </li>
                       </ul>
                     </div>
-                    <h2 class="fl-h4">Benefits of Dental Implants</h2>
-                    <p>420 Dental implants let you get on with life, without compromise. If you already wear dentures, or are facing the prospect of losing your teeth, implants can have a truly transformative impact. With dental implants, you can take for granted the ability to taste and eat all foods; speak and laugh without fear of embarrassment; enjoy a healthy and beautiful smile with no discomfort; and avoid the ageing facial sagging that missing teeth can cause – so you’ll look younger for longer.</p>
-                    <p>As our many happy implant patients will attest, you can’t put a price on the improvement implants can have on quality of life and self-confidence.</p>
-                    <div class="abtis-intro-des-btn">
-                      <a class="cdc-btn" href="#">Dental Implant FAQs</a>
-                    </div>
+                    <?php if(!empty($block['subtitle'])) printf('<h2 class="fl-h4">%s</h2>',$block['subtitle']);?>
+                    <?php if(!empty($block['description'])) echo wpautop($block['description']); ?>
+                    <?php if(is_array($blink) && !empty($blink['url'])) printf('<div class="abtis-intro-des-btn"><a class="cdc-btn" href="%s">%s</a></div>',$blink['url'],$blink['title']); ?>
                   </div>                          
                 </div>
               </div>
@@ -176,6 +157,7 @@ get_template_part('templates/page', 'banner');
     </div>
   </section> 
 <?php 
+endif;
 $showhidewch = get_field('showhidewch', $thisID);
 if($showhidewch):
 $why_choose = get_field('why_choose', HOMEID);
@@ -288,6 +270,7 @@ $ourteam = get_field('ourteam', $thisID);
           if($loop->have_posts()):
         ?>
       <div class="profile-module">
+        <div class="profile-module-inr">
         <div class="team-grds teamGrdSlider">
             <?php 
               while($loop->have_posts()):$loop->the_post();
@@ -359,6 +342,7 @@ $ourteam = get_field('ourteam', $thisID);
             </span>
           </div>
         </div> 
+        </div>
       </div>
       <?php wp_reset_postdata();endif;?> 
     </div>
