@@ -64,13 +64,17 @@
     display: inline-block;
     margin-bottom: 0;
 }
+.practice-gallery-grid-title{
+    
+}
 .practice-gallery-grid-title a:hover{
     color: #EACC95;
 }
-.practice-gallery-grid-title{
+.practice-gallery-grid-title a{
     padding-left: 25px;
+    text-align: left;
 }
-.practice-gallery-grid-title:after{
+.practice-gallery-grid-title a:after{
     content: "";
     position: absolute;
     left: 0;
@@ -251,13 +255,13 @@
     .practice-gallery-grid-title{
         font-size: 17px!important;
     }
-    .practice-gallery-grid-title:after{
+    .practice-gallery-grid-title a:after{
         width: 14px;
         height: 14px;
         top: 3px;
         background-size: cover;
     }
-    .practice-gallery-grid-title {
+    .practice-gallery-grid-title a{
         padding-left: 20px;
     }
     .expert-treatment-sec {
@@ -296,7 +300,7 @@
     .practice-gallery-grid-title {
         font-size: 18px!important;
     }
-    .practice-gallery-grid-title:after{
+    .practice-gallery-grid-title a:after{
         top: 6px; 
     }
     .ex-trmnt-grd-item-col {
@@ -331,7 +335,7 @@
     .practice-gallery-grid-title {
         font-size: 21px!important;
     }
-    .practice-gallery-grid-title:after {
+    .practice-gallery-grid-title a:after {
         width: 12px;
         height: 12px;
         top: 7px;        
