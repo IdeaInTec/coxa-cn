@@ -5,6 +5,12 @@ $thisID = get_the_ID();
 get_template_part('templates/page', 'banner');
 ?>
 <div class="patient-page-con-cntlr">       
+  <?php 
+  $intro = get_field('intro', $thisID);
+  $ilink_1 = $intro['link_1'];
+  $ilink_2 = $intro['link_2'];
+  if(!empty($intro['title']) || $intro['description']):
+  ?>
   <section class="about-intro-sec has-inline-bg double-image-module">
     <div class="container">
       <div class="row">
@@ -13,19 +19,17 @@ get_template_part('templates/page', 'banner');
               <div class="abtis-img-text-row-inr">
                 <div class="abtis-img-txt-col abtis-row-img">
                   <div class="abtis-row-img-inner">
-                    <img class="single-image"src="<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-02.png" alt="">
-                    <div class="double-image">
-                      <img class="double-image-main" src="<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-02.png" alt="">
-                      <img class="double-image-sub" src="<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-03.png" alt="">
-                    </div>
+                    <?php if(!empty($intro['image_1'])): ?>
                     <div class="abtis-row-main-img-cntrl">
-                      <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/about-us-intro-mn-img-01.jpg);">
+                      <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($intro['image_1']); ?>);">
                       </div>
                     </div>
+                    <?php endif; if(!empty($intro['image_2'])): ?>
                     <div class="abtis-row-sub-img-cntlr">
-                      <div class="abtis-row-sub-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images//about-us-intro-img-03.png);">
+                      <div class="abtis-row-sub-img inline-bg" style="background-image: url(<?php echo cbv_get_image_src($intro['image_2']); ?>);">
                       </div>
                     </div>
+                    <?php endif; ?>
                   </div>
                 </div>
                 <div class="abtis-img-txt-col abtis-row-text">
@@ -43,17 +47,21 @@ get_template_part('templates/page', 'banner');
                         </li>
                       </ul>
                     </div>
-                    <h2 class="fl-h4">New Patients Join Today!</h2>
-                    <p>Fermentum et tristique dictumst ipsum dolor turpis arcu nibh integer. Mauris volutpat dictum cras sagittis leo platea tincidunt. Scelerisque turpis tortor, purus nec eget mauris tempor lacus. Varius amet egestas cursus quam proin magna varius sit. Dui ut in massa nibh ut. Commodo et sapien semper imperdiet dolor nunc id sit consectetur. Fames amet, turpis in at in senectus, in felis amet euismod vitae potenti praesents.</p>
-                    <p>Aenean in sed mi malesuada quis purus facilisis vel senectus. Purus aliquet consequat dignissim aliquam bibendum pulvinar faucibus et enim. Sapien faucibus mattis quis nunc vulputate habitant scelerisque. Non tincidunt enim adipiscing lectus euismod turpis vel non massa, ultricies condimentum dui.</p>
+                    <?php if(!empty($intro['title'])) printf('<h2 class="fl-h4">%s</h2>',$intro['title']); ?>
+                    <?php if(!empty($intro['description'])) echo wpautop($intro['description']); ?>
+                    <?php if(!empty($ilink_2['url']) || !empty($ilink_1['url'])): ?>
                     <div class="pm-grd-btns-cntlr">
+                      <?php if(is_array($ilink_1) && !empty($ilink_1['url'])): ?>
                       <div class="pm-grd-btn pm-grd-btn-01">
-                        <a class="cdc-btn" href="#">Online Registration</a>
+                        <?php printf('<a class="cdc-btn" href="%s">%s</a>',$ilink_1['url'],$ilink_1['title'] ); ?>
                       </div>
+                      <?php endif; if(is_array($ilink_2) && !empty($ilink_2['url'])): ?>
                       <div class="pm-grd-btn pm-grd-btn-02">
-                        <a class="cdc-trnsprnt-btn" href="#">Meet Our Team</a>
+                        <?php printf('<a class="cdc-trnsprnt-btn" href="%s">%s</a>',$ilink_2['url'],$ilink_2['title'] ); ?>
                       </div>
+                      <?php endif; ?>
                     </div>
+                    <?php endif; ?>
                   </div>                          
                 </div>
               </div>
@@ -63,6 +71,7 @@ get_template_part('templates/page', 'banner');
     </div>
   </section>
 <?php 
+endif;
 $showhidewch = get_field('showhidewch', $thisID);
 if($showhidewch):
 $why_choose = get_field('why_choose', HOMEID);
