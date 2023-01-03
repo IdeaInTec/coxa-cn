@@ -138,6 +138,12 @@
     padding-bottom: 75px;
     padding-top: 30px;
 }
+.page-template-page-contact-us .locations-sec{
+    padding-bottom: 0;
+}
+.page-template-page-contact-us .map-loc-desc-cntlr{
+    background: #F7F7F7;
+}
 .locations-sec-grids {
     display: flex;
     flex-wrap: wrap;
@@ -333,6 +339,9 @@ padding-bottom: 4px;
     .faq-sec {
         padding-top: 100px;
         padding-bottom: 75px;
+    }
+    .page-template-page-contact-us .faq-sec{
+        padding-top: 70px;
     }
     .faq-accordion-hdr{
         padding: 15px 48px 15px 16px;

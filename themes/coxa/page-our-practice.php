@@ -560,77 +560,79 @@ $link = $team['link'];
 			          if($loop->have_posts()):
 			        ?>
 					<div class="profile-module">
-						<div class="team-grds teamGrdSlider">
-				            <?php 
-				              while($loop->have_posts()):$loop->the_post();
-				                global $post;
-				                $thumbID = get_post_thumbnail_id($post->ID);
-				                $image_url = !empty($thumbID)? cbv_get_image_src($thumbID) : '';
-				                $designation = get_field('designation', $post->ID);
-				                $gdc_no = get_field('gdc_no', $post->ID);
-				                $experience = get_field('experience', $post->ID);
-				            ?>
-							<div class="team-grd-item-col">
-								<div class="pro-mdul-grd">
-									<div class="pm-grd-img-cntlr">
-										<div class="pm-grd-img inline-bg" style="background-image: url(<?php echo $image_url; ?>);"></div>
-									</div>
-									<div class="pm-grd-desc-cntlr mHc">
-										<h5 class="fl-h5 pm-grd-title mHc1"><a href="#" onclick="getTeamDetailsById(<?php echo $post->ID; ?>)" data-bs-toggle="modal" data-bs-target="#profile-modal"><?php the_title(); ?></a></h5>
-					                    <?php if( !empty($designation) || !empty($gdc_no) ): ?>
-					                    <div class="pm-grd-assist mHc2">
-					                    	<span class="pm-grd-assist-name"><?php if( !empty($designation) ) printf('%s', $designation); if( !empty($gdc_no) ) printf('<span class="pm-grd-assist-no">GDC No: %s</span>', $gdc_no); ?></span>
-					                    </div>
-					                    <?php endif; 
-					                    if( !empty($experience) ) printf('<span class="pm-grd-addr mHc3">%s</span>', $experience);
-					                    ?>
-					                    <?php if( !empty(get_the_excerpt()) ): ?>
-					                    <div class="pm-grd-desc">
-					                    	<p><?php echo get_the_excerpt(); ?>...</p>
-					                    </div>
-					                    <?php endif; ?>
-										<div class="pm-grd-btns-cntlr">
-											<div class="pm-grd-btn">
-												<a class="" href="#" onclick="getTeamDetailsById(<?php echo $post->ID; ?>)" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
+						<div class="profile-module-inr">
+							<div class="team-grds teamGrdSlider">
+					            <?php 
+					              while($loop->have_posts()):$loop->the_post();
+					                global $post;
+					                $thumbID = get_post_thumbnail_id($post->ID);
+					                $image_url = !empty($thumbID)? cbv_get_image_src($thumbID) : '';
+					                $designation = get_field('designation', $post->ID);
+					                $gdc_no = get_field('gdc_no', $post->ID);
+					                $experience = get_field('experience', $post->ID);
+					            ?>
+								<div class="team-grd-item-col">
+									<div class="pro-mdul-grd">
+										<div class="pm-grd-img-cntlr">
+											<div class="pm-grd-img inline-bg" style="background-image: url(<?php echo $image_url; ?>);"></div>
+										</div>
+										<div class="pm-grd-desc-cntlr mHc">
+											<h5 class="fl-h5 pm-grd-title mHc1"><a href="#" onclick="getTeamDetailsById(<?php echo $post->ID; ?>)" data-bs-toggle="modal" data-bs-target="#profile-modal"><?php the_title(); ?></a></h5>
+						                    <?php if( !empty($designation) || !empty($gdc_no) ): ?>
+						                    <div class="pm-grd-assist mHc2">
+						                    	<span class="pm-grd-assist-name"><?php if( !empty($designation) ) printf('%s', $designation); if( !empty($gdc_no) ) printf('<span class="pm-grd-assist-no">GDC No: %s</span>', $gdc_no); ?></span>
+						                    </div>
+						                    <?php endif; 
+						                    if( !empty($experience) ) printf('<span class="pm-grd-addr mHc3">%s</span>', $experience);
+						                    ?>
+						                    <?php if( !empty(get_the_excerpt()) ): ?>
+						                    <div class="pm-grd-desc">
+						                    	<p><?php echo get_the_excerpt(); ?>...</p>
+						                    </div>
+						                    <?php endif; ?>
+											<div class="pm-grd-btns-cntlr">
+												<div class="pm-grd-btn">
+													<a class="" href="#" onclick="getTeamDetailsById(<?php echo $post->ID; ?>)" data-bs-toggle="modal" data-bs-target="#profile-modal">Read Full Profile </a>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
+								<?php endwhile; ?>
 							</div>
-							<?php endwhile; ?>
-						</div>
-						<div class="team-prev-next">
-		                  <div class="revw-prev">
-		                    <span class="revw-left">
-		                      <svg class="revw-left-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#29467D">
-		                        <use xlink:href="#revw-left-arrow"></use> 
-		                      </svg>
-		                    </span>
-		                  </div>
-		                  <div class="revw-next">
-		                    <span class="revw-right">
-		                      <svg class="revw-right-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#29467D">
-		                        <use xlink:href="#revw-right-arrow"></use> 
-		                      </svg>
-		                    </span>
-		                  </div>
+							<div class="team-prev-next">
+			                  <div class="revw-prev">
+			                    <span class="revw-left">
+			                      <svg class="revw-left-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#29467D">
+			                        <use xlink:href="#revw-left-arrow"></use> 
+			                      </svg>
+			                    </span>
+			                  </div>
+			                  <div class="revw-next">
+			                    <span class="revw-right">
+			                      <svg class="revw-right-arrow" width="11" height="34" viewBox="0 0 11 34" fill="#29467D">
+			                        <use xlink:href="#revw-right-arrow"></use> 
+			                      </svg>
+			                    </span>
+			                  </div>
+			                </div>
+			                <div class="xs-team-prev-next">
+			                  <div class="revw-prev">
+			                    <span class="revw-left">
+			                      <svg class="prev-line" width="66" height="20" viewBox="0 0 66 20" fill="#29467D">
+			                        <use xlink:href="#prev-line"></use> 
+			                      </svg>
+			                    </span>
+			                  </div>
+			                  <div class="revw-next">
+			                    <span class="revw-right">
+			                      <svg class="next-line" width="66" height="20" viewBox="0 0 66 20" fill="#29467D">
+			                        <use xlink:href="#next-line"></use> 
+			                      </svg>
+			                    </span>
+			                  </div>
+			                </div> 
 		                </div>
-		                <div class="xs-team-prev-next">
-		                  <div class="revw-prev">
-		                    <span class="revw-left">
-		                      <svg class="prev-line" width="66" height="20" viewBox="0 0 66 20" fill="#29467D">
-		                        <use xlink:href="#prev-line"></use> 
-		                      </svg>
-		                    </span>
-		                  </div>
-		                  <div class="revw-next">
-		                    <span class="revw-right">
-		                      <svg class="next-line" width="66" height="20" viewBox="0 0 66 20" fill="#29467D">
-		                        <use xlink:href="#next-line"></use> 
-		                      </svg>
-		                    </span>
-		                  </div>
-		                </div> 
 						<?php if(is_array($link) && !empty($link['url'])): ?>
 						<div class="wco-team-btn">
 							<?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title'] ); ?>

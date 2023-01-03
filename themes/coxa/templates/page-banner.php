@@ -31,7 +31,7 @@ $link_2 = $banner['link_2'];
                 </ul>
               </div> 
               <?php if(!empty($banner['description'])) echo ('<div class="pg-banner-desc">'.wpautop($banner['description']).'</div>'); ?>
-              <?php if(!empty($link_2['url']) && !empty($link_1['url'])): ?>
+              
               <div class="pg-banner-btns">
                 <?php if(is_array($link_1) && !empty($link_1['url'])): ?>
                 <div class="pg-banner-btn pg-banner-btn-01">
@@ -43,7 +43,7 @@ $link_2 = $banner['link_2'];
                 </div>
                 <?php endif; ?>
               </div>
-              <?php endif; ?>
+              
           </div>
         </div>
       </div>
