@@ -162,10 +162,7 @@ $link = $ourteam['link'];
     </div>
   </div>
 </section>
-<?php endif; ?>
-
-
-<?php 
+<?php endif; 
 $showhidedifferent = get_field('showhidedifferent', $thisID);
 if($showhidedifferent):
 $mdifferent = get_field('mdifferent', $thisID);
@@ -425,12 +422,12 @@ $link_2 = $previews['link_2'];
   </div>
 </section>
 <?php 
-    endif; 
-    $showhidepromo = get_field('showhidepromo', $thisID); 
-    if($showhidepromo):
-      $promo = get_field('promo', $thisID); 
-      $promo_link = $promo['link'];
-      ?>
+endif; 
+$showhidepromo = get_field('showhidepromo', $thisID); 
+if($showhidepromo):
+  $promo = get_field('promo', $thisID); 
+  $promo_link = $promo['link'];
+?>
       <section class="cta-section">
         <div class="container-lg">
           <div class="row">
