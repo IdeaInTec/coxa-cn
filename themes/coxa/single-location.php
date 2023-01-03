@@ -57,64 +57,64 @@ $introImg2 = !empty($intro['image_2'])?cbv_get_image_src($intro['image_2']):'';
                   <?php if( !empty($overview['opening_hours'] ) ): ?>
                   <div class="office-time-zoon mHc2">
                     <h5 class="office-des-title">Opening Hours:</h5>
-					<?php 
-						foreach( $overview['opening_hours'] as $open_hour):
-						if( !empty($open_hour['text']) ) printf('<span>%s</span>', $open_hour['text']);
-						endforeach; 
-				    ?>
-                  </div>
-					<?php endif; if( !empty($overview['telephone'] ) ): ?>
-					<div class="office-contact mHc3">
-						<h5 class="office-des-title">Phone:</h5>
-						<?php printf('<a href="tel:+%s">%s</a>', phone_preg($overview['telephone']), $overview['telephone']); ?>
-					</div>
-					<?php endif; ?>
-					<div class="office-social">
-						<h5 class="office-des-title">Say hello:</h5>
-						<ul class="reset-list">
-							<?php if( !empty($overview['facebook_url'] ) ): ?>
-							<li>
-								<a href="<?php echo $overview['facebook_url']; ?>" target="_blank">
-									<i>
-										<svg class="facebook-icon" width="10" height="18" viewBox="0 0 10 18" fill="#707070">
-											<use xlink:href="#facebook-icon"></use> 
-										</svg>
-									</i>
-								</a>
-							</li>
-							<?php endif;if( !empty($overview['twitter_url'] ) ): ?>
-							<li>
-								<a href="<?php echo $overview['twitter_url']; ?>" target="_blank">
-									<i>
-										<svg class="twitter-icon" width="24" height="20" viewBox="0 0 24 20" fill="#707070">
-											<use xlink:href="#twitter-icon"></use> 
-										</svg>
-									</i>
-								</a>
-							</li>
-							<?php endif;if( !empty($overview['instagram_url'] ) ): ?>
-							<li>
-								<a href="<?php echo $overview['instagram_url']; ?>" target="_blank">
-									<i>
-										<svg class="instagram-icon" width="22" height="22" viewBox="0 0 22 22" fill="#707070">
-											<use xlink:href="#instagram-icon"></use> 
-										</svg>
-									</i>
-								</a>
-							</li>
-							<?php endif;if( !empty($overview['linkedin_url'] ) ): ?>
-							<li>
-								<a href="<?php echo $overview['linkedin_url']; ?>" target="_blank">
-									<i>
-										<svg class="likedin-icon" width="20" height="20" viewBox="0 0 20 20" fill="#707070">
-											<use xlink:href="#likedin-icon"></use> 
-										</svg>
-									</i>
-								</a>
-							</li>
-							<?php endif; ?>
-						</ul>
-					</div>
+          					<?php 
+          						foreach( $overview['opening_hours'] as $open_hour):
+          						if( !empty($open_hour['text']) ) printf('<span>%s</span>', $open_hour['text']);
+          						endforeach; 
+          				    ?>
+                            </div>
+          					<?php endif; if( !empty($overview['telephone'] ) ): ?>
+          					<div class="office-contact mHc3">
+          						<h5 class="office-des-title">Phone:</h5>
+          						<?php printf('<a href="tel:+%s">%s</a>', phone_preg($overview['telephone']), $overview['telephone']); ?>
+          					</div>
+          					<?php endif; ?>
+          					<div class="office-social">
+          						<h5 class="office-des-title">Say hello:</h5>
+          						<ul class="reset-list">
+          							<?php if( !empty($overview['facebook_url'] ) ): ?>
+          							<li>
+          								<a href="<?php echo $overview['facebook_url']; ?>" target="_blank">
+          									<i>
+          										<svg class="facebook-icon" width="10" height="18" viewBox="0 0 10 18" fill="#707070">
+          											<use xlink:href="#facebook-icon"></use> 
+          										</svg>
+          									</i>
+          								</a>
+          							</li>
+          							<?php endif;if( !empty($overview['twitter_url'] ) ): ?>
+          							<li>
+          								<a href="<?php echo $overview['twitter_url']; ?>" target="_blank">
+          									<i>
+          										<svg class="twitter-icon" width="24" height="20" viewBox="0 0 24 20" fill="#707070">
+          											<use xlink:href="#twitter-icon"></use> 
+          										</svg>
+          									</i>
+          								</a>
+          							</li>
+          							<?php endif;if( !empty($overview['instagram_url'] ) ): ?>
+          							<li>
+          								<a href="<?php echo $overview['instagram_url']; ?>" target="_blank">
+          									<i>
+          										<svg class="instagram-icon" width="22" height="22" viewBox="0 0 22 22" fill="#707070">
+          											<use xlink:href="#instagram-icon"></use> 
+          										</svg>
+          									</i>
+          								</a>
+          							</li>
+          							<?php endif;if( !empty($overview['linkedin_url'] ) ): ?>
+          							<li>
+          								<a href="<?php echo $overview['linkedin_url']; ?>" target="_blank">
+          									<i>
+          										<svg class="likedin-icon" width="20" height="20" viewBox="0 0 20 20" fill="#707070">
+          											<use xlink:href="#likedin-icon"></use> 
+          										</svg>
+          									</i>
+          								</a>
+          							</li>
+          							<?php endif; ?>
+          						</ul>
+          					</div>
                 </div>
             	<?php endif; ?>
               </div>                          
