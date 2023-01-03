@@ -69,7 +69,7 @@ $thisID = get_the_ID();
                         </div>
                         <div class="faq-accordion-des<?php echo $active; ?>">
                          <?php if(!empty($referral['description'])) echo wpautop($referral['description']); ?>
-                          <a href="#" class="cdc-btn">Referral Form</a>
+                          <a data-to="#referral-sec" href="#" class="cdc-btn referral-to-bottom">Referral Form</a>
                         </div>
                       </div>
                     </div>
@@ -92,7 +92,7 @@ $thisID = get_the_ID();
 	if($showhiderform):
 		$refform = get_field('referralform', $thisID);
 ?>
-<section class="referral-sec">
+<section class="referral-sec" id="referral-sec">
 	<div class="container">
 	  <div class="row">
 	    <div class="col-md-12">
