@@ -138,6 +138,12 @@
     padding-bottom: 75px;
     padding-top: 30px;
 }
+.page-template-page-contact-us .locations-sec{
+    padding-bottom: 0;
+}
+.page-template-page-contact-us .map-loc-desc-cntlr{
+    background: #F7F7F7;
+}
 .locations-sec-grids {
     display: flex;
     flex-wrap: wrap;
