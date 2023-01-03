@@ -19,12 +19,7 @@ $introImg2 = !empty($intro['image_2'])?cbv_get_image_src($intro['image_2']):'';
         <div class="abtis-img-text-row abtis-lft-img-row">
           <div class="abtis-img-text-row-inr">
             <div class="abtis-img-txt-col abtis-row-img">
-              <div class="abtis-row-img-inner">
-                <img class="single-image"src="<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-02.png" alt="">
-                <div class="double-image">
-                  <img class="double-image-main" src="<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-02.png" alt="">
-                  <img class="double-image-sub" src="<?php echo THEME_URI; ?>/assets/images/about-us-intro-img-03.png" alt="">
-                </div>
+              <div class="abtis-row-img-inner">                
                 <?php if( !empty($introImg1) ): ?>
                 <div class="abtis-row-main-img-cntrl">
                   <div class="abtis-row-main-img inline-bg" style="background-image: url(<?php echo $introImg1; ?>);">
