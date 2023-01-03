@@ -597,6 +597,10 @@ textarea {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+.contact-form-wrp div.wpforms-container-full .wpforms-form h3{
+    color: #333333;
+}
 /*responsive*/
 
 @media(max-width: 1199px){
