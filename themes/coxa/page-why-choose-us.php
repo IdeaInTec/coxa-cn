@@ -163,6 +163,7 @@ get_template_part('templates/page', 'banner');
                 if($loop->have_posts()):
               ?>
               <div class="profile-module">
+                <div class="profile-module-inr">
                 <div class="team-grds teamGrdSlider">
                   <?php 
                     while($loop->have_posts()):$loop->the_post();
@@ -235,6 +236,7 @@ get_template_part('templates/page', 'banner');
                     </span>
                   </div>
                 </div> 
+                </div>
                 <?php if(is_array($ourteam_link) && !empty($ourteam_link['url'])): ?>
                 <div class="wco-team-btn">
                   <?php printf('<a class="cdc-btn" href="%s">%s</a>',$ourteam_link['url'],$ourteam_link['title'] ); ?>
