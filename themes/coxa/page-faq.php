@@ -82,7 +82,7 @@ $thisID = get_the_ID();
                     while($faq_loop->have_posts()):$faq_loop->the_post();
                       global $post;
                       $faq_link = get_field('link', $post->ID);
-                      $active = $i == 1? 'active': '';
+                      $active = $x == 1 && $i == 1? 'active': '';
                   ?>
                   <div class="faq-grd">
                     <div class="faq-grd-item">
