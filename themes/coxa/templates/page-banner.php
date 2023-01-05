@@ -3,8 +3,8 @@ $thisID = get_the_ID();
 $banner = get_field('banner', $thisID);
 $banner_bg = !empty($banner['image'])?cbv_get_image_src($banner['image']):banner_placeholder();
 $page_titel = !empty($banner['title'])?$banner['title']:get_the_title($thisID);
-$link_1 = $banner['link_1'];
-$link_2 = $banner['link_2'];
+$link_1 = isset($banner['link_1'])?$banner['link_1']:array();
+$link_2 = isset($banner['link_2'])?$banner['link_2']:array();
 ?>
 <section class="page-banner <?php echo (!empty($banner['description'])? '': 'diamond-module-none'); ?>">
   <div class="banner-black-bg"></div>
