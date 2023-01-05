@@ -17,11 +17,20 @@
 .treatment-sec .sec-entry-hdr-cntlr {
     padding-bottom: 40px;
 }
-.treatment-sec-cntlr .contact-form-wrp 
-.wpforms-container .wpforms-form 
-.wpforms-field-container 
+.treatment-sec-cntlr .contact-form-wrp, 
+.wpforms-container .wpforms-form, 
+.wpforms-field-container,
 .wpforms-field label{
 	color: #fff;
+}
+.treatment-sec-cntlr .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
+	color: #fff;
+}
+.treatment-sec-cntlr .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label a{
+	color: #A37D36;
+}
+.treatment-sec-cntlr .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label a:hover{
+	text-decoration: underline;
 }
 .referral-sec-bg-color{
 	background: #fff;
