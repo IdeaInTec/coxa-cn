@@ -572,134 +572,38 @@ $faqs = get_field('faqs', $thisID);
   </div>
 </div>
 </section> 
-<?php endif; ?>
+<?php 
+endif;
+$treatments = get_field('treatments', 'options');
+if($treatments):
+?>
 <section class="referral-sec referral-sec-bg-color  treatment-sec">
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <div class="sec-entry-hdr-cntlr">
         <div class="sec-entry-hdr">
-          <h2 class="sec-entry-hdr-title fl-h4">Book A Dental Implant Consultation</h2>
-          <p>Book a consultation with one of our Dental Implant Team</p>                
+          <?php 
+            if(!empty($treatments['title'])) printf('<h2 class="sec-entry-hdr-title fl-h4">%s</h2>', $treatments['title']); 
+            if(!empty($treatments['description'])) echo wpautop($treatments['description']); 
+          ?>               
         </div>
       </div>
+      <?php if( !empty($treatments['form_sortcode']) ): ?>
       <div class="treatment-sec-cntlr">
         <div class="refferal-sec-contlr">
           <div class="contact-form-wrp clearfix">
-            <div class="wpforms-container">
-              <form class="wpforms-form needs-validation" novalidate>
-                <div class="wpforms-field-container">
-
-                  <div class="wpforms-field wpforms-field-select">
-                    <label class="wpforms-field-label">I’m Interested In... <span class="wpforms-required-label">*</span></label>
-                    <div class="select2-wrapper" id="contact-select2-wrap">
-                      <select name="" id="contact-select2">
-                        <option value="">Choose a dental implant treatment</option>
-                        <option value="">treatment 1</option>
-                        <option value="">treatment 2</option>
-                      </select>
-                    </div>                          
-                  </div>
-                  <div class="wpforms-field">
-                    <label class="wpforms-field-label">Your Name <span class="wpforms-required-label">*</span></label>
-                    <input type="text" name="Voornaam" placeholder="Thomas Fide">
-                  </div>
-                  <div class="wpforms-field">
-                    <label class="wpforms-field-label">Your Phone Number <span class="wpforms-required-label">*</span></label>
-                    <input type="text" name="Familienaam" placeholder="Please enter your phone number">              
-                  </div>
-
-                  <div class="wpforms-field">
-                    <label class="wpforms-field-label">Your Email Address <span class="wpforms-required-label">*</span></label>
-                    <input type="text" name="Voornaam" placeholder="Please enter your email address">
-                  </div>
-
-                  <div class="wpforms-field wpforms-field-checkbox">
-                    <label class="wpforms-field-label">Which teeth would you like to fix? <span class="wpforms-required-label">*</span></label>
-                    <ul id="wpforms-142-field_9">
-                      <li class="choice-1 wpforms-selected">
-                        <input type="checkbox" class="wpforms-payment-price">
-                        <label class="wpforms-field-label-inline">Upper Teeth</label>
-                      </li>
-                      <li class="choice-1">
-                        <input type="checkbox" class="wpforms-payment-price">
-                        <label class="wpforms-field-label-inline">Lower Teeth</label>
-                      </li>
-                      <li class="choice-1">
-                        <input type="checkbox" class="wpforms-payment-price">
-                        <label class="wpforms-field-label-inline">Both</label>
-                      </li>
-                    </ul>            
-                  </div>
-
-                  <div class="wpforms-field wpforms-field-checkbox">
-                    <label class="wpforms-field-label">Do you know when you would like to begin treatment?  <span class="wpforms-required-label">*</span></label>
-                    <ul id="wpforms-142-field_9">
-                      <li class="choice-1">
-                        <input type="checkbox" class="wpforms-payment-price">
-                        <label class="wpforms-field-label-inline">Immediately</label>
-                      </li>
-                      <li class="choice-1">
-                        <input type="checkbox" class="wpforms-payment-price">
-                        <label class="wpforms-field-label-inline">Within the next 30 days</label>
-                      </li>
-                      <li class="choice-1">
-                        <input type="checkbox" class="wpforms-payment-price">
-                        <label class="wpforms-field-label-inline">Within the next 6 months</label>
-                      </li>
-                      <li class="choice-1">
-                        <input type="checkbox" class="wpforms-payment-price">
-                        <label class="wpforms-field-label-inline">Not sure, just looking for more information</label>
-                      </li>
-                    </ul>            
-                  </div>
-                  <div class="wpforms-field wpforms-field-checkbox">
-                    <label class="wpforms-field-label">Preferred method of contact <span class="wpforms-required-label">*</span></label>
-                    <ul id="wpforms-142-field_9">
-                      <li class="choice-1">
-                        <input type="checkbox" class="wpforms-payment-price">
-                        <label class="wpforms-field-label-inline">Telephone</label>
-                      </li>
-                      <li class="choice-1">
-                        <input type="checkbox" class="wpforms-payment-price">
-                        <label class="wpforms-field-label-inline">Email</label>
-                      </li>
-                    </ul>            
-                  </div>
-
-                  <div class="wpforms-field wpforms-field-textarea">
-                    <label class="wpforms-field-label">Your Message <span class="wpforms-required-label">*</span></label>
-                    <textarea name="message" placeholder="Please enter your message"></textarea>
-
-                  </div>
-
-                  <div class="wpforms-field FullWidthField wpforms-field-checkbox wpforms-field-description">
-                    <label class="wpforms-field-label">Disclaimer <span class="wpforms-required-label">*</span></label>
-                    <ul>
-                      <li class="">
-                        <input type="checkbox" value="" id="checkbox">
-                        <label for="checkbox">I agree that by submitting this form and providing my details, I have read and understood the terms and conditions detailed in our <a href="#">privacy policy .</a></label>
-                      </li>
-                    </ul>
-                  </div>
-
-                </div><!-- end of .wpforms-field-container-->
-
-
-                <div class="wpforms-submit-container">
-                  <button type="submit" name="submit" class="wpforms-submit">Book Consultation</button>
-                </div>
-
-              </form>
-            </div>
+            <?php echo do_shortcode($treatments['form_sortcode']); ?>
           </div>
         </div>
       </div>
+      <?php endif; ?>
     </div>
   </div>
 </div>
 </section>
 <?php
+endif;
 $showhidetreatment = get_field('showhidetreatment', $thisID);
 if($showhidetreatment):
 $chtreatment = get_field('chtreatment', $thisID);
