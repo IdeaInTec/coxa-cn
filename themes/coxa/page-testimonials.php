@@ -130,147 +130,16 @@ $tloop = new WP_Query($targs);
             <?php if(!empty($gallery['description'])) echo wpautop($gallery['description']); ?>
           </div>
         </div>
+        <?php if(!empty($gallery['gallery_shortcode'])): ?>
         <div class="practice-gallery-grids-cntlr">
-          <div class="practice-gallery-grids">
-            <div class="practice-gallery-grid-col">
-              <div class="practice-gallery-grid-item">
-                <div class="practice-gallery-grid-img-cntlr">
-                  <a href="<?php echo THEME_URI;?>/assets/images/testi-gallery-img-01.jpg" class="overlay-link" data-fancybox="images"></a>
-                  <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI;?>/assets/images/testi-gallery-img-01.jpg);"></div>
-                </div>
-                <div class="practice-gallery-grid-des">
-                  <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image Title</a></h3>
-                </div>
-              </div>
-            </div>
-            <div class="practice-gallery-grid-col">
-              <div class="practice-gallery-grid-item">
-                <div class="practice-gallery-grid-img-cntlr">
-                  <a href="<?php echo THEME_URI;?>/assets/images/testi-gallery-img-02.jpg" class="overlay-link" data-fancybox="images"></a>
-                  <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI;?>/assets/images/testi-gallery-img-02.jpg);"></div>
-                </div>
-                <div class="practice-gallery-grid-des">
-                  <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image Title</a></h3>
-                </div>
-              </div>
-            </div>
-            <div class="practice-gallery-grid-col">
-              <div class="practice-gallery-grid-item">
-                <div class="practice-gallery-grid-img-cntlr">
-                  <a href="<?php echo THEME_URI;?>/assets/images/testi-gallery-img-03.jpg" class="overlay-link" data-fancybox="images"></a>
-                  <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI;?>/assets/images/testi-gallery-img-03.jpg);"></div>
-                </div>
-                <div class="practice-gallery-grid-des">
-                  <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image Title</a></h3>
-                </div>
-              </div>
-            </div>
-            <div class="practice-gallery-grid-col">
-              <div class="practice-gallery-grid-item">
-                <div class="practice-gallery-grid-img-cntlr">
-                  <a href="<?php echo THEME_URI;?>/assets/images/testi-gallery-img-04.jpg" class="overlay-link" data-fancybox="images"></a>
-                  <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI;?>/assets/images/testi-gallery-img-04.jpg);"></div>
-                </div>
-                <div class="practice-gallery-grid-des">
-                  <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image Title</a></h3>
-                </div>
-              </div>
-            </div>
-            <div class="practice-gallery-grid-col">
-              <div class="practice-gallery-grid-item">
-                <div class="practice-gallery-grid-img-cntlr">
-                  <a href="<?php echo THEME_URI;?>/assets/images/testi-gallery-img-05.jpg" class="overlay-link" data-fancybox="images"></a>
-                  <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI;?>/assets/images/testi-gallery-img-05.jpg);"></div>
-                </div>
-                <div class="practice-gallery-grid-des">
-                  <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image Title</a></h3>
-                </div>
-              </div>
-            </div>
-            <div class="practice-gallery-grid-col">
-              <div class="practice-gallery-grid-item">
-                <div class="practice-gallery-grid-img-cntlr">
-                  <a href="<?php echo THEME_URI;?>/assets/images/testi-gallery-img-06.jpg" class="overlay-link" data-fancybox="images"></a>
-                  <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI;?>/assets/images/testi-gallery-img-06.jpg);"></div>
-                </div>
-                <div class="practice-gallery-grid-des">
-                  <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image Title</a></h3>
-                </div>
-              </div>
-            </div>
-            <div class="practice-gallery-grid-col">
-              <div class="practice-gallery-grid-item">
-                <div class="practice-gallery-grid-img-cntlr">
-                  <a href="<?php echo THEME_URI;?>/assets/images/testi-gallery-img-07.jpg" class="overlay-link" data-fancybox="images"></a>
-                  <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI;?>/assets/images/testi-gallery-img-07.jpg);"></div>
-                </div>
-                <div class="practice-gallery-grid-des">
-                  <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image Title</a></h3>
-                </div>
-              </div>
-            </div>
-            <div class="practice-gallery-grid-col">
-              <div class="practice-gallery-grid-item">
-                <div class="practice-gallery-grid-img-cntlr">
-                  <a href="<?php echo THEME_URI;?>/assets/images/testi-gallery-img-08.jpg" class="overlay-link" data-fancybox="images"></a>
-                  <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI;?>/assets/images/testi-gallery-img-08.jpg);"></div>
-                </div>
-                <div class="practice-gallery-grid-des">
-                  <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image Title</a></h3>
-                </div>
-              </div>
-            </div>
-            <div class="practice-gallery-grid-col">
-              <div class="practice-gallery-grid-item">
-                <div class="practice-gallery-grid-img-cntlr">
-                  <a href="<?php echo THEME_URI;?>/assets/images/testi-gallery-img-09.jpg" class="overlay-link" data-fancybox="images"></a>
-                  <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI;?>/assets/images/testi-gallery-img-09.jpg);"></div>
-                </div>
-                <div class="practice-gallery-grid-des">
-                  <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image Title</a></h3>
-                </div>
-              </div>
-            </div>
-            <div class="practice-gallery-grid-col">
-              <div class="practice-gallery-grid-item">
-                <div class="practice-gallery-grid-img-cntlr">
-                  <a href="<?php echo THEME_URI;?>/assets/images/testi-gallery-img-10.jpg" class="overlay-link" data-fancybox="images"></a>
-                  <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI;?>/assets/images/testi-gallery-img-10.jpg);"></div>
-                </div>
-                <div class="practice-gallery-grid-des">
-                  <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image Title</a></h3>
-                </div>
-              </div>
-            </div>
-            <div class="practice-gallery-grid-col">
-              <div class="practice-gallery-grid-item">
-                <div class="practice-gallery-grid-img-cntlr">
-                  <a href="<?php echo THEME_URI;?>/assets/images/testi-gallery-img-11.jpg" class="overlay-link" data-fancybox="images"></a>
-                  <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI;?>/assets/images/testi-gallery-img-11.jpg);"></div>
-                </div>
-                <div class="practice-gallery-grid-des">
-                  <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image Title</a></h3>
-                </div>
-              </div>
-            </div>
-            <div class="practice-gallery-grid-col">
-              <div class="practice-gallery-grid-item">
-                <div class="practice-gallery-grid-img-cntlr">
-                  <a href="<?php echo THEME_URI;?>/assets/images/testi-gallery-img-12.jpg" class="overlay-link" data-fancybox="images"></a>
-                  <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI;?>/assets/images/testi-gallery-img-12.jpg);"></div>
-                </div>
-                <div class="practice-gallery-grid-des">
-                  <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image Title</a></h3>
-                </div>
-              </div>
-            </div>
-          </div>
+            <?php echo do_shortcode($gallery['gallery_shortcode']); ?>
           <?php if(!empty($link)): ?>
           <div class="why-choose-grid-btn">
           	<?php printf('<a class="cdc-btn" href="%s" target="%s">%s</a>',$link['url'],$link['target'],$link['title'] ); ?>
           </div>
           <?php endif; ?>
         </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
