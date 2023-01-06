@@ -54,6 +54,48 @@
 .tmreviewSlider.slick-initialized .review-grid-col{
     display: block;
 }
+.modula-items .modula-item-content{
+    position: relative;
+}
+.modula-items .modula-item-content a:before{
+    content: '';
+    position: absolute;
+    width: calc( 100% - 50px );
+    height: calc(100% - 50px);
+    opacity: 0;
+    transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    border-top: 4px solid #A37D36;
+    border-left: 4px solid #A37D36;
+    border-bottom: 4px solid #A37D36;
+    border-right: 4px solid #A37D36;
+    right: 20px;
+    left: 20px;
+    top: 20px;
+    bottom: 20px;
+    z-index: 1;
+}
+.modula-items .modula-item-content:hover img{
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+}
+.modula-items .modula-item-content a:hover:before{
+    opacity: 1!important;
+}
+.modula .modula-item.effect-pufrobo .jtg-title::after{
+    content: none!important;
+}
+/*.modula-items .modula-item{
+    position: static!important;
+}*/
+.modula-items .modula-item .figc.no-description{
+    position: static!important;
+}
+.modula-items .modula-item .figc.no-description .jtg-title{
+    position: static;
+} 
 @media(max-width: 767px){
     .testimonials-pg-content-cntlr .practice-gallery-grids .practice-gallery-grid-col{
         margin-bottom: 24px;

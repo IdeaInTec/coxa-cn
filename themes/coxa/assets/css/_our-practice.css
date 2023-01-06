@@ -1,4 +1,5 @@
-.practice-gallery-grids{
+.practice-gallery-grids,
+.practice-gallery-grids-cntlr .modula-items{
     display: flex;
     flex-wrap: wrap;
     margin: 0 -10px;
@@ -22,10 +23,26 @@
 /*.pratice-pg-con-cntlr .locations-sec .sec-entry-hdr p{
     font-size: 15px;
 }*/
-.practice-gallery-grids .practice-gallery-grid-col{
-    width: 25%;
-    padding: 0 10px;
-    margin-bottom: 20px;
+.practice-gallery-grids .practice-gallery-grid-col,
+.practice-gallery-grids-cntlr .modula-items .modula-item{
+    width: 25%!important;
+    padding: 0 10px!important;
+    margin-bottom: 20px!important;
+    height: auto!important;
+}
+
+.practice-gallery-grids-cntlr .modula-items .modula-item .figc.no-description{
+    height: auto!important;
+    width: 100%!important;
+    position: static!important;
+    text-align: center!important;
+
+}
+.practice-gallery-grids-cntlr .modula-items .modula-item img{
+    width: 100%!important;
+    height: 275px!important;
+    object-fit: cover;
+    position: static!important;
 }
 .practice-gallery-grid-img-cntlr{
     margin-bottom: 16px;
@@ -54,7 +71,8 @@
     text-align: center;
 }
 .practice-gallery-grid-title,
-.practice-gallery-grid-title a {
+.practice-gallery-grid-title a,
+.practice-gallery-grids-cntlr .modula-items .modula-item .figc.no-description .jtg-title {
     color: #fff;
     font-weight: 600;
     line-height: 1.28;
@@ -63,6 +81,7 @@
     text-align: center;
     display: inline-block;
     margin-bottom: 0;
+    color: #333333!important;
 }
 .practice-gallery-grid-title{
     
@@ -70,11 +89,13 @@
 .practice-gallery-grid-title a:hover{
     color: #EACC95;
 }
-.practice-gallery-grid-title a{
+.practice-gallery-grid-title a,
+.practice-gallery-grids-cntlr .modula-items .modula-item .figc.no-description .jtg-title{
     padding-left: 25px;
     text-align: left;
 }
-.practice-gallery-grid-title a:after{
+.practice-gallery-grid-title a:after,
+.practice-gallery-grids-cntlr .modula-items .modula-item .figc.no-description .jtg-title:after{
     content: "";
     position: absolute;
     left: 0;
