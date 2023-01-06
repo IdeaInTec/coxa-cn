@@ -23,8 +23,12 @@
 .wpforms-field label{
 	color: #fff;
 }
+.treatment-sec-cntlr .wpforms-container .wpforms-field-container 
+.wpforms-2561-field_10-container .wpforms-field-required label{
+	color: #fff!important;
+}
 .treatment-sec-cntlr .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
-	color: #fff;
+	color: #fff!important;
 }
 .treatment-sec-cntlr .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label a{
 	color: #A37D36;
@@ -186,7 +190,7 @@
 	color:#333333;	
 }
 .treatment-page-con-cntlr .treatment-sec{
-	padding-top: 0!important;
+	padding-top: 80!important;
 	padding-bottom: 90px!important;
 }
 .treatment-sec .wpforms-field-description a{
@@ -206,6 +210,12 @@
 }
 .treatment-page-con-cntlr .pm-grd-desc{
 	display: block;
+}
+.div.wpforms-container-full .wpforms-form .wpforms-submit-container{
+	padding-top: 50px!important;
+}
+.treatment-sec-cntlr .wpforms-container .wpforms-submit-container{
+	padding-top: 50px!important;
 }
 
 
