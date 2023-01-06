@@ -2,10 +2,19 @@
 /*Template Name: Gallery*/
 get_header();
 $thisID = get_the_ID(); 
-get_template_part('templates/page', 'banner'); 
+get_template_part('templates/page', 'banner');
+$selectgallery = get_field('select_gallery', $thisID);
+if( empty($selectgallery) ){
+  $args = array(
+    'numberposts' => -1,
+    'post_type'   => 'galleries'
+  );
+  $selectgallery = get_posts( $args );
+}
 ?>
 <div class="gallery-page-con-cntlr">
 <section class="practice-gallery why-choose-sec galler-sec">
+<?php if( $selectgallery ): ?>
 <div class="filter-button-cntlr">
   <div class="container">
     <div class="row">
@@ -13,31 +22,38 @@ get_template_part('templates/page', 'banner');
         <div class="filte-button">
           <ul class="reset-list">
             <li class="active"><a href="#">all</a></li>
-            <li><a href="#">Before and After</a></li>
-            <li><a href="#">Dental Implants</a></li>
-            <li><a href="#">Cosmetic Dentistry</a></li>
-            <li><a href="#">Dentures</a></li>
-            <li><a href="#">Teeth Whitening</a></li>
-            <li><a href="#">Veneers</a></li>
+            <?php foreach( $selectgallery as $gallery ): ?>
+              <li><a href="#"><?php echo $gallery->post_title; ?></a></li>
+            <?php endforeach; ?>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
+<?php endif; ?>
 <div class="practice-gallery-grids-cntlr">
   <div class="practice-gallery-grids">
+    <?php 
+      foreach( $selectgallery as $gallery ):
+        $galleries = get_field('gallery', $gallery->ID);
+        if( !empty($galleries) ){
+        foreach( $galleries as $galID ){
+        $gimage_src = cbv_get_image_src($galID);
+    ?>
     <div class="practice-gallery-grid-col">
       <div class="practice-gallery-grid-item">
         <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-01.jpg);"></div>
+          <a href="<?php echo $gimage_src; ?>" class="overlay-link" data-fancybox="images"></a>
+          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo $gimage_src; ?>);"></div>
         </div>
         <div class="practice-gallery-grid-des">
           <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
         </div>
       </div>
     </div>
+    <?php } } ?>
+    <?php endforeach; ?>
     <div class="practice-gallery-grid-col">
       <div class="practice-gallery-grid-item">
         <div class="practice-gallery-grid-img-cntlr">
