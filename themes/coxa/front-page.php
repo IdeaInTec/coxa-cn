@@ -654,7 +654,17 @@ $ourloc = get_field('ourloc', HOMEID);
 						<div class="locations-sec-grid-item mHc">
 							<div class="locations-sec-grid-item-inner">
 								<div class="locations-area">
-									<img src="<?php echo THEME_URI; ?>/assets/images/locations-image.jpg" alt="">
+									<?php 
+										if( !empty($overview['image']) ): 
+											echo cbv_get_image_tag($overview['image']);
+										else:
+											if( $overview['map_type'] == 'embed' ){ 
+												if( !empty($overview['map_embed']) ) printf('%s', $overview['map_embed']);
+											}else{ 
+											if( is_array($overview['map_embed']) && !empty($overview['map_embed']) ) printf('<div id="googleMap_1" data-lat="%s" data-lon="%s"></div>', $overview['map_embed']['lat'], $overview['map_embed']['lon']);
+									  } 
+										endif;
+									?>
 								</div>
 								<div class="locations-des mHc1">
 									<div class="locations-title-cntrl">
