@@ -329,6 +329,9 @@ padding-bottom: 4px;
     .locations-sec-grids .locations-sec-grid-item {
         margin-bottom: 48px;
     }
+    .locations-area iframe{
+        height: 276px;
+    }
 }
 @media(max-width: 991px){
     .locations-sec-grids .locations-sec-grid-item{
@@ -338,6 +341,9 @@ padding-bottom: 4px;
         max-width: 700px;
         width: 100%;
         margin: 0 auto;
+    }
+    .locations-area iframe{
+        height: 292px;
     }
 }
 @media(max-width: 767px){
@@ -373,6 +379,9 @@ padding-bottom: 4px;
     .locations-sec-inner {        
         max-width: 400px;
     }
+    .locations-area iframe{
+        height: 341px;
+    }
 }
 @media(max-width: 575px){
     .office-des-title{
@@ -398,4 +407,9 @@ padding-bottom: 4px;
 }
 @media(max-width: 479px){
 
+}
+@media(max-width: 375px){
+    .locations-area iframe{
+        height: 239px;
+    }
 }
