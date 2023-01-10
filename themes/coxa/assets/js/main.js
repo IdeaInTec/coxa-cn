@@ -5,7 +5,7 @@ var windowWidth = $(window).width();
 var CustomMapStyles  = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
 
 $('.navbar-toggle').on('click', function(){
-	$('#mobile-nav').slideToggle(300);
+  $('#mobile-nav').slideToggle(300);
 });
 
 if( $('.hamburgar-cntlr').length ){
@@ -57,7 +57,7 @@ var stickyOffset = $('.header').offset().top;
     });
 
   }
-	if(windowWidth <=767){
+  if(windowWidth <=767){
     if( $('.fees-tab-inr').length ){
       $('.fees-tab-button').click(function(){
        $(this).toggleClass('fees-tab-arrow');
@@ -805,8 +805,6 @@ $(window).resize(function(){
 
 
 
-
-
 // var scrollArea = document.getElementById('body');
 // var scrollIndicator = document.getElementById('indicator');
 // var scrollHeight = 0;
@@ -839,12 +837,59 @@ $(window).resize(function(){
 
 
 
+/*var data = $('.gallery-page-con-cntlr .filte-button ul li a').attr('data-filter');
+if(data == 'all'){
+     $('.practice-gallery-grid-col').addClass('show');
+}*/
+$('.gallery-page-con-cntlr .filte-button ul li.type-normal a').on('click', function(e){ 
+    e.preventDefault();
+    var data = $(this).attr('data-filter');
+    var targetCls = '.galler-sec .practice-gallery-grids .practice-gallery-grid-col '+'.'+data;
+    $('.gallery-page-con-cntlr .filte-button ul li').removeClass('active');
+    $(this).parent().addClass('active');
+
+    $('.galler-sec .practice-gallery-grids .practice-gallery-grid-col, .galler-sec .after-before-grids-cntlr').hide();
+    $('.galler-sec .practice-gallery-grids .practice-gallery-grid-col'+'.'+data).show();
+    if(data == 'all'){
+         $('.galler-sec .practice-gallery-grids .practice-gallery-grid-col').show();
+    }
+      
+});
+$('.gallery-page-con-cntlr .filte-button ul li.type-before-after a').on('click', function(e){ 
+    e.preventDefault();
+    var data = $(this).attr('data-filter');
+    $('.gallery-page-con-cntlr .filte-button ul li').removeClass('active');
+    $(this).parent().addClass('active');
+
+    $('.galler-sec .practice-gallery-grids .practice-gallery-grid-col, .galler-sec .after-before-grids-cntlr').hide();
+    $('.galler-sec .after-before-grids-cntlr'+'.'+data).show();
+    if(data == 'all'){
+         $('.galler-sec .practice-gallery-grids .practice-gallery-grid-col').show();
+    }
+      
+});
+$('.gallery-page-con-cntlr .filte-button ul li.type-all a').on('click', function(e){ 
+    e.preventDefault();
+    var data = $(this).attr('data-filter');
+    if(data == 'all'){
+        $('.galler-sec .practice-gallery-grids .practice-gallery-grid-col, .galler-sec .after-before-grids-cntlr').show();
+    }
+      
+});
+
+if(windowWidth >767){
+var hdrtopoffset = $('.header-inr').height();
+$('.fees-tab-inr ul li a').click(function(){
+   $('.fees-module-cntlr').css("padding-top", hdrtopoffset+20); 
+});
+}
+
 })(jQuery);
 
 function getTeamDetailsById(id){
   if(jQuery('#teamDetail').length){
     var hostName = window.location.origin;
-    var ajax_url = hostName + '/projects/2022/coxa/wp-admin/admin-ajax.php';
+    var ajax_url = hostName + '/clients/cox-hitchcock/wp-admin/admin-ajax.php';
     jQuery.ajax({
       type: 'POST',
       url: ajax_url,

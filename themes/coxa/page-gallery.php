@@ -21,10 +21,16 @@ if( empty($selectgallery) ){
       <div class="col-md-12">
         <div class="filte-button">
           <ul class="reset-list">
-            <li class="active"><a href="#">all</a></li>
-            <?php foreach( $selectgallery as $gallery ): ?>
-              <li><a href="#"><?php echo $gallery->post_title; ?></a></li>
-            <?php endforeach; ?>
+            <li class="type-all active"><a href="#" data-filter="all">all</a></li>
+            <?php 
+            foreach( $selectgallery as $gallery ): 
+            $afterbefore_images = get_field('afterbefore_images', $gallery->ID);
+            if($afterbefore_images){
+            ?>
+              <li class="type-before-after"><a href="#" data-filter="<?php echo $gallery->post_name; ?>"><?php echo $gallery->post_title; ?></a></li>
+            <?php }else{?>
+              <li class="type-normal"><a href="#" data-filter="<?php echo $gallery->post_name; ?>"><?php echo $gallery->post_title; ?></a></li>
+            <?php } endforeach; ?>
           </ul>
         </div>
       </div>
@@ -36,12 +42,14 @@ if( empty($selectgallery) ){
   <div class="practice-gallery-grids">
     <?php 
       foreach( $selectgallery as $gallery ):
+        $afterbefore_images = get_field('afterbefore_images', $gallery->ID);
+        if(!$afterbefore_images){
         $galleries = get_field('gallery', $gallery->ID);
         if( !empty($galleries) ){
         foreach( $galleries as $galID ){
         $gimage_src = cbv_get_image_src($galID);
     ?>
-    <div class="practice-gallery-grid-col">
+    <div class="practice-gallery-grid-col <?php echo $gallery->post_name; ?>" data-class="<?php echo $gallery->post_name; ?>">
       <div class="practice-gallery-grid-item">
         <div class="practice-gallery-grid-img-cntlr">
           <a href="<?php echo $gimage_src; ?>" class="overlay-link" data-fancybox="images"></a>
@@ -52,233 +60,47 @@ if( empty($selectgallery) ){
         </div>
       </div>
     </div>
-    <?php } } ?>
+    <?php } } } ?>
     <?php endforeach; ?>
-    <div class="practice-gallery-grid-col">
-      <div class="practice-gallery-grid-item">
-        <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-01.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-02.jpg);"></div>
-        </div>
-        <div class="practice-gallery-grid-des">
-          <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="practice-gallery-grid-col">
-      <div class="practice-gallery-grid-item">
-        <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-03.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-03.jpg);"></div>
-        </div>
-        <div class="practice-gallery-grid-des">
-          <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="practice-gallery-grid-col">
-      <div class="practice-gallery-grid-item">
-        <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-04.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-04.jpg);"></div>
-        </div>
-        <div class="practice-gallery-grid-des">
-          <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="practice-gallery-grid-col">
-      <div class="practice-gallery-grid-item">
-        <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-05.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-05.jpg);"></div>
-        </div>
-        <div class="practice-gallery-grid-des">
-          <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="practice-gallery-grid-col">
-      <div class="practice-gallery-grid-item">
-        <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-06.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-06.jpg);"></div>
-        </div>
-        <div class="practice-gallery-grid-des">
-          <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="practice-gallery-grid-col">
-      <div class="practice-gallery-grid-item">
-        <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-07.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-07.jpg);"></div>
-        </div>
-        <div class="practice-gallery-grid-des">
-          <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="practice-gallery-grid-col">
-      <div class="practice-gallery-grid-item">
-        <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-08.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-08.jpg);"></div>
-        </div>
-        <div class="practice-gallery-grid-des">
-          <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="practice-gallery-grid-col">
-      <div class="practice-gallery-grid-item">
-        <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-09.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-09.jpg);"></div>
-        </div>
-        <div class="practice-gallery-grid-des">
-          <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="practice-gallery-grid-col">
-      <div class="practice-gallery-grid-item">
-        <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-10.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-10.jpg);"></div>
-        </div>
-        <div class="practice-gallery-grid-des">
-          <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="practice-gallery-grid-col">
-      <div class="practice-gallery-grid-item">
-        <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-11.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-11.jpg);"></div>
-        </div>
-        <div class="practice-gallery-grid-des">
-          <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="practice-gallery-grid-col">
-      <div class="practice-gallery-grid-item">
-        <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-12.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-12.jpg);"></div>
-        </div>
-        <div class="practice-gallery-grid-des">
-          <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="practice-gallery-grid-col">
-      <div class="practice-gallery-grid-item">
-        <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-13.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-13.jpg);"></div>
-        </div>
-        <div class="practice-gallery-grid-des">
-          <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="practice-gallery-grid-col">
-      <div class="practice-gallery-grid-item">
-        <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-14.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-14.jpg);"></div>
-        </div>
-        <div class="practice-gallery-grid-des">
-          <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="practice-gallery-grid-col">
-      <div class="practice-gallery-grid-item">
-        <div class="practice-gallery-grid-img-cntlr">
-          <a href="<?php echo THEME_URI; ?>/assets/images/gallery-15.jpg" class="overlay-link" data-fancybox="images"></a>
-          <div class="practice-gallery-grid-img inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/gallery-15.jpg);"></div>
-        </div>
-        <div class="practice-gallery-grid-des">
-          <h3 class="practice-gallery-grid-title fl-h6"><a href="#">Image description</a></h3>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
-<div class="after-before-grids-cntlr">
+
+<?php 
+if( $selectgallery ): 
+foreach( $selectgallery as $gallery ): 
+$afterbefore_images = get_field('afterbefore_images', $gallery->ID);
+if($afterbefore_images){
+?>
+<div class="after-before-grids-cntlr <?php echo $gallery->post_name; ?>">
   <div class="after-before-grids">
-    <div class="after-before-grd-item-col width-50">
-      <div class="after-before-grd-item">
-        <div class="after-before-img-cntlr">
-          <div class="afterBeforeEffect-bx afterBeforeEffect">
-            <img src="<?php echo THEME_URI; ?>/assets/images/after-before-img-01.jpg">
-            <img src="<?php echo THEME_URI; ?>/assets/images/after-before-img-02.jpg">
-          </div>
-        </div>
-        <div class="after-before-des">
-          <h6 class="after-before-des-title fl-h6"><a href="#">Image description</a></h6>
-        </div>
-      </div>
-    </div>
-    <div class="after-before-grd-item-col width-50">
-      <div class="after-before-grd-item">
-        <div class="after-before-img-cntlr">
-          <div class="afterBeforeEffect-bx afterBeforeEffect">
-            <img src="<?php echo THEME_URI; ?>/assets/images/after-before-img-01.jpg">
-            <img src="<?php echo THEME_URI; ?>/assets/images/after-before-img-02.jpg">
-          </div>
-        </div>
-        <div class="after-before-des">
-          <h6 class="after-before-des-title fl-h6"><a href="#">Image description</a></h6>
+  <?php
+      $ab_images = get_field('ab_images', $gallery->ID);
+      if( !empty($ab_images) ){
+      foreach( $ab_images as $ab_image ){
+      $after_image = !empty($ab_image['after_image'])?$ab_image['after_image']:'';
+      $before_image = !empty($ab_image['before_image'])?$ab_image['before_image']:'';
+  ?>
+  <div class="after-before-grd-item-col width-50 <?php echo $gallery->post_name; ?>">
+    <div class="after-before-grd-item">
+      <div class="after-before-img-cntlr">
+        <div class="afterBeforeEffect-bx afterBeforeEffect">
+          <?php 
+            if( !empty($after_image) ) echo cbv_get_image_tag($after_image); 
+            if( !empty($before_image) ) echo cbv_get_image_tag($before_image); 
+          ?>
         </div>
       </div>
-    </div>
-    <div class="after-before-grd-item-col">
-      <div class="after-before-grd-item">
-        <div class="after-before-img-cntlr">
-          <div class="afterBeforeEffect-bx afterBeforeEffect">
-            <img src="<?php echo THEME_URI; ?>/assets/images/after-before-img-01.jpg">
-            <img src="<?php echo THEME_URI; ?>/assets/images/after-before-img-02.jpg">
-          </div>
-        </div>
-        <div class="after-before-des">
-          <h6 class="after-before-des-title fl-h6"><a href="#">Image description</a></h6>
-        </div>
-      </div>
-    </div>
-    <div class="after-before-grd-item-col">
-      <div class="after-before-grd-item">
-        <div class="after-before-img-cntlr">
-          <div class="afterBeforeEffect-bx afterBeforeEffect">
-            <img src="<?php echo THEME_URI; ?>/assets/images/after-before-img-01.jpg">
-            <img src="<?php echo THEME_URI; ?>/assets/images/after-before-img-02.jpg">
-          </div>
-        </div>
-        <div class="after-before-des">
-          <h6 class="after-before-des-title fl-h6"><a href="#">Image description</a></h6>
-        </div>
-      </div>
-    </div>
-    <div class="after-before-grd-item-col">
-      <div class="after-before-grd-item">
-        <div class="after-before-img-cntlr">
-          <div class="afterBeforeEffect-bx afterBeforeEffect">
-            <img src="<?php echo THEME_URI; ?>/assets/images/after-before-img-01.jpg">
-            <img src="<?php echo THEME_URI; ?>/assets/images/after-before-img-02.jpg">
-          </div>
-        </div>
-        <div class="after-before-des">
-          <h6 class="after-before-des-title fl-h6"><a href="#">Image description</a></h6>
-        </div>
+      <div class="after-before-des">
+        <h6 class="after-before-des-title fl-h6"><a href="#">Image description</a></h6>
       </div>
     </div>
   </div>
+  <?php } } ?>
+  </div>
 </div>
+  <?php } endforeach; ?>
+<?php endif; ?>
+
 </section>
 
 <?php 
@@ -316,7 +138,7 @@ if($showhidepromo):
                 <div class="cta-btn-ctlr">
                   <?php if(is_array($promo_link) && !empty($promo_link['url'])): ?>
                   <div class="cta-btn">
-                    <?php printf('<a class="cdc-btn" href="%s">%s</a>',$promo_link['url'],$promo_link['title'] ); ?>
+                    <?php printf('<a class="cdc-btn" href="%s" target="%s">%s</a>',$promo_link['url'],$promo_link['target'],$promo_link['title'] ); ?>
                   </div>
                 <?php endif; ?>
               </div>
@@ -356,7 +178,7 @@ $link = $chtreatment['link'];
       <?php if(!empty($chtreatment['description'])) echo('<div class="treatment-desc hide-md">'.wpautop($chtreatment['description']).'</div>'); ?>
       <?php if(is_array($link) && !empty($link['url'])): ?>
       <div class="treatment-btn hide-md">
-        <?php printf('<a class="cdc-btn" href="%s">%s</a>',$link['url'],$link['title']); ?>
+        <?php printf('<a class="cdc-btn" href="%s" target="%s">%s</a>',$link['url'],$link['target'],$link['title']); ?>
       </div>
       <?php endif; ?>
     </div>
