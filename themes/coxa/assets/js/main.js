@@ -884,6 +884,7 @@ $('.fees-tab-inr ul li a').click(function(){
 });
 }
 
+parallax();
 })(jQuery);
 
 function getTeamDetailsById(id){
@@ -921,12 +922,30 @@ function getTeamDetailsById(id){
   return false;
 }
 
+function parallax(){
+  var wScroll = $(window).scrollTop();
+  $('.parallax-window').css('background-position', 'left '+(wScroll+0.75)+'px');
+
+
+}
+
 $(function() {
-    var $el = $('.parallax-background');
+/*    var $el = $('.parallax-background');
     $(window).on('scroll', function () {
         var scroll = $(document).scrollTop();
         $el.css({
             'background-position':'50% '+(-.4*scroll)+'px'
         });
-    });
+    });*/
+
+/*    function parallax(){
+  var scrolled = $(window).scrollTop();
+  $('.parallax-background').css({'transform':'translate(0px,'+scrolled /2+'%'});
+  }*/
+
+
+
+/*  $(window).scroll(function(e){
+      parallax();
+  });*/
 });

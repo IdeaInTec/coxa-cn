@@ -12,14 +12,14 @@
     background: transparent;
 }
 .parallax-background{
-    background-image: url('../images/why-choose-bg-img.png');
-    background-position: 50% 0;
+    /*background-image: url('../images/why-choose-bg-img.png');*/
+    background-position:center;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
-    -moz-transform: translate3d(0,0,0);
+/*    -moz-transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);*/
 
 }
 .why-choose-sec .sec-entry-hdr p,
