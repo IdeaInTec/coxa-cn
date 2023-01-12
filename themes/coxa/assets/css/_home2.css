@@ -8,6 +8,20 @@
     background-position: center center!important;
 /*	background-position: top left!important;*/
 }
+.parallax-window {
+    background: transparent;
+}
+.parallax-background{
+    background-image: url('../images/why-choose-bg-img.png');
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+
+}
 .why-choose-sec .sec-entry-hdr p,
 .why-choose-sec .sec-entry-hdr-title{
 	color: #fff;
@@ -260,9 +274,6 @@
 /*.cta-module-wrp{
     background: #29467D;
 }*/
-.parallax-window {
-    background: transparent;
-}
 .cta-module-wrp {
     padding: 35px;
     background-repeat: no-repeat!important;
