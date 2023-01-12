@@ -257,8 +257,11 @@
 .revw-next{
 	right: -35px;
 }
-.cta-module-cntlr{
+/*.cta-module-wrp{
     background: #29467D;
+}*/
+.parallax-window {
+    background: transparent;
 }
 .cta-module-wrp {
     padding: 35px;
